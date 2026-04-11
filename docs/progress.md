@@ -49,10 +49,20 @@
   - Assets downloaded from Figma MCP: group-booking-bg.jpg, icon-train-white.svg, icon-link.svg
   - Mobile-first (flex-col → lg:flex-row), 0 TypeScript errors, 0 inline styles
 
+### Done (April 12, 2026 — all homepage sections)
+- components/sections/Footer.tsx ✅ node 33:832 — purple bg, CTA + 3-col links + social icons
+- components/sections/Features.tsx ✅ node 1:13279 — 4 feature cards + large photo, cream bg
+- components/sections/PracticalInfo.tsx ✅ node 49:2694 — 4 photo cards + 2 wide cards grid
+- components/sections/Prices.tsx ✅ node 1:13387 — 2 pricing cards (individual + group)
+- components/sections/Reviews.tsx ✅ node 1:13645 — masonry grid of 6 real reviews + gallery
+- components/sections/FAQ.tsx ✅ node 1:13767 — interactive accordion, 7 Q&A, "use client"
+- components/sections/OurLocation.tsx ✅ node 1:13453 — photo + 3 access feature items
+- components/sections/RoutesTimeline.tsx ✅ node 1:13507 — 3 stops zigzag timeline
+- components/sections/Locations.tsx ✅ node 49:2226 — 2 location cards (Vannes + Quiberon)
+- app/page.tsx updated with all 12 sections in visual order
+- Final npx tsc --noEmit: 0 errors
+
 ### Next Steps
-- [ ] Approve Hero.tsx + Souvenirs.tsx + GroupBookingCTA.tsx and commit
-- [ ] Build Navbar as standalone components/sections/Navbar.tsx
-- [ ] Build Pricing section
-- [ ] Build FAQ section
-- [ ] Build Footer
-- [ ] Compose final app/page.tsx
+- [ ] Export real image assets from Figma → public/figma-assets/
+- [ ] Build inner pages (Informations, Prices, Routes, Careers, Book, Privatization, FAQs)
+- [ ] Add Navbar as shared layout in app/layout.tsx
