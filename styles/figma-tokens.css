@@ -1,0 +1,9 @@
+/* Figma design tokens — auto-populated as sections are built */
+:root {
+  /* Colors */
+  --color-primary: #5a4a6e;
+  --color-bg: #f7f7f0;
+  --color-bg-dark: #3f3053;
+  --color-text: #181d27;
+  --color-text-muted: #535862;
+}
