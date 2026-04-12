@@ -15,16 +15,16 @@ export default function Page() {
   return (
     <main>
       <Hero />
-      <Features />
       <Souvenirs />
+      <Features />
       <PracticalInfo />
       <Prices />
-      <GroupBookingCTA />
-      <Reviews />
-      <FAQ />
       <OurLocation />
       <RoutesTimeline />
+      <Reviews />
+      <GroupBookingCTA />
       <Locations />
+      <FAQ />
       <Footer />
     </main>
   )

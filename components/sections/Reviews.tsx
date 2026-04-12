@@ -35,11 +35,11 @@ const reviews = [
 
 const galleryImages = [
   {
-    src: "https://picsum.photos/seed/review-gallery-1/427/265",
+    src: "/figma-assets/review-gallery-1.jpg",
     alt: "Petit Train de Carnac on the route",
   },
   {
-    src: "https://picsum.photos/seed/review-gallery-2/427/265",
+    src: "/figma-assets/review-gallery-2.jpg",
     alt: "Carnac menhirs landscape",
   },
 ];
@@ -65,7 +65,7 @@ function StarRating() {
 
 function ReviewCard({ name, text }: { name: string; text: string }) {
   return (
-    <div className="card-hover bg-[#fffcf9] rounded-[6px] shadow-[0px_1px_4px_0px_rgba(0,0,0,0.15)] p-5 flex flex-col justify-between gap-6">
+    <div className="bg-[#fffcf9] rounded-[6px] shadow-[0px_1px_4px_0px_rgba(0,0,0,0.15)] p-5 flex flex-col justify-between gap-6">
       <p className="font-['Roboto',sans-serif] text-[#021538] text-[16px] leading-[1.3] tracking-[-0.5px]">
         {text}
       </p>
@@ -92,7 +92,6 @@ function TrackCard({ item }: { item: TrackItem }) {
           alt={galleryImages[item.index].alt}
           fill
           className="object-cover"
-          unoptimized
         />
       </div>
     );
@@ -153,7 +152,7 @@ export default function Reviews() {
   return (
     <section className="bg-[#58496c] flex flex-col gap-20 items-center py-28 overflow-hidden">
       {/* Header */}
-      <div className="max-w-[1280px] mx-auto px-[5%] w-full flex justify-center">
+      <div className="max-w-[1280px] mx-auto px-5 xl:px-0 w-full flex justify-center">
         <div className="flex flex-col gap-6 items-center text-center max-w-[623px]">
           <div className="flex items-center gap-2">
             <div className="relative shrink-0 w-[19px] h-[19px]">
@@ -176,7 +175,7 @@ export default function Reviews() {
 
           <p className="font-['Roboto',sans-serif] text-[#f7f7f0] text-[16px] text-center leading-[1.2] tracking-[-0.48px] w-[570px]">
             <strong>The Petit Train de Carnac</strong> has a rating over{" "}
-            <span className="text-[#d8b800] underline">4.7 on Google</span>,
+            <a href="https://www.google.com/maps/search/Petit+Train+de+Carnac" target="_blank" rel="noopener noreferrer" className="text-[#d8b800] underline">4.7 on Google</a>,
             with over 6,000 reviews, making it one of the most popular touristic
             attractions in Carnac.
           </p>

@@ -82,3 +82,31 @@
 ### Next Steps
 - [ ] Export real image assets from Figma → public/figma-assets/
 - [ ] Build inner pages (Informations, Prices, Routes, Careers, Book, Privatization, FAQs)
+
+### Done (April 12, 2026 — Homepage QA Pass)
+- Section order corrected per Figma y-positions: Hero → Souvenirs → Features → PracticalInfo → Prices → OurLocation → RoutesTimeline → Reviews → GroupBookingCTA → Locations → FAQ → Footer
+- Global padding standardized: all `px-[5%]` → `px-5 xl:px-0` across all section containers and Navbar
+- Navbar: "The Route" dropdown removed (now plain Link); hamburger menu added for mobile with animated lines and slide-down drawer
+- Features: rebuilt as 2×2 feature grid (left) + tall image flush to right viewport edge (full-width two-column flex)
+- Souvenirs: real images swapped in (souvenir-1..5.jpg); section hidden on mobile (`hidden md:block`)
+- OurLocation: decorative purple band removed; mobile layout = content top, image bottom (`flex-col-reverse lg:flex-row`)
+- RoutesTimeline: scroll fill animation via IntersectionObserver + clip-path reveal on `.timeline-line`; images hidden on mobile; content offset left to clear left-side timeline line
+- Reviews: "4.7 on Google" now an `<a>` link to Google Maps
+- Locations: heading uses `max-w-[570px] [text-wrap:balance]`; padding standardized
+- Footer: background image scoped to CTA block only; footer body is solid purple `bg-[#58496c]`
+- FAQ: accordion transition updated to `0.3s ease`
+- npx tsc --noEmit: 0 errors
+
+### Next Steps
+- [ ] Build inner pages starting with Informations (node 1:13939)
+- [ ] Verify Locations section icon with Figma (icon-link.svg vs correct icon)
+
+## QA Pass 2 + Figma Audit (Apr 12, 2026)
+- Removed `card-hover` lift animation from Features, Reviews, Locations cards
+- Fixed PracticalInfo: single-column mobile grid (`grid-cols-1 sm:grid-cols-2 lg:grid-cols-4`)
+- Fixed PracticalInfo heading: `w-[575px]` → `max-w-[575px] w-full` for responsive width
+- Fixed Souvenirs section label: gray placeholder → `icon-train-white.svg` (matching all other sections)
+- Downloaded 15 real images from Figma design to `public/figma-assets/`
+- Swapped all 15 picsum placeholder URLs with real `/figma-assets/` paths across 7 section files
+- Removed `unoptimized` prop from all swapped `<Image>` components
+- TypeScript check: 0 errors

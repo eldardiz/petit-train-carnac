@@ -6,7 +6,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 const infoCards: { id: string; photo: string; title: string; description: ReactNode }[] = [
   {
     id: "duration",
-    photo: "https://picsum.photos/seed/practical-1/319/423",
+    photo: "/figma-assets/practical-1.jpg",
     title: "Duration",
     description: (
       <>
@@ -19,7 +19,7 @@ const infoCards: { id: string; photo: string; title: string; description: ReactN
   },
   {
     id: "departure",
-    photo: "https://picsum.photos/seed/practical-2/319/423",
+    photo: "/figma-assets/practical-2.jpg",
     title: "Departure",
     description: (
       <>
@@ -32,7 +32,7 @@ const infoCards: { id: string; photo: string; title: string; description: ReactN
   },
   {
     id: "schedule",
-    photo: "https://picsum.photos/seed/practical-3/319/423",
+    photo: "/figma-assets/practical-3.jpg",
     title: "Schedule",
     description: (
       <>
@@ -45,7 +45,7 @@ const infoCards: { id: string; photo: string; title: string; description: ReactN
   },
   {
     id: "accessibility",
-    photo: "https://picsum.photos/seed/practical-4/319/423",
+    photo: "/figma-assets/practical-4.jpg",
     title: "Accessibility",
     description: (
       <>
@@ -61,7 +61,7 @@ const infoCards: { id: string; photo: string; title: string; description: ReactN
 export default function PracticalInfo() {
   return (
     <section className="bg-[#f7f7f0] py-20 overflow-hidden">
-      <div className="max-w-[1280px] mx-auto px-[5%] w-full flex flex-col gap-12 items-start">
+      <div className="max-w-[1280px] mx-auto px-5 xl:px-0 w-full flex flex-col gap-12 items-start">
         {/* Header */}
         <div className="flex flex-col gap-3 max-w-[615px]">
           <div className="flex items-center gap-2">
@@ -78,7 +78,7 @@ export default function PracticalInfo() {
               Information
             </p>
           </div>
-          <h2 className="font-['Libre_Baskerville',serif] text-[48px] text-[#181d27] leading-[1.15] tracking-[-3.36px] w-[575px]">
+          <h2 className="font-['Libre_Baskerville',serif] text-[48px] text-[#181d27] leading-[1.15] tracking-[-3.36px] max-w-[575px] w-full">
             Practical Information
           </h2>
           <p className="font-['Inter',sans-serif] text-[18px] text-[#535862] leading-[1.2] tracking-[-0.54px]">
@@ -88,7 +88,7 @@ export default function PracticalInfo() {
         </div>
 
         {/* Cards grid */}
-        <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
           {/* Row 1: 4 photo cards */}
           {infoCards.map((card, index) => (
             <ScrollReveal key={card.id} delay={index * 70}>
@@ -102,7 +102,6 @@ export default function PracticalInfo() {
                     alt=""
                     fill
                     className="object-cover"
-                    unoptimized
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-[rgba(88,73,108,0.52)] from-[34%] to-[rgba(88,73,108,0.8)]" />
                 </div>
@@ -126,11 +125,10 @@ export default function PracticalInfo() {
                 className="absolute inset-0 pointer-events-none"
               >
                 <Image
-                  src="https://picsum.photos/seed/practical-5/650/423"
+                  src="/figma-assets/practical-5.jpg"
                   alt=""
                   fill
                   className="object-cover"
-                  unoptimized
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-[rgba(88,73,108,0.52)] from-[34%] to-[rgba(88,73,108,0.8)]" />
               </div>

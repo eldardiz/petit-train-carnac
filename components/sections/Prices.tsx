@@ -20,15 +20,14 @@ export default function Prices() {
         className="absolute inset-0 pointer-events-none opacity-10"
       >
         <Image
-          src="https://picsum.photos/seed/prices-bg/1573/484"
+          src="/figma-assets/prices-bg.jpg"
           alt=""
           fill
           className="object-cover"
-          unoptimized
         />
       </div>
 
-      <div className="max-w-[1280px] mx-auto px-[5%] w-full flex flex-col gap-20 items-center">
+      <div className="max-w-[1280px] mx-auto px-5 xl:px-0 w-full flex flex-col gap-20 items-center">
         {/* Header */}
         <div className="relative flex flex-col gap-6 items-center text-center max-w-[623px]">
           <div className="flex items-center gap-2">

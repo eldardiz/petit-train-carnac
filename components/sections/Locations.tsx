@@ -10,7 +10,7 @@ const locations = [
       "Step aboard the Petit Train de Vannes and explore one of the most beautiful historic cities in Brittany. The guided tour takes you through medieval streets, along ancient ramparts, and past key landmarks that tell the story of Vannes and its rich past. This sightseeing tour is ideal for visitors who want to understand the city's history while enjoying a relaxed and accessible experience.",
     cta: "Discover the Petit Train de Vannes",
     href: "#",
-    image: "https://picsum.photos/seed/vannes/640/550",
+    image: "/figma-assets/vannes.jpg",
     imageAlt: "Vannes historic city centre",
     roundedClass: "rounded-tl-[32px]",
   },
@@ -22,7 +22,7 @@ const locations = [
       "Hop aboard the Petit Train de Quiberon for a scenic journey along the iconic peninsula. Enjoy breathtaking views of the Atlantic coast, discover charming seaside villages, and learn about the area's seafaring traditions with informative audio commentary throughout the ride.",
     cta: "Discover the Petit Train de Quiberon",
     href: "#",
-    image: "https://picsum.photos/seed/quiberon/640/550",
+    image: "/figma-assets/quiberon.jpg",
     imageAlt: "Quiberon peninsula coastal views",
     roundedClass: "rounded-tr-[32px]",
   },
@@ -31,7 +31,7 @@ const locations = [
 export default function Locations() {
   return (
     <section className="bg-[#f7f7f0] py-28 overflow-hidden">
-      <div className="max-w-[1280px] mx-auto px-[5%] w-full flex flex-col gap-16 items-center">
+      <div className="max-w-[1280px] mx-auto px-5 xl:px-0 w-full flex flex-col gap-16 items-center">
         {/* Header */}
         <div className="flex flex-col gap-6 items-center text-center max-w-[768px]">
           <div className="flex items-center gap-2">
@@ -48,7 +48,7 @@ export default function Locations() {
               Locations
             </p>
           </div>
-          <h2 className="font-['Libre_Baskerville',serif] text-[48px] text-[#181d27] text-center leading-[1.1] tracking-[-3.36px] w-[570px]">
+          <h2 className="font-['Libre_Baskerville',serif] text-[48px] text-[#181d27] text-center leading-[1.1] tracking-[-3.36px] max-w-[570px] [text-wrap:balance]">
             Discover our other Petit Train tours in Morbihan
           </h2>
           <p className="font-['Roboto',sans-serif] text-[#535862] text-[16px] text-center leading-[1.2] tracking-[-0.48px] w-[600px]">
@@ -64,7 +64,7 @@ export default function Locations() {
           {locations.map((loc) => (
             <div
               key={loc.id}
-              className={`card-hover relative h-[550px] overflow-hidden ${loc.roundedClass}`}
+              className={`relative h-[550px] overflow-hidden ${loc.roundedClass}`}
             >
               {/* Background photo + gradient */}
               <div
@@ -76,7 +76,6 @@ export default function Locations() {
                   alt=""
                   fill
                   className="object-cover"
-                  unoptimized
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-[rgba(88,73,108,0.52)] from-[34%] to-[rgba(88,73,108,0.8)]" />
               </div>

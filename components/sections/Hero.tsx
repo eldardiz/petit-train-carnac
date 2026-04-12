@@ -171,7 +171,7 @@ export default function Hero() {
 
       {/* HeroBanner: Online Booking section */}
       <div className="bg-[#f7f7f0] border-t border-[rgba(0,0,0,0.15)] pt-[34px] pb-16">
-        <div className="max-w-[1280px] mx-auto px-[5%] flex flex-col gap-10">
+        <div className="max-w-[1280px] mx-auto px-5 xl:px-0 flex flex-col gap-10">
           {/* Section label */}
           <div className="flex items-center gap-2">
             <div className="relative shrink-0 w-[19px] h-[19px]">

@@ -190,7 +190,7 @@ video {
 .faq-answer-wrap {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: grid-template-rows 0.3s ease;
 }
 .faq-answer-wrap.open {
   grid-template-rows: 1fr;
@@ -215,6 +215,11 @@ video {
     transparent 100%
   );
   z-index: 0;
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 2s ease-in-out;
+}
+.timeline-line--visible {
+  clip-path: inset(0 0 0% 0);
 }
 
 @media (max-width: 768px) {

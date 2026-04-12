@@ -92,7 +92,7 @@ export default function FAQ() {
 
   return (
     <section className="bg-[#f7f7f0] py-24">
-      <div className="max-w-[1280px] mx-auto px-[5%] w-full grid grid-cols-1 lg:grid-cols-[35%_1fr] gap-16 items-start">
+      <div className="max-w-[1280px] mx-auto px-5 xl:px-0 w-full grid grid-cols-1 lg:grid-cols-[35%_1fr] gap-16 items-start">
         {/* Left: heading */}
         <div className="flex flex-col gap-6 lg:sticky lg:top-28">
           <div className="flex items-center gap-2">

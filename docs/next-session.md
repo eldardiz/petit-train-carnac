@@ -51,40 +51,15 @@ Middle column is `hidden md:block` and third column is `hidden lg:block`. On mob
 
 ---
 
-## Missing Image Assets
+## Image Assets
 
-All of these are referenced in components but don't exist in `public/figma-assets/`. They show broken image icons. Export from Figma before final review.
+All homepage assets downloaded via Figma REST API on 2026-04-12. ✅
 
-| Path | Used in | Figma source |
-|---|---|---|
-| `/figma-assets/souvenir-1.jpg` | Souvenirs.tsx | Polaroid card 1 |
-| `/figma-assets/souvenir-2.jpg` | Souvenirs.tsx | Polaroid card 2 |
-| `/figma-assets/souvenir-3.jpg` | Souvenirs.tsx | Polaroid card 3 |
-| `/figma-assets/souvenir-4.jpg` | Souvenirs.tsx | Polaroid card 4 |
-| `/figma-assets/souvenir-5.jpg` | Souvenirs.tsx | Polaroid card 5 |
-| `/figma-assets/icon-train-seat.svg` | Features.tsx | Feature icon 1 |
-| `/figma-assets/icon-audio-guide.svg` | Features.tsx | Feature icon 2 |
-| `/figma-assets/icon-landmark.svg` | Features.tsx | Feature icon 3 |
-| `/figma-assets/icon-family.svg` | Features.tsx | Feature icon 4 |
-| `/figma-assets/icon-facebook.svg` | Footer.tsx | Social icon |
-| `/figma-assets/icon-twitter.svg` | Footer.tsx | Social icon |
-| `/figma-assets/icon-instagram.svg` | Footer.tsx | Social icon |
-| `/figma-assets/icon-linkedin.svg` | Footer.tsx | Social icon |
-| `/figma-assets/icon-email.svg` | Footer.tsx | Contact icon |
-| `/figma-assets/icon-phone.svg` | Footer.tsx | Contact icon |
-| `/figma-assets/icon-ticket-white.svg` | Locations.tsx, RoutesTimeline.tsx | White ticket icon |
-| `/figma-assets/icon-map-pin.svg` | OurLocation.tsx | Access icon 1 |
-| `/figma-assets/icon-car.svg` | OurLocation.tsx | Access icon 2 |
-| `/figma-assets/icon-train-sm.svg` | OurLocation.tsx | Access icon 3 |
-| `/figma-assets/train-illustration.png` | PracticalInfo.tsx | Decorative illustration |
-| `/figma-assets/icon-info.svg` | Prices.tsx | Info icon (dark) |
-| `/figma-assets/icon-group.svg` | Prices.tsx | Group icon |
-| `/figma-assets/icon-info-white.svg` | Prices.tsx | Info icon (white) |
+**⚠ Visual check needed:**
+- `icon-info.svg` and `icon-info-white.svg` — same file size (1885 bytes); may be identical. Verify in browser that the white variant actually renders white on the dark Prices card.
+- `icon-ticket-white.svg` — same file size as `icon-train-white.svg` (9142 bytes); verify it looks like a ticket icon, not a train icon.
 
-Already present (no action needed):
-`google-icon.svg`, `group-booking-bg.jpg`, `hero-image.jpg`, `icon-link.svg`,
-`icon-ticket.svg`, `icon-train-white.svg`, `icon-train.svg`, `languages-flags.png`,
-`logo.svg`, `stars.svg`
+All 33 files now in `public/figma-assets/`. Inner page assets will be downloaded per-session as each page is built.
 
 ---
 
@@ -117,3 +92,39 @@ Build one page per session. Each page gets its own `app/[route]/page.tsx`. Navba
 7. Ask for commit approval
 
 Do not batch with other pages. One page = one session = one commit.
+# Homepage QA Feedback — Petit Train de Carnac
+> Generated: 2026-04-12 | Source: Visual QA review by Eldar
+
+---
+
+## DESKTOP
+
+- [ ] **Global padding** — Remove the 5% global padding on all sections to make them all even
+- [ ] **Navbar — Routes link** — The Route link should be a regular link, not a dropdown menu
+- [ ] **PracticalInfo — Typo fix** — Missing space: "2 hours**before**" → "2 hours **before**"
+- [ ] **Features section — Layout wrong** — Grid needs to be 2x2 not 1x4. Image flush to right edge with no padding (`components/sections/Features.tsx`)
+- [ ] **Section order wrong** — Souvenirs needs to be BELOW the "Online Booking" note. Check Figma for canonical section order, reorder `app/page.tsx`
+- [ ] **Locations — Heading overflow on mobile** — Heading getting cut off on left side. Add `text-wrap: balance` and proper responsive padding (`components/sections/Locations.tsx`)
+- [ ] **Reviews — Google hyperlink** — "4.7 on Google" link needs to point to the Google Business Profile URL
+- [ ] **OurLocation — Remove purple element** — Unknown purple element on the left side of the section image (`components/sections/OurLocation.tsx`)
+- [ ] **RoutesTimeline — Scroll fill animation** — Timeline line fills from opacity 20 → 100 as user scrolls through section
+- [ ] **Locations — Wrong icon** — Wrong icon on right side of section heading. Check Figma for correct icon
+- [ ] **Footer — Wrong design** — Footer CTA needs background image. Footer background must be purple (`components/sections/Footer.tsx`)
+- [ ] **FAQ — Accordion animation** — Open/close needs `0.3s ease` transition (`components/sections/FAQ.tsx`)
+
+---
+
+## MOBILE
+
+- [ ] **Navbar — Hamburger menu** — Add hamburger menu with all nav links (`components/layout/Navbar.tsx`)
+- [ ] **Souvenirs — Hide on mobile** — Hide Souvenirs section on mobile screens (`components/sections/Souvenirs.tsx`)
+- [ ] **OurLocation — Mobile layout** — Image on bottom, content on top on mobile (`components/sections/OurLocation.tsx`)
+- [ ] **RoutesTimeline — Mobile layout** — Line on left side, content on right side on mobile (`components/sections/RoutesTimeline.tsx`)
+
+---
+
+## Notes for Claude
+- Features grid: 2 columns of features left + 1 tall image right, flush to section edge
+- Section order: read Figma page node for canonical order, reorder `app/page.tsx`
+- Timeline scroll fill: use IntersectionObserver or scroll-driven animation on `.timeline-line`
+- Never run Playwright — Eldar reviews in browser directly

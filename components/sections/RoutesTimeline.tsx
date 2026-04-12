@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 type Stop = {
@@ -23,7 +26,7 @@ const stops: Stop[] = [
       "Ticket office on site",
     ],
     note: "This is the only guaranteed boarding point for individual tickets.",
-    image: "https://picsum.photos/seed/stop-1/592/440",
+    image: "/figma-assets/stop-1.jpg",
     imageAlt: "Ménec car park, Carnac — departure point for the Petit Train",
     flip: false,
   },
@@ -34,7 +37,7 @@ const stops: Stop[] = [
       "Stop located near Carnac's beach area",
       "Ideal for visitors staying near the seaside",
     ],
-    image: "https://picsum.photos/seed/stop-2/592/440",
+    image: "/figma-assets/stop-2.jpg",
     imageAlt: "Carnac beach — Port en Drô stop",
     flip: true,
   },
@@ -45,7 +48,7 @@ const stops: Stop[] = [
       'Located near the "Cours des Quais" bus stop',
       "Close to the famous marina and sailing area",
     ],
-    image: "https://picsum.photos/seed/stop-3/592/440",
+    image: "/figma-assets/stop-3.jpg",
     imageAlt: "La Trinité sur Mer harbour",
     flip: false,
   },
@@ -65,9 +68,31 @@ function StopNumber({ n, active }: { n: string; active: boolean }) {
 }
 
 export default function RoutesTimeline() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+    const line = section.querySelector(".timeline-line") as HTMLElement | null;
+    if (!line) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          line.classList.add("timeline-line--visible");
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="bg-[#f7f7f0] py-28">
-      <div className="max-w-[1280px] mx-auto px-[5%] w-full flex flex-col gap-20 items-center">
+      <div className="max-w-[1280px] mx-auto px-5 xl:px-0 w-full flex flex-col gap-20 items-center">
         {/* Header */}
         <div className="flex flex-col gap-6 items-center text-center max-w-[768px]">
           <div className="flex items-center gap-2">
@@ -84,41 +109,40 @@ export default function RoutesTimeline() {
               Routes Timeline
             </p>
           </div>
-          <h2 className="font-['Libre_Baskerville',serif] text-[48px] text-[#181d27] text-center leading-[1.1] tracking-[-3.36px] w-[518px]">
+          <h2 className="font-['Libre_Baskerville',serif] text-[48px] text-[#181d27] text-center leading-[1.1] tracking-[-3.36px] max-w-[518px]">
             Stops and route of the{" "}
             <em className="text-[#58496c]">Petit Train de Carnac</em>
           </h2>
-          <p className="font-['Roboto',sans-serif] text-[#535862] text-[16px] text-center leading-[1.2] tracking-[-0.48px] w-[570px]">
+          <p className="font-['Roboto',sans-serif] text-[#535862] text-[16px] text-center leading-[1.2] tracking-[-0.48px] max-w-[570px]">
             During the guided sightseeing tour, the Petit Train de Carnac passes
             through several key locations, offering a complete overview of
             Carnac and its surroundings.
           </p>
-          <p className="font-['Roboto',sans-serif] font-bold text-[#535862] text-[16px] text-center leading-[1.2] tracking-[-0.48px] w-[570px]">
+          <p className="font-['Roboto',sans-serif] font-bold text-[#535862] text-[16px] text-center leading-[1.2] tracking-[-0.48px] max-w-[570px]">
             The Petit Train de Carnac serves the following stops during the
             tour:
           </p>
         </div>
 
         {/* Timeline stops */}
-        <div className="relative w-full flex flex-col items-center">
+        <div className="relative w-full flex flex-col items-center" ref={sectionRef}>
           <div className="timeline-line" aria-hidden="true" />
 
           {stops.map((stop, i) => {
             const ImageBlock = (
-              <div className="flex-1 py-8">
+              <div className="hidden lg:block flex-1 py-8">
                 <div className="relative h-[440px] rounded-lg overflow-hidden">
                   <Image
                     src={stop.image}
                     alt={stop.imageAlt}
                     fill
                     className="object-cover"
-                    unoptimized
                   />
                 </div>
               </div>
             );
             const ContentBlock = (
-              <div className="flex-1 flex flex-col gap-8 pt-4">
+              <div className="flex-1 flex flex-col gap-8 pt-4 pl-10 lg:pl-0">
                 <div className="flex flex-col gap-6">
                   <StopNumber n={stop.number} active={i === 0} />
                   <p className="font-['Libre_Baskerville',serif] text-[32px] text-[#0d0a06] leading-[1.3] tracking-[-2.24px]">
@@ -140,7 +164,7 @@ export default function RoutesTimeline() {
                     </p>
                   )}
                 </ul>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 flex-wrap">
                   <Link
                     href="/book"
                     className="btn-primary inline-flex items-center gap-2 h-[45px] px-[22px] bg-[#5a4a6e] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
@@ -174,11 +198,12 @@ export default function RoutesTimeline() {
                 className="w-full"
               >
                 <div className="w-full flex flex-col items-center">
-                  <div className="w-full flex gap-12 items-center">
+                  {/* Mobile: content only, left-aligned to clear timeline line */}
+                  <div className="w-full flex flex-col lg:flex-row gap-12 items-start lg:items-center">
                     {stop.flip ? ContentBlock : ImageBlock}
 
-                    {/* Timeline connector dot */}
-                    <div className="flex flex-col items-center justify-center self-stretch w-8 relative z-10">
+                    {/* Timeline connector dot — desktop only */}
+                    <div className="hidden lg:flex flex-col items-center justify-center self-stretch w-8 relative z-10">
                       <div className="w-3 h-3 rounded-full bg-[#5a4a6e] border-2 border-white ring-1 ring-[#5a4a6e]" />
                     </div>
 
