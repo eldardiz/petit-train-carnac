@@ -1,256 +1,119 @@
-# Next Session Instructions — UI Polish & Animation Pass
+# Next Session Instructions — Inner Pages Build
 
-## Git State (as of session close)
+## Current Git State
 
-Last committed: `04981ff` — "docs: update CLAUDE.md with full project brain"
-Previous: `45160a3` — "feat: complete homepage sections" (all 12 sections)
-
-**Uncommitted changes:**
-- `app/globals.css` — modified (full animation CSS written, not yet committed)
-- `docs/next-session.md` — this file (new, not committed)
-
-Commit both at the start of tomorrow's session before doing anything else:
-```bash
-git add app/globals.css docs/next-session.md
-git commit -m "chore: add animation CSS foundation and next-session plan"
-```
+Last commit: `c1d0025` — "feat: UI polish pass — animations, hover effects, navbar extraction, container fixes"
+Branch: main, pushed to origin.
+No uncommitted changes.
 
 ---
 
-## Known Visual Bugs / Things That Felt Off
+## Homepage Section Status
 
-1. **Reviews layout is broken-looking** — currently static `columns-3` masonry.
-   Cards are different heights and the layout feels uneven. Full rebuild needed (Task 1).
-
-2. **FAQ two-column layout is wrong** — uses `flex flex-wrap` with a hardcoded
-   `w-[623px]` left panel. On anything under ~1300px wide the columns collapse
-   awkwardly. The accordion also allows multiple items open simultaneously which
-   feels janky. Full fix needed (Task 2).
-
-3. **RoutesTimeline has no visible vertical line** — the connecting thread between
-   stops is just tiny `w-[3px]` divs that disappear visually. The `.timeline-line`
-   CSS class in globals.css will fix this but isn't applied yet (Task 3).
-
-4. **Zero hover effects anywhere** — all buttons, cards, links, and icons are static.
-   The CSS is written but no component has the classes applied yet (Tasks 5–6).
-
-5. **Navbar has no scroll shadow** — it's a static server component embedded inside
-   Hero.tsx. It needs to be extracted and made a client component to get the
-   blur+shadow on scroll (Task 4).
-
-6. **All sections have inconsistent padding** — most use `px-8` (32px fixed) instead
-   of the intended `px-[5%]` responsive padding (Task 5).
-
-7. **No scroll-in animations anywhere** — the `ScrollReveal` component doesn't exist
-   yet. Everything pops in instantly (Task 7).
-
-8. **StopNumber component in RoutesTimeline always renders stop 1 as "active"** —
-   `active={i === 0}` is hardcoded. This is intentional for now (static display)
-   but worth revisiting if the timeline becomes interactive.
+| Section | File | State | Notes |
+|---|---|---|---|
+| Hero | Hero.tsx | ✅ done | Navbar extracted; btn-primary/secondary on CTAs; px-[5%] |
+| Souvenirs | Souvenirs.tsx | ✅ done | ImageTrail working; picsum placeholders |
+| Features | Features.tsx | ✅ done | card-hover; ScrollReveal stagger 70ms; px-[5%] |
+| GroupBookingCTA | GroupBookingCTA.tsx | ✅ done | btn-primary; max-w-[1280px] px-[5%] |
+| PracticalInfo | PracticalInfo.tsx | ✅ done | ScrollReveal stagger; btn-primary; px-[5%] |
+| Prices | Prices.tsx | ✅ done | ScrollReveal left/right; px-[5%] |
+| Reviews | Reviews.tsx | ✅ done | 3 infinite-scroll columns; mask-image fade; card-hover |
+| FAQ | FAQ.tsx | ✅ done | CSS grid layout; single-open accordion; faq-answer-wrap |
+| OurLocation | OurLocation.tsx | ✅ done | ScrollReveal stagger; rotate-[8.21deg]; px-[5%] |
+| RoutesTimeline | RoutesTimeline.tsx | ✅ done | timeline-line; btn-primary/secondary; ScrollReveal left/right |
+| Locations | Locations.tsx | ✅ done | card-hover; btn-primary; px-[5%] |
+| Footer | Footer.tsx | ✅ done | footer-link; social-icon; btn-primary/secondary; px-[5%] |
+| Navbar | components/layout/Navbar.tsx | ✅ done | sticky; scroll shadow; nav-link; client component |
 
 ---
 
-## Context
+## Known Issues (do not fix unless explicitly asked)
 
-All 12 homepage sections are built and committed. `app/globals.css` already contains
-the full animation/hover CSS system (scroll-reveal, btn-primary/secondary, card-hover,
-social-icon, footer-link, nav-link, reviews infinite scroll, FAQ accordion,
-timeline-line). Nothing is visually different yet because the CSS classes are defined
-but not applied to any component files.
+### 1. Navbar — no mobile menu
+No hamburger button or mobile drawer exists. On screens < lg the nav links are `hidden` with no toggle. The mobile banner is visible but the nav is inaccessible.
+- Fix needed: hamburger icon button + state-controlled mobile drawer (slide down or overlay)
+- Files: `components/layout/Navbar.tsx`
 
-**Your job: wire the CSS to the components.**
+### 2. Hero diagonal clip-path on mobile
+`clip-path: polygon(0 0, 100% 0, 0 100%)` diagonal split looks wrong at < 768px because the two columns stack. The clip-path still applies to the left column background.
+- Fix needed: remove or swap clip-path on mobile (`lg:` breakpoint guard)
+- File: `components/sections/Hero.tsx`
 
----
+### 3. Responsive text overflow — Locations.tsx
+Location card content text (description) is full width but the card is `h-[550px]` fixed. On medium screens the text overflows the bottom edge of the card.
+- Fix: add `line-clamp-4` to the description `<p>` tag
+- File: `components/sections/Locations.tsx` line ~103
 
-## Task List (in priority order)
-
-### 1. Rebuild Reviews.tsx — infinite-scroll columns
-
-File: `components/sections/Reviews.tsx`
-
-Replace the static `columns-3` masonry with 3 CSS infinite-scroll columns:
-
-- 3 columns on desktop → 2 on tablet → 1 on mobile
-- Each column is a vertically scrolling track using `reviews-track-down` or
-  `reviews-track-up` (already defined in globals.css)
-- Duplicate the card list inside each track so the loop is seamless (content + clone)
-- Add `reviews-container` class to the wrapper so hover-pause works
-- Add `mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent)`
-  to the container for top/bottom fade
-- Each column should have a different `animation-duration` (e.g. 28s, 22s, 32s)
-  so they feel organic; set via inline style (only exception to no-inline-style rule)
-- Apply `card-hover` class to each review card
-
-### 2. Fix FAQ.tsx — layout + accordion
-
-File: `components/sections/FAQ.tsx`
-
-Current issues: `flex flex-wrap` layout with hardcoded 623px left column, `max-h`
-accordion instead of CSS grid trick, multiple items can be open simultaneously.
-
-Fix:
-- Layout: CSS grid `grid-cols-[35%_1fr]` on desktop, single col on mobile
-- Left column: section label + heading + subtext + CTA button (sticky optional)
-- Right column: list of FAQ items separated by `<hr>` (border-[rgba(0,0,0,0.1)])
-- Accordion: replace `max-h` with `.faq-answer-wrap` / `.faq-answer-wrap.open` classes
-  (already in globals.css — uses `grid-template-rows: 0fr → 1fr`)
-- Wrap answer text in `.faq-answer-inner` div (overflow: hidden)
-- Single-open: store `openIndex: number | null` in useState, only one item open at a time
-- Icon: show `+` when closed, `×` when open (CSS rotation or swap)
-- Keyboard: `onKeyDown` handler for Enter/Space on the trigger button
-- Apply `btn-primary` class to the CTA button
-
-### 3. Fix RoutesTimeline.tsx — vertical line + dots
-
-File: `components/sections/RoutesTimeline.tsx`
-
-- Wrap the stops list in a `relative` positioned container
-- Add `<div className="timeline-line" aria-hidden="true" />` as the first child of that
-  wrapper (the CSS in globals.css positions it at `left: 50%` with gradient fade)
-- Style the connector dots: `w-3 h-3 rounded-full bg-[#5a4a6e] border-2 border-white ring-1 ring-[#5a4a6e]`
-- On mobile (`max-w-768px`), the `.timeline-line` CSS already shifts to `left: 16px`
-  — make sure the mobile layout stacks content to the right of that line
-- Apply `btn-primary` to "Book your tour" button, `btn-secondary` to "See Pricing"
-
-### 4. Extract Navbar + scroll shadow
-
-Files: `components/sections/Hero.tsx` → new `components/layout/Navbar.tsx`
-
-- Extract the navbar JSX from Hero.tsx into its own `"use client"` component
-- Add passive scroll listener in `useEffect`:
-  ```ts
-  const onScroll = () => setScrolled(window.scrollY > 10)
-  window.addEventListener('scroll', onScroll, { passive: true })
-  return () => window.removeEventListener('scroll', onScroll)
-  ```
-- Apply `navbar-scrolled` class when `scrolled === true` (already in globals.css:
-  `box-shadow + backdrop-filter: blur(8px)`)
-- Apply `nav-link` class to all nav anchor links (underline slide effect)
-- Import Navbar in `app/layout.tsx` so it persists across pages
-
-### 5. Container audit — all sections
-
-For every section file, the pattern should be:
-
-```tsx
-// Full-bleed background (color/image) on the <section> tag
-// Content constrained inside:
-<div className="max-w-[1280px] mx-auto px-[5%] w-full">
-  {/* ... */}
-</div>
-```
-
-Sections that currently use `px-8` (wrong) and need fixing:
-- Footer.tsx
-- Features.tsx
-- PracticalInfo.tsx
-- Prices.tsx
-- OurLocation.tsx
-- RoutesTimeline.tsx
-- Locations.tsx
-- GroupBookingCTA.tsx
-
-Hero.tsx and Souvenirs.tsx have their own layout — check but be careful not to
-break the diagonal split or the ImageTrail container height.
-
-### 6. Apply hover classes — all sections
-
-Go through every section and add the appropriate CSS class:
-
-| Element | Class to add |
-|---|---|
-| Purple filled buttons | `btn-primary` |
-| Outlined / secondary buttons | `btn-secondary` |
-| Nav links in Navbar | `nav-link` |
-| Footer column links | `footer-link` |
-| Review cards | `card-hover` |
-| Location cards in Locations.tsx | `card-hover` |
-| Feature cards in Features.tsx | `card-hover` |
-| Social icon links in Footer | `social-icon` |
-
-### 7. Create ScrollReveal component
-
-New file: `components/ui/ScrollReveal.tsx` (`"use client"`)
-
-```tsx
-"use client";
-import { useEffect, useRef, ReactNode } from "react";
-import { cn } from "@/lib/utils";
-
-type Props = {
-  children: ReactNode;
-  className?: string;
-  direction?: "up" | "left" | "right"; // default: "up"
-  delay?: number; // ms, default 0
-};
-
-export default function ScrollReveal({ children, className, direction = "up", delay = 0 }: Props) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => el.classList.add("visible"), delay);
-          observer.unobserve(el);
-        }
-      },
-      { threshold: 0.15 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [delay]);
-
-  return (
-    <div
-      ref={ref}
-      className={cn(
-        "reveal",
-        direction === "left" && "from-left",
-        direction === "right" && "from-right",
-        className
-      )}
-    >
-      {children}
-    </div>
-  );
-}
-```
-
-Apply `<ScrollReveal>` wrappers to section headings and cards across:
-- Features cards (stagger: 0, 70, 140, 210ms)
-- PracticalInfo cards (stagger 70ms)
-- Prices cards (left/right direction)
-- OurLocation feature items (stagger 70ms)
-- RoutesTimeline stops (alternating from-left / from-right)
-- FAQ items (stagger 50ms)
+### 4. Reviews column height on narrow screens
+Middle column is `hidden md:block` and third column is `hidden lg:block`. On mobile only one column shows. The `h-[560px]` container height was sized for 3 columns of content — on mobile it may feel short.
+- Watch when testing on real device; adjust container height if needed.
 
 ---
 
-## Verification after each task
+## Missing Image Assets
 
-After each task run:
+All of these are referenced in components but don't exist in `public/figma-assets/`. They show broken image icons. Export from Figma before final review.
 
-```bash
-npx tsc --noEmit
-```
+| Path | Used in | Figma source |
+|---|---|---|
+| `/figma-assets/souvenir-1.jpg` | Souvenirs.tsx | Polaroid card 1 |
+| `/figma-assets/souvenir-2.jpg` | Souvenirs.tsx | Polaroid card 2 |
+| `/figma-assets/souvenir-3.jpg` | Souvenirs.tsx | Polaroid card 3 |
+| `/figma-assets/souvenir-4.jpg` | Souvenirs.tsx | Polaroid card 4 |
+| `/figma-assets/souvenir-5.jpg` | Souvenirs.tsx | Polaroid card 5 |
+| `/figma-assets/icon-train-seat.svg` | Features.tsx | Feature icon 1 |
+| `/figma-assets/icon-audio-guide.svg` | Features.tsx | Feature icon 2 |
+| `/figma-assets/icon-landmark.svg` | Features.tsx | Feature icon 3 |
+| `/figma-assets/icon-family.svg` | Features.tsx | Feature icon 4 |
+| `/figma-assets/icon-facebook.svg` | Footer.tsx | Social icon |
+| `/figma-assets/icon-twitter.svg` | Footer.tsx | Social icon |
+| `/figma-assets/icon-instagram.svg` | Footer.tsx | Social icon |
+| `/figma-assets/icon-linkedin.svg` | Footer.tsx | Social icon |
+| `/figma-assets/icon-email.svg` | Footer.tsx | Contact icon |
+| `/figma-assets/icon-phone.svg` | Footer.tsx | Contact icon |
+| `/figma-assets/icon-ticket-white.svg` | Locations.tsx, RoutesTimeline.tsx | White ticket icon |
+| `/figma-assets/icon-map-pin.svg` | OurLocation.tsx | Access icon 1 |
+| `/figma-assets/icon-car.svg` | OurLocation.tsx | Access icon 2 |
+| `/figma-assets/icon-train-sm.svg` | OurLocation.tsx | Access icon 3 |
+| `/figma-assets/train-illustration.png` | PracticalInfo.tsx | Decorative illustration |
+| `/figma-assets/icon-info.svg` | Prices.tsx | Info icon (dark) |
+| `/figma-assets/icon-group.svg` | Prices.tsx | Group icon |
+| `/figma-assets/icon-info-white.svg` | Prices.tsx | Info icon (white) |
 
-Zero errors before moving to the next task.
+Already present (no action needed):
+`google-icon.svg`, `group-booking-bg.jpg`, `hero-image.jpg`, `icon-link.svg`,
+`icon-ticket.svg`, `icon-train-white.svg`, `icon-train.svg`, `languages-flags.png`,
+`logo.svg`, `stars.svg`
 
 ---
 
-## What NOT to change
+## Inner Pages Build Order
 
-- `components/fancy/image/image-trail.tsx` — do not touch
-- `lib/utils.ts` — do not touch
-- `styles/figma-tokens.css` — do not touch
-- `app/globals.css` — do not touch (CSS is already written)
-- `app/page.tsx` — section order is final
+Build one page per session. Each page gets its own `app/[route]/page.tsx`. Navbar + Footer are already in `app/layout.tsx` — do not re-add them.
+
+| # | Page | Node ID | Route | Priority |
+|---|---|---|---|---|
+| 1 | Informations | 1:13939 | app/informations/page.tsx | HIGH — linked from Navbar |
+| 2 | Prices and Tickets | 1:17365 | app/prices/page.tsx | HIGH — linked from Navbar + Footer CTAs |
+| 3 | Routes | 1:23354 | app/routes/page.tsx | HIGH — linked from Navbar |
+| 4 | FAQs | 1:20537 | app/faqs/page.tsx | MEDIUM — linked from Footer |
+| 5 | Book | 1:24145 | app/book/page.tsx | MEDIUM — CTA target for all booking buttons |
+| 6 | Privatization | 1:17070 | app/privatization/page.tsx | LOW |
+| 7 | Careers | 1:23842 | app/careers/page.tsx | LOW |
 
 ---
 
-## When done
+## First Task for Next Session
 
-Update `docs/progress.md` with what was completed, then ask for commit approval.
+**Build `app/informations/page.tsx` from Figma node `1:13939`.**
+
+1. Arm figma-to-react hook (see CLAUDE.md workflow)
+2. Fetch Figma design context for node `1:13939` (file key: `wTd0GeN1Y2HWGw3nkii3t8`)
+3. Identify all section frames within the page — build each as a separate component in `components/sections/` following naming convention
+4. Create `app/informations/page.tsx` that imports those sections (no Navbar/Footer — already in layout)
+5. Run `npx tsc --noEmit` — 0 errors
+6. Update `docs/progress.md`
+7. Ask for commit approval
+
+Do not batch with other pages. One page = one session = one commit.

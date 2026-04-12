@@ -23,14 +23,16 @@ playwright@1.59.1     → dev dependency, chromium installed
 ```
 app/
   globals.css           ← @import "../styles/figma-tokens.css" THEN @import "tailwindcss"
+  layout.tsx            ← Navbar + Footer rendered here; persists across all pages
   page.tsx              ← imports sections only, no logic/styles
 components/
   fancy/image/
     image-trail.tsx     ← fancycomponents.dev ImageTrail (DO NOT rewrite)
-  sections/             ← one file per Figma section
-    Hero.tsx            ✅ node 8:783
-    Souvenirs.tsx       ✅ node 49:2977
-    GroupBookingCTA.tsx ✅ node 1:13740
+  layout/
+    Navbar.tsx          ← "use client"; sticky; scroll shadow; nav-link; btn-primary/secondary
+  sections/             ← one file per Figma section (all 12 homepage sections done ✅)
+  ui/
+    ScrollReveal.tsx    ← IntersectionObserver reveal; direction=up/left/right; delay prop
 lib/
   utils.ts              ← cn() helper: twMerge(clsx(inputs))
 styles/
@@ -60,20 +62,22 @@ public/figma-assets/    ← all images/SVGs served here; URL prefix: /figma-asse
 
 Figma file key: `wTd0GeN1Y2HWGw3nkii3t8`
 
-## Section Build Order (remaining)
+## Section Build Order (homepage — all done ✅)
 
 | #   | Section               | Node ID | Status  |
 | --- | --------------------- | ------- | ------- |
-| 1   | Group Booking CTA     | 1:13740 | ✅ done |
-| 2   | Footer                | 33:832  | pending |
-| 3   | Features              | 1:13279 | pending |
-| 4   | Practical Information | 49:2694 | pending |
-| 5   | Prices                | 1:13387 | pending |
-| 6   | Reviews               | 1:13645 | pending |
-| 7   | FAQ                   | 1:13767 | pending |
-| 8   | Our Location          | 1:13453 | pending |
-| 9   | Routes Timeline       | 1:13507 | pending |
-| 10  | Locations             | 49:2226 | pending |
+| 1   | Hero                  | 8:783   | ✅ done |
+| 2   | Souvenirs             | 49:2977 | ✅ done |
+| 3   | Features              | 1:13279 | ✅ done |
+| 4   | Group Booking CTA     | 1:13740 | ✅ done |
+| 5   | Practical Information | 49:2694 | ✅ done |
+| 6   | Prices                | 1:13387 | ✅ done |
+| 7   | Reviews               | 1:13645 | ✅ done |
+| 8   | FAQ                   | 1:13767 | ✅ done |
+| 9   | Our Location          | 1:13453 | ✅ done |
+| 10  | Routes Timeline       | 1:13507 | ✅ done |
+| 11  | Locations             | 49:2226 | ✅ done |
+| 12  | Footer                | 33:832  | ✅ done |
 
 ## Page Build Order (remaining)
 
@@ -82,12 +86,12 @@ Figma file key: `wTd0GeN1Y2HWGw3nkii3t8`
 | 1   | Informations       | 1:13939 | app/informations/page.tsx  | pending |
 | 2   | Prices and Tickets | 1:17365 | app/prices/page.tsx        | pending |
 | 3   | Routes             | 1:23354 | app/routes/page.tsx        | pending |
-| 4   | Careers            | 1:23842 | app/careers/page.tsx       | pending |
+| 4   | FAQs               | 1:20537 | app/faqs/page.tsx          | pending |
 | 5   | Book               | 1:24145 | app/book/page.tsx          | pending |
 | 6   | Privatization      | 1:17070 | app/privatization/page.tsx | pending |
-| 7   | FAQs               | 1:20537 | app/faqs/page.tsx          | pending |
+| 7   | Careers            | 1:23842 | app/careers/page.tsx       | pending |
 
-...
+Build one page per session. Navbar + Footer are in app/layout.tsx — never re-add to page files.
 
 ## Component Patterns That Work
 
@@ -216,6 +220,29 @@ import ImageTrail, {
 6. **`use client` directive** — required for any component using hooks (useState,
    useEffect, useAnimate, event handlers). Omit it for pure presentational components.
 
+7. **Server component importing "use client" component** — valid in Next.js App Router.
+   A server component (no "use client") CAN import and render a client component
+   (ScrollReveal, FAQ accordion, Navbar). Do not add "use client" to the parent just
+   because a child has it.
+
+8. **CSS accordion: use grid-template-rows trick, not max-height** — `max-height`
+   animations stutter and require guessing a max value. Use `.faq-answer-wrap` /
+   `.faq-answer-wrap.open` with `grid-template-rows: 0fr → 1fr` (already in globals.css).
+   Inner content needs `.faq-answer-inner` with `overflow: hidden`.
+
+9. **Infinite scroll columns: content must exceed container height** — for `reviews-track-down/up`
+   to loop seamlessly, the total height of one set of cards must be >= container height
+   (`h-[560px]`). If a column has few/short cards, add a gallery image or taller card
+   to that column to ensure enough content.
+
+10. **ScrollReveal breaks if parent has `overflow: hidden` without explicit height** —
+    IntersectionObserver fires immediately if the element is clipped before entering
+    viewport. Ensure ScrollReveal wrappers are inside scrollable containers, not clipped ones.
+
+11. **maskImage / WebkitMaskImage must be inline styles** — Tailwind cannot generate
+    `mask-image` with complex gradient values. This is the only approved exception to
+    the no-inline-styles rule. Use: `style={{ maskImage: "...", WebkitMaskImage: "..." }}`
+
 ## Design Tokens (styles/figma-tokens.css)
 
 ```css
@@ -237,6 +264,14 @@ import ImageTrail, {
 - Inspect only files relevant to the current task
 - Never scan the full codebase unless explicitly asked for an audit
 - After each session: update docs/progress.md
+- **Surgical edits only** — always use targeted line-level edits (Edit tool with old_string/new_string)
+  instead of full component rewrites. Only rewrite if explicitly asked to rebuild, or if > 60% of
+  the file changes. Rewriting a 150-line component to change 3 class names wastes 5-10x tokens.
+- **Run /compact after every 2 major tasks**, not after each small edit. Major task = new component,
+  full section rebuild, new page. Minor task = class swap, prop change, bug fix.
+- **Never run Playwright visual validation** unless explicitly requested by the user. It burns context
+  and the user reviews changes directly in the browser.
+- **One page per session** — inner pages only. Do not batch multiple pages. Finish, commit, end session.
 
 **Routing convention:** Each page lives at `app/[route]/page.tsx`.
 Shared layout (Navbar + Footer) goes in `app/layout.tsx`.
