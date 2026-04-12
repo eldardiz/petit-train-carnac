@@ -1,2 +1,225 @@
 @import "../styles/figma-tokens.css";
 @import "tailwindcss";
+
+/* ── Box sizing ─────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+/* ── Scroll-reveal system ───────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.from-left {
+  transform: translateX(-24px);
+}
+.reveal.from-right {
+  transform: translateX(24px);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ── Button hover — primary (filled) ───────────────────────── */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.22s;
+  pointer-events: none;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+.btn-primary:hover::after {
+  opacity: 1;
+}
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Ripple */
+.btn-primary .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(0);
+  animation: ripple-anim 0.55s linear;
+  pointer-events: none;
+}
+@keyframes ripple-anim {
+  to {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+/* ── Button hover — secondary (outlined) ───────────────────── */
+.btn-secondary {
+  transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.22s;
+}
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  background-color: rgba(90, 74, 110, 0.08);
+}
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+/* ── Nav link underline ─────────────────────────────────────── */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: currentColor;
+  transition: width 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.nav-link:hover::after,
+.nav-link[aria-current="page"]::after {
+  width: 100%;
+}
+
+/* ── Footer link hover ──────────────────────────────────────── */
+.footer-link {
+  transition: opacity 0.2s, transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.footer-link:hover {
+  opacity: 0.75;
+  transform: translateX(3px);
+}
+
+/* ── Card hover ─────────────────────────────────────────────── */
+.card-hover {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ── Social icon hover ──────────────────────────────────────── */
+.social-icon {
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.2s;
+}
+.social-icon:hover {
+  transform: translateY(-3px);
+  opacity: 0.8;
+}
+
+/* ── Reviews infinite scroll ────────────────────────────────── */
+@keyframes scroll-down {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+@keyframes scroll-up {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.reviews-track-down {
+  animation: scroll-down linear infinite;
+}
+.reviews-track-up {
+  animation: scroll-up linear infinite;
+}
+.reviews-container:hover .reviews-track-down,
+.reviews-container:hover .reviews-track-up {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reviews-track-down,
+  .reviews-track-up {
+    animation: none;
+  }
+}
+
+/* ── Navbar scroll shadow ───────────────────────────────────── */
+.navbar-scrolled {
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  transition: box-shadow 0.3s ease;
+}
+
+/* ── FAQ accordion ──────────────────────────────────────────── */
+.faq-answer-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.faq-answer-wrap.open {
+  grid-template-rows: 1fr;
+}
+.faq-answer-inner {
+  overflow: hidden;
+}
+
+/* ── Timeline line ──────────────────────────────────────────── */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #5a4a6e 8%,
+    #5a4a6e 92%,
+    transparent 100%
+  );
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 16px;
+    transform: none;
+  }
+}
