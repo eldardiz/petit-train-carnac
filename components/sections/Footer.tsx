@@ -42,7 +42,7 @@ export default function Footer() {
       </div>
 
       {/* CTA Block */}
-      <div className="relative w-full max-w-[1280px] px-8">
+      <div className="relative w-full max-w-[1280px] px-[5%]">
         <div className="flex flex-col lg:flex-row gap-8 items-start py-8">
           <div className="flex flex-col gap-8 max-w-[570px]">
             <p className="font-['Libre_Baskerville',serif] text-[#f7f7f0] text-[40px] leading-[1.15] tracking-[-2.8px]">
@@ -56,7 +56,7 @@ export default function Footer() {
                 {/* Cream CTA button */}
                 <Link
                   href="/book"
-                  className="inline-flex items-center gap-2 h-[45px] px-[22px] bg-[#f7f7f0] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
+                  className="btn-primary inline-flex items-center gap-2 h-[45px] px-[22px] bg-[#f7f7f0] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
                 >
                   <div className="relative shrink-0 w-5 h-5">
                     <Image
@@ -72,7 +72,7 @@ export default function Footer() {
                 {/* Outline button */}
                 <Link
                   href="/prices"
-                  className="inline-flex items-center justify-center h-[45px] px-[22px] bg-[#58496c] border border-[rgba(247,247,240,0.2)] rounded-[4px] text-[#f7f7f0] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
+                  className="btn-secondary inline-flex items-center justify-center h-[45px] px-[22px] bg-[#58496c] border border-[rgba(247,247,240,0.2)] rounded-[4px] text-[#f7f7f0] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
                 >
                   See Pricing
                 </Link>
@@ -83,7 +83,7 @@ export default function Footer() {
       </div>
 
       {/* Links Block */}
-      <div className="relative w-full max-w-[1280px] px-8 pt-12">
+      <div className="relative w-full max-w-[1280px] px-[5%] pt-12">
         <div className="flex flex-col lg:flex-row gap-12 items-start justify-between">
           {/* Logo + tagline */}
           <div className="flex flex-col gap-8 max-w-[320px]">
@@ -111,7 +111,7 @@ export default function Footer() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="font-['Roboto',sans-serif] font-light text-[#f7f7f0] text-base leading-6 hover:text-white transition-colors"
+                  className="footer-link font-['Roboto',sans-serif] font-light text-[#f7f7f0] text-base leading-6"
                 >
                   {link.label}
                 </Link>
@@ -152,7 +152,7 @@ export default function Footer() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="font-['Roboto',sans-serif] font-light text-[#f7f7f0] text-base leading-6 hover:text-white transition-colors"
+                  className="footer-link font-['Roboto',sans-serif] font-light text-[#f7f7f0] text-base leading-6"
                 >
                   {link.label}
                 </Link>
@@ -163,7 +163,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="relative w-full max-w-[1280px] px-8">
+      <div className="relative w-full max-w-[1280px] px-[5%]">
         <div className="border-t border-[rgba(233,234,235,0.2)] pt-8 flex flex-col sm:flex-row items-center justify-between gap-6 flex-wrap">
           <p className="font-['Inter',sans-serif] text-white text-base leading-6 whitespace-nowrap">
             © 2026 Built by Softbird. All rights reserved.
@@ -174,7 +174,7 @@ export default function Footer() {
                 key={icon.alt}
                 href={icon.href}
                 aria-label={icon.alt}
-                className="relative w-6 h-6 shrink-0"
+                className="social-icon relative w-6 h-6 shrink-0"
               >
                 <Image
                   src={icon.src}

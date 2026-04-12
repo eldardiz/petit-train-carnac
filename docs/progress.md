@@ -62,7 +62,23 @@
 - app/page.tsx updated with all 12 sections in visual order
 - Final npx tsc --noEmit: 0 errors
 
+### Done (April 12, 2026 — UI Polish & Animation Pass)
+- components/layout/Navbar.tsx ✅ — extracted from Hero, sticky with scroll shadow (navbar-scrolled), nav-link hover underlines, btn-primary/btn-secondary on CTA buttons
+- components/ui/ScrollReveal.tsx ✅ — IntersectionObserver reveal component with up/left/right direction + delay support
+- app/layout.tsx ✅ — Navbar imported and rendered above page content (persists across all routes)
+- components/sections/Hero.tsx ✅ — banner + navbar removed (now in layout), btn-primary/btn-secondary on hero CTAs, px-[5%] container
+- components/sections/Reviews.tsx ✅ — rebuilt with 3 infinite-scroll CSS columns (reviews-track-down/up), mask-image fade, card-hover, responsive (1→2→3 cols)
+- components/sections/FAQ.tsx ✅ — grid-cols-[35%_1fr] layout, single-open accordion with faq-answer-wrap CSS grid trick, btn-primary CTA, ScrollReveal stagger 50ms
+- components/sections/RoutesTimeline.tsx ✅ — timeline-line CSS added, connector dots restyled, btn-primary/btn-secondary on stop CTAs, ScrollReveal alternating left/right, px-[5%] container
+- components/sections/Features.tsx ✅ — px-[5%] container, card-hover on feature cards, ScrollReveal stagger 70ms
+- components/sections/PracticalInfo.tsx ✅ — px-[5%] container, ScrollReveal on all cards with stagger, btn-primary on Discover More
+- components/sections/Prices.tsx ✅ — px-[5%] container, ScrollReveal left/right on pricing cards
+- components/sections/OurLocation.tsx ✅ — px-[5%] container, ScrollReveal stagger 70ms on location items, rotate-[8.21deg] Tailwind instead of inline style
+- components/sections/Locations.tsx ✅ — px-[5%] container, card-hover on location cards, btn-primary on CTAs
+- components/sections/Footer.tsx ✅ — px-[5%] on all 3 wrapper divs, footer-link on nav links, social-icon on social icons, btn-primary/btn-secondary on CTAs
+- components/sections/GroupBookingCTA.tsx ✅ — max-w-[1280px] px-[5%] container, btn-primary on CTA
+- Final npx tsc --noEmit: 0 errors
+
 ### Next Steps
 - [ ] Export real image assets from Figma → public/figma-assets/
 - [ ] Build inner pages (Informations, Prices, Routes, Careers, Book, Privatization, FAQs)
-- [ ] Add Navbar as shared layout in app/layout.tsx

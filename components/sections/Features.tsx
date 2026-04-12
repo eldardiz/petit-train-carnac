@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const features = [
   {
@@ -31,7 +32,7 @@ export default function Features() {
   return (
     <section className="bg-[#f7f7f0] flex flex-col items-center gap-16 py-24">
       {/* Header row */}
-      <div className="w-full max-w-[1280px] px-8">
+      <div className="w-full max-w-[1280px] px-[5%] mx-auto">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-8">
           {/* Left: label + heading */}
           <div className="flex flex-col gap-3 max-w-[615px]">
@@ -57,49 +58,61 @@ export default function Features() {
           {/* Right: body text */}
           <div className="flex flex-col gap-5 max-w-[603px] font-['Inter',sans-serif] text-[18px] text-[#535862] leading-[1.2] tracking-[-0.54px]">
             <p>
-              The Petit Train de Carnac invites you to discover the town at a relaxed pace, comfortably seated aboard a sightseeing train designed for visitors who want to enjoy Carnac without effort.
+              The Petit Train de Carnac invites you to discover the town at a
+              relaxed pace, comfortably seated aboard a sightseeing train
+              designed for visitors who want to enjoy Carnac without effort.
             </p>
             <p>
-              During the tour, audio commentary provides clear and accessible information about the places you pass, helping you understand Carnac's history, landmarks, and atmosphere. This tourist train is ideal for visitors looking for a pleasant introduction to Carnac and its surroundings.
+              During the tour, audio commentary provides clear and accessible
+              information about the places you pass, helping you understand
+              Carnac&apos;s history, landmarks, and atmosphere. This tourist
+              train is ideal for visitors looking for a pleasant introduction to
+              Carnac and its surroundings.
             </p>
           </div>
         </div>
       </div>
 
       {/* Features grid + photo */}
-      <div className="w-full max-w-[1280px] px-8 flex flex-col lg:flex-row gap-16 items-center">
+      <div className="w-full max-w-[1280px] px-[5%] mx-auto flex flex-col lg:flex-row gap-16 items-center">
         {/* 2×2 feature grid */}
         <div className="flex flex-wrap gap-x-8 gap-y-12 flex-1">
-          {features.map((feature) => (
-            <div
+          {features.map((feature, index) => (
+            <ScrollReveal
               key={feature.title}
-              className="flex flex-col gap-5 items-start flex-1 min-w-[240px]"
+              delay={index * 70}
+              className="flex-1 min-w-[240px]"
             >
-              {/* Icon box */}
-              <div className="relative shrink-0 w-16 h-16 rounded-[10px] border border-[#e9eaeb] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] overflow-hidden">
-                <div aria-hidden="true" className="absolute inset-0 bg-[#58496c] pointer-events-none rounded-[10px]" />
-                <div className="absolute inset-[15px]">
-                  <Image
-                    src={feature.icon}
-                    alt=""
-                    fill
-                    className="object-contain"
+              <div className="card-hover flex flex-col gap-5 items-start h-full">
+                {/* Icon box */}
+                <div className="relative shrink-0 w-16 h-16 rounded-[10px] border border-[#e9eaeb] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] overflow-hidden">
+                  <div
                     aria-hidden="true"
+                    className="absolute inset-0 bg-[#58496c] pointer-events-none rounded-[10px]"
                   />
+                  <div className="absolute inset-[15px]">
+                    <Image
+                      src={feature.icon}
+                      alt=""
+                      fill
+                      className="object-contain"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <div className="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_1px_rgba(10,13,18,0.18),inset_0px_-2px_0px_0px_rgba(10,13,18,0.05)]" />
                 </div>
-                <div className="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_0px_1px_rgba(10,13,18,0.18),inset_0px_-2px_0px_0px_rgba(10,13,18,0.05)]" />
-              </div>
 
-              {/* Text */}
-              <div className="flex flex-col gap-2">
-                <p className="font-['Inter',sans-serif] font-semibold text-[20px] text-[#181d27] leading-[1.5] tracking-[-0.8px]">
-                  {feature.title}
-                </p>
-                <p className="font-['Inter',sans-serif] text-base text-[#535862] leading-6">
-                  {feature.description}
-                </p>
+                {/* Text */}
+                <div className="flex flex-col gap-2">
+                  <p className="font-['Inter',sans-serif] font-semibold text-[20px] text-[#181d27] leading-[1.5] tracking-[-0.8px]">
+                    {feature.title}
+                  </p>
+                  <p className="font-['Inter',sans-serif] text-base text-[#535862] leading-6">
+                    {feature.description}
+                  </p>
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 

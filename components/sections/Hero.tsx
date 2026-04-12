@@ -1,109 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
     <section className="bg-[#f7f7f0] overflow-hidden">
-      {/* Top announcement banner */}
-      <div className="bg-[#3f3053] border-b border-[rgba(213,215,218,0.4)] relative">
-        <div className="max-w-[1280px] mx-auto px-8 py-[6px] flex items-center justify-center">
-          <p className="text-[#f7f7f0] text-base leading-6 tracking-[-0.48px] text-center font-['Roboto',sans-serif]">
-            This website is part of Les Petits Trains du Morbihan. Discover our
-            other tours in{" "}
-            <a href="#" className="underline text-[#f7f7f0]">
-              Vannes
-            </a>{" "}
-            and{" "}
-            <a href="#" className="underline text-[#f7f7f0]">
-              Quiberon.
-            </a>
-          </p>
-        </div>
-      </div>
-
-      {/* Navbar */}
-      <nav className="bg-[#5a4a6e] h-20 flex items-center">
-        <div className="max-w-[1280px] mx-auto px-8 flex items-center justify-between w-full">
-          {/* Logo + Nav links */}
-          <div className="flex items-center gap-8">
-            <div className="relative h-11 w-[110px] shrink-0">
-              <Image
-                src="/figma-assets/logo.svg"
-                alt="Les Petits Trains du Morbihan"
-                fill
-                className="object-contain"
-              />
-            </div>
-            <div className="hidden lg:flex items-center gap-5">
-              <a
-                href="#"
-                className="text-[#f7f7f0] text-base leading-6 tracking-[-0.48px] font-['Roboto',sans-serif] whitespace-nowrap"
-              >
-                Home
-              </a>
-              <a
-                href="#"
-                className="text-[#f7f7f0] text-base leading-6 tracking-[-0.48px] font-['Roboto',sans-serif] whitespace-nowrap flex items-center gap-1"
-              >
-                The Route
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M5 7.5L10 12.5L15 7.5"
-                    stroke="#f7f7f0"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </a>
-              <a
-                href="#"
-                className="text-[#f7f7f0] text-base leading-6 tracking-[-0.48px] font-['Roboto',sans-serif] whitespace-nowrap"
-              >
-                Practical Information
-              </a>
-              <a
-                href="#"
-                className="text-[#f7f7f0] text-base leading-6 tracking-[-0.48px] font-['Roboto',sans-serif] whitespace-nowrap"
-              >
-                Prices &amp; Tickets
-              </a>
-              <a
-                href="#"
-                className="text-[#f7f7f0] text-base leading-6 tracking-[-0.48px] font-['Roboto',sans-serif] whitespace-nowrap"
-              >
-                FAQ
-              </a>
-              <a
-                href="#"
-                className="text-[#f7f7f0] text-base leading-6 tracking-[-0.48px] font-['Roboto',sans-serif] whitespace-nowrap"
-              >
-                Contact
-              </a>
-            </div>
-          </div>
-          {/* CTA buttons */}
-          <div className="flex items-center gap-3">
-            <button className="bg-[#5a4a6e] border border-[rgba(255,255,255,0.15)] h-[45px] px-[22px] rounded-[4px] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap">
-              See Prices
-            </button>
-            <button className="bg-[#f7f7f0] border border-[rgba(0,0,0,0.2)] h-[45px] px-[22px] rounded-[4px] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap">
-              Book your tour
-            </button>
-          </div>
-        </div>
-      </nav>
-
       {/* Main hero section: left text + right image */}
       <div className="flex flex-col lg:flex-row lg:items-stretch min-h-[721px] relative">
         {/* Left panel */}
         <div className="flex-1 flex items-center justify-end py-24 bg-[#f7f7f0] relative z-10">
-          <div className="w-full max-w-[640px] px-8">
+          <div className="w-full max-w-[640px] px-[5%]">
             <div className="pr-8 flex flex-col gap-10">
               {/* Heading block */}
               <div className="flex flex-col gap-6">
@@ -152,7 +57,10 @@ export default function Hero() {
 
               {/* CTA buttons */}
               <div className="flex items-center gap-3">
-                <button className="bg-[#5a4a6e] h-[45px] px-[22px] rounded-[4px] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap flex items-center gap-2 shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)]">
+                <Link
+                  href="/book"
+                  className="btn-primary bg-[#5a4a6e] h-[45px] px-[22px] rounded-[4px] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap inline-flex items-center gap-2 shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)]"
+                >
                   <div className="relative shrink-0 size-5">
                     <Image
                       src="/figma-assets/icon-ticket.svg"
@@ -163,10 +71,13 @@ export default function Hero() {
                     />
                   </div>
                   Book your tour
-                </button>
-                <button className="bg-[#f7f7f0] border border-[rgba(0,0,0,0.2)] h-[45px] px-[22px] rounded-[4px] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap">
+                </Link>
+                <Link
+                  href="/prices"
+                  className="btn-secondary bg-[#f7f7f0] border border-[rgba(0,0,0,0.2)] h-[45px] px-[22px] rounded-[4px] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap inline-flex items-center"
+                >
                   See Pricing
-                </button>
+                </Link>
               </div>
 
               {/* Divider */}
@@ -204,7 +115,9 @@ export default function Hero() {
                 </div>
 
                 <p className="font-['Roboto',sans-serif] text-[#535862] text-base leading-[1.2] tracking-[-0.48px] max-w-[499px]">
-                  <strong className="font-bold">The Petit Train de Carnac</strong>{" "}
+                  <strong className="font-bold">
+                    The Petit Train de Carnac
+                  </strong>{" "}
                   has a rating over 4.7 on Google, with over 6,000 reviews,
                   making it one of the most popular touristic in Carnac
                 </p>
@@ -258,7 +171,7 @@ export default function Hero() {
 
       {/* HeroBanner: Online Booking section */}
       <div className="bg-[#f7f7f0] border-t border-[rgba(0,0,0,0.15)] pt-[34px] pb-16">
-        <div className="max-w-[1280px] mx-auto px-8 flex flex-col gap-10">
+        <div className="max-w-[1280px] mx-auto px-[5%] flex flex-col gap-10">
           {/* Section label */}
           <div className="flex items-center gap-2">
             <div className="relative shrink-0 w-[19px] h-[19px]">

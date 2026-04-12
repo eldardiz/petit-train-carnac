@@ -16,7 +16,7 @@ export default function GroupBookingCTA() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-[1440px] mx-auto px-8 lg:px-16 py-[112px]">
+      <div className="relative z-10 max-w-[1280px] mx-auto px-[5%] py-[112px]">
         <div className="flex flex-col lg:flex-row lg:items-start gap-16 lg:gap-20">
           {/* Left column: label + heading */}
           <div className="flex-1 flex flex-col gap-3">
@@ -55,7 +55,7 @@ export default function GroupBookingCTA() {
             <div>
               <Link
                 href="#"
-                className="inline-flex items-center gap-2 h-[45px] px-[22px] bg-[#f7f7f0] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
+                className="btn-primary inline-flex items-center gap-2 h-[45px] px-[22px] bg-[#f7f7f0] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
               >
                 <div className="relative shrink-0 size-5">
                   <Image
