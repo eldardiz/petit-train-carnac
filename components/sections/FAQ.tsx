@@ -3,9 +3,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import type { ReactNode } from "react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
-const faqs = [
+interface FaqData {
+  question: string;
+  answer: string;
+}
+
+const defaultFaqs: FaqData[] = [
   {
     question: "What is the Petit Train de Carnac?",
     answer:
@@ -63,7 +69,7 @@ function FaqItem({ question, answer, open, onToggle }: FaqItemProps) {
           }
         }}
         className="w-full flex items-start justify-between gap-6 text-left cursor-pointer"
-        aria-expanded={open}
+        aria-expanded={open ? "true" : "false"}
       >
         <p className="font-['Libre_Baskerville',serif] text-[20px] text-[#181d27] leading-[1.1] tracking-[-1.4px]">
           {question}
@@ -87,7 +93,19 @@ function FaqItem({ question, answer, open, onToggle }: FaqItemProps) {
   );
 }
 
-export default function FAQ() {
+interface FAQProps {
+  faqs?: FaqData[];
+  label?: string;
+  heading?: ReactNode;
+  description?: string;
+}
+
+export default function FAQ({
+  faqs = defaultFaqs,
+  label = "FAQ",
+  heading = <>Frequently <em className="text-[#58496c]">Asked Questions</em></>,
+  description = "Find clear answers to the most common questions about the Petit Train de Carnac.",
+}: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
@@ -106,15 +124,14 @@ export default function FAQ() {
               />
             </div>
             <p className="font-['Libre_Baskerville',serif] italic text-[#5a4a6e] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
-              FAQ
+              {label}
             </p>
           </div>
           <h2 className="font-['Libre_Baskerville',serif] text-[32px] sm:text-[40px] md:text-[48px] text-[#181d27] leading-[1.1] tracking-[-1.5px] sm:tracking-[-2.5px] md:tracking-[-3.36px] [text-wrap:balance] break-words">
-            Frequently <em className="text-[#58496c]">Asked Questions</em>
+            {heading}
           </h2>
           <p className="font-['Roboto',sans-serif] text-[#535862] text-[16px] leading-[1.2] tracking-[-0.48px]">
-            Find clear answers to the most common questions about the Petit
-            Train de Carnac.
+            {description}
           </p>
           <Link
             href="/book"

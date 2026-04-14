@@ -28,7 +28,7 @@ export default function Navbar() {
       {/* Top announcement banner */}
       <div className="bg-[#3f3053] border-b border-[rgba(213,215,218,0.4)]">
         <div className="max-w-[1280px] mx-auto px-5 xl:px-0 py-[6px] flex items-center justify-center">
-          <p className="text-[#f7f7f0] text-base leading-6 tracking-[-0.48px] text-center font-['Roboto',sans-serif]">
+          <p className="text-[#f7f7f0] text-[12px] md:text-base leading-5 md:leading-6 tracking-[-0.48px] text-center font-['Roboto',sans-serif]">
             This website is part of Les Petits Trains du Morbihan. Discover our
             other tours in{" "}
             <a href="#" className="underline text-[#f7f7f0]">

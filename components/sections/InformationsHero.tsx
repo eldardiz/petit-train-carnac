@@ -1,6 +1,21 @@
 import Image from "next/image";
+import type { ReactNode } from "react";
 
-export default function InformationsHero() {
+interface InformationsHeroProps {
+  label: string;
+  heading: ReactNode;
+  description: string;
+  imageSrc: string;
+  imageAlt: string;
+}
+
+export default function InformationsHero({
+  label,
+  heading,
+  description,
+  imageSrc,
+  imageAlt,
+}: InformationsHeroProps) {
   return (
     <section className="bg-[#f7f7f0] pt-20 pb-0 overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-5 xl:px-0">
@@ -18,25 +33,18 @@ export default function InformationsHero() {
               />
             </div>
             <p className="font-['Libre_Baskerville',serif] italic text-[#5a4a6e] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
-              Informations
+              {label}
             </p>
           </div>
 
           {/* Heading */}
           <h1 className="font-['Libre_Baskerville',serif] text-[clamp(36px,5vw,60px)] leading-[1.1] tracking-[-4.2px] text-[#181d27] break-words">
-            Practical information for the{" "}
-            <em className="italic text-[#5a4a6e] not-italic font-['Libre_Baskerville',serif] italic">
-              Petit Train de Carnac
-            </em>
+            {heading}
           </h1>
 
           {/* Supporting text */}
           <p className="font-['Roboto',sans-serif] text-base leading-[1.2] tracking-[-0.48px] text-[#535862] max-w-[551px]">
-            Here you will find all the practical information you need before
-            joining the Petit Train de Carnac. Learn about the departure point,
-            tour duration, schedules, accessibility, and booking
-            recommendations, so you can plan your visit to Carnac with
-            confidence and enjoy a smooth sightseeing experience.
+            {description}
           </p>
         </div>
       </div>
@@ -44,8 +52,8 @@ export default function InformationsHero() {
       {/* Full-width banner image */}
       <div className="relative w-full max-w-[1280px] mx-auto h-[320px] md:h-[420px] lg:h-[512px] overflow-hidden rounded-tl-2xl rounded-tr-2xl md:rounded-tl-[48px] md:rounded-tr-[48px]">
         <Image
-          src="/figma-assets/PracticalInformationHero.jpg"
-          alt="Le Petit Train de Carnac au bord de la mer"
+          src={imageSrc}
+          alt={imageAlt}
           fill
           className="object-cover"
           priority

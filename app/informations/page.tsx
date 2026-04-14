@@ -15,7 +15,20 @@ export const metadata = {
 export default function InformationsPage() {
   return (
     <main>
-      <InformationsHero />
+      <InformationsHero
+        label="Informations"
+        heading={
+          <>
+            Practical information for the{" "}
+            <em className="italic text-[#5a4a6e] not-italic font-['Libre_Baskerville',serif] italic">
+              Petit Train de Carnac
+            </em>
+          </>
+        }
+        description="Here you will find all the practical information you need before joining the Petit Train de Carnac. Learn about the departure point, tour duration, schedules, accessibility, and booking recommendations, so you can plan your visit to Carnac with confidence and enjoy a smooth sightseeing experience."
+        imageSrc="/figma-assets/PracticalInformationHero.jpg"
+        imageAlt="Le Petit Train de Carnac au bord de la mer"
+      />
       <InformationsSchedule />
       <Prices />
       <InformationsIntro />

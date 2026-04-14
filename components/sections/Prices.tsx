@@ -23,6 +23,7 @@ export default function Prices() {
           src="/figma-assets/prices-bg.jpg"
           alt=""
           fill
+          sizes="100vw"
           className="object-cover invert"
         />
       </div>

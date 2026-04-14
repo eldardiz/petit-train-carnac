@@ -1,7 +1,90 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 
-export default function Hero() {
+interface HeroProps {
+  label?: string;
+  heading?: ReactNode;
+  description?: ReactNode;
+  tagline?: ReactNode;
+  buttons?: ReactNode;
+  googleBadgeText?: string;
+  rightImageSrc?: string;
+  rightImageAlt?: string;
+  rightCard?: ReactNode;
+  showBottomBanner?: boolean;
+}
+
+const defaultHeading = (
+  <>
+    Discover{" "}
+    <em className="italic text-[#5a4a6e] not-[font-style:normal]">Carnac</em>{" "}
+    aboard the Petit Train
+  </>
+);
+
+const defaultDescription = (
+  <>
+    The Petit Train de Carnac offers a guided sightseeing tour through the town
+    and its surroundings. Discover the world&apos;s most beautiful Neolithic
+    site on this <strong className="font-bold">50-minute guided tour.</strong>{" "}
+    It is an easy and comfortable way to discover Carnac, its heritage, and its
+    iconic landscapes, without the need for long walks.
+  </>
+);
+
+const defaultButtons = (
+  <>
+    <Link
+      href="/book"
+      className="btn-primary bg-[#5a4a6e] h-[45px] px-[22px] rounded-[4px] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap inline-flex items-center shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)]"
+    >
+      Book your tour
+    </Link>
+    <Link
+      href="/prices"
+      className="btn-secondary bg-[#f7f7f0] border border-[rgba(0,0,0,0.2)] h-[45px] px-[22px] rounded-[4px] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap inline-flex items-center"
+    >
+      See Pricing
+    </Link>
+  </>
+);
+
+const defaultRightCard = (
+  <div className="absolute bottom-[514px] lg:bottom-[30px] left-1/2 -translate-x-1/2 lg:left-[189px] lg:translate-x-0 bg-[rgba(90,74,110,0.65)] border border-[rgba(255,255,255,0.2)] rounded-xl p-6 w-[499px] max-w-[calc(100%-32px)] flex flex-col gap-4 z-20">
+    <div className="flex items-start justify-between gap-4">
+      <p className="font-['Roboto',sans-serif] font-semibold text-[20px] leading-[1.1] text-white tracking-[-0.8px] max-w-[312px]">
+        Guided sightseeing tour with audio commentary in 16 languages
+      </p>
+      <div className="relative h-[43px] w-[83px] shrink-0 overflow-hidden rounded">
+        <Image
+          src="/figma-assets/languages-flags.png"
+          alt="Language flags"
+          fill
+          className="object-cover"
+        />
+      </div>
+    </div>
+    <p className="font-['Roboto',sans-serif] font-normal text-[14px] leading-[1.4] text-white tracking-[-0.56px] max-w-[312px]">
+      French, English, German, Spanish, Italian, Portuguese, Dutch, Russian,
+      Chinese, Japanese, Swedish, Danish, Polish, Arabic, Croatian, and
+      Slovenian.
+    </p>
+  </div>
+);
+
+export default function Hero({
+  label = "Le Petit Trains de Morbihan · Carnac",
+  heading = defaultHeading,
+  description = defaultDescription,
+  tagline = "Perfect for families, couples, seniors, and visitors of all ages.",
+  buttons = defaultButtons,
+  googleBadgeText = "The Petit Train de Carnac has a rating over 4.7 on Google, with over 6,000 reviews, making it one of the most popular touristic attractions in Carnac.",
+  rightImageSrc = "/figma-assets/hero-image.jpg",
+  rightImageAlt = "Le Petit Train de Carnac on a scenic route",
+  rightCard = defaultRightCard,
+  showBottomBanner = true,
+}: HeroProps) {
   return (
     <section className="bg-[#f7f7f0] overflow-hidden">
       {/* Main hero section: left text + right image */}
@@ -24,52 +107,30 @@ export default function Hero() {
                     />
                   </div>
                   <p className="font-['Libre_Baskerville',serif] italic text-[#5a4a6e] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
-                    Le Petit Trains de Morbihan · Carnac
+                    {label}
                   </p>
                 </div>
 
                 {/* Main heading */}
                 <h1 className="font-['Libre_Baskerville',serif] text-[36px] sm:text-[44px] md:text-[52px] lg:text-[60px] leading-[1.1] tracking-[-1.8px] sm:tracking-[-2.4px] md:tracking-[-3.2px] lg:tracking-[-4.2px] text-[#181d27] not-italic w-full break-words">
-                  Discover{" "}
-                  <em className="italic text-[#5a4a6e] not-[font-style:normal]">
-                    Carnac
-                  </em>{" "}
-                  aboard the Petit Train
+                  {heading}
                 </h1>
 
                 {/* Description */}
                 <p className="font-['Roboto',sans-serif] text-[#535862] text-base leading-[1.2] tracking-[-0.48px]">
-                  The Petit Train de Carnac offers a guided sightseeing tour
-                  through the town and its surroundings. Discover the
-                  world&apos;s most beautiful Neolithic site on this{" "}
-                  <strong className="font-bold">50-minute guided tour.</strong>{" "}
-                  It is an easy and comfortable way to discover Carnac, its
-                  heritage, and its iconic landscapes, without the need for long
-                  walks.
+                  {description}
                 </p>
 
                 {/* Tagline */}
-                <p className="font-['Roboto',sans-serif] font-semibold text-[#535862] text-base leading-[1.2] tracking-[-0.48px]">
-                  Perfect for families, couples, seniors, and visitors of all
-                  ages.
-                </p>
+                {tagline && (
+                  <p className="font-['Roboto',sans-serif] font-semibold text-[#535862] text-base leading-[1.2] tracking-[-0.48px]">
+                    {tagline}
+                  </p>
+                )}
               </div>
 
               {/* CTA buttons */}
-              <div className="flex items-center gap-3">
-                <Link
-                  href="/book"
-                  className="btn-primary bg-[#5a4a6e] h-[45px] px-[22px] rounded-[4px] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap inline-flex items-center shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)]"
-                >
-                  Book your tour
-                </Link>
-                <Link
-                  href="/prices"
-                  className="btn-secondary bg-[#f7f7f0] border border-[rgba(0,0,0,0.2)] h-[45px] px-[22px] rounded-[4px] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap inline-flex items-center"
-                >
-                  See Pricing
-                </Link>
-              </div>
+              <div className="flex items-center gap-3">{buttons}</div>
 
               {/* Divider */}
               <hr className="border-t border-[rgba(0,0,0,0.12)] w-[554px] max-w-full" />
@@ -106,12 +167,7 @@ export default function Hero() {
                 </div>
 
                 <p className="font-['Roboto',sans-serif] text-[#535862] text-base leading-[1.2] tracking-[-0.48px] max-w-[499px]">
-                  <strong className="font-bold">
-                    The Petit Train de Carnac
-                  </strong>{" "}
-                  has a rating over 4.7 on Google, with over 6,000 reviews,
-                  making it one of the most popular touristic attractions in
-                  Carnac.
+                  {googleBadgeText}
                 </p>
               </div>
             </div>
@@ -129,81 +185,64 @@ export default function Hero() {
           {/* Hero image */}
           <div className="absolute inset-0">
             <Image
-              src="/figma-assets/hero-image.jpg"
-              alt="Le Petit Train de Carnac on a scenic route"
+              src={rightImageSrc}
+              alt={rightImageAlt}
               fill
               className="object-cover"
               priority
             />
           </div>
 
-          {/* Info card overlay */}
-          <div className="absolute bottom-[514px] lg:bottom-[30px] left-1/2 -translate-x-1/2 lg:left-[189px] lg:translate-x-0 bg-[rgba(90,74,110,0.65)] border border-[rgba(255,255,255,0.2)] rounded-xl p-6 w-[499px] max-w-[calc(100%-32px)] flex flex-col gap-4 z-20">
-            <div className="flex items-start justify-between gap-4">
-              <p className="font-['Roboto',sans-serif] font-semibold text-[20px] leading-[1.1] text-white tracking-[-0.8px] max-w-[312px]">
-                Guided sightseeing tour with audio commentary in 16 languages
-              </p>
-              <div className="relative h-[43px] w-[83px] shrink-0 overflow-hidden rounded">
-                <Image
-                  src="/figma-assets/languages-flags.png"
-                  alt="Language flags"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-            <p className="font-['Roboto',sans-serif] font-normal text-[14px] leading-[1.4] text-white tracking-[-0.56px] max-w-[312px]">
-              French, English, German, Spanish, Italian, Portuguese, Dutch,
-              Russian, Chinese, Japanese, Swedish, Danish, Polish, Arabic,
-              Croatian, and Slovenian.
-            </p>
-          </div>
+          {/* Overlay card */}
+          {rightCard}
         </div>
       </div>
 
       {/* HeroBanner: Online Booking section */}
-      <div className="bg-[#f7f7f0] border-t border-[rgba(0,0,0,0.15)] pt-[34px] pb-16">
-        <div className="max-w-[1280px] mx-auto px-5 xl:px-0 flex flex-col gap-10">
-          {/* Section label */}
-          <div className="flex items-center gap-2">
-            <div className="relative shrink-0 w-[19px] h-[19px]">
-              <Image
-                src="/figma-assets/icon-train.svg"
-                alt=""
-                fill
-                className="object-contain"
-                aria-hidden="true"
-              />
-            </div>
-            <p className="font-['Libre_Baskerville',serif] italic text-[#5a4a6e] text-base leading-6 tracking-[-0.48px]">
-              Important Note
-            </p>
-          </div>
-
-          {/* Content row */}
-          <div className="flex flex-col lg:flex-row lg:items-start gap-8">
-            {/* Heading */}
-            <div className="lg:w-[559px] shrink-0">
-              <h2 className="font-['Libre_Baskerville',serif] text-[32px] sm:text-[40px] md:text-[48px] leading-[1.1] tracking-[-1.5px] sm:tracking-[-2.5px] md:tracking-[-3.36px] text-[#181d27] not-italic break-words">
-                Online Booking
-              </h2>
-            </div>
-            {/* Supporting text */}
-            <div className="flex-1">
-              <p className="font-['Inter',sans-serif] font-normal text-[20px] leading-[30px] text-[#535862]">
-                Booking is possible but not mandatory. You can book up to
-                <strong className="font-bold"> 2 hours </strong> before the
-                desired service. Don&apos;t forget to consider travel time and
-                parking at the site. After this deadline, go directly to the
-                departure point and purchase your tickets at the ticket office
-                or from the driver.
-                <br />
-                Not all seats are available for online sale.
+      {showBottomBanner && (
+        <div className="bg-[#f7f7f0] border-t border-[rgba(0,0,0,0.15)] pt-[34px] pb-16">
+          <div className="max-w-[1280px] mx-auto px-5 xl:px-0 flex flex-col gap-10">
+            {/* Section label */}
+            <div className="flex items-center gap-2">
+              <div className="relative shrink-0 w-[19px] h-[19px]">
+                <Image
+                  src="/figma-assets/icon-train.svg"
+                  alt=""
+                  fill
+                  className="object-contain"
+                  aria-hidden="true"
+                />
+              </div>
+              <p className="font-['Libre_Baskerville',serif] italic text-[#5a4a6e] text-base leading-6 tracking-[-0.48px]">
+                Important Note
               </p>
+            </div>
+
+            {/* Content row */}
+            <div className="flex flex-col lg:flex-row lg:items-start gap-8">
+              {/* Heading */}
+              <div className="lg:w-[559px] shrink-0">
+                <h2 className="font-['Libre_Baskerville',serif] text-[32px] sm:text-[40px] md:text-[48px] leading-[1.1] tracking-[-1.5px] sm:tracking-[-2.5px] md:tracking-[-3.36px] text-[#181d27] not-italic break-words">
+                  Online Booking
+                </h2>
+              </div>
+              {/* Supporting text */}
+              <div className="flex-1">
+                <p className="font-['Inter',sans-serif] font-normal text-[20px] leading-[30px] text-[#535862]">
+                  Booking is possible but not mandatory. You can book up to
+                  <strong className="font-bold"> 2 hours </strong> before the
+                  desired service. Don&apos;t forget to consider travel time and
+                  parking at the site. After this deadline, go directly to the
+                  departure point and purchase your tickets at the ticket office
+                  or from the driver.
+                  <br />
+                  Not all seats are available for online sale.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </section>
   );
 }
