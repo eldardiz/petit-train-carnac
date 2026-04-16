@@ -1,35 +1,42 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import Lenis from 'lenis'
 import { usePathname } from 'next/navigation'
 
 export default function LenisProvider({ children }: { children: React.ReactNode }) {
-  const lenisRef = useRef<Lenis | null>(null)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const lenisRef = useRef<any>(null)
   const pathname = usePathname()
 
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      touchMultiplier: 1.5,
-      infinite: false,
-    })
-    lenisRef.current = lenis
-
     let rafId: number
+    let destroyed = false
 
-    function raf(time: number) {
-      lenis.raf(time)
+    import('lenis').then(({ default: Lenis }) => {
+      if (destroyed) return
+
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        touchMultiplier: 1.5,
+        infinite: false,
+      })
+      lenisRef.current = lenis
+
+      function raf(time: number) {
+        lenis.raf(time)
+        rafId = requestAnimationFrame(raf)
+      }
       rafId = requestAnimationFrame(raf)
-    }
-
-    rafId = requestAnimationFrame(raf)
+    })
 
     return () => {
+      destroyed = true
       cancelAnimationFrame(rafId)
-      lenis.destroy()
-      lenisRef.current = null
+      if (lenisRef.current) {
+        lenisRef.current.destroy()
+        lenisRef.current = null
+      }
     }
   }, [])
 
