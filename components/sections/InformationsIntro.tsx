@@ -16,7 +16,7 @@ export default function InformationsIntro() {
             />
           </div>
           <p className="font-['Libre_Baskerville',serif] italic text-[#5a4a6e] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
-            Important Note
+            Note Importante
           </p>
         </div>
 
@@ -24,19 +24,12 @@ export default function InformationsIntro() {
         <div className="flex flex-col lg:flex-row gap-8 items-start">
           <div className="lg:w-[559px] shrink-0">
             <h2 className="font-['Libre_Baskerville',serif] text-[clamp(36px,4vw,48px)] leading-[1.1] tracking-[-3.36px] text-[#181d27]">
-              Online Booking
+              Réservation en Ligne
             </h2>
           </div>
           <div className="flex-1">
             <p className="font-['Inter',sans-serif] text-[18px] md:text-[20px] leading-[1.5] text-[#535862]">
-              Booking is possible but not mandatory. You can book up to{" "}
-              <strong className="font-bold text-[#181d27]">2 hours</strong>{" "}
-              before the desired service. Don&rsquo;t forget to consider travel time
-              and parking at the site. After this deadline, go directly to the
-              departure point and purchase your tickets at the ticket office or
-              from the driver.
-              <br />
-              Not all seats are available for online sale.
+             La réservation est possible mais non obligatoire. Vous pouvez réserver jusqu&apos;à 2 heures avant le départ souhaité. N&apos;oubliez pas de prévoir le temps de trajet et le stationnement sur place. Passé ce délai, rendez-vous directement au point de départ et achetez vos billets au guichet ou auprès du conducteur.
             </p>
           </div>
         </div>
