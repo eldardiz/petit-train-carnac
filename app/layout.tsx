@@ -58,8 +58,8 @@ export default function RootLayout({
     <html lang="fr" className={`${libreBaskerville.variable} ${roboto.variable} ${inter.variable} ${nunito.variable} ${raleway.variable}`}>
       <body>
         <Navbar />
-        {/* Spacer for fixed header: announcement banner ~36px + nav 80px */}
-        <div aria-hidden="true" className="h-[116px]" />
+        {/* Spacer for fixed header: announcement banner + nav 80px (banner can wrap on mobile) */}
+        <div aria-hidden="true" className="h-[152px] sm:h-[116px]" />
         {children}
         <Footer />
       </body>

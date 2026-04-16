@@ -17,7 +17,7 @@ export default function GroupBookingCTA() {
 
       {/* Content */}
       <div className="relative z-10 max-w-[1280px] mx-auto px-5 xl:px-0 py-[112px]">
-        <div className="flex flex-col lg:flex-row lg:items-start gap-16 lg:gap-20">
+        <div className="flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-20">
           {/* Left column: label + heading */}
           <div className="flex-1 flex flex-col gap-3">
             {/* Section label */}

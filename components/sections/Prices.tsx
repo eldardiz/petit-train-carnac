@@ -2,7 +2,7 @@ import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const individualRows = [
-  { label: "Adults", price: "8€" },
+  { label: "Adults", price: "8,5€" },
   { label: "Children under 12", price: "5€" },
 ];
 

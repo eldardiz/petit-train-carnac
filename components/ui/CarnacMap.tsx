@@ -37,10 +37,12 @@ export default function CarnacMap() {
 
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
+    let cancelled = false;
 
     // Leaflet must be imported client-side only
     import("leaflet").then((L) => {
       import("leaflet/dist/leaflet.css");
+      if (cancelled || !containerRef.current) return;
 
       const map = L.map(containerRef.current!, {
         center: [47.5880, -3.0420],
@@ -85,6 +87,7 @@ export default function CarnacMap() {
     });
 
     return () => {
+      cancelled = true;
       mapRef.current?.remove();
       mapRef.current = null;
     };

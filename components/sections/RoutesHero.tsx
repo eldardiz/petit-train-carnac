@@ -105,7 +105,7 @@ export default function RoutesHero({
         >
           <div className="relative w-4 h-4 shrink-0">
             <Image
-              src="/figma-assets/icon-train-sm.svg"
+              src="/figma-assets/DownloadWhite.svg"
               alt=""
               fill
               className="object-contain"
@@ -120,7 +120,7 @@ export default function RoutesHero({
         >
           <div className="relative w-4 h-4 shrink-0">
             <Image
-              src="/figma-assets/icon-ticket.svg"
+              src="/figma-assets/DownloadBlack.svg"
               alt=""
               fill
               className="object-contain"

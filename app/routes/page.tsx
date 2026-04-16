@@ -70,7 +70,7 @@ export default function RoutesPage() {
             comfort of the Petit Train.
           </p>
         }
-        imageSrc="/figma-assets/stop-1.jpg"
+        imageSrc="/figma-assets/RoutesHero.jpg"
         imageAlt="Route map of the Petit Train de Carnac — click to enlarge"
         lightbox
       />
@@ -108,8 +108,8 @@ export default function RoutesPage() {
             </p>
           </>
         }
-        imageSrc="/figma-assets/stop-3.jpg"
-        imageAlt="La Trinité sur Mer harbour — a stop on the Petit Train de Carnac route"
+        imageSrc="/figma-assets/WhiteBridge.png"
+        imageAlt="White bridge along the Petit Train de Carnac route"
       />
 
       {/* Section 4: Timeline of stops */}

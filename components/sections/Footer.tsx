@@ -2,21 +2,21 @@ import Image from "next/image";
 import Link from "next/link";
 
 const quickLinks = [
-  { label: "Home", href: "/" },
-  { label: "The Route", href: "/routes" },
-  { label: "Practical information", href: "/informations" },
-  { label: "Prices", href: "/prices" },
+  { label: "Accueil", href: "/" },
+  { label: "Le Parcours", href: "/routes" },
+  { label: "Informations Pratiques", href: "/informations" },
+  { label: "Tarifs", href: "/prices" },
   { label: "FAQ", href: "/faqs" },
-  { label: "Contact", href: "/contact" },
+  { label: "Carrières", href: "/careers" },
 ];
 
 const otherLinks = [
-  { label: "Privacy Policy", href: "/privacy" },
-  { label: "Terms of Use", href: "/terms" },
-  { label: "Cookie Policy", href: "/cookies" },
-  { label: "Prices", href: "/prices" },
+  { label: "Politique de Confidentialité", href: "/privacy" },
+  { label: "Conditions d'Utilisation", href: "/terms" },
+  { label: "Politique Cookies", href: "/cookies" },
+  { label: "Tarifs", href: "/prices" },
   { label: "FAQ", href: "/faqs" },
-  { label: "Contact", href: "/contact" },
+  { label: "Privatisation", href: "/privatisation" },
 ];
 
 const socialIcons = [
@@ -38,30 +38,30 @@ export default function Footer() {
             fill
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-[rgba(58,40,83,0.75)]" />
+          <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative z-10 w-full max-w-[1280px] mx-auto px-5 xl:px-0 py-16">
           <div className="flex flex-col lg:flex-row gap-8 items-start">
             <div className="flex flex-col gap-8 max-w-[570px]">
               <p className="font-['Libre_Baskerville',serif] text-[#f7f7f0] text-[28px] sm:text-[34px] md:text-[40px] leading-[1.15] tracking-[-1.3px] sm:tracking-[-2px] md:tracking-[-2.8px] break-words">
-                Ready to discover Carnac in a simple and enjoyable way?
+                Prêt à découvrir Carnac de façon simple et agréable&nbsp;?
               </p>
               <div className="flex flex-col gap-8 items-start">
                 <p className="font-['Roboto',sans-serif] font-light text-white text-[18px] leading-[1.5] tracking-[-0.54px] w-full">
-                  Join the Petit Train de Carnac for a guided sightseeing tour that combines history, landscapes, and comfort. Discover the famous Carnac menhirs, white sand beaches, and the harbour of La Trinité sur Mer without long walks and with clear audio commentary throughout the journey.
+                  Embarquez à bord du Petit Train de Carnac pour une visite guidée alliant histoire, paysages et confort. Découvrez les célèbres menhirs de Carnac, les plages de sable blanc et le port de La Trinité-sur-Mer, sans fatigue et avec un commentaire audio clair tout au long du parcours.
                 </p>
                 <div className="flex gap-3 items-center flex-wrap">
                   <Link
                     href="/book"
                     className="btn-primary inline-flex items-center h-[45px] px-[22px] bg-[#f7f7f0] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
                   >
-                    Book your tour
+                    Réserver
                   </Link>
                   <Link
                     href="/prices"
                     className="btn-secondary inline-flex items-center justify-center h-[45px] px-[22px] bg-transparent border border-[rgba(247,247,240,0.4)] rounded-[4px] text-[#f7f7f0] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
                   >
-                    See Pricing
+                    Voir les Tarifs
                   </Link>
                 </div>
               </div>
@@ -93,7 +93,7 @@ export default function Footer() {
             {/* Quick Links */}
             <div className="flex flex-col gap-1 w-[156px]">
               <p className="font-['Inter',sans-serif] font-semibold text-[#f7f7f0] text-base leading-6 mb-1">
-                Quick Links
+                Liens Rapides
               </p>
               {quickLinks.map((link) => (
                 <Link

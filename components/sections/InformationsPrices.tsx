@@ -68,7 +68,7 @@ export default function InformationsPrices() {
             <div className="flex flex-col gap-0">
               <div className="flex items-center justify-between py-2 border-b border-[rgba(0,0,0,0.15)]">
                 <span className="font-['Roboto',sans-serif] text-base text-[#232323]">Adults</span>
-                <span className="font-['Roboto',sans-serif] font-extrabold text-[18px] text-[#58496c]">8€</span>
+                <span className="font-['Roboto',sans-serif] font-extrabold text-[18px] text-[#58496c]">8,5€</span>
               </div>
               <div className="flex items-center justify-between py-2 border-b border-[rgba(0,0,0,0.15)]">
                 <span className="font-['Roboto',sans-serif] text-base text-[#232323]">Children under 12</span>

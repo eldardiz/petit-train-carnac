@@ -16,7 +16,7 @@ export default function InformationsCTA() {
       </div>
 
       <div className="relative z-10 max-w-[1280px] mx-auto px-5 xl:px-0">
-        <div className="flex flex-col lg:flex-row gap-20 items-start">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-20 items-start">
           {/* Left: section label + heading */}
           <div className="flex-1 flex flex-col gap-3">
             <div className="flex items-center gap-2">
