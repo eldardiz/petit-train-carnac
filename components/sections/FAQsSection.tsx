@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
+import TransitionLink from '@/components/ui/TransitionLink'
 
 const faqs = [
   {
@@ -51,9 +51,9 @@ const faqs = [
         Les tarifs varient en fonction de l&apos;âge et de la taille du groupe. Les adultes et les
         enfants de moins de 12 ans bénéficient de tarifs différents. Les tarifs complets sont
         disponibles sur la{' '}
-        <Link href="/prices" className="underline hover:text-[#5a4a6e] transition-colors">
+        <TransitionLink href="/prices" className="underline hover:text-[#5a4a6e] transition-colors">
           page Tarifs et Billets
-        </Link>
+        </TransitionLink>
         .
       </>
     ),
@@ -85,9 +85,9 @@ const faqs = [
         Oui. Le Petit Train de Carnac peut être privatisé pour des événements d&apos;entreprise, des
         associations, des groupes scolaires et des occasions privées. Un formulaire de demande dédié
         est disponible sur la{' '}
-        <Link href="/privatisation" className="underline hover:text-[#5a4a6e] transition-colors">
+        <TransitionLink href="/privatisation" className="underline hover:text-[#5a4a6e] transition-colors">
           page Privatisation
-        </Link>
+        </TransitionLink>
         .
       </>
     ),

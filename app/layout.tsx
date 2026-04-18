@@ -5,6 +5,8 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/sections/Footer";
 import LenisProvider from "@/components/providers/LenisProvider";
+import PageTransitionProvider from "@/components/providers/PageTransitionProvider";
+import TransitionOverlay from "@/components/ui/TransitionOverlay";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 
 const libreBaskerville = Libre_Baskerville({
@@ -131,12 +133,17 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
         <LenisProvider>
-          <ScrollToTop />
-          <Navbar />
-          {/* Spacer for fixed header: announcement banner + nav 80px (banner can wrap on mobile) */}
-          <div aria-hidden="true" className="h-[152px] sm:h-[116px]" />
-          {children}
-          <Footer />
+          <PageTransitionProvider>
+            <TransitionOverlay />
+            <ScrollToTop />
+            <Navbar />
+            {/* Spacer for fixed header: announcement banner + nav 80px (banner can wrap on mobile) */}
+            <div aria-hidden="true" className="h-[152px] sm:h-[116px]" />
+            <div data-transition-content>
+              {children}
+              <Footer />
+            </div>
+          </PageTransitionProvider>
         </LenisProvider>
       </body>
     </html>

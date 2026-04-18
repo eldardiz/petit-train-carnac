@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Link from 'next/link'
+import TransitionLink from '@/components/ui/TransitionLink'
 
 type JobPost = {
   title: string
@@ -95,7 +95,7 @@ export default function CareersHero() {
 
             {/* Apply CTA */}
             <div>
-              <Link
+              <TransitionLink
                 href="mailto:petittrain-lebayon@orange.fr"
                 className="btn-primary inline-flex items-center gap-2 h-[45px] px-[22px] bg-[#5a4a6e] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
               >
@@ -109,7 +109,7 @@ export default function CareersHero() {
                   />
                 </div>
                 Postulez &amp; Envoyez-nous votre CV
-              </Link>
+              </TransitionLink>
             </div>
           </div>
 

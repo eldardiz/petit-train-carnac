@@ -1,10 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import type { ReactNode } from "react";
-import ScrollReveal from "@/components/ui/ScrollReveal";
+import TransitionLink from "@/components/ui/TransitionLink";
 
 interface FaqData {
   question: string;
@@ -133,27 +132,26 @@ export default function FAQ({
           <p className="font-['Roboto',sans-serif] text-[#535862] text-[16px] leading-[1.2] tracking-[-0.48px]">
             {description}
           </p>
-          <Link
+          <TransitionLink
             href="/book"
             className="btn-primary inline-flex items-center gap-2 h-[45px] px-[22px] bg-[#5a4a6e] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap w-fit"
           >
             Réservez votre visite
-          </Link>
+          </TransitionLink>
         </div>
 
         {/* Right: FAQ items */}
         <div className="flex flex-col divide-y divide-[rgba(0,0,0,0.1)]">
           {faqs.map((faq, index) => (
-            <ScrollReveal key={faq.question} delay={index * 50}>
-              <FaqItem
-                question={faq.question}
-                answer={faq.answer}
-                open={openIndex === index}
-                onToggle={() =>
-                  setOpenIndex(openIndex === index ? null : index)
-                }
-              />
-            </ScrollReveal>
+            <FaqItem
+              key={faq.question}
+              question={faq.question}
+              answer={faq.answer}
+              open={openIndex === index}
+              onToggle={() =>
+                setOpenIndex(openIndex === index ? null : index)
+              }
+            />
           ))}
         </div>
       </div>

@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
+import TransitionLink from "@/components/ui/TransitionLink";
 import type { ReactNode } from "react";
-import ScrollReveal from "@/components/ui/ScrollReveal";
+
 
 const infoCards: { id: string; photo: string; title: string; description: ReactNode }[] = [
   {
@@ -91,9 +91,8 @@ export default function PracticalInfo() {
         {/* Cards grid */}
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
           {/* Row 1: 4 photo cards */}
-          {infoCards.map((card, index) => (
-            <ScrollReveal key={card.id} delay={index * 70}>
-              <div className="relative h-[423px] rounded-xl overflow-hidden">
+          {infoCards.map((card) => (
+            <div key={card.id} className="relative h-[423px] rounded-xl overflow-hidden">
                 <div
                   aria-hidden="true"
                   className="absolute inset-0 pointer-events-none"
@@ -115,12 +114,10 @@ export default function PracticalInfo() {
                   </p>
                 </div>
               </div>
-            </ScrollReveal>
           ))}
 
           {/* Row 2 col 1-2: wide photo card */}
-          <ScrollReveal delay={280} className="col-span-2">
-            <div className="relative h-[423px] rounded-xl overflow-hidden">
+          <div className="col-span-2 relative h-[423px] rounded-xl overflow-hidden">
               <div
                 aria-hidden="true"
                 className="absolute inset-0 pointer-events-none"
@@ -145,12 +142,10 @@ export default function PracticalInfo() {
                   un devis.
                 </p>
               </div>
-            </div>
-          </ScrollReveal>
+          </div>
 
           {/* Row 2 col 3-4: purple CTA card */}
-          <ScrollReveal delay={350} className="col-span-2">
-            <div className="relative h-[423px] rounded-xl overflow-hidden bg-[#58496c]">
+          <div className="col-span-2 relative h-[423px] rounded-xl overflow-hidden bg-[#58496c]">
               <div
                 aria-hidden="true"
                 className="absolute inset-0 pointer-events-none opacity-40"
@@ -173,15 +168,14 @@ export default function PracticalInfo() {
                 </p>
               </div>
               <div className="absolute bottom-6 right-6">
-                <Link
+                <TransitionLink
                   href="/informations"
                   className="btn-primary inline-flex items-center justify-center h-[45px] px-[22px] bg-[#f7f7f0] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-[#58496c] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
                 >
                   En savoir plus
-                </Link>
+                </TransitionLink>
               </div>
-            </div>
-          </ScrollReveal>
+          </div>
         </div>
       </div>
     </section>

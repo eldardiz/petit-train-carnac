@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import TransitionLink from "@/components/ui/TransitionLink";
 
 const locations = [
   {
@@ -103,7 +103,7 @@ export default function Locations() {
                 <p className="font-['Nunito',sans-serif] text-[14px] leading-[1.3] tracking-[-0.42px]">
                   {loc.description}
                 </p>
-                <Link
+                <a
                   href={loc.href}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -119,7 +119,7 @@ export default function Locations() {
                     />
                   </div>
                   {loc.cta}
-                </Link>
+                </a>
               </div>
             </div>
           ))}

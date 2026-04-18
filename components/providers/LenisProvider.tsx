@@ -1,12 +1,22 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
-import { usePathname } from 'next/navigation'
+import { createContext, useContext, useEffect, useRef } from 'react'
+
+interface LenisContextValue {
+  stop: () => void
+  start: () => void
+  scrollTo: (target: number, options?: Record<string, unknown>) => void
+}
+
+export const LenisContext = createContext<LenisContextValue | null>(null)
+
+export function useLenis() {
+  return useContext(LenisContext)
+}
 
 export default function LenisProvider({ children }: { children: React.ReactNode }) {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const lenisRef = useRef<any>(null)
-  const pathname = usePathname()
 
   useEffect(() => {
     let rafId: number
@@ -23,11 +33,27 @@ export default function LenisProvider({ children }: { children: React.ReactNode 
       })
       lenisRef.current = lenis
 
+      // Dispatch scroll event for ScrollTrigger sync (consumed by PageTransitionProvider)
+      lenis.on('scroll', () => {
+        window.dispatchEvent(new CustomEvent('lenis-scroll'))
+      })
+
       function raf(time: number) {
         lenis.raf(time)
         rafId = requestAnimationFrame(raf)
       }
       rafId = requestAnimationFrame(raf)
+
+      // Listen for transition events from PageTransitionProvider
+      const handleStop = () => lenis.stop()
+      const handleStart = () => lenis.start()
+      window.addEventListener('page-transition-stop', handleStop)
+      window.addEventListener('page-transition-start', handleStart)
+
+      return () => {
+        window.removeEventListener('page-transition-stop', handleStop)
+        window.removeEventListener('page-transition-start', handleStart)
+      }
     })
 
     return () => {
@@ -40,11 +66,15 @@ export default function LenisProvider({ children }: { children: React.ReactNode 
     }
   }, [])
 
-  useEffect(() => {
-    if (lenisRef.current) {
-      lenisRef.current.scrollTo(0, { immediate: true })
-    }
-  }, [pathname])
+  const contextValue: LenisContextValue = {
+    stop: () => lenisRef.current?.stop(),
+    start: () => lenisRef.current?.start(),
+    scrollTo: (target, options) => lenisRef.current?.scrollTo(target, options),
+  }
 
-  return <>{children}</>
+  return (
+    <LenisContext.Provider value={contextValue}>
+      {children}
+    </LenisContext.Provider>
+  )
 }

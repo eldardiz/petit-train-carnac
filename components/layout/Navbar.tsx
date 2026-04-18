@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
+import TransitionLink from "@/components/ui/TransitionLink";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -51,41 +51,41 @@ export default function Navbar() {
         <div className="w-full max-w-[1280px] mx-auto px-5 xl:px-0 flex items-center justify-between">
           {/* Logo + Desktop nav links */}
           <div className="flex items-center gap-8">
-            <Link href="/" className="relative h-11 w-[110px] shrink-0 block">
+            <TransitionLink href="/" className="relative h-11 w-[110px] shrink-0 block">
               <Image
                 src="/figma-assets/logo.svg"
                 alt="Les Petits Trains du Morbihan"
                 fill
                 className="object-contain"
               />
-            </Link>
+            </TransitionLink>
             <div className="hidden lg:flex items-center gap-5">
               {navLinks.map((link) => (
-                <Link
+                <TransitionLink
                   key={link.href}
                   href={link.href}
                   className="nav-link text-[#f7f7f0] text-base leading-6 tracking-[-0.48px] font-['Roboto',sans-serif] whitespace-nowrap"
                 >
                   {link.label}
-                </Link>
+                </TransitionLink>
               ))}
             </div>
           </div>
 
           {/* Desktop CTA buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <Link
+            <TransitionLink
               href="/prices"
               className="btn-secondary bg-[#5a4a6e] border border-[rgba(255,255,255,0.15)] h-[45px] px-[22px] rounded-[4px] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap inline-flex items-center"
             >
               Voir les Tarifs
-            </Link>
-            <Link
+            </TransitionLink>
+            <TransitionLink
               href="/book"
               className="btn-primary bg-[#f7f7f0] border border-[rgba(0,0,0,0.2)] h-[45px] px-[22px] rounded-[4px] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap inline-flex items-center"
             >
               Réserver
-            </Link>
+            </TransitionLink>
           </div>
 
           {/* Hamburger button — mobile only */}
@@ -122,30 +122,30 @@ export default function Navbar() {
         >
           <div className="px-5 py-5 flex flex-col gap-4">
             {navLinks.map((link) => (
-              <Link
+              <TransitionLink
                 key={link.href}
                 href={link.href}
                 className="text-[#f7f7f0] text-base leading-6 tracking-[-0.48px] font-['Roboto',sans-serif]"
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
-              </Link>
+              </TransitionLink>
             ))}
             <div className="flex flex-col gap-3 pt-2 border-t border-[rgba(255,255,255,0.15)]">
-              <Link
+              <TransitionLink
                 href="/prices"
                 className="btn-secondary bg-[#5a4a6e] border border-[rgba(255,255,255,0.15)] h-[45px] px-[22px] rounded-[4px] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap inline-flex items-center justify-center"
                 onClick={() => setMobileOpen(false)}
               >
                 Voir les Tarifs
-              </Link>
-              <Link
+              </TransitionLink>
+              <TransitionLink
                 href="/book"
                 className="btn-primary bg-[#f7f7f0] border border-[rgba(0,0,0,0.2)] h-[45px] px-[22px] rounded-[4px] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap inline-flex items-center justify-center"
                 onClick={() => setMobileOpen(false)}
               >
                 Réserver
-              </Link>
+              </TransitionLink>
             </div>
           </div>
         </div>

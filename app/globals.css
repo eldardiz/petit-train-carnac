@@ -252,3 +252,83 @@ body {
     transform: none;
   }
 }
+
+/* ── Page transition overlay ────────────────────────────────── */
+[data-transition-wrap] {
+  z-index: 9999;
+  pointer-events: none;
+  visibility: hidden;
+  position: fixed;
+  inset: 0;
+  overflow: clip;
+}
+
+[data-transition-wrap].is-active {
+  pointer-events: all;
+  visibility: visible;
+}
+
+.transition__panel {
+  color: #58496c;
+  background-color: currentColor;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  will-change: transform;
+}
+
+.transition__panel-top {
+  transform-origin: bottom;
+  align-items: center;
+  width: 100%;
+  height: 0%;
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  bottom: calc(100% - 1px);
+  left: 0;
+  overflow: hidden;
+}
+
+.transition__panel-bottom {
+  transform-origin: top;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 0%;
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  top: calc(100% - 1px);
+  left: 0;
+  overflow: hidden;
+}
+
+.transition__panel-circle {
+  background-color: currentColor;
+  border-radius: 50%;
+  width: 125%;
+  height: 500%;
+  aspect-ratio: auto;
+  position: absolute;
+}
+
+.transition__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-transition-wrap] {
+    display: none !important;
+  }
+}

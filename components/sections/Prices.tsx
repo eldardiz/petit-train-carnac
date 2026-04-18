@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const individualRows = [
   { label: "Adultes", price: "8,5€" },
@@ -58,8 +57,7 @@ export default function Prices() {
         {/* Pricing Cards */}
         <div className="relative flex flex-col lg:flex-row gap-8 items-start">
           {/* Individual Tickets */}
-          <ScrollReveal direction="left">
-            <div className="bg-[#f7f7f0] flex flex-col w-full max-w-[371px] h-[317px] p-6 relative">
+          <div className="bg-[#f7f7f0] flex flex-col w-full max-w-[371px] h-[317px] p-6 relative">
               <div className="flex items-center gap-2.5 mb-3">
                 <div className="relative shrink-0 w-6 h-6">
                   <Image
@@ -105,12 +103,10 @@ export default function Prices() {
                   est au point de départ ; guichet sur place.
                 </p>
               </div>
-            </div>
-          </ScrollReveal>
+          </div>
 
           {/* Group Booking */}
-          <ScrollReveal direction="right">
-            <div className="bg-[#58496c] border border-[rgba(247,247,240,0.15)] flex flex-col w-full max-w-[371px] h-[317px] p-6 relative">
+          <div className="bg-[#58496c] border border-[rgba(247,247,240,0.15)] flex flex-col w-full max-w-[371px] h-[317px] p-6 relative">
               <div className="flex items-center gap-2.5 mb-3">
                 <div className="relative shrink-0 w-6 h-6">
                   <Image
@@ -157,8 +153,7 @@ export default function Prices() {
                   uniquement à partir de 20 personnes embarquant.
                 </p>
               </div>
-            </div>
-          </ScrollReveal>
+          </div>
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import TransitionLink from "@/components/ui/TransitionLink";
 import type { ReactNode } from "react";
 
 interface HeroProps {
@@ -36,18 +36,18 @@ const defaultDescription = (
 
 const defaultButtons = (
   <>
-    <Link
+    <TransitionLink
       href="/book"
       className="btn-primary bg-[#5a4a6e] h-[45px] px-[22px] rounded-[4px] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap inline-flex items-center shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)]"
     >
       Réservez votre visite
-    </Link>
-    <Link
+    </TransitionLink>
+    <TransitionLink
       href="/prices"
       className="btn-secondary bg-[#f7f7f0] border border-[rgba(0,0,0,0.2)] h-[45px] px-[22px] rounded-[4px] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap inline-flex items-center"
     >
       Voir les Tarifs
-    </Link>
+    </TransitionLink>
   </>
 );
 

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import ScrollReveal from "@/components/ui/ScrollReveal";
+
 
 const CarnacMap = dynamic(() => import("@/components/ui/CarnacMap"), {
   ssr: false,
@@ -75,9 +75,8 @@ export default function OurLocation() {
 
           {/* Feature items */}
           <div className="flex flex-col gap-8">
-            {locationItems.map((item, index) => (
-              <ScrollReveal key={item.title} delay={index * 70}>
-                <div className="flex items-start gap-4">
+            {locationItems.map((item) => (
+              <div key={item.title} className="flex items-start gap-4">
                   {/* Icon box */}
                   <div className="relative shrink-0 w-12 h-12 rounded-[10px] border border-[#e9eaeb] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] overflow-hidden bg-white">
                     <div className="absolute inset-[11px]">
@@ -101,8 +100,7 @@ export default function OurLocation() {
                       {item.description}
                     </p>
                   </div>
-                </div>
-              </ScrollReveal>
+              </div>
             ))}
           </div>
 

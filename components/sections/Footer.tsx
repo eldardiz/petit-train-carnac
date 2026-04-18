@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import TransitionLink from "@/components/ui/TransitionLink";
 
 const quickLinks = [
   { label: "Accueil", href: "/" },
@@ -47,18 +47,18 @@ export default function Footer() {
                   Embarquez à bord du Petit Train de Carnac pour une visite guidée alliant histoire, paysages et confort. Découvrez les célèbres menhirs de Carnac, les plages de sable blanc et le port de La Trinité-sur-Mer, sans fatigue et avec un commentaire audio clair tout au long du parcours.
                 </p>
                 <div className="flex gap-3 items-center flex-wrap">
-                  <Link
+                  <TransitionLink
                     href="/book"
                     className="btn-primary inline-flex items-center h-[45px] px-[22px] bg-[#f7f7f0] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
                   >
                     Réserver
-                  </Link>
-                  <Link
+                  </TransitionLink>
+                  <TransitionLink
                     href="/prices"
                     className="btn-secondary inline-flex items-center justify-center h-[45px] px-[22px] bg-transparent border border-[rgba(247,247,240,0.4)] rounded-[4px] text-[#f7f7f0] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
                   >
                     Voir les Tarifs
-                  </Link>
+                  </TransitionLink>
                 </div>
               </div>
             </div>
@@ -92,13 +92,13 @@ export default function Footer() {
                 Liens Rapides
               </p>
               {quickLinks.map((link) => (
-                <Link
+                <TransitionLink
                   key={link.label}
                   href={link.href}
                   className="footer-link font-['Roboto',sans-serif] font-light text-[#f7f7f0] text-base leading-6"
                 >
                   {link.label}
-                </Link>
+                </TransitionLink>
               ))}
             </div>
 
@@ -133,13 +133,13 @@ export default function Footer() {
                 Autres
               </p>
               {otherLinks.map((link) => (
-                <Link
+                <TransitionLink
                   key={link.label}
                   href={link.href}
                   className="footer-link font-['Roboto',sans-serif] font-light text-[#f7f7f0] text-base leading-6"
                 >
                   {link.label}
-                </Link>
+                </TransitionLink>
               ))}
             </div>
           </div>

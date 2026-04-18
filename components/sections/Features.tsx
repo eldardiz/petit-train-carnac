@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const features = [
   {
@@ -80,8 +79,7 @@ export default function Features() {
         <div className="flex-1">
           <div className="grid grid-cols-2 gap-x-8 gap-y-12">
             {features.map((feature, index) => (
-              <ScrollReveal key={feature.title} delay={index * 70}>
-                <div className="flex flex-col gap-5 items-start h-full">
+              <div key={feature.title} className="flex flex-col gap-5 items-start h-full">
                   {/* Icon box */}
                   <div className="relative shrink-0 w-16 h-16 rounded-[10px] border border-[#e9eaeb] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] overflow-hidden">
                     <div
@@ -110,7 +108,6 @@ export default function Features() {
                     </p>
                   </div>
                 </div>
-              </ScrollReveal>
             ))}
           </div>
         </div>

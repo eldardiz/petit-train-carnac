@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import TransitionLink from "@/components/ui/TransitionLink";
 
 export default function GroupBookingCTA() {
   return (
@@ -53,12 +53,12 @@ export default function GroupBookingCTA() {
 
             {/* CTA button */}
             <div>
-              <Link
+              <TransitionLink
                 href="/privatisation"
                 className="btn-primary inline-flex items-center h-[45px] px-[22px] bg-[#f7f7f0] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
               >
                 Réservation privatisation
-              </Link>
+              </TransitionLink>
             </div>
           </div>
         </div>
