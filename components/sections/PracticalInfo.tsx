@@ -6,7 +6,7 @@ import type { ReactNode } from "react";
 const infoCards: { id: string; photo: string; title: string; description: ReactNode }[] = [
   {
     id: "duration",
-    photo: "/figma-assets/practical-1.jpg",
+    photo: "/figma-assets/PracticalInfo1.jpg",
     title: "Durée",
     description: (
       <>
@@ -19,7 +19,7 @@ const infoCards: { id: string; photo: string; title: string; description: ReactN
   },
   {
     id: "departure",
-    photo: "/figma-assets/practical-2.jpg",
+    photo: "/figma-assets/PracticalInfo2.jpg",
     title: "Départ",
     description: (
       <>
@@ -32,7 +32,7 @@ const infoCards: { id: string; photo: string; title: string; description: ReactN
   },
   {
     id: "schedule",
-    photo: "/figma-assets/practical-3.jpg",
+    photo: "/figma-assets/PracticalInfo3.jpg",
     title: "Horaires",
     description: (
       <>
@@ -45,7 +45,7 @@ const infoCards: { id: string; photo: string; title: string; description: ReactN
   },
   {
     id: "accessibility",
-    photo: "/figma-assets/practical-4.jpg",
+    photo: "/figma-assets/PracticalInfo4.jpg",
     title: "Accessibilité",
     description: (
       <>
@@ -123,7 +123,7 @@ export default function PracticalInfo() {
                 className="absolute inset-0 pointer-events-none"
               >
                 <Image
-                  src="/figma-assets/practical-5.jpg"
+                  src="/figma-assets/PracticalInfo5.jpg"
                   alt=""
                   fill
                   className="object-cover"
