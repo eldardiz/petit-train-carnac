@@ -34,7 +34,7 @@ const locationItems = [
 
 export default function OurLocation() {
   return (
-    <section className="bg-[#f7f7f0] py-16 xl:py-28 isolate">
+    <section data-anim-section className="bg-[#f7f7f0] py-16 xl:py-28 isolate">
       <div className="max-w-[1280px] mx-auto px-5 xl:px-0 w-full flex flex-col-reverse lg:flex-row items-start lg:items-center gap-12 lg:gap-20">
         {/* Map — bottom on mobile, left on desktop */}
         <div className="w-full h-[400px] lg:flex-1 lg:self-stretch lg:h-auto lg:min-h-[560px] rounded-2xl overflow-hidden shadow-md">

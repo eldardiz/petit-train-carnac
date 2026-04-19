@@ -29,7 +29,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="bg-[#f7f7f0] flex flex-col gap-16 py-24 overflow-hidden">
+    <section data-anim-section className="bg-[#f7f7f0] flex flex-col gap-16 py-24 overflow-hidden">
       {/* Header row */}
       <div className="w-full max-w-[1280px] px-5 xl:px-0 mx-auto">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-8">

@@ -103,8 +103,10 @@ export default function RoutesHero({
           href={primaryButton.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-primary inline-flex items-center gap-2 h-[45px] px-[22px] bg-[#5a4a6e] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
+          aria-label={primaryButton.label}
+          className="btn-animate-chars btn-primary gap-2 h-[45px] px-[22px] bg-[#5a4a6e] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
         >
+          <div className="btn-animate-chars__bg" />
           <div className="relative w-4 h-4 shrink-0">
             <Image
               src="/figma-assets/DownloadWhite.svg"
@@ -114,12 +116,14 @@ export default function RoutesHero({
               aria-hidden="true"
             />
           </div>
-          {primaryButton.label}
+          <span data-button-animate-chars="" className="btn-animate-chars__text">{primaryButton.label}</span>
         </a>
         <TransitionLink
           href={secondaryButton.href}
-          className="btn-secondary inline-flex items-center gap-2 h-[45px] px-[22px] bg-[#f7f7f0] rounded-[4px] border border-[rgba(0,0,0,0.2)] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
+          aria-label={secondaryButton.label}
+          className="btn-animate-chars btn-secondary gap-2 h-[45px] px-[22px] bg-[#f7f7f0] rounded-[4px] border border-[rgba(0,0,0,0.2)] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
         >
+          <div className="btn-animate-chars__bg" />
           <div className="relative w-4 h-4 shrink-0">
             <Image
               src="/figma-assets/DownloadBlack.svg"
@@ -129,7 +133,7 @@ export default function RoutesHero({
               aria-hidden="true"
             />
           </div>
-          {secondaryButton.label}
+          <span data-button-animate-chars="" className="btn-animate-chars__text">{secondaryButton.label}</span>
         </TransitionLink>
       </div>
 

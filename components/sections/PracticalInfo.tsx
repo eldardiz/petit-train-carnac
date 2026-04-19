@@ -60,7 +60,7 @@ const infoCards: { id: string; photo: string; title: string; description: ReactN
 
 export default function PracticalInfo() {
   return (
-    <section className="bg-[#f7f7f0] py-20 overflow-hidden">
+    <section data-anim-section className="bg-[#f7f7f0] py-20 overflow-hidden">
       <div className="max-w-[1280px] mx-auto px-5 xl:px-0 w-full flex flex-col gap-12 items-start">
         {/* Header */}
         <div className="flex flex-col gap-3 max-w-[615px]">

@@ -30,7 +30,7 @@ const locations = [
 
 export default function Locations() {
   return (
-    <section className="bg-[#f7f7f0] py-16 xl:py-28 overflow-hidden">
+    <section data-anim-section className="bg-[#f7f7f0] py-16 xl:py-28 overflow-hidden">
       <div className="max-w-[1280px] mx-auto px-5 xl:px-0 w-full flex flex-col gap-16 items-center">
         {/* Header */}
         <div className="flex flex-col gap-6 items-center text-center max-w-[768px]">

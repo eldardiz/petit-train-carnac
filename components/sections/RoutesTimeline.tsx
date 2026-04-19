@@ -91,7 +91,7 @@ export default function RoutesTimeline() {
   }, []);
 
   return (
-    <section className="bg-[#f7f7f0] py-16 xl:py-28">
+    <section data-anim-section className="bg-[#f7f7f0] py-16 xl:py-28">
       <div className="max-w-[1280px] mx-auto px-5 xl:px-0 w-full flex flex-col gap-20 items-center">
         {/* Header */}
         <div className="flex flex-col gap-6 items-center text-center max-w-[768px]">

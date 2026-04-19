@@ -147,7 +147,7 @@ export default function FAQsSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section className="bg-[#f7f7f0] py-24">
+    <section data-anim-section className="bg-[#f7f7f0] py-24">
       <div className="max-w-[1280px] mx-auto px-5 xl:px-[32px]">
         {faqs.map((faq, index) => (
           <FaqItem

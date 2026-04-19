@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function InformationsIntro() {
   return (
-    <section className="bg-[#f7f7f0] py-16">
+    <section data-anim-section className="bg-[#f7f7f0] py-16">
       <div className="max-w-[1280px] mx-auto px-5 xl:px-0 border-t border-[rgba(0,0,0,0.15)] pt-8 flex flex-col gap-10">
         {/* Section label */}
         <div className="flex items-center gap-2">

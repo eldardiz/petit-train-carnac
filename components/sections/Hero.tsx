@@ -39,15 +39,19 @@ const defaultButtons = (
   <>
     <TransitionLink
       href="/book"
-      className="btn-primary bg-[#5a4a6e] h-[45px] px-[22px] rounded-[4px] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap inline-flex items-center shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)]"
+      aria-label="Réservez votre visite"
+      className="btn-animate-chars btn-primary bg-[#5a4a6e] h-[45px] px-[22px] rounded-[4px] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)]"
     >
-      Réservez votre visite
+      <div className="btn-animate-chars__bg" />
+      <span data-button-animate-chars="" className="btn-animate-chars__text">Réservez votre visite</span>
     </TransitionLink>
     <TransitionLink
       href="/prices"
-      className="btn-secondary bg-[#f7f7f0] border border-[rgba(0,0,0,0.2)] h-[45px] px-[22px] rounded-[4px] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap inline-flex items-center"
+      aria-label="Voir les Tarifs"
+      className="btn-animate-chars btn-secondary bg-[#f7f7f0] border border-[rgba(0,0,0,0.2)] h-[45px] px-[22px] rounded-[4px] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
     >
-      Voir les Tarifs
+      <div className="btn-animate-chars__bg" />
+      <span data-button-animate-chars="" className="btn-animate-chars__text">Voir les Tarifs</span>
     </TransitionLink>
   </>
 );
@@ -89,11 +93,11 @@ export default function Hero({
   showBottomBanner = true,
 }: HeroProps) {
   return (
-    <section className="bg-[#f7f7f0] overflow-hidden">
+    <section data-anim-section="hero" className="bg-[#f7f7f0] overflow-hidden">
       {/* Main hero section: left text + right image */}
       <div className="flex flex-col lg:flex-row lg:items-stretch min-h-[721px] relative">
         {/* Left panel */}
-        <div className="flex-1 flex items-center justify-end py-24 bg-[#f7f7f0] relative z-10">
+        <div className="flex-1 flex items-center justify-end py-12 lg:py-24 bg-[#f7f7f0] relative z-10">
           <div className="w-full max-w-[640px] px-5 xl:px-0">
             <div className="pr-8 flex flex-col gap-10">
               {/* Heading block */}
@@ -115,25 +119,25 @@ export default function Hero({
                 </div>
 
                 {/* Main heading */}
-                <h1 className="font-['Libre_Baskerville',serif] text-[36px] sm:text-[44px] md:text-[52px] lg:text-[60px] leading-[1.1] tracking-[-1.8px] sm:tracking-[-2.4px] md:tracking-[-3.2px] lg:tracking-[-4.2px] text-[#181d27] not-italic w-full break-words">
+                <h1 data-anim="hero-title" className="font-['Libre_Baskerville',serif] text-[36px] sm:text-[44px] md:text-[52px] lg:text-[60px] leading-[1.1] tracking-[-1.8px] sm:tracking-[-2.4px] md:tracking-[-3.2px] lg:tracking-[-4.2px] text-[#181d27] not-italic w-full break-words">
                   {heading}
                 </h1>
 
                 {/* Description */}
-                <p className="font-['Roboto',sans-serif] text-[#535862] text-base leading-[1.2] tracking-[-0.48px]">
+                <p data-anim="hero-paragraph" className="font-['Roboto',sans-serif] text-[#535862] text-base leading-[1.2] tracking-[-0.48px]">
                   {description}
                 </p>
 
                 {/* Tagline */}
                 {tagline && (
-                  <p className="font-['Roboto',sans-serif] font-semibold text-[#535862] text-base leading-[1.2] tracking-[-0.48px]">
+                  <p data-anim="tagline" className="font-['Roboto',sans-serif] font-semibold text-[#535862] text-base leading-[1.2] tracking-[-0.48px]">
                     {tagline}
                   </p>
                 )}
               </div>
 
               {/* CTA buttons */}
-              <div className="flex items-center gap-3">{buttons}</div>
+              <div data-anim="hero-button" className="flex items-center gap-3">{buttons}</div>
 
               {/* Divider */}
               <hr className="border-t border-[rgba(0,0,0,0.12)] w-[554px] max-w-full" />
@@ -178,10 +182,10 @@ export default function Hero({
         </div>
 
         {/* Right panel: image + diagonal split overlay */}
-        <div className="flex-1 relative min-h-[480px] lg:min-h-0 overflow-hidden">
-          {/* Diagonal left edge overlay to create the angled split */}
+        <div className="flex-1 relative min-h-[320px] lg:min-h-0 overflow-hidden rounded-2xl lg:rounded-none mx-4 lg:mx-0 mb-4 lg:mb-0">
+          {/* Diagonal left edge overlay — desktop only */}
           <div
-            className="absolute inset-y-0 left-0 w-24 bg-[#f7f7f0] z-10 origin-top-left [clip-path:polygon(0_0,100%_0,0_100%)]"
+            className="hidden lg:block absolute inset-y-0 left-0 w-24 bg-[#f7f7f0] z-10 origin-top-left [clip-path:polygon(0_0,100%_0,0_100%)]"
             aria-hidden="true"
           />
 

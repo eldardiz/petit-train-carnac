@@ -12,7 +12,7 @@ const groupRows = [
 
 export default function Prices() {
   return (
-    <section className="relative bg-[#58496c] py-20 overflow-hidden">
+    <section data-anim-section className="relative bg-[#58496c] py-20 overflow-hidden">
       {/* Decorative background illustration */}
       <div
         aria-hidden="true"

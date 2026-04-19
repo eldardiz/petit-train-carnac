@@ -8,6 +8,7 @@ import LenisProvider from "@/components/providers/LenisProvider";
 import PageTransitionProvider from "@/components/providers/PageTransitionProvider";
 import TransitionOverlay from "@/components/ui/TransitionOverlay";
 import ScrollToTop from "@/components/ui/ScrollToTop";
+import AnimationInit from "@/components/providers/AnimationInit";
 
 const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
@@ -134,6 +135,7 @@ export default function RootLayout({
         />
         <LenisProvider>
           <PageTransitionProvider>
+            <AnimationInit />
             <TransitionOverlay />
             <ScrollToTop />
             <Navbar />

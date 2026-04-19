@@ -13,7 +13,7 @@ const souvenirs = [
 
 export default function Souvenirs() {
   return (
-    <section className="hidden md:block bg-[#5a4a6e] relative overflow-hidden min-h-screen">
+    <section data-anim-section className="hidden md:block bg-[#5a4a6e] relative overflow-hidden min-h-screen">
       {/* Horizontal rule — Figma y=48 */}
       <div className="absolute left-1/2 -translate-x-1/2 top-12 w-[1280px] max-w-full h-px bg-white/10 z-20" />
 

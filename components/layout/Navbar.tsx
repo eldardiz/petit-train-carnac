@@ -76,15 +76,19 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <TransitionLink
               href="/prices"
-              className="btn-secondary bg-[#5a4a6e] border border-[rgba(255,255,255,0.15)] h-[45px] px-[22px] rounded-[4px] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap inline-flex items-center"
+              aria-label="Voir les Tarifs"
+              className="btn-animate-chars btn-secondary bg-[#5a4a6e] border border-[rgba(255,255,255,0.15)] h-[45px] px-[22px] rounded-[4px] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
             >
-              Voir les Tarifs
+              <div className="btn-animate-chars__bg" />
+              <span data-button-animate-chars="" className="btn-animate-chars__text">Voir les Tarifs</span>
             </TransitionLink>
             <TransitionLink
               href="/book"
-              className="btn-primary bg-[#f7f7f0] border border-[rgba(0,0,0,0.2)] h-[45px] px-[22px] rounded-[4px] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap inline-flex items-center"
+              aria-label="Réserver"
+              className="btn-animate-chars btn-primary bg-[#f7f7f0] border border-[rgba(0,0,0,0.2)] h-[45px] px-[22px] rounded-[4px] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
             >
-              Réserver
+              <div className="btn-animate-chars__bg" />
+              <span data-button-animate-chars="" className="btn-animate-chars__text">Réserver</span>
             </TransitionLink>
           </div>
 
@@ -134,17 +138,21 @@ export default function Navbar() {
             <div className="flex flex-col gap-3 pt-2 border-t border-[rgba(255,255,255,0.15)]">
               <TransitionLink
                 href="/prices"
-                className="btn-secondary bg-[#5a4a6e] border border-[rgba(255,255,255,0.15)] h-[45px] px-[22px] rounded-[4px] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap inline-flex items-center justify-center"
+                aria-label="Voir les Tarifs"
+                className="btn-animate-chars btn-secondary bg-[#5a4a6e] border border-[rgba(255,255,255,0.15)] h-[45px] px-[22px] rounded-[4px] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap justify-center"
                 onClick={() => setMobileOpen(false)}
               >
-                Voir les Tarifs
+                <div className="btn-animate-chars__bg" />
+                <span data-button-animate-chars="" className="btn-animate-chars__text">Voir les Tarifs</span>
               </TransitionLink>
               <TransitionLink
                 href="/book"
-                className="btn-primary bg-[#f7f7f0] border border-[rgba(0,0,0,0.2)] h-[45px] px-[22px] rounded-[4px] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap inline-flex items-center justify-center"
+                aria-label="Réserver"
+                className="btn-animate-chars btn-primary bg-[#f7f7f0] border border-[rgba(0,0,0,0.2)] h-[45px] px-[22px] rounded-[4px] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap justify-center"
                 onClick={() => setMobileOpen(false)}
               >
-                Réserver
+                <div className="btn-animate-chars__bg" />
+                <span data-button-animate-chars="" className="btn-animate-chars__text">Réserver</span>
               </TransitionLink>
             </div>
           </div>

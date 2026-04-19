@@ -195,7 +195,7 @@ const col3: TrackItem[] = [
 
 export default function Reviews() {
   return (
-    <section className="bg-[#58496c] flex flex-col gap-20 items-center py-16 xl:py-28 overflow-hidden">
+    <section data-anim-section className="bg-[#58496c] flex flex-col gap-20 items-center py-16 xl:py-28 overflow-hidden">
       {/* Header */}
       <div className="max-w-[1280px] mx-auto px-5 xl:px-0 w-full flex justify-center">
         <div className="flex flex-col gap-6 items-center text-center max-w-[623px]">
