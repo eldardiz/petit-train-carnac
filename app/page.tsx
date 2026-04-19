@@ -13,7 +13,7 @@ import Locations from '@/components/sections/Locations'
 export default function Page() {
   return (
     <main>
-      <Hero />
+      <Hero rightVideoSrc="/figma-assets/carnac-hero.mp4" />
       <Souvenirs />
       <Features />
       <PracticalInfo />

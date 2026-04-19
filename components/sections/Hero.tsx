@@ -11,6 +11,7 @@ interface HeroProps {
   googleBadgeText?: string;
   rightImageSrc?: string;
   rightImageAlt?: string;
+  rightVideoSrc?: string;
   rightCard?: ReactNode;
   showBottomBanner?: boolean;
 }
@@ -83,6 +84,7 @@ export default function Hero({
   googleBadgeText = "Le Petit Train de Carnac est noté 4,7 sur Google, avec plus de 6 000 avis, ce qui en fait l'une des attractions touristiques les plus populaires de Carnac.",
   rightImageSrc = "/figma-assets/hero-image.jpg",
   rightImageAlt = "Le Petit Train de Carnac sur un parcours pittoresque",
+  rightVideoSrc,
   rightCard = defaultRightCard,
   showBottomBanner = true,
 }: HeroProps) {
@@ -183,15 +185,26 @@ export default function Hero({
             aria-hidden="true"
           />
 
-          {/* Hero image */}
+          {/* Hero media: video or image */}
           <div className="absolute inset-0">
-            <Image
-              src={rightImageSrc}
-              alt={rightImageAlt}
-              fill
-              className="object-cover"
-              priority
-            />
+            {rightVideoSrc ? (
+              <video
+                src={rightVideoSrc}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <Image
+                src={rightImageSrc}
+                alt={rightImageAlt}
+                fill
+                className="object-cover"
+                priority
+              />
+            )}
           </div>
 
           {/* Overlay card */}
