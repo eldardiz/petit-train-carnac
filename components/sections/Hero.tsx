@@ -16,6 +16,7 @@ interface HeroProps {
   openingImageSrc?: string;
   rightCard?: ReactNode;
   showBottomBanner?: boolean;
+  backgroundVariant?: "cream" | "gradient-to-white";
 }
 
 const defaultHeading = (
@@ -42,7 +43,7 @@ const defaultButtons = (
     <TransitionLink
       href="/book"
       aria-label="Réservez votre visite"
-      className="btn-animate-chars btn-primary bg-[#54206d] h-[45px] px-[22px] rounded-[4px] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)]"
+      className="btn-animate-chars btn-primary bg-[#54206d] h-[45px] px-[22px] rounded-[4px] text-white text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)]"
     >
       <div className="btn-animate-chars__bg" />
       <span data-button-animate-chars="" className="btn-animate-chars__text">Réservez votre visite</span>
@@ -50,7 +51,7 @@ const defaultButtons = (
     <TransitionLink
       href="/prices"
       aria-label="Voir les Tarifs"
-      className="btn-animate-chars btn-secondary bg-[#f7f7f0] border border-[rgba(0,0,0,0.2)] h-[45px] px-[22px] rounded-[4px] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
+      className="btn-animate-chars btn-secondary bg-[#f5ebdd] border border-[rgba(0,0,0,0.2)] h-[45px] px-[22px] rounded-[4px] text-[#414651] text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap"
     >
       <div className="btn-animate-chars__bg" />
       <span data-button-animate-chars="" className="btn-animate-chars__text">Voir les Tarifs</span>
@@ -61,7 +62,7 @@ const defaultButtons = (
 const defaultRightCard = (
   <div className="absolute bottom-[514px] lg:bottom-[30px] left-1/2 -translate-x-1/2 lg:left-auto lg:right-6 lg:translate-x-0 bg-[rgba(84,32,109,0.65)] border border-[rgba(255,255,255,0.2)] rounded-xl p-6 w-[499px] max-w-[calc(100%-32px)] flex flex-col gap-4 z-20">
     <div className="flex items-start justify-between gap-4">
-      <p className="font-['Roboto',sans-serif] font-semibold text-[20px] leading-[1.1] text-white tracking-[-0.8px] max-w-[312px]">
+      <p className="font-['Manrope',sans-serif] font-semibold text-[20px] leading-[1.1] text-white tracking-[-0.8px] max-w-[312px]">
         Visite guidée avec commentaire audio en 16 langues
       </p>
       <div className="relative h-[43px] w-[83px] shrink-0 overflow-hidden rounded">
@@ -73,7 +74,7 @@ const defaultRightCard = (
         />
       </div>
     </div>
-    <p className="font-['Roboto',sans-serif] font-normal text-[14px] leading-[1.4] text-white tracking-[-0.56px] max-w-[312px]">
+    <p className="font-['Manrope',sans-serif] font-normal text-[14px] leading-[1.4] text-white tracking-[-0.56px] max-w-[312px]">
       Français, anglais, allemand, espagnol, italien, portugais, néerlandais,
       russe, chinois, japonais, suédois, danois, polonais, arabe, croate et
       slovène.
@@ -94,13 +95,22 @@ export default function Hero({
   openingImageSrc,
   rightCard = defaultRightCard,
   showBottomBanner = true,
+  backgroundVariant = "cream",
 }: HeroProps) {
+  const sectionBg =
+    backgroundVariant === "gradient-to-white"
+      ? "bg-gradient-to-b from-[#f5ebdd] to-white to-[60%]"
+      : "bg-[#f5ebdd]";
+  const leftPanelBg =
+    backgroundVariant === "gradient-to-white" ? "" : "bg-[#f5ebdd]";
+  const bannerBg =
+    backgroundVariant === "gradient-to-white" ? "bg-white" : "bg-[#f5ebdd]";
   return (
-    <section data-anim-section="hero" className="bg-[#f7f7f0] overflow-hidden">
+    <section data-anim-section="hero" className={`${sectionBg} overflow-hidden`}>
       {/* Main hero section: left text + right image */}
       <div className="flex flex-col lg:flex-row lg:items-stretch min-h-[721px] relative">
         {/* Left panel */}
-        <div className="flex-1 flex items-center justify-end py-12 lg:py-24 bg-[#f7f7f0] relative z-10">
+        <div className={`flex-1 flex items-center justify-end py-12 lg:py-24 ${leftPanelBg} relative z-10`}>
           <div className="w-full max-w-[640px] px-5 xl:px-0">
             <div className="pr-8 flex flex-col gap-10">
               {/* Heading block */}
@@ -116,24 +126,24 @@ export default function Hero({
                       aria-hidden="true"
                     />
                   </div>
-                  <p className="font-['Libre_Baskerville',serif] italic text-[#54206d] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
+                  <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#54206d] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
                     {label}
                   </p>
                 </div>
 
                 {/* Main heading */}
-                <h1 data-anim-item className="font-normal font-['Libre_Baskerville',serif] text-[36px] sm:text-[44px] md:text-[52px] lg:text-[60px] leading-[1.1] tracking-[-1.8px] sm:tracking-[-2.4px] md:tracking-[-3.2px] lg:tracking-[-4.2px] text-[#181d27] not-italic w-full break-words">
+                <h1 data-anim-item className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[36px] sm:text-[44px] md:text-[52px] lg:text-[60px] leading-[1.1] tracking-[-1.8px] sm:tracking-[-2.4px] md:tracking-[-3.2px] lg:tracking-[-4.2px] text-[#181d27] not-italic w-full break-words">
                   {heading}
                 </h1>
 
                 {/* Description */}
-                <p data-anim-item className="font-['Roboto',sans-serif] text-[#535862] text-base leading-[1.2] tracking-[-0.48px]">
+                <p data-anim-item className="font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.2] tracking-[-0.48px]">
                   {description}
                 </p>
 
                 {/* Tagline */}
                 {tagline && (
-                  <p data-anim-item className="font-['Roboto',sans-serif] font-semibold text-[#535862] text-base leading-[1.2] tracking-[-0.48px]">
+                  <p data-anim-item className="font-['Manrope',sans-serif] font-semibold text-[#535862] text-base leading-[1.2] tracking-[-0.48px]">
                     {tagline}
                   </p>
                 )}
@@ -158,7 +168,7 @@ export default function Hero({
                   </div>
                   <div className="flex flex-col gap-[2px]">
                     <div className="flex items-center gap-1">
-                      <span className="font-['Nunito',sans-serif] font-bold text-[14px] leading-normal text-black tracking-[-0.42px]">
+                      <span className="font-['Manrope',sans-serif] font-bold text-[14px] leading-normal text-black tracking-[-0.42px]">
                         4,7
                       </span>
                       <div className="relative h-3 w-[76px] shrink-0">
@@ -170,13 +180,13 @@ export default function Hero({
                         />
                       </div>
                     </div>
-                    <p className="font-['Nunito',sans-serif] font-normal text-[11px] leading-normal text-black tracking-[-0.33px] opacity-60">
+                    <p className="font-['Manrope',sans-serif] font-normal text-[11px] leading-normal text-black tracking-[-0.33px] opacity-60">
                       6 000+ avis
                     </p>
                   </div>
                 </div>
 
-                <p className="font-['Roboto',sans-serif] text-[#535862] text-base leading-[1.2] tracking-[-0.48px] max-w-[499px]">
+                <p className="font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.2] tracking-[-0.48px] max-w-[499px]">
                   {googleBadgeText}
                 </p>
               </div>
@@ -214,7 +224,7 @@ export default function Hero({
 
       {/* HeroBanner: Online Booking section */}
       {showBottomBanner && (
-        <div className="bg-[#f7f7f0] border-t border-[rgba(0,0,0,0.15)] pt-[34px] pb-16">
+        <div className={`${bannerBg} border-t border-[rgba(0,0,0,0.15)] pt-[34px] pb-16`}>
           <div className="max-w-[1280px] mx-auto px-5 xl:px-0 flex flex-col gap-10">
             {/* Section label */}
             <div className="flex items-center gap-2">
@@ -227,7 +237,7 @@ export default function Hero({
                   aria-hidden="true"
                 />
               </div>
-              <p className="font-['Libre_Baskerville',serif] italic text-[#54206d] text-base leading-6 tracking-[-0.48px]">
+              <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#54206d] text-base leading-6 tracking-[-0.48px]">
                 Note Importante
               </p>
             </div>
@@ -236,13 +246,13 @@ export default function Hero({
             <div className="flex flex-col lg:flex-row lg:items-start gap-8">
               {/* Heading */}
               <div className="lg:w-[559px] shrink-0">
-                <h2 className="font-normal font-['Libre_Baskerville',serif] text-[32px] sm:text-[40px] md:text-[48px] leading-[1.1] tracking-[-1.5px] sm:tracking-[-2.5px] md:tracking-[-3.36px] text-[#181d27] not-italic break-words">
+                <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[32px] sm:text-[40px] md:text-[48px] leading-[1.1] tracking-[-1.5px] sm:tracking-[-2.5px] md:tracking-[-3.36px] text-[#181d27] not-italic break-words">
                   Réservation en Ligne
                 </h2>
               </div>
               {/* Supporting text */}
               <div className="flex-1">
-                <p className="font-['Inter',sans-serif] font-normal text-[20px] leading-[30px] text-[#535862]">
+                <p className="font-['Manrope',sans-serif] font-normal text-[20px] leading-[30px] text-[#535862]">
                   La réservation est possible mais non obligatoire. Vous pouvez
                   réserver jusqu&apos;à{" "}
                   <strong className="font-bold">2 heures</strong>{" "}avant le

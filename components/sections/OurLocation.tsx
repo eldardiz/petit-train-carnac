@@ -51,7 +51,7 @@ const locationItems = [
 
 export default function OurLocation() {
   return (
-    <section data-anim-section className="bg-[#f7f7f0] py-16 xl:py-28 isolate">
+    <section data-anim-section className="bg-[#f5ebdd] py-16 xl:py-28 isolate">
       <div className="max-w-[1280px] mx-auto px-5 xl:px-0 w-full flex flex-col-reverse lg:flex-row items-start lg:items-center gap-12 lg:gap-20">
         {/* Map — bottom on mobile, left on desktop */}
         <div data-anim-item className="w-full h-[400px] lg:flex-1 lg:self-stretch lg:h-auto lg:min-h-[560px] rounded-2xl overflow-hidden shadow-md">
@@ -71,19 +71,19 @@ export default function OurLocation() {
                 aria-hidden="true"
               />
             </div>
-            <p className="font-['Libre_Baskerville',serif] italic text-[#54206d] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
+            <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#54206d] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
               Notre Emplacement
             </p>
           </div>
 
           {/* Heading */}
-          <h2 className="font-normal font-['Libre_Baskerville',serif] text-[32px] sm:text-[40px] md:text-[48px] text-[#181d27] leading-[1.1] tracking-[-1.5px] sm:tracking-[-2.5px] md:tracking-[-3.36px] max-w-[472px] break-words">
+          <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[32px] sm:text-[40px] md:text-[48px] text-[#181d27] leading-[1.1] tracking-[-1.5px] sm:tracking-[-2.5px] md:tracking-[-3.36px] max-w-[472px] break-words">
             Comment accéder au{" "}
             <em className="text-[#4d1c64]">Petit Train de Carnac</em>
           </h2>
 
           {/* Subtext */}
-          <p className="font-['Roboto',sans-serif] text-[#535862] text-[16px] leading-[1.2] tracking-[-0.48px] max-w-[570px]">
+          <p className="font-['Manrope',sans-serif] text-[#535862] text-[16px] leading-[1.2] tracking-[-0.48px] max-w-[570px]">
             Le Petit Train de Carnac est facilement accessible, que vous arriviez
             en voiture ou en train. Le point de départ principal est situé à
             proximité des menhirs de Carnac et des principales zones touristiques
@@ -110,10 +110,10 @@ export default function OurLocation() {
 
                   {/* Text */}
                   <div className="flex flex-col gap-2 pt-2.5 flex-1">
-                    <p className="font-['Libre_Baskerville',serif] text-[24px] text-[#181d27] leading-[1.1] tracking-[-1.68px]">
+                    <p className="font-['Bricolage_Grotesque',sans-serif] text-[24px] text-[#181d27] leading-[1.1] tracking-[-1.68px]">
                       {item.title}
                     </p>
-                    <p className="font-['Inter',sans-serif] text-[#535862] text-base leading-6">
+                    <p className="font-['Manrope',sans-serif] text-[#535862] text-base leading-6">
                       {item.description}
                     </p>
                     {item.mapsUrl && (
@@ -121,7 +121,7 @@ export default function OurLocation() {
                         href={item.mapsUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-[#54206d] text-sm font-['Roboto',sans-serif] font-medium underline underline-offset-2 hover:opacity-70 transition-opacity w-fit"
+                        className="inline-flex items-center gap-1.5 text-[#54206d] text-sm font-['Manrope',sans-serif] font-medium underline underline-offset-2 hover:opacity-70 transition-opacity w-fit"
                       >
                         <div className="relative shrink-0 w-4 h-4">
                           <Image src="/figma-assets/icon-map-pin.svg" alt="" fill className="object-contain" aria-hidden="true" />
@@ -136,10 +136,10 @@ export default function OurLocation() {
 
           {/* Arrival recommendation */}
           <div className="flex flex-col gap-2 pl-16">
-            <p className="font-['Roboto',sans-serif] font-semibold text-[#54206d] text-[20px] leading-[1.2] tracking-[-0.6px]">
+            <p className="font-['Manrope',sans-serif] font-semibold text-[#54206d] text-[20px] leading-[1.2] tracking-[-0.6px]">
               Conseil d&apos;arrivée
             </p>
-            <p className="font-['Roboto',sans-serif] text-[#535862] text-[16px] leading-[1.2] tracking-[-0.48px] max-w-[435px]">
+            <p className="font-['Manrope',sans-serif] text-[#535862] text-[16px] leading-[1.2] tracking-[-0.48px] max-w-[435px]">
               Merci d&apos;arriver au moins 15 minutes avant le départ afin
               d&apos;avoir le temps de valider votre billet et d&apos;embarquer.
             </p>

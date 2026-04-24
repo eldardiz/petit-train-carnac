@@ -77,7 +77,7 @@ export default function CarnacMap() {
         L.marker([stop.lat, stop.lng], { icon })
           .addTo(map)
           .bindPopup(
-            `<strong style="font-family:'Libre Baskerville',serif;font-size:14px;color:#181d27">${stop.name}</strong><br/><span style="font-family:Inter,sans-serif;font-size:12px;color:#535862">${stop.detail}</span>`
+            `<strong style="font-family:'Bricolage Grotesque',sans-serif;font-size:14px;color:#181d27">${stop.name}</strong><br/><span style="font-family:Manrope,sans-serif;font-size:12px;color:#535862">${stop.detail}</span>`
           );
       });
 

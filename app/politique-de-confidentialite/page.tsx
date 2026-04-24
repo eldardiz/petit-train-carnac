@@ -11,33 +11,33 @@ export default function PolitiqueDeConfidentialitePage() {
       {/* Hero */}
       <section className="bg-[#54206d] py-16 xl:py-24 px-5 xl:px-[64px]">
         <div className="max-w-[1312px] mx-auto">
-          <h1 className="font-normal font-['Libre_Baskerville',serif] text-[40px] sm:text-[52px] xl:text-[64px] text-[#f7f7f0] leading-[1.1] tracking-[-3.36px]">
+          <h1 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[40px] sm:text-[52px] xl:text-[64px] text-[#f5ebdd] leading-[1.1] tracking-[-3.36px]">
             Politique de Confidentialité
           </h1>
         </div>
       </section>
 
       {/* Content */}
-      <section className="bg-[#f7f7f0] py-16 xl:py-24 px-5 xl:px-[64px]">
+      <section className="bg-[#f5ebdd] py-16 xl:py-24 px-5 xl:px-[64px]">
         <div className="max-w-[800px] mx-auto flex flex-col gap-10">
 
           {/* Intro */}
           <div className="flex flex-col gap-4">
-            <h2 className="font-normal font-['Libre_Baskerville',serif] text-[24px] text-[#181d27] tracking-[-1px] leading-[1.3]">
+            <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[24px] text-[#181d27] tracking-[-1px] leading-[1.3]">
               Données personnelles
             </h2>
-            <p className="font-['Roboto',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
+            <p className="font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
               Nous nous engageons à ce que la collecte et le traitement de vos données, effectués à
               partir du site{' '}
               <span className="text-[#181d27] font-medium">petit-train-carnac.vercel.app</span>,
               soient conformes au règlement général sur la protection des données (RGPD) et à la loi
               Informatique et Libertés.
             </p>
-            <p className="font-['Roboto',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
+            <p className="font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
               La présente Politique vous informe sur la façon dont Le Petit Train de Carnac, ses
               sous-traitants et ses éventuels partenaires traitent vos données personnelles.
             </p>
-            <p className="font-['Roboto',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
+            <p className="font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
               Cette Politique est notamment applicable aux clients et utilisateurs des offres et
               services Le Petit Train de Carnac. Elle est susceptible d&apos;être complétée par des
               informations spécifiques portées à la connaissance de l&apos;utilisateur,
@@ -49,20 +49,20 @@ export default function PolitiqueDeConfidentialitePage() {
 
           {/* Cookies section */}
           <div className="flex flex-col gap-4">
-            <h2 className="font-normal font-['Libre_Baskerville',serif] text-[24px] text-[#181d27] tracking-[-1px] leading-[1.3]">
+            <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[24px] text-[#181d27] tracking-[-1px] leading-[1.3]">
               Cookies
             </h2>
-            <p className="font-['Roboto',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
+            <p className="font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
               Un cookie est un petit fichier informatique, un traceur, déposé et lu par exemple lors
               de la consultation d&apos;un site internet. L&apos;utilisation de ces outils est
               soumise à votre consentement dès lors qu&apos;ils ne sont pas strictement nécessaires
               au fonctionnement du site concerné.
             </p>
-            <h3 className="font-['Roboto',sans-serif] font-semibold text-[#181d27] text-base tracking-[-0.3px]">
+            <h3 className="font-['Manrope',sans-serif] font-semibold text-[#181d27] text-base tracking-[-0.3px]">
               Quels cookies utilisons-nous ?
             </h3>
             <div className="overflow-x-auto">
-              <table className="w-full font-['Roboto',sans-serif] text-sm text-[#535862] border-collapse">
+              <table className="w-full font-['Manrope',sans-serif] text-sm text-[#535862] border-collapse">
                 <thead>
                   <tr className="border-b border-[rgba(77,28,100,0.12)]">
                     <th className="text-left py-2 pr-4 text-[#181d27] font-semibold whitespace-nowrap">Nom</th>
@@ -134,14 +134,14 @@ export default function PolitiqueDeConfidentialitePage() {
           </PrivacySection>
 
           <div className="flex flex-col gap-3">
-            <h2 className="font-normal font-['Libre_Baskerville',serif] text-[20px] text-[#181d27] tracking-[-0.8px] leading-[1.3]">
+            <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[20px] text-[#181d27] tracking-[-0.8px] leading-[1.3]">
               Finalités de traitement
             </h2>
-            <p className="font-['Roboto',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
+            <p className="font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
               Le Petit Train de Carnac ne traite les données personnelles que pour des finalités
               déterminées, explicites et légitimes :
             </p>
-            <ul className="list-disc pl-5 flex flex-col gap-1 font-['Roboto',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
+            <ul className="list-disc pl-5 flex flex-col gap-1 font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
               <li>Traitement des données du formulaire de contact</li>
               <li>Connaissance client et statistiques d&apos;audience du site</li>
               <li>Envoi de messages par email (si consentement donné)</li>
@@ -150,10 +150,10 @@ export default function PolitiqueDeConfidentialitePage() {
           </div>
 
           <div className="flex flex-col gap-3">
-            <h2 className="font-normal font-['Libre_Baskerville',serif] text-[20px] text-[#181d27] tracking-[-0.8px] leading-[1.3]">
+            <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[20px] text-[#181d27] tracking-[-0.8px] leading-[1.3]">
               Quelles données sont traitées
             </h2>
-            <ul className="list-disc pl-5 flex flex-col gap-1 font-['Roboto',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
+            <ul className="list-disc pl-5 flex flex-col gap-1 font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
               <li>Données d&apos;identité : Prénom, nom</li>
               <li>Données de contact : Email, adresse postale, numéro de téléphone</li>
               <li>Données de localisation</li>
@@ -162,11 +162,11 @@ export default function PolitiqueDeConfidentialitePage() {
           </div>
 
           <div className="flex flex-col gap-3">
-            <h2 className="font-normal font-['Libre_Baskerville',serif] text-[20px] text-[#181d27] tracking-[-0.8px] leading-[1.3]">
+            <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[20px] text-[#181d27] tracking-[-0.8px] leading-[1.3]">
               Sous-traitants
             </h2>
             <div className="overflow-x-auto">
-              <table className="w-full font-['Roboto',sans-serif] text-sm text-[#535862] border-collapse">
+              <table className="w-full font-['Manrope',sans-serif] text-sm text-[#535862] border-collapse">
                 <thead>
                   <tr className="border-b border-[rgba(77,28,100,0.12)]">
                     <th className="text-left py-2 pr-4 text-[#181d27] font-semibold">Nom</th>
@@ -192,10 +192,10 @@ export default function PolitiqueDeConfidentialitePage() {
           </div>
 
           <div className="flex flex-col gap-3">
-            <h2 className="font-normal font-['Libre_Baskerville',serif] text-[20px] text-[#181d27] tracking-[-0.8px] leading-[1.3]">
+            <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[20px] text-[#181d27] tracking-[-0.8px] leading-[1.3]">
               Durée de conservation
             </h2>
-            <ul className="list-disc pl-5 flex flex-col gap-1 font-['Roboto',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
+            <ul className="list-disc pl-5 flex flex-col gap-1 font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
               <li>Données du formulaire de contact : 3 ans</li>
               <li>Saisine du responsable de traitement : 3 ans</li>
             </ul>
@@ -216,10 +216,10 @@ function PrivacySection({
 }) {
   return (
     <div className="flex flex-col gap-3">
-      <h2 className="font-normal font-['Libre_Baskerville',serif] text-[20px] text-[#181d27] tracking-[-0.8px] leading-[1.3]">
+      <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[20px] text-[#181d27] tracking-[-0.8px] leading-[1.3]">
         {title}
       </h2>
-      <p className="font-['Roboto',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
+      <p className="font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
         {children}
       </p>
       <div className="border-t border-[rgba(77,28,100,0.12)]" />

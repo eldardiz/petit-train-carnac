@@ -42,11 +42,11 @@ const reviews = [
 function ReviewCard({ text, author }: { text: string; author: string }) {
   return (
     <div className="bg-[#fffcf9] rounded-[6px] shadow-[0px_1px_4px_0px_rgba(0,0,0,0.15)] p-5 flex flex-col gap-3">
-      <p className="font-['Roboto',sans-serif] text-base leading-[1.3] tracking-[-0.5px] text-[#021538] flex-1">
+      <p className="font-['Manrope',sans-serif] text-base leading-[1.3] tracking-[-0.5px] text-[#021538] flex-1">
         {text}
       </p>
       <div className="flex items-center justify-between pt-2 border-t border-[rgba(0,0,0,0.08)]">
-        <span className="font-['Inter',sans-serif] font-bold text-base leading-[1.4] tracking-[-0.5px] text-[#021538]">
+        <span className="font-['Manrope',sans-serif] font-bold text-base leading-[1.4] tracking-[-0.5px] text-[#021538]">
           {author}
         </span>
         <div className="relative w-[93px] h-[14px]">
@@ -80,17 +80,17 @@ export default function InformationsReviews() {
                 aria-hidden="true"
               />
             </div>
-            <p className="font-['Libre_Baskerville',serif] italic text-[#f7f7f0] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
+            <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#f5ebdd] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
               Reviews
             </p>
           </div>
 
-          <h2 className="font-normal font-['Libre_Baskerville',serif] text-[clamp(36px,4vw,48px)] leading-[1.1] tracking-[-3.36px] text-[#f7f7f0]">
+          <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[clamp(36px,4vw,48px)] leading-[1.1] tracking-[-3.36px] text-[#f5ebdd]">
             What visitors say about{" "}
-            <em className="font-['Libre_Baskerville',serif] italic">the train?</em>
+            <em className="font-['Bricolage_Grotesque',sans-serif] italic">the train?</em>
           </h2>
 
-          <p className="font-['Roboto',sans-serif] text-base leading-[1.2] tracking-[-0.48px] text-[#f7f7f0]">
+          <p className="font-['Manrope',sans-serif] text-base leading-[1.2] tracking-[-0.48px] text-[#f5ebdd]">
             <strong>The Petit Train de Carnac</strong> has a rating over{" "}
             <a
               href="https://www.google.com/maps/search/Petit+Train+de+Carnac"
@@ -117,7 +117,7 @@ export default function InformationsReviews() {
               </div>
               <div className="flex flex-col gap-0.5">
                 <div className="flex items-center gap-1">
-                  <span className="font-['Nunito',sans-serif] font-bold text-[14px] text-black tracking-[-0.42px]">
+                  <span className="font-['Manrope',sans-serif] font-bold text-[14px] text-black tracking-[-0.42px]">
                     4,7
                   </span>
                   <div className="relative w-[76px] h-[12px]">
@@ -129,7 +129,7 @@ export default function InformationsReviews() {
                     />
                   </div>
                 </div>
-                <span className="font-['Nunito',sans-serif] text-[11px] text-black opacity-60 tracking-[-0.33px]">
+                <span className="font-['Manrope',sans-serif] text-[11px] text-black opacity-60 tracking-[-0.33px]">
                   6,000+ reviews
                 </span>
               </div>

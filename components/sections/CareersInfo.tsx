@@ -33,7 +33,7 @@ const panels = [
 
 export default function CareersInfo() {
   return (
-    <section data-anim-section className="bg-[#f7f7f0] py-16 xl:py-[112px] px-5 xl:px-[64px]">
+    <section data-anim-section className="bg-[#f5ebdd] py-16 xl:py-[112px] px-5 xl:px-[64px]">
       <div className="max-w-[1280px] mx-auto flex flex-col lg:flex-row gap-[80px] items-start">
         {/* Left: image */}
         <div data-anim-item className="hidden lg:block shrink-0 w-[calc(50%-40px)]">
@@ -55,14 +55,14 @@ export default function CareersInfo() {
               key={panel.heading}
               className="border-b border-[rgba(0,0,0,0.2)] pb-8 mb-8 last:border-b-0 last:mb-0 flex flex-col gap-6"
             >
-              <h2 className="font-normal font-['Libre_Baskerville',serif] text-[32px] text-[#181d27] leading-[1.1] tracking-[-2.24px]">
+              <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[32px] text-[#181d27] leading-[1.1] tracking-[-2.24px]">
                 {panel.heading}
               </h2>
               <div className="flex flex-col gap-3">
                 {panel.paragraphs.map((p, i) => (
                   <p
                     key={i}
-                    className="font-['Roboto',sans-serif] text-[#535862] text-base leading-[1.2] tracking-[-0.48px] max-w-[551px]"
+                    className="font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.2] tracking-[-0.48px] max-w-[551px]"
                   >
                     {p}
                   </p>
@@ -72,7 +72,7 @@ export default function CareersInfo() {
                 <div>
                   <TransitionLink
                     href="mailto:petittrain-lebayon@orange.fr"
-                    className="btn-animate-chars btn-primary inline-flex items-center gap-2 h-[45px] px-[22px] bg-[#54206d] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
+                    className="btn-animate-chars btn-primary inline-flex items-center gap-2 h-[45px] px-[22px] bg-[#54206d] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-white text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap"
                   >
                     <div className="btn-animate-chars__bg" />
                     <div className="relative shrink-0 w-5 h-5">

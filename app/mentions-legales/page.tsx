@@ -11,26 +11,26 @@ export default function MentionsLegalesPage() {
       {/* Hero */}
       <section className="bg-[#54206d] py-16 xl:py-24 px-5 xl:px-[64px]">
         <div className="max-w-[1312px] mx-auto">
-          <h1 className="font-normal font-['Libre_Baskerville',serif] text-[40px] sm:text-[52px] xl:text-[64px] text-[#f7f7f0] leading-[1.1] tracking-[-3.36px]">
+          <h1 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[40px] sm:text-[52px] xl:text-[64px] text-[#f5ebdd] leading-[1.1] tracking-[-3.36px]">
             Mentions Légales
           </h1>
         </div>
       </section>
 
       {/* Content */}
-      <section className="bg-[#f7f7f0] py-16 xl:py-24 px-5 xl:px-[64px]">
+      <section className="bg-[#f5ebdd] py-16 xl:py-24 px-5 xl:px-[64px]">
         <div className="max-w-[800px] mx-auto flex flex-col gap-10">
           <div className="flex flex-col gap-4">
-            <p className="font-['Roboto',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
+            <p className="font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
               Nous vous remercions de votre visite sur notre site. Veuillez lire attentivement ces
               Conditions générales d&apos;utilisation, car en accédant à ce site, vous acceptez, sans
               limitation ni réserve, les dispositions légales en vigueur et les conditions
               ci-après détaillées.
             </p>
-            <p className="font-['Roboto',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
+            <p className="font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
               <strong className="text-[#181d27]">Directeur de la publication :</strong> Nom
             </p>
-            <p className="font-['Roboto',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
+            <p className="font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
               Ce site est hébergé par OVH :{' '}
               <a
                 href="https://www.ovh.com"
@@ -41,7 +41,7 @@ export default function MentionsLegalesPage() {
                 www.ovh.com
               </a>
             </p>
-            <div className="font-['Roboto',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
+            <div className="font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
               <p>Le site a été créé par :</p>
               <p>
                 <strong className="text-[#181d27]">Heureuses – Agence web</strong>
@@ -140,10 +140,10 @@ function LegalSection({
 }) {
   return (
     <div className="flex flex-col gap-3">
-      <h2 className="font-normal font-['Libre_Baskerville',serif] text-[20px] text-[#181d27] tracking-[-0.8px] leading-[1.3]">
+      <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[20px] text-[#181d27] tracking-[-0.8px] leading-[1.3]">
         {number} – {title}
       </h2>
-      <p className="font-['Roboto',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
+      <p className="font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
         {children}
       </p>
       <div className="border-t border-[rgba(77,28,100,0.12)]" />

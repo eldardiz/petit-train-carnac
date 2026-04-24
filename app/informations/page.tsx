@@ -24,7 +24,7 @@ export default function InformationsPage() {
         heading={
           <>
             Informations pratiques pour le{" "}
-            <em className="italic text-[#54206d] not-italic font-['Libre_Baskerville',serif] italic">
+            <em className="italic text-[#54206d] not-italic font-['Bricolage_Grotesque',sans-serif] italic">
               Petit Train de Carnac
             </em>
           </>

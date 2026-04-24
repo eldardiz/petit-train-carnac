@@ -28,16 +28,16 @@ export default function InformationsPrices() {
                 aria-hidden="true"
               />
             </div>
-            <p className="font-['Libre_Baskerville',serif] italic text-[#f7f7f0] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
+            <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#f5ebdd] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
               Prices
             </p>
           </div>
 
-          <h2 className="font-normal font-['Libre_Baskerville',serif] text-[clamp(36px,4vw,48px)] leading-[1.1] tracking-[-3.36px] text-[#f7f7f0]">
+          <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[clamp(36px,4vw,48px)] leading-[1.1] tracking-[-3.36px] text-[#f5ebdd]">
             An affordable adventure for the whole family
           </h2>
 
-          <p className="font-['Roboto',sans-serif] text-base leading-[1.2] tracking-[-0.48px] text-[#f7f7f0]">
+          <p className="font-['Manrope',sans-serif] text-base leading-[1.2] tracking-[-0.48px] text-[#f5ebdd]">
             From solo explorers to large tribes, find the perfect rate for your
             visit. Take advantage of our special pricing for children and
             families.
@@ -47,7 +47,7 @@ export default function InformationsPrices() {
         {/* Pricing cards */}
         <div data-anim-item className="flex flex-col md:flex-row gap-8 items-stretch w-full">
           {/* Individual Tickets — cream card */}
-          <div className="bg-[#f7f7f0] flex-1 p-6 flex flex-col gap-4">
+          <div className="bg-[#f5ebdd] flex-1 p-6 flex flex-col gap-4">
             <div className="flex items-center gap-2 pb-4 border-b border-[rgba(0,0,0,0.15)]">
               <div className="relative shrink-0 w-6 h-6">
                 <Image
@@ -58,34 +58,34 @@ export default function InformationsPrices() {
                   aria-hidden="true"
                 />
               </div>
-              <p className="font-['Libre_Baskerville',serif] italic text-[#4d1c64] text-[22px] tracking-[-0.72px]">
+              <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#4d1c64] text-[22px] tracking-[-0.72px]">
                 Individual Tickets
               </p>
             </div>
             <div className="flex flex-col gap-0">
               <div className="flex items-center justify-between py-2 border-b border-[rgba(0,0,0,0.15)]">
-                <span className="font-['Roboto',sans-serif] text-base text-[#232323]">Adults</span>
-                <span className="font-['Roboto',sans-serif] font-extrabold text-[18px] text-[#4d1c64]">8,50€</span>
+                <span className="font-['Manrope',sans-serif] text-base text-[#232323]">Adults</span>
+                <span className="font-['Manrope',sans-serif] font-extrabold text-[18px] text-[#4d1c64]">8,50€</span>
               </div>
               <div className="flex items-center justify-between py-2 border-b border-[rgba(0,0,0,0.15)]">
-                <span className="font-['Roboto',sans-serif] text-base text-[#232323]">Children under 12</span>
-                <span className="font-['Roboto',sans-serif] font-extrabold text-[18px] text-[#4d1c64]">5€</span>
+                <span className="font-['Manrope',sans-serif] text-base text-[#232323]">Children under 12</span>
+                <span className="font-['Manrope',sans-serif] font-extrabold text-[18px] text-[#4d1c64]">5€</span>
               </div>
             </div>
             <div className="flex items-start gap-2 mt-auto pt-2">
               <div className="relative shrink-0 w-6 h-6 mt-0.5">
                 <Image src="/figma-assets/icon-info.svg" alt="" fill className="object-contain" aria-hidden="true" />
               </div>
-              <p className="font-['Nunito',sans-serif] text-[11px] leading-[1.4] tracking-[-0.5px] text-[rgba(35,35,35,0.7)]">
+              <p className="font-['Manrope',sans-serif] text-[11px] leading-[1.4] tracking-[-0.5px] text-[rgba(35,35,35,0.7)]">
                 <strong>For individuals:</strong> the meeting point is at the departure point; ticket office on-site.
               </p>
             </div>
           </div>
 
           {/* Bons Plans — Early morning departures */}
-          <div className="bg-[#f7f7f0] border-2 border-[#4d1c64] flex-1 p-6 flex flex-col gap-4 relative">
+          <div className="bg-[#f5ebdd] border-2 border-[#4d1c64] flex-1 p-6 flex flex-col gap-4 relative">
             <div className="absolute top-0 right-0 bg-[#4d1c64] px-3 py-1">
-              <p className="font-['Roboto',sans-serif] text-white text-[11px] font-medium tracking-[0.5px] uppercase">
+              <p className="font-['Manrope',sans-serif] text-white text-[11px] font-medium tracking-[0.5px] uppercase">
                 Great Deal
               </p>
             </div>
@@ -93,25 +93,25 @@ export default function InformationsPrices() {
               <div className="relative shrink-0 w-6 h-6">
                 <Image src="/figma-assets/icon-ticket.svg" alt="" fill className="object-contain" aria-hidden="true" />
               </div>
-              <p className="font-['Libre_Baskerville',serif] italic text-[#4d1c64] text-[22px] tracking-[-0.72px]">
+              <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#4d1c64] text-[22px] tracking-[-0.72px]">
                 Early Morning Departures
               </p>
             </div>
             <div className="flex flex-col gap-0">
               <div className="flex items-center justify-between py-2 border-b border-[rgba(0,0,0,0.15)]">
-                <span className="font-['Roboto',sans-serif] text-base text-[#232323]">Adults</span>
-                <span className="font-['Roboto',sans-serif] font-extrabold text-[18px] text-[#4d1c64]">7,00€</span>
+                <span className="font-['Manrope',sans-serif] text-base text-[#232323]">Adults</span>
+                <span className="font-['Manrope',sans-serif] font-extrabold text-[18px] text-[#4d1c64]">7,00€</span>
               </div>
               <div className="flex items-center justify-between py-2 border-b border-[rgba(0,0,0,0.15)]">
-                <span className="font-['Roboto',sans-serif] text-base text-[#232323]">Children under 12</span>
-                <span className="font-['Roboto',sans-serif] font-extrabold text-[18px] text-[#4d1c64]">3,50€</span>
+                <span className="font-['Manrope',sans-serif] text-base text-[#232323]">Children under 12</span>
+                <span className="font-['Manrope',sans-serif] font-extrabold text-[18px] text-[#4d1c64]">3,50€</span>
               </div>
             </div>
             <div className="flex items-start gap-2 mt-auto pt-2">
               <div className="relative shrink-0 w-6 h-6 mt-0.5">
                 <Image src="/figma-assets/icon-info.svg" alt="" fill className="object-contain" aria-hidden="true" />
               </div>
-              <p className="font-['Nunito',sans-serif] text-[11px] leading-[1.4] tracking-[-0.5px] text-[rgba(35,35,35,0.7)]">
+              <p className="font-['Manrope',sans-serif] text-[11px] leading-[1.4] tracking-[-0.5px] text-[rgba(35,35,35,0.7)]">
                 <strong>Reduced rate</strong> applicable to the first departures of the morning only. Tickets available at the on-site ticket office.
               </p>
             </div>
@@ -123,12 +123,12 @@ export default function InformationsPrices() {
               <div className="relative shrink-0 w-6 h-6">
                 <Image src="/figma-assets/icon-group.svg" alt="" fill className="object-contain" aria-hidden="true" />
               </div>
-              <p className="font-['Libre_Baskerville',serif] italic text-white text-[22px] tracking-[-0.72px]">
+              <p className="font-['Bricolage_Grotesque',sans-serif] italic text-white text-[22px] tracking-[-0.72px]">
                 Group Booking
               </p>
             </div>
             <div className="flex flex-col gap-4">
-              <p className="font-['Roboto',sans-serif] text-white text-[16px] leading-[1.4]">
+              <p className="font-['Manrope',sans-serif] text-white text-[16px] leading-[1.4]">
                 For group rates, please contact us directly:
               </p>
               <div className="flex flex-col gap-2">
@@ -136,7 +136,7 @@ export default function InformationsPrices() {
                   <div className="relative shrink-0 w-5 h-5">
                     <Image src="/figma-assets/icon-email.svg" alt="" fill className="object-contain" aria-hidden="true" />
                   </div>
-                  <span className="font-['Roboto',sans-serif] text-[15px] underline underline-offset-2">
+                  <span className="font-['Manrope',sans-serif] text-[15px] underline underline-offset-2">
                     petittrain-lebayon@orange.fr
                   </span>
                 </a>
@@ -144,7 +144,7 @@ export default function InformationsPrices() {
                   <div className="relative shrink-0 w-5 h-5">
                     <Image src="/figma-assets/icon-phone.svg" alt="" fill className="object-contain" aria-hidden="true" />
                   </div>
-                  <span className="font-['Roboto',sans-serif] text-[15px]">02 97 24 06 29</span>
+                  <span className="font-['Manrope',sans-serif] text-[15px]">02 97 24 06 29</span>
                 </a>
               </div>
             </div>
@@ -152,7 +152,7 @@ export default function InformationsPrices() {
               <div className="relative shrink-0 w-6 h-6 mt-0.5">
                 <Image src="/figma-assets/icon-info-white.svg" alt="" fill className="object-contain" aria-hidden="true" />
               </div>
-              <p className="font-['Nunito',sans-serif] text-[11px] leading-[1.4] tracking-[-0.5px] text-[rgba(255,255,255,0.7)]">
+              <p className="font-['Manrope',sans-serif] text-[11px] leading-[1.4] tracking-[-0.5px] text-[rgba(255,255,255,0.7)]">
                 <strong>For groups:</strong> reduced rate for 20+ passengers embarking. Advance reservation recommended.
               </p>
             </div>
@@ -162,7 +162,7 @@ export default function InformationsPrices() {
         {/* Book now CTA */}
         <TransitionLink
           href="/book"
-          className="btn-animate-chars btn-primary inline-flex items-center gap-2 h-[45px] px-[22px] bg-[#f7f7f0] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
+          className="btn-animate-chars btn-primary inline-flex items-center gap-2 h-[45px] px-[22px] bg-[#f5ebdd] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-[#414651] text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap"
         >
           <div className="btn-animate-chars__bg" />
           <span data-button-animate-chars="" className="btn-animate-chars__text">Book now</span>

@@ -30,20 +30,20 @@ type Status = 'idle' | 'loading' | 'success' | 'error'
 
 function FieldLabel({ children }: { children: React.ReactNode }) {
   return (
-    <p className="absolute font-['Roboto',sans-serif] font-medium text-[#4d1c64] text-[13px] leading-none left-[10px] top-[8px] tracking-[0.1px] pointer-events-none">
+    <p className="absolute font-['Manrope',sans-serif] font-medium text-[#4d1c64] text-[13px] leading-none left-[10px] top-[8px] tracking-[0.1px] pointer-events-none">
       {children}
     </p>
   )
 }
 
 const inputClass =
-  "w-full h-[63px] pt-[26px] pb-[10px] px-[10px] bg-white border border-[rgba(77,28,100,0.12)] rounded-[10px] font-['Roboto',sans-serif] text-[14px] text-[#181d27] placeholder:text-[rgba(77,28,100,0.45)] focus:outline-none focus:ring-2 focus:ring-[#54206d]/30 focus:border-[rgba(77,28,100,0.4)] transition-shadow"
+  "w-full h-[63px] pt-[26px] pb-[10px] px-[10px] bg-white border border-[rgba(77,28,100,0.12)] rounded-[10px] font-['Manrope',sans-serif] text-[14px] text-[#181d27] placeholder:text-[rgba(77,28,100,0.45)] focus:outline-none focus:ring-2 focus:ring-[#54206d]/30 focus:border-[rgba(77,28,100,0.4)] transition-shadow"
 
 const selectClass =
-  "w-full h-[63px] pt-[26px] pb-[10px] px-[10px] bg-white border border-[rgba(77,28,100,0.12)] rounded-[10px] font-['Roboto',sans-serif] text-[14px] text-[#181d27] focus:outline-none focus:ring-2 focus:ring-[#54206d]/30 focus:border-[rgba(77,28,100,0.4)] transition-shadow appearance-none cursor-pointer"
+  "w-full h-[63px] pt-[26px] pb-[10px] px-[10px] bg-white border border-[rgba(77,28,100,0.12)] rounded-[10px] font-['Manrope',sans-serif] text-[14px] text-[#181d27] focus:outline-none focus:ring-2 focus:ring-[#54206d]/30 focus:border-[rgba(77,28,100,0.4)] transition-shadow appearance-none cursor-pointer"
 
 const textareaClass =
-  "w-full pt-[26px] pb-[10px] px-[10px] bg-white border border-[rgba(77,28,100,0.12)] rounded-[10px] font-['Roboto',sans-serif] text-[14px] text-[#181d27] placeholder:text-[rgba(77,28,100,0.45)] focus:outline-none focus:ring-2 focus:ring-[#54206d]/30 focus:border-[rgba(77,28,100,0.4)] transition-shadow resize-none"
+  "w-full pt-[26px] pb-[10px] px-[10px] bg-white border border-[rgba(77,28,100,0.12)] rounded-[10px] font-['Manrope',sans-serif] text-[14px] text-[#181d27] placeholder:text-[rgba(77,28,100,0.45)] focus:outline-none focus:ring-2 focus:ring-[#54206d]/30 focus:border-[rgba(77,28,100,0.4)] transition-shadow resize-none"
 
 // ---------------------------------------------------------------------------
 // Component
@@ -79,7 +79,7 @@ export default function PrivatisationHero() {
   }
 
   return (
-    <section data-anim-section="hero" className="bg-[#f7f7f0] w-full">
+    <section data-anim-section="hero" className="bg-[#f5ebdd] w-full">
       <div className="flex flex-col xl:flex-row gap-4 xl:gap-[32px] px-4 xl:px-[16px] py-4 xl:py-[16px]">
 
         {/* ── Form panel ── */}
@@ -93,10 +93,10 @@ export default function PrivatisationHero() {
                 </svg>
               </div>
               <div className="flex flex-col gap-2">
-                <h2 className="font-normal font-['Libre_Baskerville',serif] text-[28px] text-[#181d27] tracking-[-2px] leading-[1.15]">
+                <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[28px] text-[#181d27] tracking-[-2px] leading-[1.15]">
                   Demande envoyée !
                 </h2>
-                <p className="font-['Roboto',sans-serif] text-[#535862] text-base leading-[1.4] tracking-[-0.48px]">
+                <p className="font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.4] tracking-[-0.48px]">
                   Merci de votre intérêt. Notre équipe examinera votre demande et vous recontactera
                   dès que possible pour confirmer la disponibilité et discuter des détails.
                 </p>
@@ -106,7 +106,7 @@ export default function PrivatisationHero() {
             <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-6">
 
               {/* ── Your Details ── */}
-              <p className="font-['Libre_Baskerville',serif] text-[#4d1c64] text-[28px] leading-none tracking-[-2px]">
+              <p className="font-['Bricolage_Grotesque',sans-serif] text-[#4d1c64] text-[28px] leading-none tracking-[-2px]">
                 Vos Coordonnées
               </p>
 
@@ -183,7 +183,7 @@ export default function PrivatisationHero() {
               <div className="border-t border-[rgba(77,28,100,0.12)]" />
 
               {/* ── Event Details ── */}
-              <p className="font-['Libre_Baskerville',serif] text-[#4d1c64] text-[28px] leading-none tracking-[-2px]">
+              <p className="font-['Bricolage_Grotesque',sans-serif] text-[#4d1c64] text-[28px] leading-none tracking-[-2px]">
                 Détails de l&apos;événement
               </p>
 
@@ -287,14 +287,14 @@ export default function PrivatisationHero() {
               </div>
 
               {/* Info note */}
-              <p className="font-['Roboto',sans-serif] text-[#54206d] text-[13px] leading-[1.4] tracking-[-0.3px] max-w-[354px]">
+              <p className="font-['Manrope',sans-serif] text-[#54206d] text-[13px] leading-[1.4] tracking-[-0.3px] max-w-[354px]">
                 ⓘ Plus vous nous fournissez de détails, mieux nous pourrons répondre à votre demande
               </p>
 
               {/* Error message */}
               {status === 'error' && errorMsg && (
                 <div className="bg-red-50 border border-red-200 rounded-[6px] px-4 py-3">
-                  <p className="font-['Roboto',sans-serif] text-sm text-red-700">{errorMsg}</p>
+                  <p className="font-['Manrope',sans-serif] text-sm text-red-700">{errorMsg}</p>
                 </div>
               )}
 
@@ -302,7 +302,7 @@ export default function PrivatisationHero() {
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="btn-animate-chars btn-primary inline-flex items-center justify-center h-[45px] px-[22px] bg-[#54206d] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap w-fit disabled:opacity-60"
+                className="btn-animate-chars btn-primary inline-flex items-center justify-center h-[45px] px-[22px] bg-[#54206d] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-white text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap w-fit disabled:opacity-60"
               >
                 <div className="btn-animate-chars__bg" />
                 <span data-button-animate-chars="" className="btn-animate-chars__text">{status === 'loading' ? 'Envoi en cours…' : 'Envoyer la demande'}</span>
@@ -334,7 +334,7 @@ export default function PrivatisationHero() {
               </div>
               <div className="flex flex-col gap-0.5">
                 <div className="flex items-center gap-1">
-                  <span className="font-['Nunito',sans-serif] font-bold text-[14px] text-black tracking-[-0.42px]">4,7</span>
+                  <span className="font-['Manrope',sans-serif] font-bold text-[14px] text-black tracking-[-0.42px]">4,7</span>
                   <div className="flex gap-0.5">
                     {[...Array(5)].map((_, i) => (
                       <svg key={i} width="12" height="12" viewBox="0 0 12 12" fill="#FBBC04" xmlns="http://www.w3.org/2000/svg">
@@ -343,7 +343,7 @@ export default function PrivatisationHero() {
                     ))}
                   </div>
                 </div>
-                <p className="font-['Nunito',sans-serif] text-[11px] text-black/60 tracking-[-0.33px]">6 000+ avis</p>
+                <p className="font-['Manrope',sans-serif] text-[11px] text-black/60 tracking-[-0.33px]">6 000+ avis</p>
               </div>
             </div>
 
@@ -352,18 +352,18 @@ export default function PrivatisationHero() {
               <div className="relative shrink-0 w-[19px] h-[19px]">
                 <Image src="/figma-assets/icon-train-white.svg" alt="" fill className="object-contain" aria-hidden="true" />
               </div>
-              <p className="font-['Libre_Baskerville',serif] italic text-[#f7f7f0] text-base leading-6 tracking-[-0.48px]">
+              <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#f5ebdd] text-base leading-6 tracking-[-0.48px]">
                 Privatisation &amp; location B2B
               </p>
             </div>
 
             {/* Heading */}
-            <h1 className="font-normal font-['Libre_Baskerville',serif] text-[32px] xl:text-[48px] leading-[1.1] tracking-[-2.5px] xl:tracking-[-3.36px] text-[#f7f7f0] max-w-[537px]">
+            <h1 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[32px] xl:text-[48px] leading-[1.1] tracking-[-2.5px] xl:tracking-[-3.36px] text-[#f5ebdd] max-w-[537px]">
               Privatisez le <em>Petit Train de Carnac</em> pour votre événement
             </h1>
 
             {/* Description */}
-            <p className="hidden xl:block font-['Roboto',sans-serif] text-[rgba(247,247,240,0.7)] text-base leading-[1.2] tracking-[-0.48px] max-w-[500px]">
+            <p className="hidden xl:block font-['Manrope',sans-serif] text-[rgba(247,247,240,0.7)] text-base leading-[1.2] tracking-[-0.48px] max-w-[500px]">
               Le Petit Train de Carnac peut être privatisé pour des visites de groupe, des événements d&apos;entreprise et des occasions spéciales. Cette solution flexible vous permet d&apos;offrir à vos invités une visite guidée à travers Carnac, confortable et originale, adaptée à vos besoins et à votre programme.
             </p>
           </div>

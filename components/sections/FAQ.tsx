@@ -70,7 +70,7 @@ function FaqItem({ question, answer, open, onToggle }: FaqItemProps) {
         className="w-full flex items-start justify-between gap-6 text-left cursor-pointer"
         aria-expanded={open ? "true" : "false"}
       >
-        <h3 className="font-normal font-['Libre_Baskerville',serif] text-[20px] text-[#181d27] leading-[1.1] tracking-[-1.4px] m-0">
+        <h3 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[20px] text-[#181d27] leading-[1.1] tracking-[-1.4px] m-0">
           {question}
         </h3>
         <span
@@ -83,7 +83,7 @@ function FaqItem({ question, answer, open, onToggle }: FaqItemProps) {
 
       <div className={`faq-answer-wrap ${open ? "open" : ""} mt-2`}>
         <div className="faq-answer-inner">
-          <p className="font-['Roboto',sans-serif] text-[#535862] text-[16px] leading-6 tracking-[-0.48px] pt-2">
+          <p className="font-['Manrope',sans-serif] text-[#535862] text-[16px] leading-6 tracking-[-0.48px] pt-2">
             {answer}
           </p>
         </div>
@@ -118,7 +118,7 @@ export default function FAQ({
   };
 
   return (
-    <section data-anim-section className="bg-[#f7f7f0] py-24">
+    <section data-anim-section className="bg-[#f5ebdd] py-24">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -136,19 +136,19 @@ export default function FAQ({
                 aria-hidden="true"
               />
             </div>
-            <p className="font-['Libre_Baskerville',serif] italic text-[#54206d] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
+            <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#54206d] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
               {label}
             </p>
           </div>
-          <h2 className="font-normal font-['Libre_Baskerville',serif] text-[32px] sm:text-[40px] md:text-[48px] text-[#181d27] leading-[1.1] tracking-[-1.5px] sm:tracking-[-2.5px] md:tracking-[-3.36px] [text-wrap:balance] break-words">
+          <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[32px] sm:text-[40px] md:text-[48px] text-[#181d27] leading-[1.1] tracking-[-1.5px] sm:tracking-[-2.5px] md:tracking-[-3.36px] [text-wrap:balance] break-words">
             {heading}
           </h2>
-          <p className="font-['Roboto',sans-serif] text-[#535862] text-[16px] leading-[1.2] tracking-[-0.48px]">
+          <p className="font-['Manrope',sans-serif] text-[#535862] text-[16px] leading-[1.2] tracking-[-0.48px]">
             {description}
           </p>
           <TransitionLink
             href="/book"
-            className="btn-animate-chars btn-primary inline-flex items-center gap-2 h-[45px] px-[22px] bg-[#54206d] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap w-fit"
+            className="btn-animate-chars btn-primary inline-flex items-center gap-2 h-[45px] px-[22px] bg-[#54206d] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-white text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap w-fit"
           >
             <div className="btn-animate-chars__bg" />
             <span data-button-animate-chars="" className="btn-animate-chars__text">Réservez votre visite</span>

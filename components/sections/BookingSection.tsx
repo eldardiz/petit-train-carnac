@@ -7,7 +7,7 @@ export default function BookingSection() {
   return (
     <section
       data-anim-section="hero"
-      className="bg-[#f7f7f0] pt-12 xl:pt-20 pb-16 xl:pb-24 overflow-hidden"
+      className="bg-white pt-12 xl:pt-20 pb-16 xl:pb-24 overflow-hidden"
     >
       <div className="max-w-[1280px] mx-auto px-5 xl:px-0">
         {/* Header */}
@@ -23,7 +23,7 @@ export default function BookingSection() {
                 aria-hidden="true"
               />
             </div>
-            <p className="font-['Libre_Baskerville',serif] italic text-[#54206d] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
+            <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#54206d] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
               Réservation
             </p>
           </div>
@@ -31,7 +31,7 @@ export default function BookingSection() {
           {/* Heading */}
           <h1
             data-anim-item
-            className="font-normal font-['Libre_Baskerville',serif] text-[36px] sm:text-[44px] md:text-[52px] xl:text-[60px] leading-[1.1] tracking-[-1.8px] sm:tracking-[-2.4px] md:tracking-[-3.2px] xl:tracking-[-4.2px] text-[#181d27] not-italic [text-wrap:balance] break-words"
+            className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[36px] sm:text-[44px] md:text-[52px] xl:text-[60px] leading-[1.1] tracking-[-1.8px] sm:tracking-[-2.4px] md:tracking-[-3.2px] xl:tracking-[-4.2px] text-[#181d27] not-italic [text-wrap:balance] break-words"
           >
             Réservez votre visite en <em className="italic text-[#54206d] not-[font-style:normal]">Petit Train</em> à Carnac
           </h1>
@@ -39,7 +39,7 @@ export default function BookingSection() {
           {/* Description */}
           <p
             data-anim-item
-            className="font-['Roboto',sans-serif] text-[#535862] text-base leading-[1.4] tracking-[-0.48px] max-w-[620px]"
+            className="font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.4] tracking-[-0.48px] max-w-[620px]"
           >
             Choisissez votre date et votre heure, sélectionnez le nombre de billets et
             confirmez votre réservation en ligne. La visite dure{' '}

@@ -29,13 +29,13 @@ export default function Navbar() {
       {/* Top announcement banner */}
       <div className="bg-[#33114d] border-b border-[rgba(213,215,218,0.4)]">
         <div className="max-w-[1280px] mx-auto px-5 xl:px-0 py-[6px] flex items-center justify-center">
-          <p className="text-[#f7f7f0] text-[12px] md:text-base leading-5 md:leading-6 tracking-[-0.48px] text-center font-['Roboto',sans-serif]">
+          <p className="text-[#f5ebdd] text-[12px] md:text-base leading-5 md:leading-6 tracking-[-0.48px] text-center font-['Manrope',sans-serif]">
             Ce site fait partie des Petits Trains du Morbihan. Découvrez nos autres circuits à{" "}
-            <a href="https://www.petittrain-morbihan.com/en/vannes/" className="underline text-[#f7f7f0]" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.petittrain-morbihan.com/en/vannes/" className="underline text-[#f5ebdd]" target="_blank" rel="noopener noreferrer">
               Vannes
             </a>{" "}
             et{" "}
-            <a href="https://www.petittrain-morbihan.com/en/quiberon/" className="underline text-[#f7f7f0]" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.petittrain-morbihan.com/en/quiberon/" className="underline text-[#f5ebdd]" target="_blank" rel="noopener noreferrer">
               Quiberon.
             </a>
           </p>
@@ -64,7 +64,7 @@ export default function Navbar() {
                 <TransitionLink
                   key={link.href}
                   href={link.href}
-                  className="nav-link text-[#f7f7f0] text-base leading-6 tracking-[-0.48px] font-['Roboto',sans-serif] whitespace-nowrap"
+                  className="nav-link text-[#f5ebdd] text-base leading-6 tracking-[-0.48px] font-['Manrope',sans-serif] whitespace-nowrap"
                 >
                   {link.label}
                 </TransitionLink>
@@ -77,7 +77,7 @@ export default function Navbar() {
             <TransitionLink
               href="/prices"
               aria-label="Voir les Tarifs"
-              className="btn-animate-chars btn-secondary bg-[#54206d] border border-[rgba(255,255,255,0.15)] h-[45px] px-[22px] rounded-[4px] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
+              className="btn-animate-chars btn-secondary bg-[#54206d] border border-[rgba(255,255,255,0.15)] h-[45px] px-[22px] rounded-[4px] text-white text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap"
             >
               <div className="btn-animate-chars__bg" />
               <span data-button-animate-chars="" className="btn-animate-chars__text">Voir les Tarifs</span>
@@ -85,7 +85,7 @@ export default function Navbar() {
             <TransitionLink
               href="/book"
               aria-label="Réserver"
-              className="btn-animate-chars btn-primary bg-[#f7f7f0] border border-[rgba(0,0,0,0.2)] h-[45px] px-[22px] rounded-[4px] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
+              className="btn-animate-chars btn-primary bg-[#f5ebdd] border border-[rgba(0,0,0,0.2)] h-[45px] px-[22px] rounded-[4px] text-[#414651] text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap"
             >
               <div className="btn-animate-chars__bg" />
               <span data-button-animate-chars="" className="btn-animate-chars__text">Réserver</span>
@@ -129,7 +129,7 @@ export default function Navbar() {
               <TransitionLink
                 key={link.href}
                 href={link.href}
-                className="text-[#f7f7f0] text-base leading-6 tracking-[-0.48px] font-['Roboto',sans-serif]"
+                className="text-[#f5ebdd] text-base leading-6 tracking-[-0.48px] font-['Manrope',sans-serif]"
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
@@ -139,7 +139,7 @@ export default function Navbar() {
               <TransitionLink
                 href="/prices"
                 aria-label="Voir les Tarifs"
-                className="btn-animate-chars btn-secondary bg-[#54206d] border border-[rgba(255,255,255,0.15)] h-[45px] px-[22px] rounded-[4px] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap justify-center"
+                className="btn-animate-chars btn-secondary bg-[#54206d] border border-[rgba(255,255,255,0.15)] h-[45px] px-[22px] rounded-[4px] text-white text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap justify-center"
                 onClick={() => setMobileOpen(false)}
               >
                 <div className="btn-animate-chars__bg" />
@@ -148,7 +148,7 @@ export default function Navbar() {
               <TransitionLink
                 href="/book"
                 aria-label="Réserver"
-                className="btn-animate-chars btn-primary bg-[#f7f7f0] border border-[rgba(0,0,0,0.2)] h-[45px] px-[22px] rounded-[4px] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap justify-center"
+                className="btn-animate-chars btn-primary bg-[#f5ebdd] border border-[rgba(0,0,0,0.2)] h-[45px] px-[22px] rounded-[4px] text-[#414651] text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap justify-center"
                 onClick={() => setMobileOpen(false)}
               >
                 <div className="btn-animate-chars__bg" />

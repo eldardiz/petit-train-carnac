@@ -29,7 +29,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section data-anim-section className="bg-[#f7f7f0] flex flex-col gap-16 py-24 overflow-hidden">
+    <section data-anim-section className="bg-[#f5ebdd] flex flex-col gap-16 py-24 overflow-hidden">
       {/* Header row */}
       <div className="w-full max-w-[1280px] px-5 xl:px-0 mx-auto">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-8">
@@ -45,17 +45,17 @@ export default function Features() {
                   aria-hidden="true"
                 />
               </div>
-              <p className="font-['Libre_Baskerville',serif] italic text-[#111] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
+              <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#111] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
                 Aperçu du Circuit
               </p>
             </div>
-            <h2 className="font-normal font-['Libre_Baskerville',serif] text-[32px] sm:text-[40px] md:text-[48px] text-[#181d27] leading-[1.15] tracking-[-1.5px] sm:tracking-[-2.5px] md:tracking-[-3.36px] max-w-[575px] [text-wrap:balance] break-words">
+            <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[32px] sm:text-[40px] md:text-[48px] text-[#181d27] leading-[1.15] tracking-[-1.5px] sm:tracking-[-2.5px] md:tracking-[-3.36px] max-w-[575px] [text-wrap:balance] break-words">
               Une façon simple et agréable d&apos;explorer Carnac
             </h2>
           </div>
 
           {/* Right: body text */}
-          <div data-anim-item className="flex flex-col gap-5 max-w-[603px] font-['Inter',sans-serif] text-[18px] text-[#535862] leading-[1.2] tracking-[-0.54px]">
+          <div data-anim-item className="flex flex-col gap-5 max-w-[603px] font-['Manrope',sans-serif] text-[18px] text-[#535862] leading-[1.2] tracking-[-0.54px]">
             <p>
               Le Petit Train de Carnac vous invite à découvrir la ville à un
               rythme détendu, confortablement installé à bord d&apos;un train
@@ -100,10 +100,10 @@ export default function Features() {
 
                   {/* Text */}
                   <div className="flex flex-col gap-2">
-                    <p className="font-['Inter',sans-serif] font-semibold text-[20px] text-[#181d27] leading-[1.5] tracking-[-0.8px]">
+                    <p className="font-['Manrope',sans-serif] font-semibold text-[20px] text-[#181d27] leading-[1.5] tracking-[-0.8px]">
                       {feature.title}
                     </p>
-                    <p className="font-['Inter',sans-serif] text-base text-[#535862] leading-6">
+                    <p className="font-['Manrope',sans-serif] text-base text-[#535862] leading-6">
                       {feature.description}
                     </p>
                   </div>

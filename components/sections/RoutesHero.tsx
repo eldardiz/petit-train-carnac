@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import TransitionLink from '@/components/ui/TransitionLink'
 import { useState, useEffect, type ReactNode } from 'react'
 
 interface RoutesHeroProps {
@@ -27,7 +26,7 @@ export default function RoutesHero({
   lightbox = false,
   headingLevel: Heading = 'h1',
   primaryButton = { label: 'Flyer individuel', href: '/figma-assets/FlyerIndividual.pdf' },
-  secondaryButton = { label: 'Flyer de groupe', href: '#' },
+  secondaryButton = { label: 'Flyer de groupe', href: '/figma-assets/GroupFlyer.pdf' },
 }: RoutesHeroProps) {
   const [open, setOpen] = useState(false)
 
@@ -81,18 +80,18 @@ export default function RoutesHero({
               aria-hidden="true"
             />
           </div>
-          <p className="font-['Libre_Baskerville',serif] italic text-[#54206d] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
+          <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#54206d] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
             {label}
           </p>
         </div>
 
         {/* Heading */}
-        <Heading data-anim-item className="font-['Libre_Baskerville',serif] text-[40px] sm:text-[48px] xl:text-[60px] text-[#181d27] leading-[1.1] tracking-[-3.36px] [text-wrap:balance]">
+        <Heading data-anim-item className="font-['Bricolage_Grotesque',sans-serif] text-[40px] sm:text-[48px] xl:text-[60px] text-[#181d27] leading-[1.1] tracking-[-3.36px] [text-wrap:balance]">
           {heading}
         </Heading>
 
         {/* Description */}
-        <div data-anim-item className="font-['Roboto',sans-serif] text-[#535862] text-[16px] leading-[1.2] tracking-[-0.48px] flex flex-col gap-4 max-w-[551px]">
+        <div data-anim-item className="font-['Manrope',sans-serif] text-[#535862] text-[16px] leading-[1.2] tracking-[-0.48px] flex flex-col gap-4 max-w-[551px]">
           {description}
         </div>
       </div>
@@ -104,7 +103,7 @@ export default function RoutesHero({
           target="_blank"
           rel="noopener noreferrer"
           aria-label={primaryButton.label}
-          className="btn-animate-chars btn-primary gap-2 h-[45px] px-[22px] bg-[#54206d] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-white text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
+          className="btn-animate-chars btn-primary gap-2 h-[45px] px-[22px] bg-[#54206d] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-white text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap"
         >
           <div className="btn-animate-chars__bg" />
           <div className="relative w-4 h-4 shrink-0">
@@ -118,10 +117,12 @@ export default function RoutesHero({
           </div>
           <span data-button-animate-chars="" className="btn-animate-chars__text">{primaryButton.label}</span>
         </a>
-        <TransitionLink
+        <a
           href={secondaryButton.href}
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label={secondaryButton.label}
-          className="btn-animate-chars btn-secondary gap-2 h-[45px] px-[22px] bg-[#f7f7f0] rounded-[4px] border border-[rgba(0,0,0,0.2)] text-[#414651] text-base font-medium font-['Roboto',sans-serif] tracking-[-0.64px] whitespace-nowrap"
+          className="btn-animate-chars btn-secondary gap-2 h-[45px] px-[22px] bg-[#f5ebdd] rounded-[4px] border border-[rgba(0,0,0,0.2)] text-[#414651] text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap"
         >
           <div className="btn-animate-chars__bg" />
           <div className="relative w-4 h-4 shrink-0">
@@ -134,7 +135,7 @@ export default function RoutesHero({
             />
           </div>
           <span data-button-animate-chars="" className="btn-animate-chars__text">{secondaryButton.label}</span>
-        </TransitionLink>
+        </a>
       </div>
 
       {/* Divider */}
@@ -153,7 +154,7 @@ export default function RoutesHero({
           </div>
           <div className="flex flex-col gap-0.5">
             <div className="flex items-center gap-1">
-              <span className="font-['Nunito',sans-serif] font-bold text-[14px] text-black tracking-[-0.42px]">
+              <span className="font-['Manrope',sans-serif] font-bold text-[14px] text-black tracking-[-0.42px]">
                 4,7
               </span>
               <div className="relative w-[76px] h-[12px]">
@@ -165,12 +166,12 @@ export default function RoutesHero({
                 />
               </div>
             </div>
-            <span className="font-['Nunito',sans-serif] text-[11px] text-black/60 tracking-[-0.33px]">
+            <span className="font-['Manrope',sans-serif] text-[11px] text-black/60 tracking-[-0.33px]">
               6 000+ avis
             </span>
           </div>
         </div>
-        <p className="font-['Roboto',sans-serif] text-[#535862] text-[16px] leading-[1.2] tracking-[-0.48px] max-w-[499px]">
+        <p className="font-['Manrope',sans-serif] text-[#535862] text-[16px] leading-[1.2] tracking-[-0.48px] max-w-[499px]">
           <strong className="font-bold text-[#535862]">Le Petit Train de Carnac</strong>{' '}
           est noté plus de 4,7 sur Google, avec plus de 6 000 avis, ce qui en fait l&apos;une des
           attractions touristiques les plus populaires de Carnac.
@@ -181,7 +182,7 @@ export default function RoutesHero({
 
   return (
     <>
-      <section data-anim-section="hero" className="bg-[#f7f7f0] py-16 xl:py-[112px] px-5 xl:px-[64px]">
+      <section data-anim-section="hero" className="bg-[#f5ebdd] py-16 xl:py-[112px] px-5 xl:px-[64px]">
         <div className="max-w-[1312px] mx-auto flex flex-col xl:flex-row items-center gap-[80px]">
           {flip ? (
             <>

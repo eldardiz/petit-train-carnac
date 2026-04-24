@@ -91,16 +91,16 @@ function ReviewCard({ name, subtitle, text, image }: { name: string; subtitle: s
     <div className="bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row md:h-[420px] w-full shadow-[0px_2px_12px_0px_rgba(0,0,0,0.08)]">
       {/* Text content */}
       <div className="flex-1 p-6 md:p-8 flex flex-col justify-between gap-6 md:gap-0 min-w-0">
-        <p className="font-['Roboto',sans-serif] text-[#181d27] text-[17px] md:text-[20px] leading-[1.5] tracking-[-0.4px]">
+        <p className="font-['Manrope',sans-serif] text-[#181d27] text-[17px] md:text-[20px] leading-[1.5] tracking-[-0.4px]">
           {text}
         </p>
         <div className="flex flex-col gap-1">
-          <p className="font-['Libre_Baskerville',serif] text-[#181d27] text-[20px] md:text-[22px] leading-[1.2] tracking-[-0.8px] font-bold">
+          <p className="font-['Bricolage_Grotesque',sans-serif] text-[#181d27] text-[20px] md:text-[22px] leading-[1.2] tracking-[-0.8px] font-bold">
             {name}
           </p>
           <div className="flex items-center gap-2">
             <StarRating />
-            <span className="font-['Roboto',sans-serif] text-[#535862] text-[13px]">{subtitle}</span>
+            <span className="font-['Manrope',sans-serif] text-[#535862] text-[13px]">{subtitle}</span>
           </div>
         </div>
       </div>

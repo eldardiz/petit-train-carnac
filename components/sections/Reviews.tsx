@@ -15,7 +15,7 @@ function StarRating() {
 
 export default function Reviews() {
   return (
-    <section data-anim-section className="bg-[#4d1c64] flex flex-col gap-10 xl:gap-14 items-center justify-center py-16 overflow-hidden min-h-[100vh]">
+    <section data-anim-section className="bg-[#4d1c64] flex flex-col gap-10 xl:gap-14 items-center justify-center py-20 overflow-hidden">
       {/* Header */}
       <div className="max-w-[1280px] mx-auto px-5 xl:px-0 w-full flex justify-center">
         <div className="flex flex-col gap-6 items-center text-center max-w-[623px]">
@@ -29,16 +29,16 @@ export default function Reviews() {
                 aria-hidden="true"
               />
             </div>
-            <p className="font-['Libre_Baskerville',serif] italic text-[#f7f7f0] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
+            <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#f5ebdd] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
               Avis
             </p>
           </div>
 
-          <h2 data-anim-item className="font-normal font-['Libre_Baskerville',serif] text-[#f7f7f0] text-[32px] sm:text-[40px] md:text-[48px] text-center leading-[1.1] tracking-[-1.5px] sm:tracking-[-2.5px] md:tracking-[-3.36px] max-w-[410px] w-full [text-wrap:balance] break-words">
+          <h2 data-anim-item className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[#f5ebdd] text-[32px] sm:text-[40px] md:text-[48px] text-center leading-[1.1] tracking-[-1.5px] sm:tracking-[-2.5px] md:tracking-[-3.36px] max-w-[410px] w-full [text-wrap:balance] break-words">
             Ce que disent les visiteurs <em>du train&nbsp;?</em>
           </h2>
 
-          <p data-anim-item className="font-['Roboto',sans-serif] text-[#f7f7f0] text-[16px] text-center leading-[1.2] tracking-[-0.48px] max-w-[570px] w-full">
+          <p data-anim-item className="font-['Manrope',sans-serif] text-[#f5ebdd] text-[16px] text-center leading-[1.2] tracking-[-0.48px] max-w-[570px] w-full">
             <strong>Le Petit Train de Carnac</strong> est noté plus de{" "}
             <a href="https://www.google.com/maps/search/Petit+Train+de+Carnac" target="_blank" rel="noopener noreferrer" className="text-[#d8b800] underline">4,7 sur Google</a>,
             avec plus de 6 000 avis, ce qui en fait l&apos;une des attractions
@@ -57,12 +57,12 @@ export default function Reviews() {
             </div>
             <div className="flex flex-col gap-0.5">
               <div className="flex items-center gap-1">
-                <span className="font-['Nunito',sans-serif] font-bold text-[14px] text-black tracking-[-0.42px]">
+                <span className="font-['Manrope',sans-serif] font-bold text-[14px] text-black tracking-[-0.42px]">
                   4,7
                 </span>
                 <StarRating />
               </div>
-              <p className="font-['Nunito',sans-serif] text-[11px] text-black opacity-60 tracking-[-0.33px]">
+              <p className="font-['Manrope',sans-serif] text-[11px] text-black opacity-60 tracking-[-0.33px]">
                 6 000+ avis
               </p>
             </div>

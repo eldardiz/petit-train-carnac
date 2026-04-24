@@ -117,7 +117,7 @@ function FaqItem({
         className="w-full flex items-start justify-between gap-6 text-left cursor-pointer group"
         aria-expanded={open}
       >
-        <h3 className="font-normal font-['Libre_Baskerville',serif] text-[20px] text-[#181d27] leading-[1.1] tracking-[-1.4px] m-0">
+        <h3 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[20px] text-[#181d27] leading-[1.1] tracking-[-1.4px] m-0">
           {question}
         </h3>
         <span
@@ -138,7 +138,7 @@ function FaqItem({
 
       <div className={`faq-answer-wrap ${open ? 'open' : ''} mt-1`}>
         <div className="faq-answer-inner">
-          <p className="font-['Roboto',sans-serif] text-[#535862] text-base leading-6 tracking-[-0.48px] pt-3 pr-8">
+          <p className="font-['Manrope',sans-serif] text-[#535862] text-base leading-6 tracking-[-0.48px] pt-3 pr-8">
             {answer}
           </p>
         </div>
@@ -167,7 +167,7 @@ export default function FAQsSection() {
   }
 
   return (
-    <section data-anim-section className="bg-[#f7f7f0] py-24">
+    <section data-anim-section className="bg-[#f5ebdd] py-24">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

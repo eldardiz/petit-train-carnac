@@ -6,7 +6,7 @@ export const metadata = {
 }
 
 import RoutesHero from '@/components/sections/RoutesHero'
-import Souvenirs from '@/components/sections/Souvenirs'
+import Gallery from '@/components/sections/Gallery'
 import RoutesTimeline from '@/components/sections/RoutesTimeline'
 import FAQ from '@/components/sections/FAQ'
 import Locations from '@/components/sections/Locations'
@@ -67,7 +67,7 @@ export default function RoutesPage() {
         heading={
           <>
             Le parcours du{' '}
-            <em className="font-['Libre_Baskerville',serif] italic text-[#54206d] not-italic">
+            <em className="font-['Bricolage_Grotesque',sans-serif] italic text-[#54206d] not-italic">
               Petit Train de Carnac
             </em>
           </>
@@ -85,8 +85,8 @@ export default function RoutesPage() {
         lightbox
       />
 
-      {/* Section 2: Souvenirs image trail */}
-      <Souvenirs />
+      {/* Section 2: Gallery masonry */}
+      <Gallery />
 
       {/* Section 3: Timeline of stops */}
       <RoutesTimeline />

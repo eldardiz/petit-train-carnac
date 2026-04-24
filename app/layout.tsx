@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Libre_Baskerville, Roboto, Inter, Nunito, Raleway } from "next/font/google";
+import { Bricolage_Grotesque, Manrope } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
@@ -11,33 +11,16 @@ import ScrollToTop from "@/components/ui/ScrollToTop";
 import AnimationInit from "@/components/providers/AnimationInit";
 import { SITE_URL, absoluteUrl } from "@/lib/site";
 
-const libreBaskerville = Libre_Baskerville({
+const bricolageGrotesque = Bricolage_Grotesque({
   subsets: ["latin"],
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-libre-baskerville",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-bricolage",
   display: "swap",
 });
-const roboto = Roboto({
+const manrope = Manrope({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-roboto",
-  display: "swap",
-});
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-const nunito = Nunito({
-  subsets: ["latin"],
-  variable: "--font-nunito",
-  display: "swap",
-});
-const raleway = Raleway({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-raleway",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-manrope",
   display: "swap",
 });
 
@@ -87,7 +70,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${libreBaskerville.variable} ${roboto.variable} ${inter.variable} ${nunito.variable} ${raleway.variable}`}>
+    <html lang="fr" className={`${bricolageGrotesque.variable} ${manrope.variable}`}>
       <body>
         <script
           type="application/ld+json"

@@ -1,5 +1,6 @@
 @import "../styles/figma-tokens.css";
 @import "tailwindcss";
+@import "../styles/gallery.css";
 
 /* ── Box sizing ─────────────────────────────────────────────── */
 *,
@@ -16,7 +17,7 @@ video {
 html,
 body {
   overflow-x: hidden;
-  background-color: #f7f7f0;
+  background-color: #f5ebdd;
 }
 
 /* ── Scroll-reveal system ───────────────────────────────────── */

@@ -104,7 +104,7 @@ const monthsBottom = [
 
 export default function InformationsSchedule() {
   return (
-    <section data-anim-section className="bg-[#f7f7f0] py-20 overflow-hidden">
+    <section data-anim-section className="bg-[#f5ebdd] py-20 overflow-hidden">
       <div className="max-w-[1280px] mx-auto px-5 xl:px-0 flex flex-col gap-8">
 
         {/* Info cards — Operating period + Weather */}
@@ -133,10 +133,10 @@ export default function InformationsSchedule() {
                 </div>
               </div>
               <div className="flex flex-col gap-4">
-                <h3 className="font-normal font-['Libre_Baskerville',serif] text-[28px] md:text-[32px] leading-[1.25] text-white tracking-[-2.24px]">
+                <h3 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[28px] md:text-[32px] leading-[1.25] text-white tracking-[-2.24px]">
                   Période d&apos;exploitation
                 </h3>
-                <p className="font-['Nunito',sans-serif] text-[14px] leading-[1.3] tracking-[-0.42px] text-white max-w-[400px]">
+                <p className="font-['Manrope',sans-serif] text-[14px] leading-[1.3] tracking-[-0.42px] text-white max-w-[400px]">
                   Le Petit Train de Carnac fonctionne tous les jours d&apos;avril
                   à début novembre, y compris les dimanches et jours fériés.
                 </p>
@@ -168,10 +168,10 @@ export default function InformationsSchedule() {
                 </div>
               </div>
               <div className="flex flex-col gap-4">
-                <h3 className="font-normal font-['Libre_Baskerville',serif] text-[28px] md:text-[32px] leading-[1.25] text-white tracking-[-2.24px]">
+                <h3 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[28px] md:text-[32px] leading-[1.25] text-white tracking-[-2.24px]">
                   Météo
                 </h3>
-                <p className="font-['Nunito',sans-serif] text-[14px] leading-[1.3] tracking-[-0.42px] text-white max-w-[400px]">
+                <p className="font-['Manrope',sans-serif] text-[14px] leading-[1.3] tracking-[-0.42px] text-white max-w-[400px]">
                   En cas de pluie ou de grand vent, le train est vitré sur trois
                   côtés, vous permettant de profiter pleinement de votre visite.
                 </p>
@@ -186,7 +186,7 @@ export default function InformationsSchedule() {
             {/* Timetables heading */}
             <div className="flex items-center gap-4 pb-8 border-b border-[rgba(255,255,255,0.2)]">
               <div className="flex-1 h-px bg-[rgba(255,255,255,0.35)]" />
-              <h2 className="font-normal font-['Libre_Baskerville',serif] italic text-white text-[28px] tracking-[-1.5px] whitespace-nowrap">
+              <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] italic text-white text-[28px] tracking-[-1.5px] whitespace-nowrap">
                 Horaires
               </h2>
               <div className="flex-1 h-px bg-[rgba(255,255,255,0.35)]" />
@@ -196,7 +196,7 @@ export default function InformationsSchedule() {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-[rgba(255,255,255,0.4)]">
               {months.map((month) => (
                 <div key={month.name} className="flex flex-col gap-3">
-                  <p className="font-['Libre_Baskerville',serif] italic text-[28px] md:text-[32px] leading-[normal] text-white tracking-[-2.24px]">
+                  <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[28px] md:text-[32px] leading-[normal] text-white tracking-[-2.24px]">
                     {month.name}
                   </p>
                   {month.hours && (
@@ -210,12 +210,12 @@ export default function InformationsSchedule() {
                           aria-hidden="true"
                         />
                       </div>
-                      <p className="font-['Raleway',sans-serif] text-base text-white leading-[normal]">
+                      <p className="font-['Manrope',sans-serif] text-base text-white leading-[normal]">
                         {month.hours}
                       </p>
                     </div>
                   )}
-                  <p className="font-['Raleway',sans-serif] text-[13px] leading-[1.4] text-[rgba(255,255,255,0.75)] tracking-[-0.42px]">
+                  <p className="font-['Manrope',sans-serif] text-[13px] leading-[1.4] text-[rgba(255,255,255,0.75)] tracking-[-0.42px]">
                     {month.note}
                   </p>
                 </div>
@@ -226,7 +226,7 @@ export default function InformationsSchedule() {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               {monthsBottom.map((month) => (
                 <div key={month.name} className="flex flex-col gap-3">
-                  <p className="font-['Libre_Baskerville',serif] italic text-[28px] md:text-[32px] leading-[1.1] text-white tracking-[-2.24px]">
+                  <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[28px] md:text-[32px] leading-[1.1] text-white tracking-[-2.24px]">
                     {month.name}
                   </p>
                   {month.hours && (
@@ -240,12 +240,12 @@ export default function InformationsSchedule() {
                           aria-hidden="true"
                         />
                       </div>
-                      <p className="font-['Raleway',sans-serif] text-base text-white leading-[normal]">
+                      <p className="font-['Manrope',sans-serif] text-base text-white leading-[normal]">
                         {month.hours}
                       </p>
                     </div>
                   )}
-                  <p className="font-['Raleway',sans-serif] text-[13px] leading-[1.4] text-[rgba(255,255,255,0.75)] tracking-[-0.42px]">
+                  <p className="font-['Manrope',sans-serif] text-[13px] leading-[1.4] text-[rgba(255,255,255,0.75)] tracking-[-0.42px]">
                     {month.note}
                   </p>
                 </div>
@@ -255,16 +255,16 @@ export default function InformationsSchedule() {
         </div>
 
         {/* Holidays & Off-season — standalone cream box */}
-        <div data-anim-item className="rounded-[32px] border border-[rgba(0,0,0,0.1)] bg-[#f7f7f0] px-10 py-12 flex flex-col items-center gap-6 text-center">
+        <div data-anim-item className="rounded-[32px] border border-[rgba(0,0,0,0.1)] bg-[#f5ebdd] px-10 py-12 flex flex-col items-center gap-6 text-center">
           {/* Heading */}
           <div className="flex items-center gap-4 w-full">
             <div className="flex-1 h-px bg-[rgba(0,0,0,0.12)]" />
-            <h2 className="font-normal font-['Libre_Baskerville',serif] italic text-[#4d1c64] text-[28px] tracking-[-1.5px] whitespace-nowrap">
+            <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] italic text-[#4d1c64] text-[28px] tracking-[-1.5px] whitespace-nowrap">
               Jours fériés &amp; Hors-saison
             </h2>
             <div className="flex-1 h-px bg-[rgba(0,0,0,0.12)]" />
           </div>
-          <p className="font-['Raleway',sans-serif] text-[#181d27] text-base leading-[normal] max-w-[476px]">
+          <p className="font-['Manrope',sans-serif] text-[#181d27] text-base leading-[normal] max-w-[476px]">
             Les horaires des jours fériés sont identiques aux horaires habituels.
             Le Petit Train fonctionne normalement tous les jours fériés d&apos;avril à début novembre.
           </p>

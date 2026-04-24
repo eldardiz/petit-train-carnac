@@ -2,6 +2,19 @@
 
 ## Done
 
+- **QA Round 3** (Apr 24, 2026) — client polish pass:
+  - Global color swap `#f7f7f0` → `#f5ebdd` (new cream brand token)
+  - Font overhaul: Libre Baskerville / Roboto / Inter / Nunito / Raleway → Bricolage Grotesque (headings) + Manrope (body), all via `next/font/google`
+  - Hero gradient on homepage: `from-[#f5ebdd] to-white to-[60%]` + Note Importante banner → white
+  - PracticalInfo cards: hover-to-reveal photo behind purple gradient, 48×48 icon badges (Icon01–05.svg) with 8px radius + purple drop shadow, body text `text-white/75`
+  - Tarifs section: hexagonal-pattern.svg background at `opacity-[0.03]`
+  - Booking widget: moved to homepage after Note Importante, BookingSection bg → white
+  - /prices hero image → PricesHero.jpg
+  - Flyer buttons wired on /prices + /routes (FlyerIndividual.pdf + GroupFlyer.pdf, download icons), removed dead `href="#"`
+  - Reviews: dropped `min-h-[100vh]`, regular `py-20`
+  - Pricing cards: `rounded-[16px] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.08)]`; middle card note updated with -1,50€ reduction + 10H20/10H30 timing
+  - New **Gallery** masonry section (GSAP Flip lightbox + shortest-column packing, varied aspect ratios, 11 compressed client photos at `gallery-1…11.jpg`) replacing Souvenirs on homepage + /routes. Souvenirs.tsx deleted.
+
 - **All 12 homepage sections** built, polished, QA-passed (Apr 11–12)
 - **Global font fix** — `next/font/google` in `app/layout.tsx`: Libre Baskerville, Roboto, Inter, Nunito, Raleway via CSS variables on `<html>` (Apr 13)
 - **`app/informations/page.tsx`** — 6 sections from node 1:13939 (Apr 13):
