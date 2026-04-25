@@ -2,6 +2,13 @@
 
 ## Done
 
+- **i18n Phase 2** (Apr 25, 2026) — translated rendering across the homepage + every page's hero/metadata/breadcrumbs in all 6 locales (fr/en/es/de/it/nl):
+  - Section components refactored to consume `useTranslations()` / `getTranslations()`: PracticalInfo, Prices, BeforeYouBook, Features, GroupBookingCTA, Locations, Reviews, BookingSection, Gallery, OurLocation, FAQ (default + faqs prop), InformationsIntro, InformationsCTA, FAQsHero
+  - Pages migrated to async server components with `setRequestLocale` + `generateMetadata` + locale-aware breadcrumbs + Hero override translation: /prices (incl. FAQ data array), /routes, /book, /faqs, /careers, /informations, /privatisation
+  - All ~120 keys × 6 locales (~720 translation entries) authored manually
+  - QA: zero French leaks on /it/prices, /de/prices, etc. for translated keys; all 21 sampled (locale × path) routes return 200; no MISSING_MESSAGE / runtime errors in dev log
+  - **Deferred (Phase 3 backlog):** Hero variants used only on inner pages (RoutesHero, CareersHero, PrivatisationHero, InformationsHero) keep their internal hardcoded French strings — only the page-passed props are translated. Section components with bulky content (RoutesTimeline, InformationsSchedule, CareersInfo, FAQsSection, PrivatisationHero form) and the /routes route-FAQ data array render French in non-FR locales via fallback. Legal pages (mentions-legales, politique-de-confidentialite) intentionally kept FR-only.
+
 - **QA Round 3** (Apr 24, 2026) — client polish pass:
   - Global color swap `#f7f7f0` → `#f5ebdd` (new cream brand token)
   - Font overhaul: Libre Baskerville / Roboto / Inter / Nunito / Raleway → Bricolage Grotesque (headings) + Manrope (body), all via `next/font/google`

@@ -1,28 +1,33 @@
+'use client'
+
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import TransitionLink from "@/components/ui/TransitionLink";
-
-const quickLinks = [
-  { label: "Accueil", href: "/" },
-  { label: "Le Parcours", href: "/routes" },
-  { label: "Informations Pratiques", href: "/informations" },
-  { label: "Tarifs", href: "/prices" },
-  { label: "FAQ", href: "/faqs" },
-  { label: "Carrières", href: "/careers" },
-];
-
-const otherLinks = [
-  { label: "Mentions légales", href: "/mentions-legales" },
-  { label: "Politique de Confidentialité", href: "/politique-de-confidentialite" },
-  { label: "Tarifs", href: "/prices" },
-  { label: "FAQ", href: "/faqs" },
-  { label: "Privatisation", href: "/privatisation" },
-];
 
 const socialIcons = [
   { src: "/figma-assets/icon-facebook.svg", alt: "Facebook", href: "https://www.facebook.com/lespetitstrainsdumorbihan" },
 ];
 
 export default function Footer() {
+  const t = useTranslations();
+
+  const quickLinks = [
+    { label: t("nav.home"), href: "/" },
+    { label: t("nav.routes"), href: "/routes" },
+    { label: t("nav.informations"), href: "/informations" },
+    { label: t("nav.pricesShort"), href: "/prices" },
+    { label: t("nav.faqs"), href: "/faqs" },
+    { label: t("nav.careers"), href: "/careers" },
+  ];
+
+  const otherLinks = [
+    { label: t("footer.mentionsLegales"), href: "/mentions-legales" },
+    { label: t("footer.privacy"), href: "/politique-de-confidentialite" },
+    { label: t("nav.pricesShort"), href: "/prices" },
+    { label: t("nav.faqs"), href: "/faqs" },
+    { label: t("nav.privatisation"), href: "/privatisation" },
+  ];
+
   return (
     <footer className="bg-[#4d1c64] flex flex-col items-center gap-16 pb-12 overflow-hidden">
       {/* CTA Block — has background image */}
@@ -40,28 +45,28 @@ export default function Footer() {
           <div className="flex flex-col lg:flex-row gap-8 items-start">
             <div className="flex flex-col gap-8 max-w-[570px]">
               <p className="font-['Bricolage_Grotesque',sans-serif] text-[#f5ebdd] text-[28px] sm:text-[34px] md:text-[40px] leading-[1.15] tracking-[-1.3px] sm:tracking-[-2px] md:tracking-[-2.8px] break-words">
-                Prêt à découvrir Carnac de façon simple et agréable&nbsp;?
+                {t("footer.ctaHeading")}
               </p>
               <div className="flex flex-col gap-8 items-start">
                 <p className="font-['Manrope',sans-serif] font-light text-white text-[18px] leading-[1.5] tracking-[-0.54px] w-full">
-                  Embarquez à bord du Petit Train de Carnac pour une visite guidée alliant histoire, paysages et confort. Découvrez les célèbres menhirs de Carnac, les plages de sable blanc et le port de La Trinité-sur-Mer, sans fatigue et avec un commentaire audio clair tout au long du parcours.
+                  {t("footer.ctaBody")}
                 </p>
                 <div className="flex gap-3 items-center flex-wrap">
                   <TransitionLink
                     href="/book"
-                    aria-label="Réserver"
+                    aria-label={t("nav.book")}
                     className="btn-animate-chars btn-primary h-[45px] px-[22px] bg-[#f5ebdd] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-[#414651] text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap"
                   >
                     <div className="btn-animate-chars__bg" />
-                    <span data-button-animate-chars="" className="btn-animate-chars__text">Réserver</span>
+                    <span data-button-animate-chars="" className="btn-animate-chars__text">{t("nav.book")}</span>
                   </TransitionLink>
                   <TransitionLink
                     href="/prices"
-                    aria-label="Voir les Tarifs"
+                    aria-label={t("nav.viewPrices")}
                     className="btn-animate-chars btn-secondary h-[45px] px-[22px] bg-transparent border border-[rgba(247,247,240,0.4)] rounded-[4px] text-[#f5ebdd] text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap"
                   >
                     <div className="btn-animate-chars__bg" />
-                    <span data-button-animate-chars="" className="btn-animate-chars__text">Voir les Tarifs</span>
+                    <span data-button-animate-chars="" className="btn-animate-chars__text">{t("nav.viewPrices")}</span>
                   </TransitionLink>
                 </div>
               </div>
@@ -84,7 +89,7 @@ export default function Footer() {
               />
             </div>
             <p className="font-['Manrope',sans-serif] font-light text-[12px] leading-[1.4] tracking-[-0.24px] text-[rgba(247,247,240,0.6)]">
-              Le Petit Train de Carnac propose une visite guidée à travers l'une des régions les plus remarquables du sud de la Bretagne. Confortablement installés à bord, les visiteurs découvrent Carnac, ses célèbres mégalithes, ses plages et le port voisin, de manière détendue et accessible.
+              {t("footer.tagline")}
             </p>
           </div>
 
@@ -93,11 +98,11 @@ export default function Footer() {
             {/* Quick Links */}
             <div className="flex flex-col gap-1 w-[156px]">
               <p className="font-['Manrope',sans-serif] font-semibold text-[#f5ebdd] text-base leading-6 mb-1">
-                Liens Rapides
+                {t("footer.quickLinks")}
               </p>
               {quickLinks.map((link) => (
                 <TransitionLink
-                  key={link.label}
+                  key={link.href + link.label}
                   href={link.href}
                   className="footer-link font-['Manrope',sans-serif] font-light text-[#f5ebdd] text-base leading-6"
                 >
@@ -109,7 +114,7 @@ export default function Footer() {
             {/* Contact Us */}
             <div className="flex flex-col gap-1 w-[222px]">
               <p className="font-['Manrope',sans-serif] font-semibold text-[#f5ebdd] text-base leading-6 mb-1">
-                Contactez-nous
+                {t("footer.contactUs")}
               </p>
               <a
                 href="mailto:petittrain-lebayon@orange.fr"
@@ -134,11 +139,11 @@ export default function Footer() {
             {/* Other */}
             <div className="flex flex-col gap-1 w-[156px]">
               <p className="font-['Manrope',sans-serif] font-semibold text-[#f5ebdd] text-base leading-6 mb-1">
-                Autres
+                {t("footer.other")}
               </p>
               {otherLinks.map((link) => (
                 <TransitionLink
-                  key={link.label}
+                  key={link.href + link.label}
                   href={link.href}
                   className="footer-link font-['Manrope',sans-serif] font-light text-[#f5ebdd] text-base leading-6"
                 >
@@ -154,7 +159,7 @@ export default function Footer() {
       <div className="w-full max-w-[1280px] mx-auto px-5 xl:px-0">
         <div className="border-t border-[rgba(233,234,235,0.2)] pt-8 flex flex-col sm:flex-row items-center justify-between gap-6 flex-wrap">
           <p className="font-['Manrope',sans-serif] text-white text-base leading-6 whitespace-nowrap">
-            © 2026 Built by{" "}
+            {t("footer.copyrightPrefix")}{" "}
             <a
               href="https://www.softbird.fr"
               target="_blank"
@@ -163,7 +168,7 @@ export default function Footer() {
             >
               Softbird
             </a>
-            . Tous droits réservés.
+            . {t("footer.copyrightSuffix")}
           </p>
           <div className="flex gap-6 items-center">
             {socialIcons.map((icon) => (

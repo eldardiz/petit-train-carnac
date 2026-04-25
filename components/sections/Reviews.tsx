@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import ReviewsSlider from "@/components/ui/ReviewsSlider";
 
 function StarRating() {
@@ -14,6 +15,9 @@ function StarRating() {
 }
 
 export default function Reviews() {
+  const t = useTranslations("sections.reviews");
+  const tShared = useTranslations("shared");
+
   return (
     <section data-anim-section className="bg-[#4d1c64] flex flex-col gap-10 xl:gap-14 items-center justify-center py-20 overflow-hidden">
       {/* Header */}
@@ -21,39 +25,25 @@ export default function Reviews() {
         <div className="flex flex-col gap-6 items-center text-center max-w-[623px]">
           <div data-anim-item className="flex items-center gap-2">
             <div className="relative shrink-0 w-[19px] h-[19px]">
-              <Image
-                src="/figma-assets/icon-train.svg"
-                alt=""
-                fill
-                className="object-contain"
-                aria-hidden="true"
-              />
+              <Image src="/figma-assets/icon-train.svg" alt="" fill className="object-contain" aria-hidden="true" />
             </div>
             <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#f5ebdd] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
-              Avis
+              {t("label")}
             </p>
           </div>
 
           <h2 data-anim-item className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[#f5ebdd] text-[32px] sm:text-[40px] md:text-[48px] text-center leading-[1.1] tracking-[-1.5px] sm:tracking-[-2.5px] md:tracking-[-3.36px] max-w-[410px] w-full [text-wrap:balance] break-words">
-            Ce que disent les visiteurs <em>du train&nbsp;?</em>
+            {t("heading")}
           </h2>
 
           <p data-anim-item className="font-['Manrope',sans-serif] text-[#f5ebdd] text-[16px] text-center leading-[1.2] tracking-[-0.48px] max-w-[570px] w-full">
-            <strong>Le Petit Train de Carnac</strong> est noté plus de{" "}
-            <a href="https://www.google.com/maps/search/Petit+Train+de+Carnac" target="_blank" rel="noopener noreferrer" className="text-[#d8b800] underline">4,7 sur Google</a>,
-            avec plus de 6 000 avis, ce qui en fait l&apos;une des attractions
-            touristiques les plus populaires de Carnac.
+            {t("description")}
           </p>
 
           {/* Google badge */}
           <div data-anim-item className="bg-white rounded-[8px] flex items-center gap-2.5 px-2 py-1 rotate-[0.54deg]">
             <div className="relative shrink-0 w-6 h-6">
-              <Image
-                src="/figma-assets/google-icon.svg"
-                alt="Google"
-                fill
-                className="object-contain"
-              />
+              <Image src="/figma-assets/google-icon.svg" alt="Google" fill className="object-contain" />
             </div>
             <div className="flex flex-col gap-0.5">
               <div className="flex items-center gap-1">
@@ -63,7 +53,7 @@ export default function Reviews() {
                 <StarRating />
               </div>
               <p className="font-['Manrope',sans-serif] text-[11px] text-black opacity-60 tracking-[-0.33px]">
-                6 000+ avis
+                {tShared("googleReviewsCount")}
               </p>
             </div>
           </div>

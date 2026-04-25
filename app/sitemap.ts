@@ -1,13 +1,22 @@
 import type { MetadataRoute } from 'next'
 import { SITE_URL } from '@/lib/site'
+import { routing } from '@/i18n/routing'
+import { getPathname } from '@/i18n/navigation'
 
 // Next.js auto-generates /sitemap.xml from this export at build time.
-// When the custom domain goes live, SITE_URL picks it up automatically via env var.
+// Each route is emitted once per locale with hreflang alternates pointing to
+// the same path under every supported locale.
+
+type RouteConfig = {
+  path: string
+  priority: number
+  changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency']
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
 
-  const routes: Array<{ path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'] }> = [
+  const routes: RouteConfig[] = [
     { path: '/', priority: 1.0, changeFrequency: 'monthly' },
     { path: '/routes', priority: 0.9, changeFrequency: 'monthly' },
     { path: '/prices', priority: 0.9, changeFrequency: 'monthly' },
@@ -20,10 +29,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/politique-de-confidentialite', priority: 0.2, changeFrequency: 'yearly' },
   ]
 
-  return routes.map((r) => ({
-    url: `${SITE_URL}${r.path}`,
-    lastModified: now,
-    changeFrequency: r.changeFrequency,
-    priority: r.priority,
-  }))
+  const buildUrl = (path: RouteConfig['path'], locale: (typeof routing.locales)[number]) =>
+    `${SITE_URL}${getPathname({ locale, href: path })}`
+
+  return routes.flatMap((r) =>
+    routing.locales.map((locale) => ({
+      url: buildUrl(r.path, locale),
+      lastModified: now,
+      changeFrequency: r.changeFrequency,
+      priority: locale === routing.defaultLocale ? r.priority : Math.max(0.1, r.priority - 0.1),
+      alternates: {
+        languages: Object.fromEntries(
+          routing.locales.map((l) => [l, buildUrl(r.path, l)])
+        ),
+      },
+    })),
+  )
 }

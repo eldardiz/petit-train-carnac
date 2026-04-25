@@ -2,9 +2,12 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import TransitionLink from "@/components/ui/TransitionLink";
+import LanguageDropdown from "@/components/layout/LanguageDropdown";
 
 export default function Navbar() {
+  const t = useTranslations();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -15,30 +18,33 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: "Accueil", href: "/" },
-    { label: "Le Parcours", href: "/routes" },
-    { label: "Informations Pratiques", href: "/informations" },
-    { label: "Tarifs & Billets", href: "/prices" },
-    { label: "Privatisation", href: "/privatisation" },
-    { label: "FAQ", href: "/faqs" },
-    { label: "Carrières", href: "/careers" },
+    { label: t("nav.home"), href: "/" },
+    { label: t("nav.routes"), href: "/routes" },
+    { label: t("nav.informations"), href: "/informations" },
+    { label: t("nav.prices"), href: "/prices" },
+    { label: t("nav.privatisation"), href: "/privatisation" },
+    { label: t("nav.faqs"), href: "/faqs" },
+    { label: t("nav.careers"), href: "/careers" },
   ];
 
   return (
     <header data-anim-navbar className="fixed top-0 left-0 right-0 z-50">
       {/* Top announcement banner */}
       <div className="bg-[#33114d] border-b border-[rgba(213,215,218,0.4)]">
-        <div className="max-w-[1280px] mx-auto px-5 xl:px-0 py-[6px] flex items-center justify-center">
-          <p className="text-[#f5ebdd] text-[12px] md:text-base leading-5 md:leading-6 tracking-[-0.48px] text-center font-['Manrope',sans-serif]">
-            Ce site fait partie des Petits Trains du Morbihan. Découvrez nos autres circuits à{" "}
+        <div className="max-w-[1280px] mx-auto px-5 xl:px-0 py-[6px] flex items-center justify-between gap-4">
+          <p className="text-[#f5ebdd] text-[12px] md:text-base leading-5 md:leading-6 tracking-[-0.48px] text-left md:text-center font-['Manrope',sans-serif] flex-1">
+            {t("navbar.bannerPrefix")}{" "}
             <a href="https://www.petittrain-morbihan.com/en/vannes/" className="underline text-[#f5ebdd]" target="_blank" rel="noopener noreferrer">
-              Vannes
+              {t("navbar.bannerLinkVannes")}
             </a>{" "}
-            et{" "}
+            {t("navbar.bannerAnd")}{" "}
             <a href="https://www.petittrain-morbihan.com/en/quiberon/" className="underline text-[#f5ebdd]" target="_blank" rel="noopener noreferrer">
-              Quiberon.
+              {t("navbar.bannerLinkQuiberon")}
             </a>
           </p>
+          <div className="shrink-0">
+            <LanguageDropdown variant="banner" />
+          </div>
         </div>
       </div>
 
@@ -76,19 +82,19 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <TransitionLink
               href="/prices"
-              aria-label="Voir les Tarifs"
+              aria-label={t("nav.viewPrices")}
               className="btn-animate-chars btn-secondary bg-[#54206d] border border-[rgba(255,255,255,0.15)] h-[45px] px-[22px] rounded-[4px] text-white text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap"
             >
               <div className="btn-animate-chars__bg" />
-              <span data-button-animate-chars="" className="btn-animate-chars__text">Voir les Tarifs</span>
+              <span data-button-animate-chars="" className="btn-animate-chars__text">{t("nav.viewPrices")}</span>
             </TransitionLink>
             <TransitionLink
               href="/book"
-              aria-label="Réserver"
+              aria-label={t("nav.book")}
               className="btn-animate-chars btn-primary bg-[#f5ebdd] border border-[rgba(0,0,0,0.2)] h-[45px] px-[22px] rounded-[4px] text-[#414651] text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap"
             >
               <div className="btn-animate-chars__bg" />
-              <span data-button-animate-chars="" className="btn-animate-chars__text">Réserver</span>
+              <span data-button-animate-chars="" className="btn-animate-chars__text">{t("nav.book")}</span>
             </TransitionLink>
           </div>
 
@@ -97,7 +103,7 @@ export default function Navbar() {
             type="button"
             className="lg:hidden flex flex-col items-center justify-center gap-[5px] w-10 h-10 -mr-2"
             onClick={() => setMobileOpen((v) => !v)}
-            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-label={mobileOpen ? t("navbar.closeMenu") : t("navbar.openMenu")}
             aria-expanded={mobileOpen}
           >
             <span
@@ -138,22 +144,25 @@ export default function Navbar() {
             <div className="flex flex-col gap-3 pt-2 border-t border-[rgba(255,255,255,0.15)]">
               <TransitionLink
                 href="/prices"
-                aria-label="Voir les Tarifs"
+                aria-label={t("nav.viewPrices")}
                 className="btn-animate-chars btn-secondary bg-[#54206d] border border-[rgba(255,255,255,0.15)] h-[45px] px-[22px] rounded-[4px] text-white text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap justify-center"
                 onClick={() => setMobileOpen(false)}
               >
                 <div className="btn-animate-chars__bg" />
-                <span data-button-animate-chars="" className="btn-animate-chars__text">Voir les Tarifs</span>
+                <span data-button-animate-chars="" className="btn-animate-chars__text">{t("nav.viewPrices")}</span>
               </TransitionLink>
               <TransitionLink
                 href="/book"
-                aria-label="Réserver"
+                aria-label={t("nav.book")}
                 className="btn-animate-chars btn-primary bg-[#f5ebdd] border border-[rgba(0,0,0,0.2)] h-[45px] px-[22px] rounded-[4px] text-[#414651] text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap justify-center"
                 onClick={() => setMobileOpen(false)}
               >
                 <div className="btn-animate-chars__bg" />
-                <span data-button-animate-chars="" className="btn-animate-chars__text">Réserver</span>
+                <span data-button-animate-chars="" className="btn-animate-chars__text">{t("nav.book")}</span>
               </TransitionLink>
+              <div className="pt-2 flex justify-start">
+                <LanguageDropdown variant="mobile" />
+              </div>
             </div>
           </div>
         </div>

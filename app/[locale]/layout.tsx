@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Manrope } from "next/font/google";
 import Script from "next/script";
-import "./globals.css";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { notFound } from "next/navigation";
+import "../globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/sections/Footer";
 import LenisProvider from "@/components/providers/LenisProvider";
@@ -10,6 +13,7 @@ import TransitionOverlay from "@/components/ui/TransitionOverlay";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import AnimationInit from "@/components/providers/AnimationInit";
 import { SITE_URL, absoluteUrl } from "@/lib/site";
+import { routing } from "@/i18n/routing";
 
 const bricolageGrotesque = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -64,13 +68,23 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function LocaleLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) notFound();
+  setRequestLocale(locale);
+
   return (
-    <html lang="fr" className={`${bricolageGrotesque.variable} ${manrope.variable}`}>
+    <html lang={locale} className={`${bricolageGrotesque.variable} ${manrope.variable}`}>
       <body>
         <script
           type="application/ld+json"
@@ -121,20 +135,22 @@ export default function RootLayout({
           src="https://cdn.jsdelivr.net/gh/eldardiz/cookie-consent-softbird@main/cookie-consent.js"
           strategy="afterInteractive"
         />
-        <LenisProvider>
-          <PageTransitionProvider>
-            <AnimationInit />
-            <TransitionOverlay />
-            <ScrollToTop />
-            <Navbar />
-            {/* Spacer for fixed header: announcement banner + nav 80px (banner can wrap on mobile) */}
-            <div aria-hidden="true" className="h-[152px] sm:h-[116px]" />
-            <div data-transition-content>
-              {children}
-              <Footer />
-            </div>
-          </PageTransitionProvider>
-        </LenisProvider>
+        <NextIntlClientProvider>
+          <LenisProvider>
+            <PageTransitionProvider>
+              <AnimationInit />
+              <TransitionOverlay />
+              <ScrollToTop />
+              <Navbar />
+              {/* Spacer for fixed header: announcement banner + nav 80px (banner can wrap on mobile) */}
+              <div aria-hidden="true" className="h-[152px] sm:h-[116px]" />
+              <div data-transition-content>
+                {children}
+                <Footer />
+              </div>
+            </PageTransitionProvider>
+          </LenisProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

@@ -1,0 +1,365 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "routes": "Die Route",
+    "informations": "Praktische Infos",
+    "prices": "Preise & Tickets",
+    "pricesShort": "Preise",
+    "privatisation": "Privatfahrten",
+    "faqs": "FAQ",
+    "careers": "Karriere",
+    "book": "Buchen",
+    "viewPrices": "Preise ansehen"
+  },
+  "navbar": {
+    "bannerPrefix": "Diese Seite gehört zu den Petits Trains du Morbihan. Entdecken Sie auch unsere Touren in",
+    "bannerLinkVannes": "Vannes",
+    "bannerAnd": "und",
+    "bannerLinkQuiberon": "Quiberon.",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "languageLabel": "Sprache"
+  },
+  "footer": {
+    "ctaHeading": "Bereit, Carnac auf einfache und angenehme Weise zu entdecken?",
+    "ctaBody": "Steigen Sie in den Petit Train de Carnac und erleben Sie eine geführte Tour mit Geschichte, Landschaft und Komfort. Entdecken Sie die berühmten Menhire von Carnac, die weißen Sandstrände und den Hafen von La Trinité-sur-Mer — ohne Anstrengung und mit klarem Audiokommentar entlang der gesamten Strecke.",
+    "tagline": "Der Petit Train de Carnac bietet eine geführte Tour durch eine der bemerkenswertesten Regionen der südlichen Bretagne. Bequem an Bord erleben die Besucher Carnac, seine berühmten Megalithen, seine Strände und den nahegelegenen Hafen auf entspannte und barrierefreie Weise.",
+    "quickLinks": "Schnellzugriff",
+    "contactUs": "Kontakt",
+    "other": "Weiteres",
+    "mentionsLegales": "Impressum",
+    "privacy": "Datenschutz",
+    "copyrightPrefix": "© 2026 Entwickelt von",
+    "copyrightSuffix": "Alle Rechte vorbehalten."
+  },
+  "breadcrumb": {
+    "home": "Startseite",
+    "prices": "Preise & Tickets",
+    "routes": "Die Route",
+    "book": "Buchung",
+    "informations": "Praktische Infos",
+    "faqs": "FAQ",
+    "careers": "Karriere",
+    "privatisation": "Privatfahrten"
+  },
+  "shared": {
+    "googleReviewsCount": "6.000+ Bewertungen",
+    "googleRatingDescription": "Le Petit Train de Carnac ist auf Google mit 4,7 bei über 6.000 Bewertungen eingestuft — eine der beliebtesten Touristenattraktionen in Carnac.",
+    "googleRatingDescriptionAlt": "Le Petit Train de Carnac ist auf Google mit über 4,7 bei mehr als 6.000 Bewertungen eingestuft — eine der beliebtesten Touristenattraktionen in Carnac.",
+    "starsAlt": "5 Sterne",
+    "fourSevenStarsAlt": "4,7 von 5 Sternen"
+  },
+  "hero": {
+    "label": "Le Petit Trains de Morbihan · Carnac",
+    "headingPrefix": "Entdecken Sie",
+    "headingHighlight": "Carnac",
+    "headingSuffix": "an Bord des Petit Train",
+    "description": "Der Petit Train de Carnac bietet eine geführte Sightseeing-Tour durch die Stadt und ihre Umgebung. Entdecken Sie die schönste neolithische Stätte der Welt auf dieser <strong>50-minütigen Führung.</strong> Eine einfache und bequeme Art, Carnac, sein Erbe und seine ikonischen Landschaften zu erleben — ganz ohne lange Wege.",
+    "tagline": "Ideal für Familien, Paare, Senioren und Besucher jeden Alters.",
+    "buttonBook": "Tour buchen",
+    "buttonPrices": "Preise ansehen",
+    "googleBadge": "Le Petit Train de Carnac ist auf Google mit 4,7 bei über 6.000 Bewertungen eingestuft — eine der beliebtesten Touristenattraktionen in Carnac.",
+    "rightCardHeading": "Geführte Tour mit Audiokommentar in 16 Sprachen",
+    "rightCardBody": "Französisch, Englisch, Deutsch, Spanisch, Italienisch, Portugiesisch, Niederländisch, Russisch, Chinesisch, Japanisch, Schwedisch, Dänisch, Polnisch, Arabisch, Kroatisch und Slowenisch.",
+    "rightCardFlagsAlt": "Sprachen-Flaggen",
+    "rightImageAlt": "Le Petit Train de Carnac auf einer malerischen Route",
+    "noteImportanteLabel": "Wichtiger Hinweis",
+    "noteImportanteHeading": "Online-Buchung",
+    "noteImportanteBody": "Eine Buchung ist möglich, aber nicht erforderlich. Sie können bis zu <strong>2 Stunden</strong> vor der gewünschten Abfahrt buchen. Planen Sie ausreichend Zeit für Anreise und Parken vor Ort ein. Danach gehen Sie direkt zum Abfahrtsort und kaufen Ihre Tickets am Schalter oder beim Fahrer.<br/>Nicht alle Plätze sind online verfügbar."
+  },
+  "metadata": {
+    "home": {
+      "title": "Petit Train de Carnac Morbihan — Geführte Tour durch Carnac und seine Menhire",
+      "description": "Entdecken Sie Carnac, seine berühmten Megalithen, seine Strände und den Hafen von La Trinité-sur-Mer an Bord des Petit Train de Carnac. Eine 55-minütige geführte Tour mit mehrsprachigem Audiokommentar."
+    },
+    "prices": {
+      "title": "Preise & Tickets",
+      "description": "Entdecken Sie die Preise des Petit Train de Carnac. Einzel- und Gruppentickets für Erwachsene und Kinder, mit Online-Buchung verfügbar."
+    },
+    "routes": {
+      "title": "Route & Strecke",
+      "description": "Entdecken Sie die Route des Petit Train de Carnac: Menhire von Carnac, Carnac-Plage und Hafen von La Trinité-sur-Mer. Eine 55-minütige Führung mit Audiokommentar in 16 Sprachen."
+    },
+    "book": {
+      "title": "Tour buchen",
+      "description": "Buchen Sie Ihre Plätze im Petit Train de Carnac. Einzel- und Gruppenbuchungen online verfügbar."
+    },
+    "informations": {
+      "title": "Praktische Infos",
+      "description": "Alle praktischen Informationen für Ihre Tour an Bord des Petit Train de Carnac: Fahrpläne, Anreise, Dauer und Tipps."
+    },
+    "faqs": {
+      "title": "FAQ",
+      "description": "Häufig gestellte Fragen zum Petit Train de Carnac: Dauer, Preise, Route, Barrierefreiheit und Buchungen."
+    },
+    "careers": {
+      "title": "Karriere",
+      "description": "Werden Sie Teil des Teams des Petit Train de Carnac. Saisonpositionen: Fahrer, Ticket-Mitarbeiter und Bahnsteigassistenz."
+    },
+    "privatisation": {
+      "title": "Privatfahrten",
+      "description": "Mieten Sie den Petit Train de Carnac für Ihre Firmenevents, Seminare, Hochzeiten oder Schülergruppen."
+    }
+  },
+  "pages": {
+    "prices": {
+      "heroLabel": "Preise & Tickets",
+      "heroHeadingPrefix": "Ticketpreise des",
+      "heroHeadingHighlight": "Petit Train de Carnac",
+      "heroDescription": "Hier finden Sie alle Preise und Buchungsinformationen für den Petit Train de Carnac. Diese Seite zeigt Einzel- und Gruppenpreise, Kinderermäßigungen sowie wie Sie Ihre geführte Tour bequem buchen können.",
+      "btnFlyerIndividual": "Flyer (einzeln)",
+      "btnFlyerGroup": "Flyer (Gruppe)",
+      "reviewQuote": "„Ich hätte für 8,50 € nicht so viel erwartet. Wirklich ein schönes Erlebnis.\"",
+      "reviewAuthor": "Dom L. · Google-Rezension",
+      "faqLabel": "Häufige Fragen",
+      "faqHeadingPrefix": "Häufig gestellte Fragen",
+      "faqHeadingHighlight": "zu den Preisen",
+      "faqDescription": "Klare Antworten auf die häufigsten Fragen zu Preisen, Gruppenrabatten und der Buchung des Petit Train de Carnac.",
+      "faq": {
+        "q1": "Wie viel kostet ein Ticket für den Petit Train de Carnac?",
+        "a1": "Die Preise hängen von Alter und Gruppengröße ab. Für Einzelbesucher kostet das Standard-Erwachsenenticket 8,50 €. Kinder unter 12 Jahren erhalten einen ermäßigten Tarif von 5 €. Gruppentarife gelten ab 20 Personen.",
+        "q2": "Gibt es Ermäßigungen für Kinder?",
+        "a2": "Ja. Kinder unter 12 Jahren erhalten einen ermäßigten Tarif. Ihr Ticket bietet Zugang zur gleichen geführten Tour und zum Audiokommentar, einschließlich einer kindgerechten Version.",
+        "q3": "Brauchen Kinder ein Ticket für den Petit Train?",
+        "a3": "Ja. Jeder Fahrgast benötigt ein Ticket, um an Bord des Petit Train de Carnac zu gehen. Für Kinder unter 12 Jahren gelten ermäßigte Tarife.",
+        "q4": "Gibt es Gruppenrabatte?",
+        "a4": "Ja. Gruppentarife gelten ab 20 zustiegenden Personen. Diese ermäßigten Tarife gelten für Erwachsene und Kinder. Eine Vorabbuchung wird empfohlen.",
+        "q5": "Was ist im Ticketpreis enthalten?",
+        "a5": "Jedes Ticket umfasst die vollständige geführte Tour von rund 55 Minuten, den mehrsprachigen Audiokommentar, eine kindgerechte Version und ein bequemes Erlebnis an Bord. Keine Zusatzkosten.",
+        "q6": "Kann man die Tickets vor Ort kaufen?",
+        "a6": "Ja. Tickets sind am Schalter im Parkplatz Ménec erhältlich, je nach Verfügbarkeit. In der Hochsaison wird eine Vorabbuchung empfohlen.",
+        "q7": "Kann man Tickets online buchen?",
+        "a7": "Ja. Die Online-Buchung ist möglich und besonders in Stoßzeiten empfehlenswert. Online-Buchungen müssen mindestens zwei Stunden vor Abfahrt erfolgen."
+      }
+    },
+    "routes": {
+      "heroLabel": "Die Route",
+      "heroHeadingPrefix": "Die Route",
+      "heroHeadingHighlight": "des Petit Train de Carnac",
+      "heroDescriptionP1": "Entdecken Sie die gesamte Route des Petit Train de Carnac durch die Menhire von Carnac, Carnac-Plage und den Hafen von La Trinité-sur-Mer.",
+      "heroDescriptionP2": "Eine 55-minütige Führung mit Audiokommentar in 16 Sprachen, die die schönsten Sehenswürdigkeiten der Region in einem komfortablen Rundgang vereint.",
+      "heroImageAlt": "Karte der Route des Petit Train de Carnac — zum Vergrößern klicken",
+      "faqLabel": "Häufige Fragen",
+      "faqHeadingPrefix": "Häufig gestellte Fragen",
+      "faqHeadingHighlight": "zur Route",
+      "faqDescription": "Klare Antworten auf die häufigsten Fragen zu Route, Stopps und Dauer des Petit Train de Carnac."
+    },
+    "informations": {
+      "heroLabel": "Praktische Infos",
+      "heroHeadingPrefix": "Praktische Infos für",
+      "heroHeadingHighlight": "den Petit Train de Carnac",
+      "heroDescription": "Alle praktischen Informationen für Ihren Besuch: Fahrpläne, Anreise, Dauer, Barrierefreiheit und nützliche Tipps.",
+      "heroImageAlt": "Le Petit Train de Carnac am Meer"
+    },
+    "faqs": {
+      "heroLabel": "FAQ",
+      "heroHeadingPrefix": "Häufig gestellte Fragen",
+      "heroDescription": "Antworten auf die häufigsten Fragen zum Petit Train de Carnac: Dauer, Preise, Route, Barrierefreiheit und Buchungen."
+    },
+    "careers": {
+      "heroLabel": "Karriere",
+      "heroHeadingPrefix": "Ihre Karriere beim",
+      "heroHeadingHighlight": "Petit Train de Carnac",
+      "heroHeadingSuffix": "beginnt hier",
+      "heroDescription": "Unsere Philosophie ist einfach: ein herzlicher, zuverlässiger und respektvoller Service für jeden Besucher. Wir suchen Menschen, die aufmerksam, professionell und leidenschaftlich daran interessiert sind, Carnac mit unseren Gästen zu teilen.",
+      "buttonApply": "Bewerben & Lebenslauf senden",
+      "jobsLabel": "Offene Stellen:",
+      "jobBadgeSeasonal": "Saisonstelle"
+    },
+    "privatisation": {
+      "overlayLabel": "Privatfahrten & B2B",
+      "overlayHeading": "Mieten Sie den Petit Train de Carnac für Ihr Event",
+      "overlayDescription": "Der Petit Train de Carnac kann für Firmenveranstaltungen, Seminare, Hochzeiten, Schülergruppen oder VIP-Besuche privat gemietet werden. Kontaktieren Sie uns für ein individuelles Angebot."
+    },
+    "mentionsLegales": {
+      "title": "Impressum"
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung"
+    }
+  },
+  "sections": {
+    "practicalInfo": {
+      "label": "Informationen",
+      "heading": "Praktische Informationen",
+      "description": "Damit Sie Ihren Besuch im Sightseeing-Zug in Carnac gut planen können, hier die wichtigsten Informationen vor der Buchung.",
+      "duration": {
+        "title": "Dauer",
+        "description": "Die Tour dauert etwa <strong>55 Minuten.</strong> In diesem Tempo können Sie Carnac in Ruhe entdecken und Kommentar wie Landschaft genießen — ohne Eile oder Erschöpfung."
+      },
+      "departure": {
+        "title": "Abfahrt",
+        "description": "Verbindlicher Abfahrtsort für <strong>Gruppen</strong> und <strong>Einzelbuchungen</strong>. Am <strong>Parkplatz Ménec</strong> in Carnac, direkt gegenüber der Maison des Mégalithes. Die Haltestelle ist deutlich beschildert und leicht zu erreichen."
+      },
+      "schedule": {
+        "title": "Fahrplan",
+        "description": "Abfahrten erfolgen <strong>von April bis September</strong>, mehrmals täglich. In der Hochsaison fährt der Zug täglich. Bitte aktuelle Fahrpläne für genaue Abfahrtszeiten und saisonale Anpassungen prüfen."
+      },
+      "accessibility": {
+        "title": "Barrierefreiheit",
+        "description": "Der Petit Train ist <strong>für alle zugänglich</strong>. Ideal für Familien mit kleinen Kindern, ältere Besucher und alle, die längere Fußwege vermeiden möchten und trotzdem das Beste von Carnac erleben wollen."
+      },
+      "payment": {
+        "title": "Zahlung",
+        "description": "Tickets können <strong>direkt an Bord</strong> oder am Abfahrtsort gekauft werden. Bar- und Kartenzahlung möglich. Gruppen- und Schultarife verfügbar — kontaktieren Sie uns für ein Angebot."
+      },
+      "cta": {
+        "heading": "Mehr Informationen",
+        "description": "Lesen Sie unseren vollständigen Leitfaden zu Ticketpreisen, Zahlungsarten und Tipps, um das Beste aus Ihrer Reise durch die Megalithen herauszuholen.",
+        "button": "Mehr erfahren"
+      }
+    },
+    "prices": {
+      "label": "Preise",
+      "heading": "Ein bezahlbares Abenteuer für die ganze Familie",
+      "description": "Vom Solo-Entdecker bis zur großen Familie — finden Sie das richtige Ticket für Ihren Besuch. Profitieren Sie von unseren Sondertarifen für Kinder und Familien.",
+      "rowAdults": "Erwachsene",
+      "rowChildren": "Kinder unter 12 Jahren",
+      "individual": {
+        "title": "Einzeltickets",
+        "note": "<strong>Für Einzelpersonen:</strong> Treffpunkt am Abfahrtsort; Kasse vor Ort."
+      },
+      "earlyBird": {
+        "title": "Frühe Abfahrten am Morgen",
+        "badge": "Bestes Angebot",
+        "note": "<strong>Ermäßigter Tarif:</strong> 1,50 € Rabatt pro Ticket, gilt nur für die ersten Morgenabfahrten (vor 10:20 oder 10:30 Uhr je nach Ziel). Tickets an der Kasse vor Ort."
+      },
+      "group": {
+        "title": "Gruppenbuchung",
+        "text": "Für Gruppentarife kontaktieren Sie uns bitte direkt:",
+        "note": "<strong>Für Gruppen:</strong> ermäßigter Tarif ab 20 zustiegenden Personen. Eine Vorabbuchung wird empfohlen."
+      }
+    },
+    "beforeYouBook": {
+      "heading": "Vor der Buchung",
+      "description": "Bevor Sie Ihre Buchung bestätigen, lesen Sie kurz die praktischen Informationen zur Tour mit dem Petit Train de Carnac. Diese Hinweise helfen Ihnen, am Tag der Tour einen reibungslosen Ablauf zu erleben und Unsicherheiten zu Zeiten, Abfahrt und Tourablauf zu vermeiden.",
+      "imageAlt": "Megalithen von Carnac am Abfahrtsort",
+      "bullet1": "Bitte mindestens 15 Minuten vor Abfahrt eintreffen",
+      "bullet2": "Online-Buchungen müssen mindestens zwei Stunden vor Abfahrt erfolgen",
+      "bullet3": "Einzelbesucher beginnen und beenden die Tour am Abfahrtsort Ménec",
+      "bullet4": "Die Tour dauert ca. 55 Minuten",
+      "bullet5": "Audiokommentar in mehreren Sprachen, einschließlich einer Kinderversion",
+      "bullet6": "Der Petit Train fährt bei jedem Wetter"
+    },
+    "features": {
+      "label": "Tour-Übersicht",
+      "heading": "Eine einfache und angenehme Art, Carnac zu erkunden",
+      "p1": "Der Petit Train de Carnac lädt Sie ein, die Stadt in entspanntem Tempo zu entdecken — bequem an Bord eines Sightseeing-Zugs, der für Besucher gedacht ist, die Carnac ohne Anstrengung genießen möchten.",
+      "p2": "Während der Tour gibt der Audiokommentar klare und verständliche Informationen zu den durchquerten Orten und hilft Ihnen, Carnacs Geschichte, Denkmäler und Atmosphäre zu verstehen. Ideal für Besucher, die einen angenehmen Einstieg in Carnac und seine Umgebung suchen.",
+      "imageAlt": "Malerische Aussicht aus dem Petit Train de Carnac",
+      "f1Title": "Komfortabler Sightseeing-Zug",
+      "f1Desc": "Entdecken Sie die Höhepunkte von Carnac bequem sitzend an Bord unseres Sightseeing-Zugs, der für müheloses Erkunden konzipiert ist.",
+      "f2Title": "Audiokommentar in 16 Sprachen — im Ticket enthalten",
+      "f2Desc": "Der Audiokommentar ist in 16 Sprachen verfügbar und im Ticketpreis enthalten. Eine Kinderversion gibt es auf Französisch und Englisch.",
+      "f3Title": "Erbe und Landschaften von Carnac entdecken",
+      "f3Desc": "Besuchen Sie die berühmten Menhire, die weißen Sandstrände und den Hafen von La Trinité-sur-Mer in einer einzigen entspannten und malerischen Fahrt.",
+      "f4Title": "Geeignet für Familien, Senioren und Gruppen",
+      "f4Desc": "Unser Zug heißt alle Altersgruppen und Gruppengrößen willkommen — keine langen Fußwege, keine Anstrengung, nur ein komfortables und angenehmes Erlebnis für alle."
+    },
+    "groupBookingCta": {
+      "label": "Gruppenbuchung — Privatfahrten",
+      "heading": "Buchung für private Touren",
+      "description": "Wenn Sie in einer Gruppe reisen oder den Petit Train de Carnac für eine Veranstaltung, ein Seminar oder einen Schulausflug privat mieten möchten, kontaktieren Sie uns für ein maßgeschneidertes Angebot.",
+      "button": "Privatfahrt buchen"
+    },
+    "locations": {
+      "label": "Reiseziele",
+      "heading": "Entdecken Sie unsere weiteren Petit-Train-Touren im Morbihan",
+      "description": "Verlängern Sie Ihren Besuch im Morbihan mit unseren weiteren Sightseeing-Zügen. In Vannes und Quiberon erwarten Sie neue Landschaften, einzigartiges Kulturerbe und unvergessliche Momente.",
+      "discover": "Entdecken",
+      "vannes": {
+        "title": "Le Petit Train de Vannes",
+        "tagline": "Entdecken Sie das historische Herz von Vannes",
+        "description": "Steigen Sie in den Petit Train de Vannes und erleben Sie die mittelalterlichen Stadtmauern, den Hafen und die malerischen Gassen der Altstadt.",
+        "cta": "Le Petit Train de Vannes entdecken",
+        "imageAlt": "Historisches Zentrum von Vannes"
+      },
+      "quiberon": {
+        "title": "Le Petit Train de Quiberon",
+        "tagline": "Erkunden Sie die wunderschöne Halbinsel Quiberon",
+        "description": "Steigen Sie in den Petit Train de Quiberon und erleben Sie eine unvergessliche Küstentour: Strände, Klippen und typische Dörfer.",
+        "cta": "Le Petit Train de Quiberon entdecken",
+        "imageAlt": "Küstenlandschaft der Halbinsel Quiberon"
+      }
+    },
+    "reviews": {
+      "label": "Bewertungen",
+      "heading": "Was Besucher über den Zug sagen",
+      "description": "Le Petit Train de Carnac ist auf Google mit über 4,7 bei mehr als 6.000 Bewertungen eingestuft — eine der beliebtesten Touristenattraktionen in Carnac."
+    },
+    "bookingSection": {
+      "label": "Buchung",
+      "headingPrefix": "Buchen Sie Ihre Tour mit dem",
+      "headingHighlight": "Petit Train",
+      "headingSuffix": "in Carnac",
+      "description": "Wählen Sie Datum und Uhrzeit, die Anzahl der Tickets und bestätigen Sie Ihre Buchung online. Die Tour dauert <strong>55 Minuten</strong> mit Audiokommentar in 16 Sprachen."
+    },
+    "gallery": {
+      "label": "Galerie",
+      "heading": "Erinnerungen an Ihren Besuch",
+      "description": "Ein Vorgeschmack auf das, was Sie an Bord des Petit Train de Carnac erwartet. Klicken Sie zum Vergrößern.",
+      "expandImage": "Bild {n} vergrößern",
+      "prevImage": "Vorheriges Bild",
+      "nextImage": "Nächstes Bild",
+      "close": "Schließen"
+    },
+    "ourLocation": {
+      "label": "Unser Standort",
+      "heading": "So erreichen Sie den Petit Train de Carnac",
+      "description": "Der Petit Train de Carnac ist mit dem Auto, dem Zug oder dem Bus leicht zu erreichen. Hier finden Sie die wichtigsten Abfahrtsorte und Tipps für Ihre Anreise.",
+      "seeRoute": "Wegbeschreibung anzeigen",
+      "arrivalTipTitle": "Anreise-Tipp",
+      "arrivalTipDescription": "Bitte mindestens 15 Minuten vor Abfahrt eintreffen.",
+      "item1Title": "Hauptabfahrtsort — Parkplatz Ménec",
+      "item1Description": "Verbindlicher Abfahrtsort für Gruppen und Einzelbuchungen. Am Parkplatz Ménec in Carnac, direkt gegenüber der Maison des Mégalithes.",
+      "item2Title": "Halt 2 — Carnac Plage (Pordro)",
+      "item2Description": "Tickets vor Ort beim Fahrer kaufen, je nach Verfügbarkeit.",
+      "item3Title": "Halt 3 — La Trinité-sur-Mer",
+      "item3Description": "Bushaltestelle Courqué, Meeresseite. Tickets vor Ort beim Fahrer kaufen, je nach Verfügbarkeit.",
+      "item4Title": "Mit dem Auto",
+      "item4Description": "Wenn Sie mit dem Auto kommen, folgen Sie den Hinweisen nach Carnac und zum Parkplatz Ménec. Das Parken ist kostenlos.",
+      "item5Title": "Mit dem Zug",
+      "item5Description": "Der nächste Bahnhof ist Auray, etwa 13 km von Carnac entfernt. In der Hochsaison verkehren Busse zwischen Auray und Carnac."
+    },
+    "informationsIntro": {
+      "label": "Wichtiger Hinweis",
+      "heading": "Online-Buchung",
+      "description": "Eine Buchung ist möglich, aber nicht erforderlich. Sie können bis zu <strong>2 Stunden</strong> vor der gewünschten Abfahrt buchen. Planen Sie ausreichend Zeit für Anreise und Parken vor Ort ein. Danach gehen Sie direkt zum Abfahrtsort und kaufen Ihre Tickets am Schalter oder beim Fahrer."
+    },
+    "informationsCta": {
+      "label": "Gruppenbuchung — Privatfahrten",
+      "heading": "Buchung für private Touren",
+      "description": "Wenn Sie in einer Gruppe reisen oder den Petit Train de Carnac für eine Veranstaltung, ein Seminar oder einen Schulausflug privat mieten möchten, kontaktieren Sie uns für ein maßgeschneidertes Angebot.",
+      "button": "Privatfahrt buchen"
+    },
+    "faqsHero": {
+      "label": "FAQ",
+      "heading": "Häufig gestellte Fragen",
+      "description": "Antworten auf die häufigsten Fragen zum Petit Train de Carnac: Dauer, Preise, Route, Barrierefreiheit und Buchungen.",
+      "cardHeading": "Geführte Tour mit Audiokommentar in 16 Sprachen",
+      "languages": "Französisch, Englisch, Deutsch, Spanisch, Italienisch, Portugiesisch, Niederländisch, Russisch, Chinesisch, Japanisch, Schwedisch, Dänisch, Polnisch, Arabisch, Kroatisch und Slowenisch."
+    },
+    "faq": {
+      "defaultLabel": "FAQ",
+      "defaultHeading": "Häufig gestellte Fragen",
+      "defaultDescription": "Klare Antworten auf die häufigsten Fragen zum Petit Train de Carnac.",
+      "button": "Tour buchen",
+      "default": {
+        "q1": "Was ist der Petit Train de Carnac?",
+        "a1": "Der Petit Train de Carnac ist ein geführter Sightseeing-Zug, der durch Carnac und die Umgebung fährt: Menhire, Strände und der Hafen von La Trinité-sur-Mer.",
+        "q2": "Wie lange dauert die Tour mit dem Petit Train de Carnac?",
+        "a2": "Die geführte Tour dauert insgesamt etwa 55 Minuten, mit mehrsprachigem Audiokommentar entlang der Route.",
+        "q3": "Wo startet der Petit Train de Carnac?",
+        "a3": "Der Haupt-Abfahrts- und Endpunkt ist der Parkplatz Ménec, gegenüber der Maison des Mégalithes.",
+        "q4": "Was werde ich während der Tour mit dem Petit Train de Carnac sehen?",
+        "a4": "Während der Tour fahren Sie an den berühmten Menhir-Reihen, am Tumulus Saint-Michel, an Carnac-Plage und am Hafen von La Trinité-sur-Mer vorbei.",
+        "q5": "Ist der Petit Train de Carnac für Kinder und Familien geeignet?",
+        "a5": "Ja, der Petit Train de Carnac eignet sich für Familien mit Kindern, ältere Besucher und alle, die längere Fußwege vermeiden möchten.",
+        "q6": "In welchen Sprachen ist der Audiokommentar verfügbar?",
+        "a6": "Der Audiokommentar ist in 16 Sprachen verfügbar, darunter Französisch, Englisch, Deutsch, Spanisch, Italienisch und Niederländisch.",
+        "q7": "Muss ich den Petit Train de Carnac im Voraus buchen?",
+        "a7": "Eine Vorabbuchung wird empfohlen, besonders in der Hochsaison. Tickets können auch vor Ort gekauft werden, je nach Verfügbarkeit."
+      }
+    }
+  }
+}

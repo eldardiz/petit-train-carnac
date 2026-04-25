@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useEffect, useRef, useSyncExternalStore } from 'react'
+import { useTranslations } from 'next-intl'
 
 type Photo = { src: string; width: number; height: number }
 
@@ -53,6 +54,7 @@ function distribute(photos: Photo[], numColumns: number): Photo[][] {
 }
 
 export default function Gallery() {
+  const t = useTranslations('sections.gallery')
   const containerRef = useRef<HTMLDivElement>(null)
   const cleanupRef = useRef<(() => void) | null>(null)
   const isMobile = useSyncExternalStore(subscribeMobile, getMobileSnapshot, getMobileServerSnapshot)
@@ -355,15 +357,14 @@ export default function Gallery() {
               />
             </div>
             <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#f5ebdd] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
-              Galerie
+              {t('label')}
             </p>
           </div>
           <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[32px] sm:text-[40px] md:text-[48px] text-[#f5ebdd] leading-[1.15] tracking-[-1.5px] sm:tracking-[-2.5px] md:tracking-[-3.36px] max-w-[575px] w-full break-words">
-            Des souvenirs de votre visite
+            {t('heading')}
           </h2>
           <p className="font-['Manrope',sans-serif] text-[18px] text-white/75 leading-[1.2] tracking-[-0.54px]">
-            Un aperçu de ce qui vous attend à bord du Petit Train de Carnac. Cliquez
-            pour agrandir.
+            {t('description')}
           </p>
         </div>
 
@@ -379,7 +380,7 @@ export default function Gallery() {
                     className="gallery-grid__item"
                     style={{ aspectRatio: `${photo.width} / ${photo.height}` }}
                   >
-                    <button data-lightbox="trigger" className="gallery-item__button" aria-label={`Agrandir l'image ${ci * 10 + i + 1}`}>
+                    <button data-lightbox="trigger" className="gallery-item__button" aria-label={t('expandImage', { n: ci * 10 + i + 1 })}>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={photo.src}
@@ -412,17 +413,17 @@ export default function Gallery() {
                 </p>
               </div>
               <div data-lightbox="nav" className="lightbox-nav__col center">
-                <button data-lightbox="prev" className="lightbox-nav__button" aria-label="Image précédente">
+                <button data-lightbox="prev" className="lightbox-nav__button" aria-label={t('prevImage')}>
                   <div className="lightbox-nav__dot"></div>
                   <span className="lightbox-nav__text">prev</span>
                 </button>
-                <button data-lightbox="next" className="lightbox-nav__button" aria-label="Image suivante">
+                <button data-lightbox="next" className="lightbox-nav__button" aria-label={t('nextImage')}>
                   <span className="lightbox-nav__text">next</span>
                   <div className="lightbox-nav__dot"></div>
                 </button>
               </div>
               <div data-lightbox="nav" className="lightbox-nav__col end">
-                <button data-lightbox="close" className="lightbox-nav__button" aria-label="Fermer">
+                <button data-lightbox="close" className="lightbox-nav__button" aria-label={t('close')}>
                   <span className="lightbox-nav__text">close</span>
                 </button>
               </div>

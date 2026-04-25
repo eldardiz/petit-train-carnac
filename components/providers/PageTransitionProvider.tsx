@@ -7,7 +7,7 @@ import {
   useRef,
   ReactNode,
 } from 'react'
-import { useRouter, usePathname } from 'next/navigation'
+import { useRouter, usePathname } from '@/i18n/navigation'
 
 interface PageTransitionContextValue {
   triggerTransition: (href: string) => void

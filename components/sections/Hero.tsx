@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import TransitionLink from "@/components/ui/TransitionLink";
 import HeroVideoPanel from "@/components/ui/HeroVideoPanel";
 import type { ReactNode } from "react";
@@ -7,7 +8,7 @@ interface HeroProps {
   label?: string;
   heading?: ReactNode;
   description?: ReactNode;
-  tagline?: ReactNode;
+  tagline?: ReactNode | null;
   buttons?: ReactNode;
   googleBadgeText?: string;
   rightImageSrc?: string;
@@ -19,84 +20,92 @@ interface HeroProps {
   backgroundVariant?: "cream" | "gradient-to-white";
 }
 
-const defaultHeading = (
-  <>
-    Découvrez{" "}
-    <em className="italic text-[#54206d] not-[font-style:normal]">Carnac</em>{" "}
-    à bord du Petit Train
-  </>
-);
-
-const defaultDescription = (
-  <>
-    Le Petit Train de Carnac propose une visite guidée touristique à travers la
-    ville et ses environs. Découvrez le plus beau site néolithique du monde lors
-    de cette <strong className="font-bold">visite guidée de 50 minutes.</strong>{" "}
-    C&apos;est une façon simple et confortable de découvrir Carnac, son
-    patrimoine et ses paysages emblématiques, sans avoir besoin de marcher
-    longtemps.
-  </>
-);
-
-const defaultButtons = (
-  <>
-    <TransitionLink
-      href="/book"
-      aria-label="Réservez votre visite"
-      className="btn-animate-chars btn-primary bg-[#54206d] h-[45px] px-[22px] rounded-[4px] text-white text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)]"
-    >
-      <div className="btn-animate-chars__bg" />
-      <span data-button-animate-chars="" className="btn-animate-chars__text">Réservez votre visite</span>
-    </TransitionLink>
-    <TransitionLink
-      href="/prices"
-      aria-label="Voir les Tarifs"
-      className="btn-animate-chars btn-secondary bg-[#f5ebdd] border border-[rgba(0,0,0,0.2)] h-[45px] px-[22px] rounded-[4px] text-[#414651] text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap"
-    >
-      <div className="btn-animate-chars__bg" />
-      <span data-button-animate-chars="" className="btn-animate-chars__text">Voir les Tarifs</span>
-    </TransitionLink>
-  </>
-);
-
-const defaultRightCard = (
-  <div className="absolute bottom-[514px] lg:bottom-[30px] left-1/2 -translate-x-1/2 lg:left-auto lg:right-6 lg:translate-x-0 bg-[rgba(84,32,109,0.65)] border border-[rgba(255,255,255,0.2)] rounded-xl p-6 w-[499px] max-w-[calc(100%-32px)] flex flex-col gap-4 z-20">
-    <div className="flex items-start justify-between gap-4">
-      <p className="font-['Manrope',sans-serif] font-semibold text-[20px] leading-[1.1] text-white tracking-[-0.8px] max-w-[312px]">
-        Visite guidée avec commentaire audio en 16 langues
-      </p>
-      <div className="relative h-[43px] w-[83px] shrink-0 overflow-hidden rounded">
-        <Image
-          src="/figma-assets/languages-flags.png"
-          alt="Drapeaux des langues"
-          fill
-          className="object-cover"
-        />
-      </div>
-    </div>
-    <p className="font-['Manrope',sans-serif] font-normal text-[14px] leading-[1.4] text-white tracking-[-0.56px] max-w-[312px]">
-      Français, anglais, allemand, espagnol, italien, portugais, néerlandais,
-      russe, chinois, japonais, suédois, danois, polonais, arabe, croate et
-      slovène.
-    </p>
-  </div>
-);
-
-export default function Hero({
-  label = "Le Petit Trains de Morbihan · Carnac",
-  heading = defaultHeading,
-  description = defaultDescription,
-  tagline = "Idéal pour les familles, les couples, les seniors et les visiteurs de tous âges.",
-  buttons = defaultButtons,
-  googleBadgeText = "Le Petit Train de Carnac est noté 4,7 sur Google, avec plus de 6 000 avis, ce qui en fait l'une des attractions touristiques les plus populaires de Carnac.",
+export default async function Hero({
+  label,
+  heading,
+  description,
+  tagline,
+  buttons,
+  googleBadgeText,
   rightImageSrc = "/figma-assets/hero-image.jpg",
-  rightImageAlt = "Le Petit Train de Carnac sur un parcours pittoresque",
+  rightImageAlt,
   rightVideoSrc,
   openingImageSrc,
-  rightCard = defaultRightCard,
+  rightCard,
   showBottomBanner = true,
   backgroundVariant = "cream",
 }: HeroProps) {
+  const t = await getTranslations("hero");
+
+  // Resolve defaults from translations when not overridden by the page.
+  const resolvedLabel = label ?? t("label");
+  const resolvedHeading: ReactNode =
+    heading ?? (
+      <>
+        {t("headingPrefix")}{" "}
+        <em className="italic text-[#54206d] not-[font-style:normal]">
+          {t("headingHighlight")}
+        </em>{" "}
+        {t("headingSuffix")}
+      </>
+    );
+  const resolvedDescription: ReactNode =
+    description ??
+    t.rich("description", {
+      strong: (chunks) => <strong className="font-bold">{chunks}</strong>,
+    });
+  const resolvedTagline: ReactNode = tagline === undefined ? t("tagline") : tagline;
+  const resolvedGoogleBadge = googleBadgeText ?? t("googleBadge");
+  const resolvedRightImageAlt = rightImageAlt ?? t("rightImageAlt");
+
+  const resolvedButtons: ReactNode =
+    buttons ?? (
+      <>
+        <TransitionLink
+          href="/book"
+          aria-label={t("buttonBook")}
+          className="btn-animate-chars btn-primary bg-[#54206d] h-[45px] px-[22px] rounded-[4px] text-white text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)]"
+        >
+          <div className="btn-animate-chars__bg" />
+          <span data-button-animate-chars="" className="btn-animate-chars__text">
+            {t("buttonBook")}
+          </span>
+        </TransitionLink>
+        <TransitionLink
+          href="/prices"
+          aria-label={t("buttonPrices")}
+          className="btn-animate-chars btn-secondary bg-[#f5ebdd] border border-[rgba(0,0,0,0.2)] h-[45px] px-[22px] rounded-[4px] text-[#414651] text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap"
+        >
+          <div className="btn-animate-chars__bg" />
+          <span data-button-animate-chars="" className="btn-animate-chars__text">
+            {t("buttonPrices")}
+          </span>
+        </TransitionLink>
+      </>
+    );
+
+  const resolvedRightCard: ReactNode =
+    rightCard ?? (
+      <div className="absolute bottom-[514px] lg:bottom-[30px] left-1/2 -translate-x-1/2 lg:left-auto lg:right-6 lg:translate-x-0 bg-[rgba(84,32,109,0.65)] border border-[rgba(255,255,255,0.2)] rounded-xl p-6 w-[499px] max-w-[calc(100%-32px)] flex flex-col gap-4 z-20">
+        <div className="flex items-start justify-between gap-4">
+          <p className="font-['Manrope',sans-serif] font-semibold text-[20px] leading-[1.1] text-white tracking-[-0.8px] max-w-[312px]">
+            {t("rightCardHeading")}
+          </p>
+          <div className="relative h-[43px] w-[83px] shrink-0 overflow-hidden rounded">
+            <Image
+              src="/figma-assets/languages-flags.png"
+              alt={t("rightCardFlagsAlt")}
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
+        <p className="font-['Manrope',sans-serif] font-normal text-[14px] leading-[1.4] text-white tracking-[-0.56px] max-w-[312px]">
+          {t("rightCardBody")}
+        </p>
+      </div>
+    );
+
   const sectionBg =
     backgroundVariant === "gradient-to-white"
       ? "bg-gradient-to-b from-[#f5ebdd] to-white to-[60%]"
@@ -105,6 +114,7 @@ export default function Hero({
     backgroundVariant === "gradient-to-white" ? "" : "bg-[#f5ebdd]";
   const bannerBg =
     backgroundVariant === "gradient-to-white" ? "bg-white" : "bg-[#f5ebdd]";
+
   return (
     <section data-anim-section="hero" className={`${sectionBg} overflow-hidden`}>
       {/* Main hero section: left text + right image */}
@@ -127,30 +137,30 @@ export default function Hero({
                     />
                   </div>
                   <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#54206d] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
-                    {label}
+                    {resolvedLabel}
                   </p>
                 </div>
 
                 {/* Main heading */}
                 <h1 data-anim-item className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[36px] sm:text-[44px] md:text-[52px] lg:text-[60px] leading-[1.1] tracking-[-1.8px] sm:tracking-[-2.4px] md:tracking-[-3.2px] lg:tracking-[-4.2px] text-[#181d27] not-italic w-full break-words">
-                  {heading}
+                  {resolvedHeading}
                 </h1>
 
                 {/* Description */}
                 <p data-anim-item className="font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.2] tracking-[-0.48px]">
-                  {description}
+                  {resolvedDescription}
                 </p>
 
                 {/* Tagline */}
-                {tagline && (
+                {resolvedTagline && (
                   <p data-anim-item className="font-['Manrope',sans-serif] font-semibold text-[#535862] text-base leading-[1.2] tracking-[-0.48px]">
-                    {tagline}
+                    {resolvedTagline}
                   </p>
                 )}
               </div>
 
               {/* CTA buttons */}
-              <div data-anim-item className="flex items-center gap-3">{buttons}</div>
+              <div data-anim-item className="flex items-center gap-3">{resolvedButtons}</div>
 
               {/* Divider */}
               <hr className="border-t border-[rgba(0,0,0,0.12)] w-[554px] max-w-full" />
@@ -187,7 +197,7 @@ export default function Hero({
                 </div>
 
                 <p className="font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.2] tracking-[-0.48px] max-w-[499px]">
-                  {googleBadgeText}
+                  {resolvedGoogleBadge}
                 </p>
               </div>
             </div>
@@ -204,12 +214,12 @@ export default function Hero({
                 videoSrc={rightVideoSrc}
                 openingImageSrc={openingImageSrc}
                 imageSrc={rightImageSrc}
-                imageAlt={rightImageAlt}
+                imageAlt={resolvedRightImageAlt}
               />
             ) : (
               <Image
                 src={rightImageSrc}
-                alt={rightImageAlt}
+                alt={resolvedRightImageAlt}
                 fill
                 className="object-cover"
                 priority
@@ -218,7 +228,7 @@ export default function Hero({
           </div>
 
           {/* Overlay card */}
-          {rightCard}
+          {resolvedRightCard}
         </div>
       </div>
 
@@ -238,7 +248,7 @@ export default function Hero({
                 />
               </div>
               <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#54206d] text-base leading-6 tracking-[-0.48px]">
-                Note Importante
+                {t("noteImportanteLabel")}
               </p>
             </div>
 
@@ -247,21 +257,16 @@ export default function Hero({
               {/* Heading */}
               <div className="lg:w-[559px] shrink-0">
                 <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[32px] sm:text-[40px] md:text-[48px] leading-[1.1] tracking-[-1.5px] sm:tracking-[-2.5px] md:tracking-[-3.36px] text-[#181d27] not-italic break-words">
-                  Réservation en Ligne
+                  {t("noteImportanteHeading")}
                 </h2>
               </div>
               {/* Supporting text */}
               <div className="flex-1">
                 <p className="font-['Manrope',sans-serif] font-normal text-[20px] leading-[30px] text-[#535862]">
-                  La réservation est possible mais non obligatoire. Vous pouvez
-                  réserver jusqu&apos;à{" "}
-                  <strong className="font-bold">2 heures</strong>{" "}avant le
-                  départ souhaité. N&apos;oubliez pas de prévoir le temps de
-                  trajet et le stationnement sur place. Passé ce délai, rendez-
-                  vous directement au point de départ et achetez vos billets au
-                  guichet ou auprès du conducteur.
-                  <br />
-                  Toutes les places ne sont pas disponibles à la vente en ligne.
+                  {t.rich("noteImportanteBody", {
+                    strong: (chunks) => <strong className="font-bold">{chunks}</strong>,
+                    br: () => <br />,
+                  })}
                 </p>
               </div>
             </div>
