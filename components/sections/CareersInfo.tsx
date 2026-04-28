@@ -1,37 +1,23 @@
 import Image from 'next/image'
 import TransitionLink from '@/components/ui/TransitionLink'
+import { getTranslations } from 'next-intl/server'
 
-const panels = [
-  {
-    heading: 'Qui cherchons-nous',
-    paragraphs: [
-      'Nous recherchons des personnes motivées et fiables qui aiment travailler avec le public et contribuer à une expérience touristique de qualité.',
-      'Vous êtes à l\'aise avec les visiteurs internationaux, disponible pendant la saison touristique et en mesure de travailler les week-ends et jours fériés si nécessaire.',
-    ],
-  },
-  {
-    heading: 'Travailler avec nous',
-    paragraphs: [
-      'Les postes sont principalement saisonniers et basés à Carnac. Une formation est dispensée avant la prise de poste. Les horaires de travail dépendent de la saison et de la fréquentation des visiteurs.',
-      'Vous travaillerez en extérieur et au sein d\'une petite équipe conviviale axée sur la satisfaction des visiteurs.',
-    ],
-  },
-  {
-    heading: 'Comment postuler',
-    paragraphs: [
-      'Pour postuler, veuillez remplir le formulaire de candidature et joindre votre CV. Si votre profil correspond à nos besoins, notre équipe vous contactera.',
-    ],
-  },
-  {
-    heading: 'Rejoindre l\'équipe du Petit Train de Carnac',
-    paragraphs: [
-      'Postulez dès maintenant et participez à une expérience touristique locale qui aide les visiteurs à découvrir Carnac de façon simple et agréable.',
-    ],
-    cta: true,
-  },
+type Panel = {
+  headingKey: string
+  paragraphKeys: readonly string[]
+  cta?: boolean
+}
+
+const panels: Panel[] = [
+  { headingKey: 'panel1Heading', paragraphKeys: ['panel1P1', 'panel1P2'] },
+  { headingKey: 'panel2Heading', paragraphKeys: ['panel2P1', 'panel2P2'] },
+  { headingKey: 'panel3Heading', paragraphKeys: ['panel3P1'] },
+  { headingKey: 'panel4Heading', paragraphKeys: ['panel4P1'], cta: true },
 ]
 
-export default function CareersInfo() {
+export default async function CareersInfo() {
+  const t = await getTranslations('sections.careersInfo')
+
   return (
     <section data-anim-section className="bg-[#f5ebdd] py-16 xl:py-[112px] px-5 xl:px-[64px]">
       <div className="max-w-[1280px] mx-auto flex flex-col lg:flex-row gap-[80px] items-start">
@@ -40,7 +26,7 @@ export default function CareersInfo() {
           <div className="relative w-full h-[829px] rounded-[16px] overflow-hidden">
             <Image
               src="/figma-assets/CareersLooking.png"
-              alt="Qui cherchons-nous au Petit Train de Carnac"
+              alt={t('imageAlt')}
               fill
               className="object-cover"
               sizes="(max-width: 1280px) 100vw, 600px"
@@ -52,19 +38,19 @@ export default function CareersInfo() {
         <div data-anim-item className="flex-1 min-w-0 flex flex-col gap-0">
           {panels.map((panel) => (
             <div
-              key={panel.heading}
+              key={panel.headingKey}
               className="border-b border-[rgba(0,0,0,0.2)] pb-8 mb-8 last:border-b-0 last:mb-0 flex flex-col gap-6"
             >
               <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[32px] text-[#181d27] leading-[1.1] tracking-[-2.24px]">
-                {panel.heading}
+                {t(panel.headingKey)}
               </h2>
               <div className="flex flex-col gap-3">
-                {panel.paragraphs.map((p, i) => (
+                {panel.paragraphKeys.map((key) => (
                   <p
-                    key={i}
+                    key={key}
                     className="font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.2] tracking-[-0.48px] max-w-[551px]"
                   >
-                    {p}
+                    {t(key)}
                   </p>
                 ))}
               </div>
@@ -84,7 +70,7 @@ export default function CareersInfo() {
                         aria-hidden="true"
                       />
                     </div>
-                    <span data-button-animate-chars="" className="btn-animate-chars__text">Postulez &amp; Envoyez-nous votre CV</span>
+                    <span data-button-animate-chars="" className="btn-animate-chars__text">{t('ctaButton')}</span>
                   </TransitionLink>
                 </div>
               )}

@@ -1,39 +1,16 @@
 import Image from 'next/image'
 import TransitionLink from '@/components/ui/TransitionLink'
+import { getTranslations } from 'next-intl/server'
 
-type JobPost = {
-  title: string
-  badge: string
-  description: string
-  requirement: string
-}
+const jobs = [
+  { titleKey: 'job1Title', descKey: 'job1Description', reqKey: 'job1Requirement' },
+  { titleKey: 'job2Title', descKey: 'job2Description', reqKey: 'job2Requirement' },
+  { titleKey: 'job3Title', descKey: 'job3Description', reqKey: 'job3Requirement' },
+] as const
 
-const jobPosts: JobPost[] = [
-  {
-    title: 'Conducteur de Petit Train',
-    badge: 'Poste saisonnier',
-    description:
-      "Conduire le Petit Train en toute sécurité sur le parcours touristique et accueillir les visiteurs à bord. Ce poste implique de conduire le train, de veiller au confort des passagers et de contribuer à une atmosphère positive tout au long de la visite.",
-    requirement: "Permis D (transport en commun) requis. Une expérience préalable avec des véhicules touristiques est un plus.",
-  },
-  {
-    title: 'Agent de Billetterie',
-    badge: 'Poste saisonnier',
-    description:
-      "Accueillir les visiteurs, vendre les billets et fournir des informations claires sur les horaires, les tarifs et la visite. Ce poste est idéal pour les personnes qui aiment le contact avec le public et le travail dans un environnement touristique animé.",
-    requirement:
-      "De bonnes aptitudes à la communication et une attitude amicale sont essentielles. La connaissance de langues étrangères est appréciée.",
-  },
-  {
-    title: "Agent de Quai",
-    badge: 'Poste saisonnier',
-    description:
-      "Accompagner les passagers lors de l'embarquement et assurer le bon déroulement des départs et des arrivées. Ce poste soutient à la fois le conducteur et l'équipe de billetterie.",
-    requirement: "Une attitude positive, de la fiabilité et une aisance avec les visiteurs de tous âges sont essentielles.",
-  },
-]
+export default async function CareersHero() {
+  const t = await getTranslations('sections.careersHero')
 
-export default function CareersHero() {
   return (
     <section data-anim-section="hero" className="bg-[#f5ebdd] relative overflow-hidden py-16 xl:py-[112px] px-5 xl:px-[64px]">
       {/* Background pattern */}
@@ -64,26 +41,22 @@ export default function CareersHero() {
                 />
               </div>
               <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#54206d] text-base leading-6 tracking-[-0.48px]">
-                Carrières
+                {t('sectionLabel')}
               </p>
             </div>
 
             {/* Heading */}
             <h1 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[40px] sm:text-[48px] xl:text-[60px] text-[#181d27] leading-[1.1] tracking-[-3.36px] [text-wrap:balance]">
-              Votre carrière au{' '}
+              {t('headingPrefix')}{' '}
               <em className="font-['Bricolage_Grotesque',sans-serif] italic text-[#54206d]">
                 Petit Train de Carnac
               </em>{' '}
-              commence ici
+              {t('headingSuffix')}
             </h1>
 
             {/* Description */}
             <p className="font-['Manrope',sans-serif] text-[#535862] text-[16px] leading-[1.2] tracking-[-0.48px] max-w-[551px]">
-              Notre philosophie est simple : offrir aux visiteurs un accueil chaleureux et une
-              expérience touristique fluide tout en découvrant Carnac et ses environs. Au Petit Train
-              de Carnac, chaque membre de l&apos;équipe joue un rôle important dans la création
-              d&apos;une visite conviviale et mémorable pour les personnes de tous âges et du monde
-              entier.
+              {t('description')}
             </p>
 
             {/* Apply CTA */}
@@ -102,7 +75,7 @@ export default function CareersHero() {
                     aria-hidden="true"
                   />
                 </div>
-                <span data-button-animate-chars="" className="btn-animate-chars__text">Postulez &amp; Envoyez-nous votre CV</span>
+                <span data-button-animate-chars="" className="btn-animate-chars__text">{t('ctaButton')}</span>
               </TransitionLink>
             </div>
           </div>
@@ -110,32 +83,32 @@ export default function CareersHero() {
           {/* Job listings */}
           <div data-anim-item className="flex flex-col gap-0">
             <p className="font-['Bricolage_Grotesque',sans-serif] text-[20px] text-[#181d27] leading-[1.2] tracking-[-1.4px] mb-6">
-              Postes Ouverts :
+              {t('openPositionsLabel')}
             </p>
 
-            {jobPosts.map((job) => (
+            {jobs.map((job) => (
               <div
-                key={job.title}
+                key={job.titleKey}
                 className="border-t border-[#e9eaeb] pt-6 pb-6 flex flex-col gap-2"
               >
                 {/* Title + badge */}
                 <div className="flex flex-wrap items-center gap-3">
                   <p className="font-['Manrope',sans-serif] font-medium text-[#181d27] text-[20px] leading-[1.4] tracking-[-0.6px]">
-                    {job.title}
+                    {t(job.titleKey)}
                   </p>
                   <span className="inline-flex items-center gap-1.5 pl-2 pr-[10px] py-[2px] bg-[rgba(84,32,109,0.1)] border border-[rgba(84,32,109,0.25)] rounded-[4px]">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#54206d] shrink-0" />
                     <span className="font-['Manrope',sans-serif] text-[#54206d] text-[12px] leading-[1.4] tracking-[-0.36px] uppercase">
-                      {job.badge}
+                      {t('seasonalBadge')}
                     </span>
                   </span>
                 </div>
                 {/* Descriptions */}
                 <p className="font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.5] tracking-[-0.48px]">
-                  {job.description}
+                  {t(job.descKey)}
                 </p>
                 <p className="font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.5] tracking-[-0.48px]">
-                  {job.requirement}
+                  {t(job.reqKey)}
                 </p>
               </div>
             ))}
@@ -147,7 +120,7 @@ export default function CareersHero() {
           <div className="relative w-full rounded-[8px] overflow-hidden">
             <Image
               src="/figma-assets/CareersHero.jpg"
-              alt="Travailler au Petit Train de Carnac"
+              alt={t('imageAlt')}
               fill
               className="object-cover"
               sizes="608px"

@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { submitPrivatisation, type PrivatisationData } from '@/app/actions/privatisation'
 
 // ---------------------------------------------------------------------------
@@ -50,6 +51,7 @@ const textareaClass =
 // ---------------------------------------------------------------------------
 
 export default function PrivatisationHero() {
+  const t = useTranslations('sections.privatisationForm')
   const [values, setValues] = useState<PrivatisationData>(defaultValues)
   const [status, setStatus] = useState<Status>('idle')
   const [errorMsg, setErrorMsg] = useState('')
@@ -94,11 +96,10 @@ export default function PrivatisationHero() {
               </div>
               <div className="flex flex-col gap-2">
                 <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[28px] text-[#181d27] tracking-[-2px] leading-[1.15]">
-                  Demande envoyée !
+                  {t('successHeading')}
                 </h2>
                 <p className="font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.4] tracking-[-0.48px]">
-                  Merci de votre intérêt. Notre équipe examinera votre demande et vous recontactera
-                  dès que possible pour confirmer la disponibilité et discuter des détails.
+                  {t('successBody')}
                 </p>
               </div>
             </div>
@@ -107,30 +108,30 @@ export default function PrivatisationHero() {
 
               {/* ── Your Details ── */}
               <p className="font-['Bricolage_Grotesque',sans-serif] text-[#4d1c64] text-[28px] leading-none tracking-[-2px]">
-                Vos Coordonnées
+                {t('yourDetailsHeading')}
               </p>
 
               {/* First + Last name */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div className="relative">
-                  <FieldLabel>Votre prénom*</FieldLabel>
+                  <FieldLabel>{t('firstNameLabel')}</FieldLabel>
                   <input
                     id="firstName"
                     type="text"
                     required
-                    placeholder="Alexandre"
+                    placeholder={t('firstNamePlaceholder')}
                     value={values.firstName}
                     onChange={set('firstName')}
                     className={inputClass}
                   />
                 </div>
                 <div className="relative">
-                  <FieldLabel>Votre nom*</FieldLabel>
+                  <FieldLabel>{t('lastNameLabel')}</FieldLabel>
                   <input
                     id="lastName"
                     type="text"
                     required
-                    placeholder="Bourgeois"
+                    placeholder={t('lastNamePlaceholder')}
                     value={values.lastName}
                     onChange={set('lastName')}
                     className={inputClass}
@@ -141,24 +142,24 @@ export default function PrivatisationHero() {
               {/* Phone + Email */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div className="relative">
-                  <FieldLabel>Votre numéro de téléphone*</FieldLabel>
+                  <FieldLabel>{t('phoneLabel')}</FieldLabel>
                   <input
                     id="phone"
                     type="tel"
                     required
-                    placeholder="+00 000 000 0000"
+                    placeholder={t('phonePlaceholder')}
                     value={values.phone}
                     onChange={set('phone')}
                     className={inputClass}
                   />
                 </div>
                 <div className="relative">
-                  <FieldLabel>Votre email*</FieldLabel>
+                  <FieldLabel>{t('emailLabel')}</FieldLabel>
                   <input
                     id="email"
                     type="email"
                     required
-                    placeholder="name@email.com"
+                    placeholder={t('emailPlaceholder')}
                     value={values.email}
                     onChange={set('email')}
                     className={inputClass}
@@ -168,11 +169,11 @@ export default function PrivatisationHero() {
 
               {/* Company name */}
               <div className="relative">
-                <FieldLabel>{`Nom de l'entreprise`}</FieldLabel>
+                <FieldLabel>{t('companyNameLabel')}</FieldLabel>
                 <input
                   id="companyName"
                   type="text"
-                  placeholder="Nom de l'entreprise"
+                  placeholder={t('companyNamePlaceholder')}
                   value={values.companyName}
                   onChange={set('companyName')}
                   className={inputClass}
@@ -184,17 +185,17 @@ export default function PrivatisationHero() {
 
               {/* ── Event Details ── */}
               <p className="font-['Bricolage_Grotesque',sans-serif] text-[#4d1c64] text-[28px] leading-none tracking-[-2px]">
-                Détails de l&apos;événement
+                {t('eventDetailsHeading')}
               </p>
 
               {/* Event type */}
               <div className="relative">
-                <FieldLabel>{`Type d'évènement*`}</FieldLabel>
+                <FieldLabel>{t('eventTypeLabel')}</FieldLabel>
                 <input
                   id="eventType"
                   type="text"
                   required
-                  placeholder="Corporate event, association visit, school group, family event, private tour..."
+                  placeholder={t('eventTypePlaceholder')}
                   value={values.eventType}
                   onChange={set('eventType')}
                   className={inputClass}
@@ -204,12 +205,12 @@ export default function PrivatisationHero() {
               {/* Departure location + Time */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div className="relative">
-                  <FieldLabel>{`Lieu de départ souhaité*`}</FieldLabel>
+                  <FieldLabel>{t('departureLocationLabel')}</FieldLabel>
                   <select
                     id="departureLocation"
                     required
-                    title="Lieu de départ souhaité"
-                    aria-label="Lieu de départ souhaité"
+                    title={t('departureLocationAriaLabel')}
+                    aria-label={t('departureLocationAriaLabel')}
                     value={values.departureLocation}
                     onChange={set('departureLocation')}
                     className={selectClass}
@@ -226,13 +227,13 @@ export default function PrivatisationHero() {
                   </div>
                 </div>
                 <div className="relative">
-                  <FieldLabel>{`Heure de départ souhaitée*`}</FieldLabel>
+                  <FieldLabel>{t('departureTimeLabel')}</FieldLabel>
                   <input
                     id="departureTime"
                     type="time"
                     required
-                    title="Heure de départ souhaitée"
-                    aria-label="Heure de départ souhaitée"
+                    title={t('departureTimeAriaLabel')}
+                    aria-label={t('departureTimeAriaLabel')}
                     value={values.departureTime}
                     onChange={set('departureTime')}
                     className={inputClass}
@@ -243,13 +244,13 @@ export default function PrivatisationHero() {
               {/* Date + Guest count */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div className="relative">
-                  <FieldLabel>Date de votre évènement</FieldLabel>
+                  <FieldLabel>{t('eventDateLabel')}</FieldLabel>
                   <input
                     id="eventDate"
                     type="date"
                     required
-                    title="Date de votre évènement"
-                    aria-label="Date de votre évènement"
+                    title={t('eventDateAriaLabel')}
+                    aria-label={t('eventDateAriaLabel')}
                     value={values.eventDate}
                     onChange={set('eventDate')}
                     className={inputClass}
@@ -257,15 +258,15 @@ export default function PrivatisationHero() {
                 </div>
                 <div className="relative">
                   <FieldLabel>
-                    {`Nombre d'invités`}{' '}
-                    <span className="text-[10px] text-[rgba(77,28,100,0.55)] font-normal">(min. 10 guests)</span>
+                    {t('guestCountLabel')}{' '}
+                    <span className="text-[10px] text-[rgba(77,28,100,0.55)] font-normal">{t('guestCountMin')}</span>
                   </FieldLabel>
                   <input
                     id="guestCount"
                     type="number"
                     required
                     min={10}
-                    placeholder="ex: 10 - 15, 25 - 35..."
+                    placeholder={t('guestCountPlaceholder')}
                     value={values.guestCount || ''}
                     onChange={set('guestCount')}
                     className={inputClass}
@@ -275,11 +276,11 @@ export default function PrivatisationHero() {
 
               {/* Additional info */}
               <div className="relative">
-                <FieldLabel>Autres informations</FieldLabel>
+                <FieldLabel>{t('additionalInfoLabel')}</FieldLabel>
                 <textarea
                   id="additionalInfo"
                   rows={4}
-                  placeholder="Demandes particulières, contraintes horaires, langue préférée ou autres détails"
+                  placeholder={t('additionalInfoPlaceholder')}
                   value={values.additionalInfo}
                   onChange={set('additionalInfo')}
                   className={`${textareaClass} min-h-[120px]`}
@@ -288,7 +289,7 @@ export default function PrivatisationHero() {
 
               {/* Info note */}
               <p className="font-['Manrope',sans-serif] text-[#54206d] text-[13px] leading-[1.4] tracking-[-0.3px] max-w-[354px]">
-                ⓘ Plus vous nous fournissez de détails, mieux nous pourrons répondre à votre demande
+                {t('infoNote')}
               </p>
 
               {/* Error message */}
@@ -305,7 +306,9 @@ export default function PrivatisationHero() {
                 className="btn-animate-chars btn-primary inline-flex items-center justify-center h-[45px] px-[22px] bg-[#54206d] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-white text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap w-fit disabled:opacity-60"
               >
                 <div className="btn-animate-chars__bg" />
-                <span data-button-animate-chars="" className="btn-animate-chars__text">{status === 'loading' ? 'Envoi en cours…' : 'Envoyer la demande'}</span>
+                <span data-button-animate-chars="" className="btn-animate-chars__text">
+                  {status === 'loading' ? t('loadingButton') : t('submitButton')}
+                </span>
               </button>
             </form>
           )}
@@ -316,7 +319,7 @@ export default function PrivatisationHero() {
         <div data-anim-item className="xl:order-first xl:flex-1 relative min-h-[300px] sm:min-h-[420px] xl:min-h-[620px] rounded-[16px] overflow-hidden border border-[rgba(255,255,255,0.15)]">
           <Image
             src="/figma-assets/PrivatisationHero.jpg"
-            alt="Privatisation du Petit Train de Carnac"
+            alt={t('imageAlt')}
             fill
             className="object-cover object-center"
             sizes="(min-width: 1280px) 746px, 100vw"
@@ -343,7 +346,7 @@ export default function PrivatisationHero() {
                     ))}
                   </div>
                 </div>
-                <p className="font-['Manrope',sans-serif] text-[11px] text-black/60 tracking-[-0.33px]">6 000+ avis</p>
+                <p className="font-['Manrope',sans-serif] text-[11px] text-black/60 tracking-[-0.33px]">{t('googleReviewsCount')}</p>
               </div>
             </div>
 
@@ -353,18 +356,18 @@ export default function PrivatisationHero() {
                 <Image src="/figma-assets/icon-train-white.svg" alt="" fill className="object-contain" aria-hidden="true" />
               </div>
               <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#f5ebdd] text-base leading-6 tracking-[-0.48px]">
-                Privatisation &amp; location B2B
+                {t('sectionLabel')}
               </p>
             </div>
 
             {/* Heading */}
             <h1 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[32px] xl:text-[48px] leading-[1.1] tracking-[-2.5px] xl:tracking-[-3.36px] text-[#f5ebdd] max-w-[537px]">
-              Privatisez le <em>Petit Train de Carnac</em> pour votre événement
+              {t('imageHeading')}
             </h1>
 
             {/* Description */}
             <p className="hidden xl:block font-['Manrope',sans-serif] text-[rgba(247,247,240,0.7)] text-base leading-[1.2] tracking-[-0.48px] max-w-[500px]">
-              Le Petit Train de Carnac peut être privatisé pour des visites de groupe, des événements d&apos;entreprise et des occasions spéciales. Cette solution flexible vous permet d&apos;offrir à vos invités une visite guidée à travers Carnac, confortable et originale, adaptée à vos besoins et à votre programme.
+              {t('imageDescription')}
             </p>
           </div>
         </div>
