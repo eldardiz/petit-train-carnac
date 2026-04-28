@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 type Band = "yellow" | "purple" | "green" | "orange" | "blue";
 
@@ -114,6 +115,8 @@ const BAND_STYLES: Record<Band, { bg: string; text: string; pill: string }> = {
 };
 
 export default function InformationsSchedule() {
+  const t = useTranslations("sections.informationsScheduleLabels");
+
   return (
     <section data-anim-section className="bg-[#f5ebdd] py-20 overflow-hidden">
       <div className="max-w-[1280px] mx-auto px-5 xl:px-0 flex flex-col gap-8">
@@ -145,11 +148,10 @@ export default function InformationsSchedule() {
               </div>
               <div className="flex flex-col gap-4">
                 <h3 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[28px] md:text-[32px] leading-[1.25] text-white tracking-[-2.24px]">
-                  Période d&apos;exploitation
+                  {t("operatingPeriodTitle")}
                 </h3>
                 <p className="font-['Manrope',sans-serif] text-[14px] leading-[1.3] tracking-[-0.42px] text-white max-w-[400px]">
-                  Le Petit Train de Carnac fonctionne 7j/7 d&apos;avril à fin
-                  octobre, y compris les dimanches et jours fériés.
+                  {t("operatingPeriodBody")}
                 </p>
               </div>
             </div>
@@ -180,11 +182,10 @@ export default function InformationsSchedule() {
               </div>
               <div className="flex flex-col gap-4">
                 <h3 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[28px] md:text-[32px] leading-[1.25] text-white tracking-[-2.24px]">
-                  Météo
+                  {t("weatherTitle")}
                 </h3>
                 <p className="font-['Manrope',sans-serif] text-[14px] leading-[1.3] tracking-[-0.42px] text-white max-w-[400px]">
-                  En cas de pluie ou de grand vent, le train est vitré sur trois
-                  côtés, vous permettant de profiter pleinement de votre visite.
+                  {t("weatherBody")}
                 </p>
               </div>
             </div>
@@ -199,7 +200,7 @@ export default function InformationsSchedule() {
             <div className="flex items-center gap-4 pb-6 border-b border-[rgba(255,255,255,0.2)]">
               <div className="flex-1 h-px bg-[rgba(255,255,255,0.35)]" />
               <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] italic text-white text-[28px] tracking-[-1.5px] whitespace-nowrap">
-                Horaires
+                {t("timetableHeading")}
               </h2>
               <div className="flex-1 h-px bg-[rgba(255,255,255,0.35)]" />
             </div>
@@ -215,7 +216,7 @@ export default function InformationsSchedule() {
                     </div>
                     <div className="flex flex-col gap-1">
                       <p className="font-['Bricolage_Grotesque',sans-serif] italic text-white text-[22px] leading-[1.1] tracking-[-1.2px]">
-                        Départ — {dep.name}
+                        {t("departurePrefix")} {dep.name}
                       </p>
                       <p className="font-['Manrope',sans-serif] text-[13px] leading-[1.4] text-[rgba(255,255,255,0.7)] tracking-[-0.32px]">
                         {dep.location}
@@ -272,12 +273,12 @@ export default function InformationsSchedule() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
               <div className="rounded-[16px] bg-white/10 border border-white/15 px-5 py-4">
                 <p className="font-['Manrope',sans-serif] text-[13px] leading-[1.5] text-white tracking-[-0.32px]">
-                  <strong>Samedi en juillet &amp; août :</strong> les départs Carnac Plage et La Trinité-sur-Mer suivent les horaires « orange » de basse saison.
+                  {t.rich("saturdayRule", { strong: (chunks) => <strong>{chunks}</strong> })}
                 </p>
               </div>
               <div className="rounded-[16px] bg-white/10 border border-white/15 px-5 py-4">
                 <p className="font-['Manrope',sans-serif] text-[13px] leading-[1.5] text-white tracking-[-0.32px]">
-                  <strong>Réservation en ligne :</strong> uniquement disponible pour le départ N°1 — Parking du Ménec.
+                  {t.rich("onlineBookingNote", { strong: (chunks) => <strong>{chunks}</strong> })}
                 </p>
               </div>
             </div>
@@ -289,13 +290,12 @@ export default function InformationsSchedule() {
           <div className="flex items-center gap-4 w-full">
             <div className="flex-1 h-px bg-[rgba(0,0,0,0.12)]" />
             <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] italic text-[#4d1c64] text-[28px] tracking-[-1.5px] whitespace-nowrap">
-              Jours fériés &amp; Fermetures
+              {t("closuresHeading")}
             </h2>
             <div className="flex-1 h-px bg-[rgba(0,0,0,0.12)]" />
           </div>
           <p className="font-['Manrope',sans-serif] text-[#181d27] text-base leading-[1.5] max-w-[560px]">
-            Les jours fériés suivent les horaires habituels.
-            Le Petit Train est <strong>fermé du 9 au 16 octobre</strong> ainsi que <strong>de novembre à mars inclus</strong>.
+            {t.rich("closuresBody", { strong: (chunks) => <strong>{chunks}</strong> })}
           </p>
         </div>
 

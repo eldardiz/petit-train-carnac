@@ -1,101 +1,30 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, type ReactNode } from 'react'
+import { useTranslations } from 'next-intl'
 import TransitionLink from '@/components/ui/TransitionLink'
 
-const faqs = [
-  {
-    question: "Qu'est-ce que le Petit Train de Carnac ?",
-    answer:
-      "Le Petit Train de Carnac est un train touristique guidé qui permet aux visiteurs de découvrir Carnac et ses environs de façon confortable et accessible. La visite inclut les menhirs de Carnac, la plage de Carnac et le port de La Trinité-sur-Mer, avec un commentaire audio tout au long du parcours.",
-  },
-  {
-    question: "Combien de temps dure la visite ?",
-    answer:
-      "La visite guidée dure environ 55 minutes. Cette durée permet aux visiteurs de voir les principaux sites de Carnac sans longues distances à parcourir à pied.",
-  },
-  {
-    question: "D'où part le Petit Train de Carnac ?",
-    answer:
-      "Le point de départ et d'arrivée principal pour les visiteurs individuels est le parking du Ménec à Carnac, situé en face de la Maison des Mégalithes.",
-  },
-  {
-    question: "Le Petit Train fonctionne-t-il tous les jours ?",
-    answer:
-      "Oui. Le Petit Train de Carnac fonctionne tous les jours d'avril à début novembre, y compris les dimanches et jours fériés.",
-  },
-  {
-    question: "La visite fonctionne-t-elle par mauvais temps ?",
-    answer:
-      "Oui. Le Petit Train fonctionne par tous les temps. En cas de pluie ou de grand vent, le train est vitré sur trois côtés, vous permettant de profiter pleinement de votre visite.",
-  },
-  {
-    question: "Que vais-je voir pendant la visite ?",
-    answer:
-      "Pendant la visite, vous passerez à proximité des menhirs de Carnac, dont les alignements du Ménec, de Kermario et de Kerlescan. Vous découvrirez également la plage de Carnac, ses plages de sable blanc et le port de La Trinité-sur-Mer.",
-  },
-  {
-    question: "Dans quelles langues le commentaire audio est-il disponible ?",
-    answer:
-      "Le commentaire audio guidé est disponible en 16 langues : français, anglais, allemand, espagnol, italien, portugais, néerlandais, polonais, russe, suédois, danois, tchèque, chinois, japonais et d'autres langues. Le commentaire audio est inclus dans le prix du billet — aucun supplément. Une version spécialement conçue pour les enfants est disponible en français et en anglais.",
-  },
-  {
-    question: "La visite est-elle adaptée aux enfants ?",
-    answer:
-      "Oui. Le Petit Train de Carnac convient aux enfants et aux familles. Le commentaire audio pour enfants offre une expérience à la fois ludique et éducative.",
-  },
-  {
-    question: "Combien coûte un billet ?",
-    answer: (
-      <>
-        Les tarifs varient en fonction de l&apos;âge et de la taille du groupe. Les adultes et les
-        enfants de moins de 12 ans bénéficient de tarifs différents. Les tarifs complets sont
-        disponibles sur la{' '}
-        <TransitionLink href="/prices" className="underline hover:text-[#54206d] transition-colors">
-          page Tarifs et Billets
-        </TransitionLink>
-        .
-      </>
-    ),
-    plainAnswer:
-      "Les tarifs varient en fonction de l'âge et de la taille du groupe. Les adultes et les enfants de moins de 12 ans bénéficient de tarifs différents. Les tarifs complets sont disponibles sur la page Tarifs et Billets.",
-  },
-  {
-    question: "Faut-il réserver à l'avance ?",
-    answer:
-      "La réservation à l'avance est recommandée, surtout pendant les périodes touristiques chargées. Les réservations en ligne doivent être effectuées au moins deux heures avant le départ.",
-  },
-  {
-    question: "Puis-je acheter des billets sur place ?",
-    answer:
-      "Oui. Les billets peuvent être achetés au guichet situé au parking du Ménec, sous réserve de disponibilité.",
-  },
-  {
-    question: "Combien de temps à l'avance dois-je arriver avant le départ ?",
-    answer:
-      "Il est demandé aux visiteurs d'arriver au moins 15 minutes avant le départ pour valider leur billet et embarquer.",
-  },
-  {
-    question: "Les réservations de groupe sont-elles disponibles ?",
-    answer:
-      "Oui. Les réservations de groupe sont disponibles pour les groupes de 20 personnes ou plus. La réservation à l'avance est recommandée.",
-  },
-  {
-    question: "Puis-je privatiser le Petit Train pour un événement ?",
-    answer: (
-      <>
-        Oui. Le Petit Train de Carnac peut être privatisé pour des événements d&apos;entreprise, des
-        associations, des groupes scolaires et des occasions privées. Un formulaire de demande dédié
-        est disponible sur la{' '}
-        <TransitionLink href="/privatisation" className="underline hover:text-[#54206d] transition-colors">
-          page Privatisation
-        </TransitionLink>
-        .
-      </>
-    ),
-    plainAnswer:
-      "Oui. Le Petit Train de Carnac peut être privatisé pour des événements d'entreprise, des associations, des groupes scolaires et des occasions privées. Un formulaire de demande dédié est disponible sur la page Privatisation.",
-  },
+type FaqEntry = {
+  questionKey: string
+  answerKey?: string
+  richAnswer?: { preKey: string; href: string; linkKey: string; postKey: string }
+}
+
+const faqs: FaqEntry[] = [
+  { questionKey: 'q1', answerKey: 'a1' },
+  { questionKey: 'q2', answerKey: 'a2' },
+  { questionKey: 'q3', answerKey: 'a3' },
+  { questionKey: 'q4', answerKey: 'a4' },
+  { questionKey: 'q5', answerKey: 'a5' },
+  { questionKey: 'q6', answerKey: 'a6' },
+  { questionKey: 'q7', answerKey: 'a7' },
+  { questionKey: 'q8', answerKey: 'a8' },
+  { questionKey: 'q9', richAnswer: { preKey: 'q9Pre', href: '/prices', linkKey: 'q9LinkText', postKey: 'q9Post' } },
+  { questionKey: 'q10', answerKey: 'a10' },
+  { questionKey: 'q11', answerKey: 'a11' },
+  { questionKey: 'q12', answerKey: 'a12' },
+  { questionKey: 'q13', answerKey: 'a13' },
+  { questionKey: 'q14', richAnswer: { preKey: 'q14Pre', href: '/privatisation', linkKey: 'q14LinkText', postKey: 'q14Post' } },
 ]
 
 function FaqItem({
@@ -105,7 +34,7 @@ function FaqItem({
   onToggle,
 }: {
   question: string
-  answer: React.ReactNode
+  answer: ReactNode
   open: boolean
   onToggle: () => void
 }) {
@@ -148,7 +77,32 @@ function FaqItem({
 }
 
 export default function FAQsSection() {
+  const t = useTranslations('sections.faqsSection')
   const [openIndex, setOpenIndex] = useState<number | null>(0)
+
+  const renderAnswer = (faq: FaqEntry): ReactNode => {
+    if (faq.answerKey) return t(faq.answerKey)
+    if (faq.richAnswer) {
+      return (
+        <>
+          {t(faq.richAnswer.preKey)}
+          <TransitionLink href={faq.richAnswer.href} className="underline hover:text-[#54206d] transition-colors">
+            {t(faq.richAnswer.linkKey)}
+          </TransitionLink>
+          {t(faq.richAnswer.postKey)}
+        </>
+      )
+    }
+    return null
+  }
+
+  const plainAnswer = (faq: FaqEntry): string => {
+    if (faq.answerKey) return t(faq.answerKey)
+    if (faq.richAnswer) {
+      return `${t(faq.richAnswer.preKey)}${t(faq.richAnswer.linkKey)}${t(faq.richAnswer.postKey)}`
+    }
+    return ''
+  }
 
   // FAQPage schema — fed to Google, ChatGPT, Perplexity, etc. for answer extraction
   const faqSchema = {
@@ -156,12 +110,10 @@ export default function FAQsSection() {
     '@type': 'FAQPage',
     mainEntity: faqs.map((faq) => ({
       '@type': 'Question',
-      name: faq.question,
+      name: t(faq.questionKey),
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'plainAnswer' in faq && faq.plainAnswer
-          ? faq.plainAnswer
-          : (typeof faq.answer === 'string' ? faq.answer : ''),
+        text: plainAnswer(faq),
       },
     })),
   }
@@ -175,9 +127,9 @@ export default function FAQsSection() {
       <div className="max-w-[1280px] mx-auto px-5 xl:px-[32px]">
         {faqs.map((faq, index) => (
           <FaqItem
-            key={faq.question}
-            question={faq.question}
-            answer={faq.answer}
+            key={faq.questionKey}
+            question={t(faq.questionKey)}
+            answer={renderAnswer(faq)}
             open={openIndex === index}
             onToggle={() => setOpenIndex(openIndex === index ? null : index)}
           />

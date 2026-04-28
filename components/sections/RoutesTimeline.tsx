@@ -3,54 +3,44 @@
 import Image from "next/image";
 import TransitionLink from "@/components/ui/TransitionLink";
 import { useEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
 
 
 type Stop = {
   number: string;
-  name: string;
-  bullets: string[];
-  note?: string;
+  nameKey: string;
+  bulletKeys: string[];
+  noteKey?: string;
   image: string;
-  imageAlt: string;
+  imageAltKey: string;
   flip: boolean;
 };
 
 const stops: Stop[] = [
   {
     number: "01",
-    name: "Parking du Ménec, Carnac",
-    bullets: [
-      "Situé en face de la Maison des Mégalithes",
-      "Point de départ n°1",
-      "Point de départ obligatoire pour les visiteurs individuels",
-      "Guichet sur place",
-    ],
-    note: "C'est le seul point d'embarquement garanti pour les billets individuels.",
+    nameKey: "stop1Name",
+    bulletKeys: ["stop1Bullet1", "stop1Bullet2", "stop1Bullet3", "stop1Bullet4"],
+    noteKey: "stop1Note",
     image: "/figma-assets/stop-1.jpg",
-    imageAlt: "Parking du Ménec, Carnac — point de départ du Petit Train",
+    imageAltKey: "stop1ImageAlt",
     flip: false,
   },
   {
     number: "02",
-    name: "Port en Drô, Carnac plage",
-    bullets: [
-      "Arrêt situé près de la plage de Carnac",
-      "Idéal pour les visiteurs séjournant côté mer",
-    ],
-    note: "Achetez vos billets sur place au moment du départ (pas de réservation possible).",
+    nameKey: "stop2Name",
+    bulletKeys: ["stop2Bullet1", "stop2Bullet2"],
+    noteKey: "stop2Note",
     image: "/figma-assets/stop-2.jpg",
-    imageAlt: "Plage de Carnac — arrêt Port en Drô",
+    imageAltKey: "stop2ImageAlt",
     flip: true,
   },
   {
     number: "03",
-    name: "Port de La Trinité-sur-Mer",
-    bullets: [
-      'Situé près de l\'arrêt de bus « Cours des Quais »',
-      "À proximité de la célèbre marina et du plan d'eau de voile",
-    ],
+    nameKey: "stop3Name",
+    bulletKeys: ["stop3Bullet1", "stop3Bullet2"],
     image: "/figma-assets/stop-3.jpg",
-    imageAlt: "Port de La Trinité-sur-Mer",
+    imageAltKey: "stop3ImageAlt",
     flip: false,
   },
 ];
@@ -69,6 +59,7 @@ function StopNumber({ n, active }: { n: string; active: boolean }) {
 }
 
 export default function RoutesTimeline() {
+  const t = useTranslations("sections.routesTimeline");
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -107,21 +98,18 @@ export default function RoutesTimeline() {
               />
             </div>
             <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#54206d] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
-              Chronologie du Parcours
+              {t("label")}
             </p>
           </div>
           <h2 className="font-normal font-['Bricolage_Grotesque',sans-serif] text-[32px] sm:text-[40px] md:text-[48px] text-[#181d27] text-center leading-[1.1] tracking-[-1.5px] sm:tracking-[-2.5px] md:tracking-[-3.36px] max-w-[518px] [text-wrap:balance] break-words">
-            Arrêts et parcours du{" "}
-            <em className="text-[#4d1c64]">Petit Train de Carnac</em>
+            {t("headingPrefix")}{" "}
+            <em className="text-[#4d1c64]">{t("headingHighlight")}</em>
           </h2>
           <p className="font-['Manrope',sans-serif] text-[#535862] text-[16px] text-center leading-[1.2] tracking-[-0.48px] max-w-[570px]">
-            Au cours de la visite guidée, le Petit Train de Carnac traverse
-            plusieurs lieux clés, offrant un aperçu complet de Carnac et de ses
-            environs.
+            {t("intro")}
           </p>
           <p className="font-['Manrope',sans-serif] font-bold text-[#535862] text-[16px] text-center leading-[1.2] tracking-[-0.48px] max-w-[570px]">
-            Le Petit Train de Carnac dessert les arrêts suivants au cours de la
-            visite :
+            {t("introBold")}
           </p>
         </div>
 
@@ -135,7 +123,7 @@ export default function RoutesTimeline() {
                 <div className="relative h-[440px] rounded-lg overflow-hidden">
                   <Image
                     src={stop.image}
-                    alt={stop.imageAlt}
+                    alt={t(stop.imageAltKey)}
                     fill
                     className="object-cover"
                   />
@@ -147,21 +135,21 @@ export default function RoutesTimeline() {
                 <div className="flex flex-col gap-6">
                   <StopNumber n={stop.number} active={i === 0} />
                   <p className="font-['Bricolage_Grotesque',sans-serif] text-[32px] text-[#0d0a06] leading-[1.3] tracking-[-2.24px]">
-                    {stop.name}
+                    {t(stop.nameKey)}
                   </p>
                 </div>
                 <ul className="flex flex-col gap-3">
-                  {stop.bullets.map((b) => (
+                  {stop.bulletKeys.map((bk) => (
                     <li
-                      key={b}
+                      key={bk}
                       className="font-['Manrope',sans-serif] text-[#535862] text-[18px] leading-[1.5] tracking-[-0.54px] list-disc ml-7"
                     >
-                      {b}
+                      {t(bk)}
                     </li>
                   ))}
-                  {stop.note && (
+                  {stop.noteKey && (
                     <p className="font-['Manrope',sans-serif] font-semibold italic text-[#535862] text-[18px] leading-[1.5] tracking-[-0.54px]">
-                      {stop.note}
+                      {t(stop.noteKey)}
                     </p>
                   )}
                 </ul>
@@ -180,14 +168,14 @@ export default function RoutesTimeline() {
                         aria-hidden="true"
                       />
                     </div>
-                    <span data-button-animate-chars="" className="btn-animate-chars__text">Réservez votre visite</span>
+                    <span data-button-animate-chars="" className="btn-animate-chars__text">{t("btnBook")}</span>
                   </TransitionLink>
                   <TransitionLink
                     href="/prices"
                     className="btn-animate-chars btn-secondary inline-flex items-center justify-center h-[45px] px-[22px] bg-[#f5ebdd] border border-[rgba(0,0,0,0.2)] rounded-[4px] text-[#414651] text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap"
                   >
                     <div className="btn-animate-chars__bg" />
-                    <span data-button-animate-chars="" className="btn-animate-chars__text">Voir les Tarifs</span>
+                    <span data-button-animate-chars="" className="btn-animate-chars__text">{t("btnPrices")}</span>
                   </TransitionLink>
                 </div>
               </div>

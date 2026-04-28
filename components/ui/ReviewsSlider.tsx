@@ -5,70 +5,65 @@ import Image from 'next/image'
 import gsap from 'gsap'
 import { Draggable } from 'gsap/Draggable'
 import { InertiaPlugin } from 'gsap/InertiaPlugin'
+import { useTranslations } from 'next-intl'
 
 gsap.registerPlugin(Draggable, InertiaPlugin)
 
+// Authentic customer reviews left in original French. The wrapping <span lang="fr">
+// signals the original language to screen readers and search engines, while
+// surrounding UI labels (subtitle, aria-labels) translate per the active locale.
 const reviews = [
   {
     id: "walter",
     name: "Walter H.",
-    subtitle: "Avis Google",
     text: "Les menhirs sont bien plus impressionnants qu'on ne le pense, et le cadre est magnifique. Le commentaire audio est bien construit et instructif. Plus d'une heure vraiment bien passée.",
     image: "/figma-assets/testimonial-img-1.jpg",
   },
   {
     id: "dom",
     name: "Dom L.",
-    subtitle: "Avis Google",
     text: "C'était une expérience existentielle et hors du commun. Tout était assez banal jusqu'à ce que nous atteignions les mégalithes, où j'ai été envahi par un sentiment d'émerveillement et de bien-être. À un moment, j'ai été baigné d'une lumière blanche et j'ai senti mon âme quitter mon corps. Tout ça pour 8,50 euros — ça vaut vraiment le coup.",
     image: "/figma-assets/testimonial-img-2.jpg",
   },
   {
     id: "carine",
     name: "Carine V.",
-    subtitle: "Avis Google",
     text: "Nous avons effectué une merveilleuse visite avec le Petit Train des Menhirs. À notre grande surprise, le guide audio était également disponible en néerlandais, avec une voix flamande — ce qui rendait l'écoute bien plus agréable !",
     image: "/figma-assets/testimonial-img-3.jpg",
   },
   {
     id: "marc",
     name: "Marc G.",
-    subtitle: "Avis Google",
     text: "Une excellente façon de voir les mégalithes, avec en prime un commentaire audio en anglais vraiment apprécié, pour que tout prenne sens... très bon rapport qualité-prix et vraiment incontournable.",
     image: "/figma-assets/stop-1.jpg",
   },
   {
     id: "judit",
     name: "Judit Benard M.",
-    subtitle: "Avis Google",
     text: "Des personnes vraiment chaleureuses à la tête de ce petit train. Nous nous étions séparés et ils ont tout fait pour aider mon mari à nous rejoindre. La visite est intéressante, le train est confortable et les options linguistiques sont nombreuses.",
     image: "/figma-assets/stop-2.jpg",
   },
   {
     id: "bked",
     name: "B Ked.",
-    subtitle: "Avis Google",
     text: "Je pense que c'était un très beau voyage autour de Carnac. Je le recommande vraiment aux personnes qui viennent à Carnac et qui souhaitent en apprendre davantage sur la ville !",
     image: "/figma-assets/stop-3.jpg",
   },
   {
     id: "sophie",
     name: "Sophie M.",
-    subtitle: "Avis Google",
     text: "Une belle expérience en famille. Le train est confortable et le conducteur était très sympathique. Une façon parfaite de découvrir les célèbres menhirs de Carnac sans avoir à marcher !",
     image: "/figma-assets/PracticalInfo1.jpg",
   },
   {
     id: "david",
     name: "David R.",
-    subtitle: "Avis Google",
     text: "Nous avons fait la visite par un beau après-midi de juillet — absolument incontournable. Le commentaire multilingue est excellent et le parcours vous emmène à tous les sites clés. Fortement recommandé pour les premiers visiteurs de Carnac.",
     image: "/figma-assets/PracticalInfo3.jpg",
   },
   {
     id: "anneclaire",
     name: "Anne-Claire B.",
-    subtitle: "Avis Google",
     text: "Charmant petit train ! Nos enfants ont adoré chaque instant et ont tellement appris sur les pierres levées. Le guide audio est clair et captivant. Nous reviendrons certainement l'été prochain.",
     image: "/figma-assets/PracticalInfo5.jpg",
   },
@@ -91,7 +86,7 @@ function ReviewCard({ name, subtitle, text, image }: { name: string; subtitle: s
     <div className="bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row md:h-[420px] w-full shadow-[0px_2px_12px_0px_rgba(0,0,0,0.08)]">
       {/* Text content */}
       <div className="flex-1 p-6 md:p-8 flex flex-col justify-between gap-6 md:gap-0 min-w-0">
-        <p className="font-['Manrope',sans-serif] text-[#181d27] text-[17px] md:text-[20px] leading-[1.5] tracking-[-0.4px]">
+        <p lang="fr" className="font-['Manrope',sans-serif] text-[#181d27] text-[17px] md:text-[20px] leading-[1.5] tracking-[-0.4px]">
           {text}
         </p>
         <div className="flex flex-col gap-1">
@@ -119,6 +114,7 @@ function ReviewCard({ name, subtitle, text, image }: { name: string; subtitle: s
 }
 
 export default function ReviewsSlider() {
+  const t = useTranslations('sections.reviews')
   const rootRef = useRef<HTMLDivElement>(null)
   const draggableRef = useRef<Draggable | null>(null)
 
@@ -141,7 +137,7 @@ export default function ReviewsSlider() {
       if (!collection || !track || !items.length) return
 
       items.forEach((slide, i) => {
-        slide.setAttribute('aria-label', `Avis ${i + 1} sur ${items.length}`)
+        slide.setAttribute('aria-label', t('slideAriaLabel', { n: i + 1, total: items.length }))
         slide.setAttribute('aria-hidden', 'true')
         slide.setAttribute('aria-selected', 'false')
         slide.setAttribute('tabindex', '-1')
@@ -273,6 +269,7 @@ export default function ReviewsSlider() {
     }
 
     init()
+    // t is stable per render; safe to omit from deps to avoid re-init on locale change
 
     let lastW = window.innerWidth
     let resizeTimer: ReturnType<typeof setTimeout>
@@ -291,6 +288,7 @@ export default function ReviewsSlider() {
       window.removeEventListener('resize', onResize)
       if (draggableRef.current) draggableRef.current.kill()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
@@ -299,7 +297,7 @@ export default function ReviewsSlider() {
       data-gsap-slider-init=""
       role="region"
       aria-roledescription="carousel"
-      aria-label="Avis des visiteurs"
+      aria-label={t('regionAriaLabel')}
       className="gsap-reviews-slider w-full flex flex-col gap-6"
     >
       <div data-gsap-slider-collection="" className="gsap-reviews-slider__collection w-full">
@@ -308,7 +306,7 @@ export default function ReviewsSlider() {
             <div key={review.id} data-gsap-slider-item="" className="gsap-reviews-slider__item">
               <ReviewCard
                 name={review.name}
-                subtitle={review.subtitle}
+                subtitle={t('googleReview')}
                 text={review.text}
                 image={review.image}
               />
@@ -321,7 +319,7 @@ export default function ReviewsSlider() {
       <div data-gsap-slider-controls="" className="flex justify-end gap-2 px-[5%]">
         <button
           data-gsap-slider-control="prev"
-          aria-label="Avis précédent"
+          aria-label={t('prevAriaLabel')}
           className="w-[52px] h-[52px] flex items-center justify-center border border-[rgba(255,255,255,0.3)] text-white transition-opacity hover:opacity-80"
         >
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -330,7 +328,7 @@ export default function ReviewsSlider() {
         </button>
         <button
           data-gsap-slider-control="next"
-          aria-label="Avis suivant"
+          aria-label={t('nextAriaLabel')}
           className="w-[52px] h-[52px] flex items-center justify-center border border-[rgba(255,255,255,0.3)] text-white transition-opacity hover:opacity-80"
         >
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">

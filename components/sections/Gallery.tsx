@@ -27,6 +27,11 @@ const GALLERY_PHOTOS: Photo[] = [
   { src: '/figma-assets/gallery-9.jpg', width: 3, height: 2 },    // landscape
   { src: '/figma-assets/gallery-10.jpg', width: 4, height: 5 },   // portrait
   { src: '/figma-assets/gallery-11.jpg', width: 16, height: 9 },  // panorama
+  { src: '/figma-assets/gallery-18.jpg', width: 3, height: 2 },   // landscape — aerial train + menhir field (drone)
+  { src: '/figma-assets/gallery-19.jpg', width: 3, height: 4 },   // portrait — menhirs in a row, cloudy mood
+  { src: '/figma-assets/gallery-20.jpg', width: 16, height: 9 },  // panorama — train alongside menhir alignment
+  { src: '/figma-assets/gallery-21.jpg', width: 4, height: 3 },   // landscape wide — train at dolmens
+  { src: '/figma-assets/gallery-22.jpg', width: 1, height: 1 },   // square — ground-level menhir close-up
 ]
 
 const MOBILE_QUERY = '(max-width: 767px)'

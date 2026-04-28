@@ -46,6 +46,11 @@
 | `gallery-15.jpg` | `~/Desktop/carnac-all-images/carnac-45.jpg` | Aerial Ménec alignment, cropped vertical (portrait) | Gallery masonry |
 | `gallery-16.jpg` | `~/Desktop/carnac-all-images/carnac-105.jpg` | Evening menhir vista, soft light (landscape wide) | Gallery masonry |
 | `gallery-17.jpg` | `~/Desktop/carnac-all-images/carnac-25.jpg` | Train + dolmen ground level (landscape) | Gallery masonry |
+| `gallery-18.jpg` | `~/Desktop/carnac-all-images/carnac-115.jpg` (Apr 28 evening round) | Aerial drone — train + Ménec menhir field, summer | Gallery masonry |
+| `gallery-19.jpg` | `~/Desktop/carnac-all-images/carnac-30.jpg` | 4 menhirs in a row, ground level cloudy mood (portrait crop) | Gallery masonry |
+| `gallery-20.jpg` | `~/Desktop/carnac-all-images/carnac-55.jpg` | Train alongside menhir alignment, panoramic | Gallery masonry |
+| `gallery-21.jpg` | `~/Desktop/carnac-all-images/carnac-75.jpg` | Train passing dolmens at Carnac (landscape) | Gallery masonry |
+| `gallery-22.jpg` | `~/Desktop/carnac-all-images/carnac-95.jpg` | Ground-level menhir close-up, dappled light (square crop) | Gallery masonry |
 
 ## Gotchas for this client's folder
 

@@ -65,7 +65,8 @@
     "rightImageAlt": "Le Petit Train de Carnac sur un parcours pittoresque",
     "noteImportanteLabel": "Note Importante",
     "noteImportanteHeading": "Réservation en Ligne",
-    "noteImportanteBody": "La réservation est possible mais non obligatoire. Vous pouvez réserver jusqu'à <strong>2 heures</strong> avant le départ souhaité. N'oubliez pas de prévoir le temps de trajet et le stationnement sur place. Passé ce délai, rendez-vous directement au point de départ et achetez vos billets au guichet ou auprès du conducteur.<br/>Toutes les places ne sont pas disponibles à la vente en ligne."
+    "noteImportanteBody": "La réservation est possible mais non obligatoire. Vous pouvez réserver jusqu'à <strong>2 heures</strong> avant le départ souhaité. N'oubliez pas de prévoir le temps de trajet et le stationnement sur place. Passé ce délai, rendez-vous directement au point de départ et achetez vos billets au guichet ou auprès du conducteur.",
+    "noteImportanteBodyExtra": "Toutes les places ne sont pas disponibles à la vente en ligne."
   },
   "metadata": {
     "home": {
@@ -286,7 +287,12 @@
     "reviews": {
       "label": "Avis",
       "heading": "Ce que disent les visiteurs du train ?",
-      "description": "Le Petit Train de Carnac est noté plus de 4,7 sur Google, avec plus de 6 000 avis, ce qui en fait l'une des attractions touristiques les plus populaires de Carnac."
+      "description": "Le Petit Train de Carnac est noté plus de 4,7 sur Google, avec plus de 6 000 avis, ce qui en fait l'une des attractions touristiques les plus populaires de Carnac.",
+      "googleReview": "Avis Google",
+      "slideAriaLabel": "Avis {n} sur {total}",
+      "regionAriaLabel": "Avis des visiteurs",
+      "prevAriaLabel": "Avis précédent",
+      "nextAriaLabel": "Avis suivant"
     },
     "bookingSection": {
       "label": "Réservation",
@@ -361,6 +367,86 @@
         "q7": "Faut-il réserver le Petit Train de Carnac à l'avance ?",
         "a7": "La réservation à l'avance est recommandée, surtout en haute saison. Les billets peuvent aussi être achetés sur place sous réserve de disponibilité."
       }
+    },
+    "routesTimeline": {
+      "label": "Chronologie du Parcours",
+      "headingPrefix": "Arrêts et parcours du",
+      "headingHighlight": "Petit Train de Carnac",
+      "intro": "Au cours de la visite guidée, le Petit Train de Carnac traverse plusieurs lieux clés, offrant un aperçu complet de Carnac et de ses environs.",
+      "introBold": "Le Petit Train de Carnac dessert les arrêts suivants au cours de la visite :",
+      "btnBook": "Réservez votre visite",
+      "btnPrices": "Voir les Tarifs",
+      "stop1Name": "Parking du Ménec, Carnac",
+      "stop1Bullet1": "Situé en face de la Maison des Mégalithes",
+      "stop1Bullet2": "Point de départ n°1",
+      "stop1Bullet3": "Point de départ obligatoire pour les visiteurs individuels",
+      "stop1Bullet4": "Guichet sur place",
+      "stop1Note": "C'est le seul point d'embarquement garanti pour les billets individuels.",
+      "stop1ImageAlt": "Parking du Ménec, Carnac — point de départ du Petit Train",
+      "stop2Name": "Port en Drô, Carnac plage",
+      "stop2Bullet1": "Arrêt situé près de la plage de Carnac",
+      "stop2Bullet2": "Idéal pour les visiteurs séjournant côté mer",
+      "stop2Note": "Achetez vos billets sur place au moment du départ (pas de réservation possible).",
+      "stop2ImageAlt": "Plage de Carnac — arrêt Port en Drô",
+      "stop3Name": "Port de La Trinité-sur-Mer",
+      "stop3Bullet1": "Situé près de l'arrêt de bus « Cours des Quais »",
+      "stop3Bullet2": "À proximité de la célèbre marina et du plan d'eau de voile",
+      "stop3ImageAlt": "Port de La Trinité-sur-Mer"
+    },
+    "faqsSection": {
+      "q1": "Qu'est-ce que le Petit Train de Carnac ?",
+      "a1": "Le Petit Train de Carnac est un train touristique guidé qui permet aux visiteurs de découvrir Carnac et ses environs de façon confortable et accessible. La visite inclut les menhirs de Carnac, la plage de Carnac et le port de La Trinité-sur-Mer, avec un commentaire audio tout au long du parcours.",
+      "q2": "Combien de temps dure la visite ?",
+      "a2": "La visite guidée dure environ 55 minutes. Cette durée permet aux visiteurs de voir les principaux sites de Carnac sans longues distances à parcourir à pied.",
+      "q3": "D'où part le Petit Train de Carnac ?",
+      "a3": "Le point de départ et d'arrivée principal pour les visiteurs individuels est le parking du Ménec à Carnac, situé en face de la Maison des Mégalithes.",
+      "q4": "Le Petit Train fonctionne-t-il tous les jours ?",
+      "a4": "Oui. Le Petit Train de Carnac fonctionne tous les jours d'avril à fin octobre, y compris les dimanches et jours fériés.",
+      "q5": "La visite fonctionne-t-elle par mauvais temps ?",
+      "a5": "Oui. Le Petit Train fonctionne par tous les temps. En cas de pluie ou de grand vent, le train est vitré sur trois côtés, vous permettant de profiter pleinement de votre visite.",
+      "q6": "Que vais-je voir pendant la visite ?",
+      "a6": "Pendant la visite, vous passerez à proximité des menhirs de Carnac, dont les alignements du Ménec, de Kermario et de Kerlescan. Vous découvrirez également la plage de Carnac, ses plages de sable blanc et le port de La Trinité-sur-Mer.",
+      "q7": "Dans quelles langues le commentaire audio est-il disponible ?",
+      "a7": "Le commentaire audio guidé est disponible en 16 langues : français, anglais, allemand, espagnol, italien, portugais, néerlandais, polonais, russe, suédois, danois, tchèque, chinois, japonais et d'autres langues. Le commentaire audio est inclus dans le prix du billet — aucun supplément. Une version spécialement conçue pour les enfants est également disponible.",
+      "q8": "La visite est-elle adaptée aux enfants ?",
+      "a8": "Oui. Le Petit Train de Carnac convient aux enfants et aux familles. Le commentaire audio pour enfants offre une expérience à la fois ludique et éducative.",
+      "q9": "Combien coûte un billet ?",
+      "q9Pre": "Les tarifs varient en fonction de l'âge et de la taille du groupe. Les adultes et les enfants de moins de 12 ans bénéficient de tarifs différents. Les tarifs complets sont disponibles sur la ",
+      "q9LinkText": "page Tarifs et Billets",
+      "q9Post": ".",
+      "q10": "Faut-il réserver à l'avance ?",
+      "a10": "La réservation à l'avance est recommandée, surtout pendant les périodes touristiques chargées. Les réservations en ligne doivent être effectuées au moins deux heures avant le départ.",
+      "q11": "Puis-je acheter des billets sur place ?",
+      "a11": "Oui. Les billets peuvent être achetés au guichet situé au parking du Ménec, sous réserve de disponibilité.",
+      "q12": "Combien de temps à l'avance dois-je arriver avant le départ ?",
+      "a12": "Il est demandé aux visiteurs d'arriver au moins 15 minutes avant le départ pour valider leur billet et embarquer.",
+      "q13": "Les réservations de groupe sont-elles disponibles ?",
+      "a13": "Oui. Les réservations de groupe sont disponibles pour les groupes de 20 personnes ou plus. La réservation à l'avance est recommandée.",
+      "q14": "Puis-je privatiser le Petit Train pour un événement ?",
+      "q14Pre": "Oui. Le Petit Train de Carnac peut être privatisé pour des événements d'entreprise, des associations, des groupes scolaires et des occasions privées. Un formulaire de demande dédié est disponible sur la ",
+      "q14LinkText": "page Privatisation",
+      "q14Post": "."
+    },
+    "informationsScheduleLabels": {
+      "operatingPeriodTitle": "Période d'exploitation",
+      "operatingPeriodBody": "Le Petit Train de Carnac fonctionne 7j/7 d'avril à fin octobre, y compris les dimanches et jours fériés.",
+      "weatherTitle": "Météo",
+      "weatherBody": "En cas de pluie ou de grand vent, le train est vitré sur trois côtés, vous permettant de profiter pleinement de votre visite.",
+      "timetableHeading": "Horaires",
+      "departurePrefix": "Départ —",
+      "saturdayRule": "<strong>Samedi en juillet & août :</strong> les départs Carnac Plage et La Trinité-sur-Mer suivent les horaires « orange » de basse saison.",
+      "onlineBookingNote": "<strong>Réservation en ligne :</strong> uniquement disponible pour le départ N°1 — Parking du Ménec.",
+      "closuresHeading": "Jours fériés & Fermetures",
+      "closuresBody": "Les jours fériés suivent les horaires habituels. Le Petit Train est <strong>fermé du 9 au 16 octobre</strong> ainsi que <strong>de novembre à mars inclus</strong>."
+    },
+    "routesHeroDefaults": {
+      "primaryButton": "Flyer individuel",
+      "secondaryButton": "Flyer de groupe",
+      "googleReviewsCount": "6 000+ avis",
+      "googleBadgeText": "<strong>Le Petit Train de Carnac</strong> est noté plus de 4,7 sur Google, avec plus de 6 000 avis, ce qui en fait l'une des attractions touristiques les plus populaires de Carnac.",
+      "lightboxClose": "Fermer",
+      "lightboxEnlarge": "Agrandir : {alt}",
+      "lightboxAriaLabel": "Vue agrandie : {alt}"
     }
   }
 }

@@ -4,6 +4,27 @@ Append 1–3 entries per session. Session-start: read this file. Session-end: ad
 
 ---
 
+## next-intl 4 — `t.rich` does NOT parse self-closing void tags (2026-04-28 evening)
+
+- **The trap**: writing `<br/>` inside an i18n value AND providing `br: () => <br />` in the `t.rich(...)` handlers map looks correct, but next-intl 4's parser only handles **paired** XML-style tags (`<strong>...</strong>`). Self-closing `<br/>` falls through and renders as literal text "&lt;br/&gt;" in the DOM. The `br:` handler is dead code — it's never invoked. Symptom: visible `<br/>` characters mid-sentence in the rendered page. Caught only by visual QA, never by tsc or JSON validation.
+- **Fix**: split the message into two keys around the line break, render with a plain `<br />` JSX element between two `t(...)` / `t.rich(...)` calls. Or, in older guidance, use `<br></br>` paired tags — but splitting is cleaner.
+- **Generalisation**: for ANY void HTML element (`<br/>`, `<hr/>`, `<img/>`) in i18n values, this same trap applies. Audit by grepping `messages/*.json` for `/>` and confirming each instance is rendered safely (or move to JSX).
+
+## Multi-locale i18n leakage — hardcoded FR strings in non-translated components (2026-04-28 evening)
+
+- **The audit reflex**: when the user reports "looks unprofessional in EN/DE/etc", the question to ask is "which components don't import `useTranslations` / `getTranslations`?" Not "are the messages files complete?" — components that ignore the active locale entirely are invisible to messages-file checks but render hardcoded strings every time.
+- **Found 7 such components in this project** (RoutesTimeline, FAQsSection, ReviewsSlider, InformationsSchedule, RoutesHero defaults, CareersHero+Info, PrivatisationHero) — totalling ~150 hardcoded FR strings on the homepage and major subpages. The `i18n/request.ts` deep-merge fallback catches MISSING keys, but it can't catch a component that never calls `t(...)` in the first place.
+- **Detection grep** (run before a multi-locale launch):
+  ```bash
+  for f in components/sections/*.tsx components/ui/*.tsx; do
+    if ! grep -q "useTranslations\|getTranslations" "$f"; then
+      grep -l "[àâéèêëîïôöûüçÀÂÉÈÊÎÏÔÛÇ]" "$f" 2>/dev/null
+    fi
+  done
+  ```
+  Lists every component that has French diacritics but doesn't import next-intl. Each is a leak source.
+- **For real-customer testimonials**: don't translate them — translation destroys voice and authenticity. Wrap with `<span lang="fr">` / `<p lang="fr">` so screen readers and search engines know it's original-language content. Translate only the surrounding UI labels (subtitle, aria-labels, region label).
+
 ## SEO post-rebrand: audit OG + subpage metadata, not just the homepage (2026-04-28 session)
 
 - **Rebrand the homepage `<title>` and you've changed ~5% of the SEO surface.** The other 95% lives in: (a) `metadata.title.template` in the root layout, (b) subpage metadata across N locales, (c) `openGraph` + `twitter` blocks (these don't pull from i18n and don't change per locale unless explicitly localized), (d) the JSON-LD `@type: TouristAttraction` block. Always audit every page × every locale via `curl <url> | grep -E '<title>|og:title|description'` before declaring an SEO swap done.

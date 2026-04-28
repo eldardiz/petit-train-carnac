@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useState, useEffect, type ReactNode } from 'react'
+import { useTranslations } from 'next-intl'
 
 interface RoutesHeroProps {
   label: string
@@ -25,9 +26,12 @@ export default function RoutesHero({
   flip = false,
   lightbox = false,
   headingLevel: Heading = 'h1',
-  primaryButton = { label: 'Flyer individuel', href: '/figma-assets/FlyerIndividual.pdf' },
-  secondaryButton = { label: 'Flyer de groupe', href: '/figma-assets/GroupFlyer.pdf' },
+  primaryButton,
+  secondaryButton,
 }: RoutesHeroProps) {
+  const t = useTranslations('sections.routesHeroDefaults')
+  const primary = primaryButton ?? { label: t('primaryButton'), href: '/figma-assets/FlyerIndividual.pdf' }
+  const secondary = secondaryButton ?? { label: t('secondaryButton'), href: '/figma-assets/GroupFlyer.pdf' }
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
@@ -47,7 +51,7 @@ export default function RoutesHero({
         }`}
         onClick={() => lightbox && setOpen(true)}
         role={lightbox ? 'button' : undefined}
-        aria-label={lightbox ? `Agrandir : ${imageAlt}` : undefined}
+        aria-label={lightbox ? t('lightboxEnlarge', { alt: imageAlt }) : undefined}
         tabIndex={lightbox ? 0 : undefined}
         onKeyDown={(e) => {
           if (lightbox && (e.key === 'Enter' || e.key === ' ')) setOpen(true)
@@ -99,10 +103,10 @@ export default function RoutesHero({
       {/* CTA buttons */}
       <div data-anim-item className="flex items-center gap-3 flex-wrap">
         <a
-          href={primaryButton.href}
+          href={primary.href}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={primaryButton.label}
+          aria-label={primary.label}
           className="btn-animate-chars btn-primary gap-2 h-[45px] px-[22px] bg-[#54206d] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-white text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap"
         >
           <div className="btn-animate-chars__bg" />
@@ -115,13 +119,13 @@ export default function RoutesHero({
               aria-hidden="true"
             />
           </div>
-          <span data-button-animate-chars="" className="btn-animate-chars__text">{primaryButton.label}</span>
+          <span data-button-animate-chars="" className="btn-animate-chars__text">{primary.label}</span>
         </a>
         <a
-          href={secondaryButton.href}
+          href={secondary.href}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={secondaryButton.label}
+          aria-label={secondary.label}
           className="btn-animate-chars btn-secondary gap-2 h-[45px] px-[22px] bg-[#f5ebdd] rounded-[4px] border border-[rgba(0,0,0,0.2)] text-[#414651] text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap"
         >
           <div className="btn-animate-chars__bg" />
@@ -134,7 +138,7 @@ export default function RoutesHero({
               aria-hidden="true"
             />
           </div>
-          <span data-button-animate-chars="" className="btn-animate-chars__text">{secondaryButton.label}</span>
+          <span data-button-animate-chars="" className="btn-animate-chars__text">{secondary.label}</span>
         </a>
       </div>
 
@@ -167,14 +171,14 @@ export default function RoutesHero({
               </div>
             </div>
             <span className="font-['Manrope',sans-serif] text-[11px] text-black/60 tracking-[-0.33px]">
-              6 000+ avis
+              {t('googleReviewsCount')}
             </span>
           </div>
         </div>
         <p className="font-['Manrope',sans-serif] text-[#535862] text-[16px] leading-[1.2] tracking-[-0.48px] max-w-[499px]">
-          <strong className="font-bold text-[#535862]">Le Petit Train de Carnac</strong>{' '}
-          est noté plus de 4,7 sur Google, avec plus de 6 000 avis, ce qui en fait l&apos;une des
-          attractions touristiques les plus populaires de Carnac.
+          {t.rich('googleBadgeText', {
+            strong: (chunks) => <strong className="font-bold text-[#535862]">{chunks}</strong>,
+          })}
         </p>
       </div>
     </div>
@@ -205,7 +209,7 @@ export default function RoutesHero({
           onClick={() => setOpen(false)}
           role="dialog"
           aria-modal="true"
-          aria-label={`Enlarged view: ${imageAlt}`}
+          aria-label={t('lightboxAriaLabel', { alt: imageAlt })}
         >
           <div
             className="relative w-full max-w-[1200px] max-h-[90vh] aspect-[3/2]"
@@ -222,7 +226,7 @@ export default function RoutesHero({
           <button
             className="absolute top-4 right-4 text-white text-[32px] leading-none hover:text-white/70 transition-colors"
             onClick={() => setOpen(false)}
-            aria-label="Close"
+            aria-label={t('lightboxClose')}
           >
             ×
           </button>

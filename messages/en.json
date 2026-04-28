@@ -65,7 +65,8 @@
     "rightImageAlt": "Le Petit Train de Carnac on a scenic route",
     "noteImportanteLabel": "Important Note",
     "noteImportanteHeading": "Online Booking",
-    "noteImportanteBody": "Booking is possible but not required. You can book up to <strong>2 hours</strong> before your departure. Remember to allow time for travel and on-site parking. After that, head straight to the departure point and buy your tickets at the kiosk or from the driver.<br/>Not all seats are available for online sale."
+    "noteImportanteBody": "Booking is possible but not required. You can book up to <strong>2 hours</strong> before your departure. Remember to allow time for travel and on-site parking. After that, head straight to the departure point and buy your tickets at the kiosk or from the driver.",
+    "noteImportanteBodyExtra": "Not all seats are available for online sale."
   },
   "metadata": {
     "home": {
@@ -286,7 +287,12 @@
     "reviews": {
       "label": "Reviews",
       "heading": "What visitors say about the train",
-      "description": "Le Petit Train de Carnac is rated above 4.7 on Google, with more than 6,000 reviews — making it one of the most popular tourist attractions in Carnac."
+      "description": "Le Petit Train de Carnac is rated above 4.7 on Google, with more than 6,000 reviews — making it one of the most popular tourist attractions in Carnac.",
+      "googleReview": "Google review",
+      "slideAriaLabel": "Review {n} of {total}",
+      "regionAriaLabel": "Visitor reviews",
+      "prevAriaLabel": "Previous review",
+      "nextAriaLabel": "Next review"
     },
     "bookingSection": {
       "label": "Booking",
@@ -361,6 +367,86 @@
         "q7": "Do I need to book the Petit Train de Carnac in advance?",
         "a7": "Booking in advance is recommended, especially in high season. Tickets can also be bought on site, subject to availability."
       }
+    },
+    "routesTimeline": {
+      "label": "Tour Timeline",
+      "headingPrefix": "Stops and route of the",
+      "headingHighlight": "Petit Train de Carnac",
+      "intro": "During the guided tour, the Petit Train de Carnac passes through several key locations, offering a complete overview of Carnac and its surroundings.",
+      "introBold": "The Petit Train de Carnac serves the following stops during the tour:",
+      "btnBook": "Book your visit",
+      "btnPrices": "View Prices",
+      "stop1Name": "Parking du Ménec, Carnac",
+      "stop1Bullet1": "Located opposite the Maison des Mégalithes",
+      "stop1Bullet2": "Departure point n°1",
+      "stop1Bullet3": "Mandatory departure point for individual visitors",
+      "stop1Bullet4": "On-site ticket office",
+      "stop1Note": "This is the only guaranteed boarding point for individual tickets.",
+      "stop1ImageAlt": "Parking du Ménec, Carnac — Petit Train departure point",
+      "stop2Name": "Port en Drô, Carnac Plage",
+      "stop2Bullet1": "Stop located near Carnac beach",
+      "stop2Bullet2": "Ideal for visitors staying on the seaside",
+      "stop2Note": "Buy your tickets on site at the time of departure (no booking available).",
+      "stop2ImageAlt": "Carnac beach — Port en Drô stop",
+      "stop3Name": "Port de La Trinité-sur-Mer",
+      "stop3Bullet1": "Located near the « Cours des Quais » bus stop",
+      "stop3Bullet2": "Close to the famous marina and sailing area",
+      "stop3ImageAlt": "Port of La Trinité-sur-Mer"
+    },
+    "faqsSection": {
+      "q1": "What is the Petit Train de Carnac?",
+      "a1": "The Petit Train de Carnac is a guided tourist train that lets visitors discover Carnac and its surroundings comfortably and accessibly. The tour includes the Carnac menhirs, Carnac beach and the harbour of La Trinité-sur-Mer, with audio commentary throughout the route.",
+      "q2": "How long does the tour last?",
+      "a2": "The guided tour lasts about 55 minutes. This duration lets visitors see the main sights of Carnac without long walking distances.",
+      "q3": "Where does the Petit Train de Carnac depart from?",
+      "a3": "The main departure and arrival point for individual visitors is the Parking du Ménec in Carnac, opposite the Maison des Mégalithes.",
+      "q4": "Does the Petit Train run every day?",
+      "a4": "Yes. The Petit Train de Carnac runs every day from April to the end of October, including Sundays and public holidays.",
+      "q5": "Does the tour run in bad weather?",
+      "a5": "Yes. The Petit Train runs in all weather. In rain or strong wind the train is glazed on three sides, so you can fully enjoy your tour.",
+      "q6": "What will I see during the tour?",
+      "a6": "During the tour, you'll pass by the Carnac menhirs — including the alignments of Ménec, Kermario and Kerlescan. You'll also discover Carnac beach, its white sand and the harbour of La Trinité-sur-Mer.",
+      "q7": "What languages is the audio commentary available in?",
+      "a7": "The guided audio commentary is available in 16 languages: French, English, German, Spanish, Italian, Portuguese, Dutch, Polish, Russian, Swedish, Danish, Czech, Chinese, Japanese and others. The audio is included in the ticket price — no extra cost. A children's version is also available.",
+      "q8": "Is the tour suitable for children?",
+      "a8": "Yes. The Petit Train de Carnac is suitable for children and families. The children's audio commentary makes the experience both fun and educational.",
+      "q9": "How much is a ticket?",
+      "q9Pre": "Prices vary by age and group size. Adults and children under 12 have different rates. Full prices are available on the ",
+      "q9LinkText": "Prices & Tickets page",
+      "q9Post": ".",
+      "q10": "Do I need to book in advance?",
+      "a10": "Booking in advance is recommended, especially during busy tourist periods. Online bookings must be made at least two hours before departure.",
+      "q11": "Can I buy tickets on site?",
+      "a11": "Yes. Tickets can be bought at the ticket office at the Parking du Ménec, subject to availability.",
+      "q12": "How early should I arrive before departure?",
+      "a12": "Visitors are asked to arrive at least 15 minutes before departure to validate their ticket and board.",
+      "q13": "Are group bookings available?",
+      "a13": "Yes. Group bookings are available for groups of 20 people or more. Booking in advance is recommended.",
+      "q14": "Can I privatise the Petit Train for an event?",
+      "q14Pre": "Yes. The Petit Train de Carnac can be privatised for corporate events, associations, school groups and private occasions. A dedicated request form is available on the ",
+      "q14LinkText": "Private Hire page",
+      "q14Post": "."
+    },
+    "informationsScheduleLabels": {
+      "operatingPeriodTitle": "Operating Period",
+      "operatingPeriodBody": "The Petit Train de Carnac runs every day from April to the end of October, including Sundays and public holidays.",
+      "weatherTitle": "Weather",
+      "weatherBody": "In rain or strong wind, the train is glazed on three sides, so you can fully enjoy your tour.",
+      "timetableHeading": "Timetable",
+      "departurePrefix": "Departure —",
+      "saturdayRule": "<strong>Saturdays in July & August:</strong> Carnac Plage and La Trinité-sur-Mer departures follow the « orange » low-season schedule.",
+      "onlineBookingNote": "<strong>Online booking:</strong> only available for departure n°1 — Parking du Ménec.",
+      "closuresHeading": "Public Holidays & Closures",
+      "closuresBody": "Public holidays follow the regular schedule. The Petit Train is <strong>closed from 9 to 16 October</strong> and <strong>from November to March inclusive</strong>."
+    },
+    "routesHeroDefaults": {
+      "primaryButton": "Individual flyer",
+      "secondaryButton": "Group flyer",
+      "googleReviewsCount": "6,000+ reviews",
+      "googleBadgeText": "<strong>Le Petit Train de Carnac</strong> is rated 4.7+ on Google with over 6,000 reviews, making it one of the most popular tourist attractions in Carnac.",
+      "lightboxClose": "Close",
+      "lightboxEnlarge": "Enlarge: {alt}",
+      "lightboxAriaLabel": "Enlarged view: {alt}"
     }
   }
 }

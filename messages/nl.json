@@ -65,7 +65,8 @@
     "rightImageAlt": "De Petit Train de Carnac op een schilderachtige route",
     "noteImportanteLabel": "Belangrijke opmerking",
     "noteImportanteHeading": "Online boeken",
-    "noteImportanteBody": "Reserveren kan, maar is niet verplicht. Je kunt tot <strong>2 uur</strong> vóór de gewenste vertrektijd boeken. Houd rekening met reis- en parkeertijd ter plaatse. Daarna ga je rechtstreeks naar het vertrekpunt en koop je je tickets aan het loket of bij de chauffeur.<br/>Niet alle plaatsen zijn online beschikbaar."
+    "noteImportanteBody": "Reserveren kan, maar is niet verplicht. Je kunt tot <strong>2 uur</strong> vóór de gewenste vertrektijd boeken. Houd rekening met reis- en parkeertijd ter plaatse. Daarna ga je rechtstreeks naar het vertrekpunt en koop je je tickets aan het loket of bij de chauffeur.",
+    "noteImportanteBodyExtra": "Niet alle plaatsen zijn online beschikbaar."
   },
   "metadata": {
     "home": {
@@ -286,7 +287,12 @@
     "reviews": {
       "label": "Recensies",
       "heading": "Wat bezoekers over de trein zeggen",
-      "description": "De Petit Train de Carnac heeft een beoordeling boven de 4,7 op Google met meer dan 6.000 recensies — een van de populairste toeristische attracties in Carnac."
+      "description": "De Petit Train de Carnac heeft een beoordeling boven de 4,7 op Google met meer dan 6.000 recensies — een van de populairste toeristische attracties in Carnac.",
+      "googleReview": "Google-recensie",
+      "slideAriaLabel": "Recensie {n} van {total}",
+      "regionAriaLabel": "Recensies van bezoekers",
+      "prevAriaLabel": "Vorige recensie",
+      "nextAriaLabel": "Volgende recensie"
     },
     "bookingSection": {
       "label": "Boeken",
@@ -361,6 +367,86 @@
         "q7": "Moet ik de Petit Train de Carnac vooraf reserveren?",
         "a7": "Vooraf boeken wordt aanbevolen, vooral in het hoogseizoen. Tickets zijn ook ter plaatse te koop, afhankelijk van beschikbaarheid."
       }
+    },
+    "routesTimeline": {
+      "label": "Tijdlijn van de Tour",
+      "headingPrefix": "Haltes en route van de",
+      "headingHighlight": "Petit Train de Carnac",
+      "intro": "Tijdens de rondleiding passeert de Petit Train de Carnac diverse belangrijke plekken en biedt een compleet overzicht van Carnac en omgeving.",
+      "introBold": "De Petit Train de Carnac stopt tijdens de rondleiding bij de volgende haltes:",
+      "btnBook": "Boek je bezoek",
+      "btnPrices": "Bekijk de tarieven",
+      "stop1Name": "Parking du Ménec, Carnac",
+      "stop1Bullet1": "Tegenover de Maison des Mégalithes",
+      "stop1Bullet2": "Vertrekpunt n°1",
+      "stop1Bullet3": "Verplicht vertrekpunt voor individuele bezoekers",
+      "stop1Bullet4": "Loket ter plaatse",
+      "stop1Note": "Dit is het enige gegarandeerde instappunt voor individuele tickets.",
+      "stop1ImageAlt": "Parking du Ménec, Carnac — vertrekpunt van de Petit Train",
+      "stop2Name": "Port en Drô, Carnac Plage",
+      "stop2Bullet1": "Halte vlak bij het strand van Carnac",
+      "stop2Bullet2": "Ideaal voor bezoekers die aan zee verblijven",
+      "stop2Note": "Koop je tickets ter plaatse op het moment van vertrek (geen reservering mogelijk).",
+      "stop2ImageAlt": "Strand van Carnac — halte Port en Drô",
+      "stop3Name": "Haven van La Trinité-sur-Mer",
+      "stop3Bullet1": "Vlak bij de bushalte « Cours des Quais »",
+      "stop3Bullet2": "Dichtbij de bekende jachthaven en zeilgebied",
+      "stop3ImageAlt": "Haven van La Trinité-sur-Mer"
+    },
+    "faqsSection": {
+      "q1": "Wat is de Petit Train de Carnac?",
+      "a1": "De Petit Train de Carnac is een geleide toeristische trein waarmee bezoekers Carnac en omgeving comfortabel en toegankelijk kunnen ontdekken. De rondleiding omvat de menhirs van Carnac, het strand van Carnac en de haven van La Trinité-sur-Mer, met audiocommentaar gedurende de hele rit.",
+      "q2": "Hoe lang duurt de rondleiding?",
+      "a2": "De rondleiding duurt ongeveer 55 minuten. Hiermee kunnen bezoekers de belangrijkste plekken van Carnac zien zonder lange wandelingen.",
+      "q3": "Vanwaar vertrekt de Petit Train de Carnac?",
+      "a3": "Het belangrijkste vertrek- en aankomstpunt voor individuele bezoekers is de Parking du Ménec in Carnac, tegenover de Maison des Mégalithes.",
+      "q4": "Rijdt de Petit Train elke dag?",
+      "a4": "Ja. De Petit Train de Carnac rijdt elke dag van april tot eind oktober, inclusief zondagen en feestdagen.",
+      "q5": "Gaat de rondleiding door bij slecht weer?",
+      "a5": "Ja. De Petit Train rijdt bij elk weer. Bij regen of harde wind is de trein aan drie kanten beglaasd, zodat je optimaal kunt genieten van je bezoek.",
+      "q6": "Wat zal ik zien tijdens de rondleiding?",
+      "a6": "Tijdens de rondleiding kom je langs de menhirs van Carnac — waaronder de menhirrijen van Ménec, Kermario en Kerlescan. Je ontdekt ook het strand van Carnac, het witte zand en de haven van La Trinité-sur-Mer.",
+      "q7": "In welke talen is het audiocommentaar beschikbaar?",
+      "a7": "Het geleide audiocommentaar is beschikbaar in 16 talen: Frans, Engels, Duits, Spaans, Italiaans, Portugees, Nederlands, Pools, Russisch, Zweeds, Deens, Tsjechisch, Chinees, Japans en meer. Het audiocommentaar is inbegrepen bij de ticketprijs — zonder meerprijs. Er is ook een kinderversie beschikbaar.",
+      "q8": "Is de rondleiding geschikt voor kinderen?",
+      "a8": "Ja. De Petit Train de Carnac is geschikt voor kinderen en gezinnen. Het audiocommentaar voor kinderen maakt de ervaring zowel leuk als leerzaam.",
+      "q9": "Hoeveel kost een ticket?",
+      "q9Pre": "De prijzen variëren op leeftijd en groepsgrootte. Volwassenen en kinderen onder de 12 jaar hebben verschillende tarieven. Volledige prijzen vind je op de ",
+      "q9LinkText": "pagina Tarieven & Tickets",
+      "q9Post": ".",
+      "q10": "Moet ik vooraf reserveren?",
+      "a10": "Vooraf reserveren wordt aanbevolen, vooral in drukke toeristische periodes. Online reserveringen moeten minstens twee uur vóór vertrek plaatsvinden.",
+      "q11": "Kan ik tickets ter plaatse kopen?",
+      "a11": "Ja. Tickets zijn verkrijgbaar aan het loket bij de Parking du Ménec, afhankelijk van beschikbaarheid.",
+      "q12": "Hoe vroeg moet ik vóór vertrek aankomen?",
+      "a12": "Bezoekers wordt gevraagd minstens 15 minuten vóór vertrek aanwezig te zijn om hun ticket te valideren en in te stappen.",
+      "q13": "Zijn groepsboekingen mogelijk?",
+      "a13": "Ja. Groepsboekingen zijn beschikbaar voor groepen van 20 personen of meer. Vooraf reserveren wordt aanbevolen.",
+      "q14": "Kan ik de Petit Train privé reserveren voor een evenement?",
+      "q14Pre": "Ja. De Petit Train de Carnac kan privé worden gereserveerd voor bedrijfsevents, verenigingen, schoolgroepen en privégelegenheden. Een speciaal aanvraagformulier vind je op de ",
+      "q14LinkText": "pagina Privéverhuur",
+      "q14Post": "."
+    },
+    "informationsScheduleLabels": {
+      "operatingPeriodTitle": "Bedrijfsperiode",
+      "operatingPeriodBody": "De Petit Train de Carnac rijdt 7 dagen per week van april tot eind oktober, inclusief zondagen en feestdagen.",
+      "weatherTitle": "Weer",
+      "weatherBody": "Bij regen of harde wind is de trein aan drie kanten beglaasd, zodat je optimaal kunt genieten van je bezoek.",
+      "timetableHeading": "Dienstregeling",
+      "departurePrefix": "Vertrek —",
+      "saturdayRule": "<strong>Zaterdag in juli & augustus:</strong> de vertrekken vanaf Carnac Plage en La Trinité-sur-Mer volgen de « oranje » laagseizoen-tijden.",
+      "onlineBookingNote": "<strong>Online reserveren:</strong> alleen beschikbaar voor vertrek nr. 1 — Parking du Ménec.",
+      "closuresHeading": "Feestdagen & Sluitingen",
+      "closuresBody": "Op feestdagen geldt het reguliere schema. De Petit Train is <strong>gesloten van 9 tot en met 16 oktober</strong> en <strong>van november tot en met maart</strong>."
+    },
+    "routesHeroDefaults": {
+      "primaryButton": "Individuele flyer",
+      "secondaryButton": "Groepsflyer",
+      "googleReviewsCount": "6 000+ beoordelingen",
+      "googleBadgeText": "<strong>Le Petit Train de Carnac</strong> heeft een score van 4,7+ op Google met meer dan 6 000 beoordelingen en is daarmee een van de populairste bezienswaardigheden van Carnac.",
+      "lightboxClose": "Sluiten",
+      "lightboxEnlarge": "Vergroten: {alt}",
+      "lightboxAriaLabel": "Vergrote weergave: {alt}"
     }
   }
 }

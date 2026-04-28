@@ -265,8 +265,10 @@ export default async function Hero({
                 <p className="font-['Manrope',sans-serif] font-normal text-[20px] leading-[30px] text-[#535862]">
                   {t.rich("noteImportanteBody", {
                     strong: (chunks) => <strong className="font-bold">{chunks}</strong>,
-                    br: () => <br />,
                   })}
+                  <br />
+                  <br />
+                  {t("noteImportanteBodyExtra")}
                 </p>
               </div>
             </div>

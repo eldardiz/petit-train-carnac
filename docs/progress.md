@@ -2,6 +2,17 @@
 
 ## Done
 
+- **i18n round 2 — fix FR-leakage on non-FR locales** (Apr 28, 2026 — evening):
+  - **`<br/>` rendering bug**: next-intl 4 `t.rich` doesn't parse self-closing void tags even with a handler. Split `hero.noteImportanteBody` into two keys (`noteImportanteBody` + `noteImportanteBodyExtra`) across 6 locales, render with explicit `<br /><br />` JSX in [Hero.tsx](vibe-coding/projects/petit-train-carnac/components/sections/Hero.tsx).
+  - **RoutesTimeline** (homepage + /routes): extracted ~25 hardcoded FR strings to `sections.routesTimeline.*`, refactored to consume `useTranslations`. Translated to en/es/de/it/nl manually.
+  - **FAQsSection** (/faqs): 14 Q&A pairs (~500 FR words) extracted to `sections.faqsSection.q1..q14` / `a1..a14`, with rich-link variants for q9 (Prices link) and q14 (Privatisation link). Translated × 6 locales. JSON-LD FAQPage schema now also localized.
+  - **InformationsSchedule UI labels** (/informations + /prices): wrapper labels (Période d'exploitation, Météo, Horaires, Saturday rule note, online-booking note, closures heading + body, Départ prefix) extracted to `sections.informationsScheduleLabels.*`. Schedule data cells (period names, hours, frequencies, locations) intentionally stay FR to match the printed flyer.
+  - **RoutesHero** (/routes): default flyer button labels, Google badge text (`<strong>` rich), reviews count, lightbox aria-labels — all extracted to `sections.routesHeroDefaults.*`.
+  - **ReviewsSlider** (homepage + /informations + /careers): customer testimonials kept in original FR (preserves authenticity) but wrapped with `<p lang="fr">` for accessibility + SEO. Surrounding UI labels (Avis Google subtitle, slide aria-label, region/prev/next aria-labels) extracted to `sections.reviews.*` and translated × 6 locales.
+  - **Gallery**: added 5 more photos (gallery-18..22, 249K–483K compressed) bringing total to 22.
+  - **Deferred to commit B2**: CareersHero + CareersInfo (~46 strings, low traffic), PrivatisationHero form (~35 strings, low traffic), Playwright i18n-coverage spec.
+  - All 6 locale JSON files validate; `tsc --noEmit` 0 errors. Verified live via curl across 12 page-locale combos.
+
 - **SEO follow-up: site-wide audit** (Apr 28, 2026 — same day):
   - **OG / Twitter cards** in `app/[locale]/layout.tsx` were stale FR copy ("Visite guidée touristique") on every page × every locale → updated to "Le Petit Train de Carnac / Menhir Tour" + mégalithes-led description. One canonical share card for now (per-locale OG deferred).
   - **`metadata.title.default` + `metadata.description`** fallbacks in layout.tsx aligned with new branding (was the pre-rebrand long FR title).
