@@ -442,7 +442,8 @@
       "closuresBody": "Public holidays follow the regular schedule. The Petit Train is <strong>closed from 9 to 16 October</strong> and <strong>from November to March inclusive</strong>.",
       "viewPlanButton": "View route map",
       "viewPlanImageAlt": "Route map — Menhirs Tour by Petit Train de Carnac",
-      "lightboxClose": "Close"
+      "lightboxClose": "Close",
+      "intermediateStopNote": "Intermediate stop — exit only, no reboarding."
     },
     "routesHeroDefaults": {
       "primaryButton": "Individual flyer",

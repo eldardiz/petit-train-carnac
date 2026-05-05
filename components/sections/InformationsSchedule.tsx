@@ -17,6 +17,7 @@ type Departure = {
   name: string;
   location: string;
   periods: Period[];
+  intermediate?: boolean;
 };
 
 const departures: Departure[] = [
@@ -47,8 +48,9 @@ const departures: Departure[] = [
   },
   {
     number: 2,
-    name: "Carnac Plage — Port-En-Drô",
+    name: "Port-En-Drô — Carnac Plage",
     location: "À 50 m de la Base nautique",
+    intermediate: true,
     periods: [
       {
         label: "Avril · Mai · Juin · Septembre · 1er – 8 octobre",
@@ -69,6 +71,7 @@ const departures: Departure[] = [
     number: 3,
     name: "La Trinité-sur-Mer",
     location: "Arrêt de bus Cours des Quais, côté mer — avant le rond-point Alain Barrière",
+    intermediate: true,
     periods: [
       {
         label: "Avril · Mai · Juin · Septembre · 1er – 8 octobre",
@@ -266,6 +269,12 @@ export default function InformationsSchedule() {
                       );
                     })}
                   </div>
+
+                  {dep.intermediate && (
+                    <p className="font-['Manrope',sans-serif] italic text-[12px] leading-[1.4] tracking-[-0.3px] text-[rgba(255,255,255,0.55)] border-t border-white/10 pt-3">
+                      {t("intermediateStopNote")}
+                    </p>
+                  )}
                 </div>
               ))}
             </div>

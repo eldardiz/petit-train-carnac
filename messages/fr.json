@@ -442,7 +442,8 @@
       "closuresBody": "Les jours fériés suivent les horaires habituels. Le Petit Train est <strong>fermé du 9 au 16 octobre</strong> ainsi que <strong>de novembre à mars inclus</strong>.",
       "viewPlanButton": "Voir le plan",
       "viewPlanImageAlt": "Plan du parcours — Menhirs Tour en Petit Train de Carnac",
-      "lightboxClose": "Fermer"
+      "lightboxClose": "Fermer",
+      "intermediateStopNote": "Arrêt intermédiaire — descente définitive uniquement, remontée impossible."
     },
     "routesHeroDefaults": {
       "primaryButton": "Flyer individuel",
