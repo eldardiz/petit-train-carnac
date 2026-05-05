@@ -34,7 +34,7 @@ export default function Navbar() {
         <div className="max-w-[1280px] mx-auto px-5 xl:px-0 py-[6px] flex items-center justify-between gap-4">
           <p className="text-[#f5ebdd] text-[12px] md:text-base leading-5 md:leading-6 tracking-[-0.48px] text-left md:text-center font-['Manrope',sans-serif] flex-1">
             {t("navbar.bannerPrefixBefore")}{" "}
-            <span className="tracking-[0.06em]">{t("navbar.bannerBrand")}</span>
+            <span className="italic underline">{t("navbar.bannerBrand")}</span>{" "}
             {t("navbar.bannerPrefixAfter")}{" "}
             <a href="https://www.petittrain-morbihan.com/en/vannes/" className="underline text-[#f5ebdd]" target="_blank" rel="noopener noreferrer">
               {t("navbar.bannerLinkVannes")}
