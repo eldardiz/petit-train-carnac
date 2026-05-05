@@ -122,7 +122,7 @@
         "q1": "How much is a ticket for the Petit Train de Carnac?",
         "a1": "Prices depend on age and group size. For individual visitors, the standard adult ticket is €8.50. Children under 12 enjoy a reduced rate of €5. Group prices apply from 20 people.",
         "q2": "Are there discounts for children?",
-        "a2": "Yes. Children under 12 get a reduced rate. Their ticket gives access to the same guided tour and audio commentary, including a version specially adapted for children.",
+        "a2": "Yes. Children under 12 get a reduced rate. Their ticket gives access to the same guided tour and audio commentaries, including a version specially adapted for children.",
         "q3": "Do children need a ticket to ride the Petit Train?",
         "a3": "Yes. Every passenger must hold a ticket to board the Petit Train de Carnac. Reduced rates apply for children under 12.",
         "q4": "Are there group discounts?",
@@ -130,9 +130,9 @@
         "q5": "What's included in the ticket price?",
         "a5": "Each ticket includes the full guided tour of about 55 minutes, multilingual audio commentary, a child-adapted version, and a comfortable on-board experience. No extra fees apply.",
         "q6": "Can I buy tickets on site?",
-        "a6": "Yes. Tickets can be purchased at the kiosk in the Ménec car park, subject to availability. In peak season, advance booking is recommended.",
+        "a6": "Yes. Tickets can be purchased at the ticket office at the Parking du Ménec or directly at stops 1 and 2.",
         "q7": "Can tickets be booked online?",
-        "a7": "Yes. Online booking is available and recommended, especially during peak periods. Online bookings must be made at least two hours before departure."
+        "a7": "Yes. Online booking is available exclusively at departure point n°1 (Parking du Ménec). Reservations must be made at least two hours before departure."
       }
     },
     "routes": {

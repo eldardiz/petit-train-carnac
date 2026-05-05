@@ -122,7 +122,7 @@
         "q1": "Quel est le tarif d'un billet pour le Petit Train de Carnac ?",
         "a1": "Les tarifs dépendent de l'âge et de la taille du groupe. Pour les visiteurs individuels, le billet adulte standard est à 8,5 euros. Les enfants de moins de 12 ans bénéficient d'un tarif réduit à 5 euros. Les tarifs de groupe s'appliquent à partir de 20 personnes.",
         "q2": "Y a-t-il des tarifs réduits pour les enfants ?",
-        "a2": "Oui. Les enfants de moins de 12 ans bénéficient d'un tarif réduit. Leur billet donne accès à la même visite guidée et au commentaire audio, dont une version spécialement adaptée aux enfants.",
+        "a2": "Oui. Les enfants de moins de 12 ans bénéficient d'un tarif réduit. Leur billet donne accès à la même visite guidée et aux commentaires audio, dont une version spécialement adaptée aux enfants.",
         "q3": "Les enfants ont-ils besoin d'un billet pour monter dans le Petit Train ?",
         "a3": "Oui. Tout passager doit être en possession d'un billet pour embarquer dans le Petit Train de Carnac. Des tarifs réduits sont appliqués pour les enfants de moins de 12 ans.",
         "q4": "Existe-t-il des réductions pour les groupes ?",
@@ -130,9 +130,9 @@
         "q5": "Qu'est-ce qui est inclus dans le prix du billet ?",
         "a5": "Chaque billet comprend la visite guidée complète d'environ 55 minutes, le commentaire audio multilingue, une version adaptée aux enfants, et une expérience confortable à bord. Aucun supplément n'est à prévoir.",
         "q6": "Peut-on acheter les billets sur place ?",
-        "a6": "Oui. Les billets peuvent être achetés au guichet situé au parking du Ménec, sous réserve de disponibilité. En haute saison touristique, il est conseillé de réserver à l'avance.",
+        "a6": "Oui. Les billets peuvent être achetés au guichet situé au parking du Ménec ou directement aux arrêts 1 et 2.",
         "q7": "Peut-on réserver des billets en ligne ?",
-        "a7": "Oui. La réservation en ligne est disponible et recommandée, notamment en période de pointe. Les réservations en ligne doivent être effectuées au moins deux heures avant le départ."
+        "a7": "Oui. La réservation en ligne est disponible uniquement au point de départ numéro 1 (parking du Ménec). Les réservations en ligne doivent être effectuées au moins deux heures avant le départ."
       }
     },
     "routes": {
