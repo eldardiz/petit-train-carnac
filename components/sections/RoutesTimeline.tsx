@@ -20,7 +20,7 @@ const stops: Stop[] = [
   {
     number: "01",
     nameKey: "stop1Name",
-    bulletKeys: ["stop1Bullet1", "stop1Bullet2", "stop1Bullet3", "stop1Bullet4"],
+    bulletKeys: ["stop1Bullet1", "stop1Bullet2", "stop1Bullet4"],
     noteKey: "stop1Note",
     image: "/figma-assets/stop-1.jpg",
     imageAltKey: "stop1ImageAlt",
@@ -39,6 +39,7 @@ const stops: Stop[] = [
     number: "03",
     nameKey: "stop3Name",
     bulletKeys: ["stop3Bullet1", "stop3Bullet2"],
+    noteKey: "stop3Note",
     image: "/figma-assets/stop-3.jpg",
     imageAltKey: "stop3ImageAlt",
     flip: false,
