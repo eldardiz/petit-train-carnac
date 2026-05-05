@@ -12,7 +12,9 @@
     "viewPrices": "Preise ansehen"
   },
   "navbar": {
-    "bannerPrefix": "Diese Seite gehört zu den Petits Trains du Morbihan. Entdecken Sie auch unsere Touren in",
+    "bannerPrefixBefore": "Diese Seite gehört zu den",
+    "bannerBrand": "Petits Trains du Morbihan",
+    "bannerPrefixAfter": ". Entdecken Sie auch unsere Touren in",
     "bannerLinkVannes": "Vannes",
     "bannerAnd": "und",
     "bannerLinkQuiberon": "Quiberon.",
@@ -60,7 +62,7 @@
     "buttonPrices": "Preise ansehen",
     "googleBadge": "Le Petit Train de Carnac ist auf Google mit 4,7 bei über 6.000 Bewertungen eingestuft — eine der beliebtesten Touristenattraktionen in Carnac.",
     "rightCardHeading": "Geführte Tour mit Audiokommentar in 16 Sprachen",
-    "rightCardBody": "Französisch, Englisch, Deutsch, Spanisch, Italienisch, Portugiesisch, Niederländisch, Russisch, Chinesisch, Japanisch, Schwedisch, Dänisch, Polnisch, Arabisch, Kroatisch und Slowenisch.",
+    "rightCardBody": "Französisch, Englisch, Deutsch, Spanisch, Italienisch, Portugiesisch, Niederländisch, Russisch, Chinesisch, Japanisch, Schwedisch, Dänisch, Polnisch, Tschechisch, Kroatisch und Slowenisch.",
     "rightCardFlagsAlt": "Sprachen-Flaggen",
     "rightImageAlt": "Le Petit Train de Carnac auf einer malerischen Route",
     "noteImportanteLabel": "Wichtiger Hinweis",
@@ -344,7 +346,7 @@
       "heading": "Häufig gestellte Fragen",
       "description": "Antworten auf die häufigsten Fragen zum Petit Train de Carnac: Dauer, Preise, Route, Barrierefreiheit und Buchungen.",
       "cardHeading": "Geführte Tour mit Audiokommentar in 16 Sprachen",
-      "languages": "Französisch, Englisch, Deutsch, Spanisch, Italienisch, Portugiesisch, Niederländisch, Russisch, Chinesisch, Japanisch, Schwedisch, Dänisch, Polnisch, Arabisch, Kroatisch und Slowenisch."
+      "languages": "Französisch, Englisch, Deutsch, Spanisch, Italienisch, Portugiesisch, Niederländisch, Russisch, Chinesisch, Japanisch, Schwedisch, Dänisch, Polnisch, Tschechisch, Kroatisch und Slowenisch."
     },
     "faq": {
       "defaultLabel": "FAQ",

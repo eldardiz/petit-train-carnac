@@ -12,7 +12,9 @@
     "viewPrices": "Ver tarifas"
   },
   "navbar": {
-    "bannerPrefix": "Este sitio forma parte de los Petits Trains du Morbihan. Descubre nuestros otros recorridos en",
+    "bannerPrefixBefore": "Este sitio forma parte de los",
+    "bannerBrand": "Petits Trains du Morbihan",
+    "bannerPrefixAfter": ". Descubre nuestros otros recorridos en",
     "bannerLinkVannes": "Vannes",
     "bannerAnd": "y",
     "bannerLinkQuiberon": "Quiberon.",
@@ -60,7 +62,7 @@
     "buttonPrices": "Ver tarifas",
     "googleBadge": "Le Petit Train de Carnac tiene una valoración de 4,7 en Google, con más de 6.000 reseñas, una de las atracciones turísticas más populares de Carnac.",
     "rightCardHeading": "Visita guiada con audio comentado en 16 idiomas",
-    "rightCardBody": "Francés, inglés, alemán, español, italiano, portugués, neerlandés, ruso, chino, japonés, sueco, danés, polaco, árabe, croata y esloveno.",
+    "rightCardBody": "Francés, inglés, alemán, español, italiano, portugués, neerlandés, ruso, chino, japonés, sueco, danés, polaco, checo, croata y esloveno.",
     "rightCardFlagsAlt": "Banderas de los idiomas",
     "rightImageAlt": "Le Petit Train de Carnac en un recorrido pintoresco",
     "noteImportanteLabel": "Nota importante",
@@ -344,7 +346,7 @@
       "heading": "Preguntas Frecuentes",
       "description": "Encuentra respuestas a las preguntas más habituales sobre el Petit Train de Carnac: duración, tarifas, recorrido, accesibilidad y reservas.",
       "cardHeading": "Visita guiada con audio comentado en 16 idiomas",
-      "languages": "Francés, inglés, alemán, español, italiano, portugués, neerlandés, ruso, chino, japonés, sueco, danés, polaco, árabe, croata y esloveno."
+      "languages": "Francés, inglés, alemán, español, italiano, portugués, neerlandés, ruso, chino, japonés, sueco, danés, polaco, checo, croata y esloveno."
     },
     "faq": {
       "defaultLabel": "FAQ",

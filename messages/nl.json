@@ -12,7 +12,9 @@
     "viewPrices": "Tarieven bekijken"
   },
   "navbar": {
-    "bannerPrefix": "Deze site maakt deel uit van de Petits Trains du Morbihan. Ontdek ook onze andere ritten in",
+    "bannerPrefixBefore": "Deze site maakt deel uit van de",
+    "bannerBrand": "Petits Trains du Morbihan",
+    "bannerPrefixAfter": ". Ontdek ook onze andere ritten in",
     "bannerLinkVannes": "Vannes",
     "bannerAnd": "en",
     "bannerLinkQuiberon": "Quiberon.",
@@ -60,7 +62,7 @@
     "buttonPrices": "Tarieven bekijken",
     "googleBadge": "De Petit Train de Carnac heeft een 4,7-beoordeling op Google met meer dan 6.000 recensies — een van de populairste toeristische attracties in Carnac.",
     "rightCardHeading": "Rondleiding met audiocommentaar in 16 talen",
-    "rightCardBody": "Frans, Engels, Duits, Spaans, Italiaans, Portugees, Nederlands, Russisch, Chinees, Japans, Zweeds, Deens, Pools, Arabisch, Kroatisch en Sloveens.",
+    "rightCardBody": "Frans, Engels, Duits, Spaans, Italiaans, Portugees, Nederlands, Russisch, Chinees, Japans, Zweeds, Deens, Pools, Tsjechisch, Kroatisch en Sloveens.",
     "rightCardFlagsAlt": "Taalvlaggen",
     "rightImageAlt": "De Petit Train de Carnac op een schilderachtige route",
     "noteImportanteLabel": "Belangrijke opmerking",
@@ -344,7 +346,7 @@
       "heading": "Veelgestelde vragen",
       "description": "Vind antwoorden op de meest gestelde vragen over de Petit Train de Carnac: duur, tarieven, route, toegankelijkheid en boekingen.",
       "cardHeading": "Rondleiding met audiocommentaar in 16 talen",
-      "languages": "Frans, Engels, Duits, Spaans, Italiaans, Portugees, Nederlands, Russisch, Chinees, Japans, Zweeds, Deens, Pools, Arabisch, Kroatisch en Sloveens."
+      "languages": "Frans, Engels, Duits, Spaans, Italiaans, Portugees, Nederlands, Russisch, Chinees, Japans, Zweeds, Deens, Pools, Tsjechisch, Kroatisch en Sloveens."
     },
     "faq": {
       "defaultLabel": "FAQ",

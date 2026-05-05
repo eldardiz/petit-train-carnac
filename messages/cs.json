@@ -12,7 +12,9 @@
     "viewPrices": "Zobrazit ceny"
   },
   "navbar": {
-    "bannerPrefix": "Tato stránka je součástí sítě Petits Trains du Morbihan. Objevte naše další trasy v",
+    "bannerPrefixBefore": "Tato stránka je součástí sítě",
+    "bannerBrand": "Petits Trains du Morbihan",
+    "bannerPrefixAfter": ". Objevte naše další trasy v",
     "bannerLinkVannes": "Vannes",
     "bannerAnd": "a",
     "bannerLinkQuiberon": "Quiberon.",
@@ -60,7 +62,7 @@
     "buttonPrices": "Zobrazit ceny",
     "googleBadge": "Petit Train de Carnac je hodnocen 4,7 na Google s více než 6 000 recenzemi, což z něj činí jednu z nejpopulárnějších turistických atrakcí v Carnaci.",
     "rightCardHeading": "Průvodcovský výlet s audio komentářem v 16 jazycích",
-    "rightCardBody": "Francouzsky, anglicky, německy, španělsky, italsky, portugalsky, nizozemsky, rusky, čínsky, japonsky, švédsky, dánsky, polsky, arabsky, chorvatsky a slovinsky.",
+    "rightCardBody": "Francouzsky, anglicky, německy, španělsky, italsky, portugalsky, nizozemsky, rusky, čínsky, japonsky, švédsky, dánsky, polsky, česky, chorvatsky a slovinsky.",
     "rightCardFlagsAlt": "Vlajky jazyků",
     "rightImageAlt": "Petit Train de Carnac na malebné trase",
     "noteImportanteLabel": "Důležitá poznámka",
@@ -344,7 +346,7 @@
       "heading": "Často kladené otázky",
       "description": "Najděte odpovědi na nejčastější otázky o Petit Train de Carnac: délka, ceny, trasa, přístupnost a rezervace.",
       "cardHeading": "Průvodcovský výlet s audio komentářem v 16 jazycích",
-      "languages": "Francouzsky, anglicky, německy, španělsky, italsky, portugalsky, nizozemsky, rusky, čínsky, japonsky, švédsky, dánsky, polsky, arabsky, chorvatsky a slovinsky."
+      "languages": "Francouzsky, anglicky, německy, španělsky, italsky, portugalsky, nizozemsky, rusky, čínsky, japonsky, švédsky, dánsky, polsky, česky, chorvatsky a slovinsky."
     },
     "faq": {
       "defaultLabel": "FAQ",

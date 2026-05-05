@@ -153,31 +153,33 @@ export default function RoutesTimeline() {
                     </p>
                   )}
                 </ul>
-                <div className="flex items-center gap-3 flex-wrap">
-                  <TransitionLink
-                    href="/book"
-                    className="btn-animate-chars btn-primary inline-flex items-center gap-2 h-[45px] px-[22px] bg-[#54206d] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-white text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap"
-                  >
-                    <div className="btn-animate-chars__bg" />
-                    <div className="relative shrink-0 w-5 h-5">
-                      <Image
-                        src="/figma-assets/icon-ticket-white.svg"
-                        alt=""
-                        fill
-                        className="object-contain"
-                        aria-hidden="true"
-                      />
-                    </div>
-                    <span data-button-animate-chars="" className="btn-animate-chars__text">{t("btnBook")}</span>
-                  </TransitionLink>
-                  <TransitionLink
-                    href="/prices"
-                    className="btn-animate-chars btn-secondary inline-flex items-center justify-center h-[45px] px-[22px] bg-[#f5ebdd] border border-[rgba(0,0,0,0.2)] rounded-[4px] text-[#414651] text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap"
-                  >
-                    <div className="btn-animate-chars__bg" />
-                    <span data-button-animate-chars="" className="btn-animate-chars__text">{t("btnPrices")}</span>
-                  </TransitionLink>
-                </div>
+                {i === 0 && (
+                  <div className="flex items-center gap-3 flex-wrap">
+                    <TransitionLink
+                      href="/book"
+                      className="btn-animate-chars btn-primary inline-flex items-center gap-2 h-[45px] px-[22px] bg-[#54206d] rounded-[4px] shadow-[0px_1px_2px_0px_rgba(10,13,18,0.05)] ring-1 ring-inset ring-[rgba(10,13,18,0.18)] text-white text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap"
+                    >
+                      <div className="btn-animate-chars__bg" />
+                      <div className="relative shrink-0 w-5 h-5">
+                        <Image
+                          src="/figma-assets/icon-ticket-white.svg"
+                          alt=""
+                          fill
+                          className="object-contain"
+                          aria-hidden="true"
+                        />
+                      </div>
+                      <span data-button-animate-chars="" className="btn-animate-chars__text">{t("btnBook")}</span>
+                    </TransitionLink>
+                    <TransitionLink
+                      href="/prices"
+                      className="btn-animate-chars btn-secondary inline-flex items-center justify-center h-[45px] px-[22px] bg-[#f5ebdd] border border-[rgba(0,0,0,0.2)] rounded-[4px] text-[#414651] text-base font-medium font-['Manrope',sans-serif] tracking-[-0.64px] whitespace-nowrap"
+                    >
+                      <div className="btn-animate-chars__bg" />
+                      <span data-button-animate-chars="" className="btn-animate-chars__text">{t("btnPrices")}</span>
+                    </TransitionLink>
+                  </div>
+                )}
               </div>
             );
 

@@ -23,9 +23,6 @@ export default function Footer() {
   const otherLinks = [
     { label: t("footer.mentionsLegales"), href: "/mentions-legales" },
     { label: t("footer.privacy"), href: "/politique-de-confidentialite" },
-    { label: t("nav.pricesShort"), href: "/prices" },
-    { label: t("nav.faqs"), href: "/faqs" },
-    { label: t("nav.privatisation"), href: "/privatisation" },
   ];
 
   return (

@@ -12,7 +12,9 @@
     "viewPrices": "View Prices"
   },
   "navbar": {
-    "bannerPrefix": "This site is part of the Petits Trains du Morbihan family. Discover our other tours in",
+    "bannerPrefixBefore": "This site is part of the",
+    "bannerBrand": "Petits Trains du Morbihan",
+    "bannerPrefixAfter": "family. Discover our other tours in",
     "bannerLinkVannes": "Vannes",
     "bannerAnd": "and",
     "bannerLinkQuiberon": "Quiberon.",
@@ -60,7 +62,7 @@
     "buttonPrices": "View Prices",
     "googleBadge": "Le Petit Train de Carnac is rated 4.7 on Google with more than 6,000 reviews — making it one of the most popular tourist attractions in Carnac.",
     "rightCardHeading": "Guided tour with audio commentary in 16 languages",
-    "rightCardBody": "French, English, German, Spanish, Italian, Portuguese, Dutch, Russian, Chinese, Japanese, Swedish, Danish, Polish, Arabic, Croatian and Slovenian.",
+    "rightCardBody": "French, English, German, Spanish, Italian, Portuguese, Dutch, Russian, Chinese, Japanese, Swedish, Danish, Polish, Czech, Croatian and Slovenian.",
     "rightCardFlagsAlt": "Language flags",
     "rightImageAlt": "Le Petit Train de Carnac on a scenic route",
     "noteImportanteLabel": "Important Note",
@@ -344,7 +346,7 @@
       "heading": "Frequently Asked Questions",
       "description": "Find answers to the most common questions about the Petit Train de Carnac: duration, prices, route, accessibility and bookings.",
       "cardHeading": "Guided tour with audio commentary in 16 languages",
-      "languages": "French, English, German, Spanish, Italian, Portuguese, Dutch, Russian, Chinese, Japanese, Swedish, Danish, Polish, Arabic, Croatian and Slovenian."
+      "languages": "French, English, German, Spanish, Italian, Portuguese, Dutch, Russian, Chinese, Japanese, Swedish, Danish, Polish, Czech, Croatian and Slovenian."
     },
     "faq": {
       "defaultLabel": "FAQ",
@@ -399,7 +401,7 @@
       "q2": "How long does the tour last?",
       "a2": "The guided tour lasts about 55 minutes. This duration lets visitors see the main sights of Carnac without long walking distances.",
       "q3": "Where does the Petit Train de Carnac depart from?",
-      "a3": "The main departure and arrival point for individual visitors is the Parking du Ménec in Carnac, opposite the Maison des Mégalithes.",
+      "a3": "The main departure point for individual visitors is the Parking du Ménec in Carnac (stop n°1), opposite the Maison des Mégalithes. The train then passes through two intermediate points — Port-En-Drô (stop n°2) and the harbour of La Trinité-sur-Mer (stop n°3) — solely to pick up additional passengers or allow a passenger to alight permanently. If you get off at one of these stops, you cannot reboard the train.",
       "q4": "Does the Petit Train run every day?",
       "a4": "Yes. The Petit Train de Carnac runs every day from April to the end of October, including Sundays and public holidays.",
       "q5": "Does the tour run in bad weather?",
@@ -415,7 +417,7 @@
       "q9LinkText": "Prices & Tickets page",
       "q9Post": ".",
       "q10": "Do I need to book in advance?",
-      "a10": "Booking in advance is recommended, especially during busy tourist periods. Online bookings must be made at least two hours before departure.",
+      "a10": "Booking in advance is recommended, especially during busy tourist periods. Online booking is only available for departure n°1 — Parking du Ménec — and must be made at least two hours before departure. It is not possible to book online for stops n°2 or n°3.",
       "q11": "Can I buy tickets on site?",
       "a11": "Yes. Tickets can be bought at the ticket office at the Parking du Ménec, subject to availability.",
       "q12": "How early should I arrive before departure?",

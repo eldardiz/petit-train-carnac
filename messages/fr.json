@@ -12,7 +12,9 @@
     "viewPrices": "Voir les Tarifs"
   },
   "navbar": {
-    "bannerPrefix": "Ce site fait partie des Petits Trains du Morbihan. Découvrez nos autres circuits à",
+    "bannerPrefixBefore": "Ce site fait partie des",
+    "bannerBrand": "Petits Trains du Morbihan",
+    "bannerPrefixAfter": ". Découvrez nos autres circuits à",
     "bannerLinkVannes": "Vannes",
     "bannerAnd": "et",
     "bannerLinkQuiberon": "Quiberon.",
@@ -60,7 +62,7 @@
     "buttonPrices": "Voir les Tarifs",
     "googleBadge": "Le Petit Train de Carnac est noté 4,7 sur Google, avec plus de 6 000 avis, ce qui en fait l'une des attractions touristiques les plus populaires de Carnac.",
     "rightCardHeading": "Visite guidée avec commentaire audio en 16 langues",
-    "rightCardBody": "Français, anglais, allemand, espagnol, italien, portugais, néerlandais, russe, chinois, japonais, suédois, danois, polonais, arabe, croate et slovène.",
+    "rightCardBody": "Français, anglais, allemand, espagnol, italien, portugais, néerlandais, russe, chinois, japonais, suédois, danois, polonais, tchèque, croate et slovène.",
     "rightCardFlagsAlt": "Drapeaux des langues",
     "rightImageAlt": "Le Petit Train de Carnac sur un parcours pittoresque",
     "noteImportanteLabel": "Note Importante",
@@ -344,7 +346,7 @@
       "heading": "Questions Fréquemment Posées",
       "description": "Trouvez des réponses aux questions les plus fréquentes sur le Petit Train de Carnac : durée, tarifs, parcours, accessibilité et réservations.",
       "cardHeading": "Visite guidée avec commentaire audio en 16 langues",
-      "languages": "Français, anglais, allemand, espagnol, italien, portugais, néerlandais, russe, chinois, japonais, suédois, danois, polonais, arabe, croate et slovène."
+      "languages": "Français, anglais, allemand, espagnol, italien, portugais, néerlandais, russe, chinois, japonais, suédois, danois, polonais, tchèque, croate et slovène."
     },
     "faq": {
       "defaultLabel": "FAQ",
@@ -399,7 +401,7 @@
       "q2": "Combien de temps dure la visite ?",
       "a2": "La visite guidée dure environ 55 minutes. Cette durée permet aux visiteurs de voir les principaux sites de Carnac sans longues distances à parcourir à pied.",
       "q3": "D'où part le Petit Train de Carnac ?",
-      "a3": "Le point de départ et d'arrivée principal pour les visiteurs individuels est le parking du Ménec à Carnac, situé en face de la Maison des Mégalithes.",
+      "a3": "Le point de départ principal pour les visiteurs individuels est le parking du Ménec à Carnac (arrêt n°1), situé en face de la Maison des Mégalithes. Le train passe ensuite par deux points intermédiaires — Port-En-Drô (arrêt n°2) et le port de La Trinité-sur-Mer (arrêt n°3) — uniquement pour prendre en charge des passagers supplémentaires ou permettre à un passager de descendre définitivement. Si vous descendez à l'un de ces arrêts, vous ne pouvez pas remonter dans le train.",
       "q4": "Le Petit Train fonctionne-t-il tous les jours ?",
       "a4": "Oui. Le Petit Train de Carnac fonctionne tous les jours d'avril à fin octobre, y compris les dimanches et jours fériés.",
       "q5": "La visite fonctionne-t-elle par mauvais temps ?",
@@ -415,7 +417,7 @@
       "q9LinkText": "page Tarifs et Billets",
       "q9Post": ".",
       "q10": "Faut-il réserver à l'avance ?",
-      "a10": "La réservation à l'avance est recommandée, surtout pendant les périodes touristiques chargées. Les réservations en ligne doivent être effectuées au moins deux heures avant le départ.",
+      "a10": "La réservation à l'avance est recommandée, surtout pendant les périodes touristiques chargées. Les réservations en ligne sont uniquement disponibles pour le départ n°1 — Parking du Ménec — et doivent être effectuées au moins deux heures avant le départ. Il n'est pas possible de réserver en ligne pour les arrêts n°2 ou n°3.",
       "q11": "Puis-je acheter des billets sur place ?",
       "a11": "Oui. Les billets peuvent être achetés au guichet situé au parking du Ménec, sous réserve de disponibilité.",
       "q12": "Combien de temps à l'avance dois-je arriver avant le départ ?",
