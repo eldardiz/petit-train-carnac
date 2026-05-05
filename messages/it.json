@@ -122,7 +122,7 @@
         "q1": "Quanto costa un biglietto per il Petit Train de Carnac?",
         "a1": "Le tariffe dipendono dall'età e dalla dimensione del gruppo. Per i visitatori individuali, il biglietto adulto standard è di 8,50 €. I bambini sotto i 12 anni hanno una tariffa ridotta di 5 €. Le tariffe di gruppo si applicano da 20 persone in su.",
         "q2": "Ci sono tariffe ridotte per i bambini?",
-        "a2": "Sì. I bambini sotto i 12 anni hanno una tariffa ridotta. Il loro biglietto dà accesso alla stessa visita guidata e all'audio, inclusa una versione adatta ai bambini.",
+        "a2": "Sì. I bambini sotto i 12 anni hanno una tariffa ridotta. Il loro biglietto dà accesso alla stessa visita guidata e ai commenti audio, inclusa una versione adatta ai bambini.",
         "q3": "I bambini hanno bisogno di un biglietto per salire sul Petit Train?",
         "a3": "Sì. Ogni passeggero deve avere un biglietto per salire sul Petit Train de Carnac. Si applicano tariffe ridotte per i bambini sotto i 12 anni.",
         "q4": "Ci sono sconti per i gruppi?",
@@ -130,9 +130,9 @@
         "q5": "Cosa è incluso nel prezzo del biglietto?",
         "a5": "Ogni biglietto include la visita guidata completa di circa 55 minuti, l'audio commento multilingue, una versione adatta ai bambini e un'esperienza confortevole a bordo. Nessun costo aggiuntivo.",
         "q6": "Si possono acquistare i biglietti sul posto?",
-        "a6": "Sì. I biglietti possono essere acquistati alla biglietteria del parcheggio del Ménec, in base alla disponibilità. In alta stagione si consiglia di prenotare in anticipo.",
+        "a6": "Sì. I biglietti possono essere acquistati alla biglietteria del parcheggio del Ménec o direttamente alle fermate 1 e 2.",
         "q7": "Si possono prenotare i biglietti online?",
-        "a7": "Sì. La prenotazione online è disponibile e raccomandata, soprattutto nei periodi di maggiore affluenza. Le prenotazioni online devono essere effettuate almeno due ore prima della partenza."
+        "a7": "Sì. La prenotazione online è disponibile esclusivamente al punto di partenza n° 1 (parcheggio del Ménec). Le prenotazioni online devono essere effettuate almeno due ore prima della partenza."
       }
     },
     "routes": {

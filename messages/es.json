@@ -122,7 +122,7 @@
         "q1": "¿Cuánto cuesta un billete para el Petit Train de Carnac?",
         "a1": "Las tarifas dependen de la edad y del tamaño del grupo. Para visitantes individuales, el billete adulto estándar es de 8,50 €. Los niños menores de 12 años disfrutan de una tarifa reducida de 5 €. Las tarifas de grupo se aplican a partir de 20 personas.",
         "q2": "¿Hay tarifas reducidas para los niños?",
-        "a2": "Sí. Los niños menores de 12 años tienen tarifa reducida. Su billete da acceso a la misma visita guiada y al audio, incluida una versión adaptada para niños.",
+        "a2": "Sí. Los niños menores de 12 años tienen tarifa reducida. Su billete da acceso a la misma visita guiada y a los comentarios de audio, incluida una versión adaptada para niños.",
         "q3": "¿Los niños necesitan billete para subir al Petit Train?",
         "a3": "Sí. Todo pasajero debe tener un billete para subir al Petit Train de Carnac. Se aplican tarifas reducidas para los menores de 12 años.",
         "q4": "¿Hay descuentos para grupos?",
@@ -130,9 +130,9 @@
         "q5": "¿Qué incluye el precio del billete?",
         "a5": "Cada billete incluye la visita guiada completa de unos 55 minutos, el audio multilingüe, una versión adaptada para niños y una experiencia cómoda a bordo. Sin coste adicional.",
         "q6": "¿Se pueden comprar los billetes en el sitio?",
-        "a6": "Sí. Los billetes se pueden adquirir en la taquilla del aparcamiento del Ménec, según disponibilidad. En temporada alta se recomienda reservar con antelación.",
+        "a6": "Sí. Los billetes se pueden adquirir en la taquilla del aparcamiento del Ménec o directamente en las paradas 1 y 2.",
         "q7": "¿Se pueden reservar billetes en línea?",
-        "a7": "Sí. La reserva en línea está disponible y recomendada, sobre todo en periodos de alta afluencia. Las reservas en línea deben hacerse al menos dos horas antes de la salida."
+        "a7": "Sí. La reserva en línea está disponible exclusivamente en el punto de salida n.° 1 (aparcamiento del Ménec). Las reservas en línea deben realizarse al menos dos horas antes de la salida."
       }
     },
     "routes": {

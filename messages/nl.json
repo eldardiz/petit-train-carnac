@@ -122,7 +122,7 @@
         "q1": "Wat kost een ticket voor de Petit Train de Carnac?",
         "a1": "De tarieven hangen af van de leeftijd en de groepsgrootte. Voor individuele bezoekers is het standaard volwassenenticket € 8,50. Kinderen onder de 12 krijgen een gereduceerd tarief van € 5. Groepstarieven gelden vanaf 20 personen.",
         "q2": "Zijn er kortingen voor kinderen?",
-        "a2": "Ja. Kinderen onder de 12 krijgen een gereduceerd tarief. Hun ticket geeft toegang tot dezelfde rondleiding en het audiocommentaar, inclusief een kindvriendelijke versie.",
+        "a2": "Ja. Kinderen onder de 12 krijgen een gereduceerd tarief. Hun ticket geeft toegang tot dezelfde rondleiding en de audiocommentaren, inclusief een kindvriendelijke versie.",
         "q3": "Hebben kinderen een ticket nodig om in de Petit Train te stappen?",
         "a3": "Ja. Elke passagier moet een ticket hebben om aan boord van de Petit Train de Carnac te gaan. Voor kinderen onder de 12 gelden gereduceerde tarieven.",
         "q4": "Zijn er groepskortingen?",
@@ -130,9 +130,9 @@
         "q5": "Wat is inbegrepen in de ticketprijs?",
         "a5": "Elk ticket omvat de volledige rondleiding van ongeveer 55 minuten, het meertalige audiocommentaar, een kindvriendelijke versie en een comfortabele beleving aan boord. Geen extra kosten.",
         "q6": "Kan ik tickets ter plaatse kopen?",
-        "a6": "Ja. Tickets zijn verkrijgbaar aan het loket op de Ménec-parking, afhankelijk van beschikbaarheid. In het hoogseizoen wordt vooraf boeken aanbevolen.",
+        "a6": "Ja. Tickets zijn verkrijgbaar aan het loket op de Ménec-parking of rechtstreeks bij haltes 1 en 2.",
         "q7": "Kunnen tickets online worden geboekt?",
-        "a7": "Ja. Online boeken is mogelijk en aanbevolen, vooral in drukke periodes. Online boekingen moeten minstens twee uur voor vertrek worden gemaakt."
+        "a7": "Ja. Online boeken is uitsluitend mogelijk op vertrekpunt nr. 1 (Ménec-parking). Online boekingen moeten minstens twee uur voor vertrek worden gemaakt."
       }
     },
     "routes": {

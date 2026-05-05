@@ -122,7 +122,7 @@
         "q1": "Jaká je cena jízdenky na Petit Train de Carnac?",
         "a1": "Ceny se liší podle věku a velikosti skupiny. Pro individuální návštěvníky je standardní cena dospělého 8,50 €. Děti do 12 let mají zvýhodněnou cenu 5 €. Skupinové ceny se vztahují na skupiny od 20 osob.",
         "q2": "Jsou pro děti zvýhodněné ceny?",
-        "a2": "Ano. Děti do 12 let mají zvýhodněnou cenu. Jejich jízdenka umožňuje přístup ke stejnému průvodcovskému výletu a audio komentáři, včetně speciální verze určené pro děti.",
+        "a2": "Ano. Děti do 12 let mají zvýhodněnou cenu. Jejich jízdenka umožňuje přístup ke stejnému průvodcovskému výletu a audio komentářům, včetně speciální verze určené pro děti.",
         "q3": "Potřebují děti jízdenku pro nastoupení do Petit Train?",
         "a3": "Ano. Každý cestující musí mít jízdenku, aby mohl nastoupit do Petit Train de Carnac. Dětem do 12 let jsou uplatňovány zvýhodněné ceny.",
         "q4": "Existují skupinové slevy?",
@@ -130,9 +130,9 @@
         "q5": "Co je zahrnuto v ceně jízdenky?",
         "a5": "Každá jízdenka zahrnuje kompletní průvodcovský výlet v délce přibližně 55 minut, vícejazyčný audio komentář, verzi pro děti a pohodlný zážitek na palubě. Nepředpokládají se žádné příplatky.",
         "q6": "Lze koupit jízdenky na místě?",
-        "a6": "Ano. Jízdenky lze koupit u pokladny na parkovišti Ménec, v závislosti na dostupnosti. V hlavní turistické sezóně se doporučuje předem rezervovat.",
+        "a6": "Ano. Jízdenky lze koupit u pokladny na parkovišti Ménec nebo přímo na zastávkách 1 a 2.",
         "q7": "Lze rezervovat jízdenky online?",
-        "a7": "Ano. Online rezervace je dostupná a doporučována, zejména ve špičkách. Online rezervace musí být provedeny nejméně dvě hodiny před odjezdem."
+        "a7": "Ano. Online rezervace je dostupná výhradně v místě odjezdu č. 1 (parkoviště Ménec). Online rezervace musí být provedeny nejméně dvě hodiny před odjezdem."
       }
     },
     "routes": {

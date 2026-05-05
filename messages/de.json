@@ -122,7 +122,7 @@
         "q1": "Wie viel kostet ein Ticket für den Petit Train de Carnac?",
         "a1": "Die Preise hängen von Alter und Gruppengröße ab. Für Einzelbesucher kostet das Standard-Erwachsenenticket 8,50 €. Kinder unter 12 Jahren erhalten einen ermäßigten Tarif von 5 €. Gruppentarife gelten ab 20 Personen.",
         "q2": "Gibt es Ermäßigungen für Kinder?",
-        "a2": "Ja. Kinder unter 12 Jahren erhalten einen ermäßigten Tarif. Ihr Ticket bietet Zugang zur gleichen geführten Tour und zum Audiokommentar, einschließlich einer kindgerechten Version.",
+        "a2": "Ja. Kinder unter 12 Jahren erhalten einen ermäßigten Tarif. Ihr Ticket bietet Zugang zur gleichen geführten Tour und zu den Audiokommentaren, einschließlich einer kindgerechten Version.",
         "q3": "Brauchen Kinder ein Ticket für den Petit Train?",
         "a3": "Ja. Jeder Fahrgast benötigt ein Ticket, um an Bord des Petit Train de Carnac zu gehen. Für Kinder unter 12 Jahren gelten ermäßigte Tarife.",
         "q4": "Gibt es Gruppenrabatte?",
@@ -130,9 +130,9 @@
         "q5": "Was ist im Ticketpreis enthalten?",
         "a5": "Jedes Ticket umfasst die vollständige geführte Tour von rund 55 Minuten, den mehrsprachigen Audiokommentar, eine kindgerechte Version und ein bequemes Erlebnis an Bord. Keine Zusatzkosten.",
         "q6": "Kann man die Tickets vor Ort kaufen?",
-        "a6": "Ja. Tickets sind am Schalter im Parkplatz Ménec erhältlich, je nach Verfügbarkeit. In der Hochsaison wird eine Vorabbuchung empfohlen.",
+        "a6": "Ja. Tickets sind am Schalter im Parkplatz Ménec oder direkt an den Haltestellen 1 und 2 erhältlich.",
         "q7": "Kann man Tickets online buchen?",
-        "a7": "Ja. Die Online-Buchung ist möglich und besonders in Stoßzeiten empfehlenswert. Online-Buchungen müssen mindestens zwei Stunden vor Abfahrt erfolgen."
+        "a7": "Ja. Die Online-Buchung ist ausschließlich am Abfahrtsort Nr. 1 (Parkplatz Ménec) möglich. Online-Buchungen müssen mindestens zwei Stunden vor Abfahrt erfolgen."
       }
     },
     "routes": {
