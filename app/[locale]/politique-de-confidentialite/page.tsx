@@ -29,7 +29,7 @@ export default function PolitiqueDeConfidentialitePage() {
             <p className="font-['Manrope',sans-serif] text-[#535862] text-base leading-[1.7] tracking-[-0.3px]">
               Nous nous engageons à ce que la collecte et le traitement de vos données, effectués à
               partir du site{' '}
-              <span className="text-[#181d27] font-medium">petit-train-carnac.vercel.app</span>,
+              <span className="text-[#181d27] font-medium">lepetittraindecarnac.fr</span>,
               soient conformes au règlement général sur la protection des données (RGPD) et à la loi
               Informatique et Libertés.
             </p>
