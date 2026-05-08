@@ -176,6 +176,16 @@ public/figma-assets/            ← all images/SVGs; URL prefix /figma-assets/
 - SVG icons: `<Image fill className="object-contain">` inside a sized `relative` div
 - Never `<img>` — always `next/image`
 
+## Privatisation page — DRAFT, never in nav
+
+The `app/[locale]/privatisation/` page exists in the project as a **draft**. It is intentionally excluded from:
+- The `navLinks` array in `components/layout/Navbar.tsx`
+- `app/sitemap.ts`
+
+**Do NOT add it to the navbar or sitemap.** The page files stay in the project so the content can be developed before publishing. This rule applies to Carnac, Vannes, Quiberon, and any future Morbihan train site.
+
+---
+
 ## Known Pitfalls (project-specific only)
 - **CSS accordion**: use `grid-template-rows: 0fr → 1fr`, not `max-height`. Already in globals.css as `.faq-answer-wrap` / `.faq-answer-wrap.open`; inner content needs `.faq-answer-inner overflow-hidden`.
 - **Infinite scroll columns**: total height of one card set must be ≥ container height (`h-[560px]`) for seamless loop.
