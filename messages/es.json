@@ -145,7 +145,23 @@
       "faqLabel": "Preguntas Frecuentes",
       "faqHeadingPrefix": "Preguntas Frecuentes",
       "faqHeadingHighlight": "sobre el recorrido",
-      "faqDescription": "Encuentra respuestas claras a las preguntas más habituales sobre el recorrido, las paradas y la duración del Petit Train de Carnac."
+      "faqDescription": "Encuentra respuestas claras a las preguntas más habituales sobre el recorrido, las paradas y la duración del Petit Train de Carnac.",
+      "faqQ1": "¿Cuál es el recorrido del Petit Train de Carnac?",
+      "faqA1": "El recorrido del Petit Train de Carnac es una visita guiada que comienza y termina en el Parking du Ménec. Durante el trayecto, el tren pasa cerca de los megalitos de Carnac, Carnac-Plage y el puerto de La Trinité-sur-Mer, ofreciendo una visión completa de la región.",
+      "faqQ2": "¿Cuánto dura el recorrido del Petit Train de Carnac?",
+      "faqA2": "El recorrido completo dura aproximadamente 55 minutos. Esta duración permite a los visitantes descubrir los principales lugares de Carnac a un ritmo tranquilo, acompañados de un comentario de audio durante todo el trayecto.",
+      "faqQ3": "¿Dónde comienza y termina el recorrido?",
+      "faqA3": "El recorrido comienza y termina en el Parking du Ménec en Carnac, situado frente a la Maison des Mégalithes. Es el principal punto de salida y llegada para los visitantes individuales.",
+      "faqQ4": "¿Hace el Petit Train paradas durante el recorrido?",
+      "faqA4": "El Petit Train recorre varios lugares a lo largo del recorrido, en particular Carnac-Plage y el puerto de La Trinité-sur-Mer. Estas etapas forman parte de la visita. Los visitantes individuales embarcan y desembarcan en el punto de partida del Ménec.",
+      "faqQ5": "¿Veremos los megalitos de Carnac durante la visita?",
+      "faqA5": "Sí. El recorrido pasa cerca de los alineamientos de megalitos más famosos de Carnac, en particular los de Ménec, Kermario y Kerlescan. El comentario de audio explica la historia y el significado de estos monumentos prehistóricos a lo largo del trayecto.",
+      "faqQ6": "¿El recorrido incluye el túmulo Saint-Michel y los dólmenes?",
+      "faqA6": "Sí. El recorrido destaca el túmulo Saint-Michel y los dólmenes circundantes. Estos lugares se presentan a través del comentario de audio como parte de la visita guiada.",
+      "faqQ7": "¿Qué veremos en Carnac-Plage durante el recorrido?",
+      "faqA7": "Durante el recorrido, el Petit Train atraviesa Carnac-Plage, permitiendo a los visitantes disfrutar de las vistas de las playas de arena blanca y el ambiente costero. Esta parte de la visita ofrece un contraste sorprendente entre el patrimonio prehistórico y los paisajes costeros.",
+      "faqQ8": "¿El recorrido llega hasta La Trinité-sur-Mer?",
+      "faqA8": "Sí. El recorrido incluye el puerto de La Trinité-sur-Mer, un destino reconocido por la vela. Los visitantes pueden observar el puerto deportivo, los barcos y la zona portuaria, acompañados de un comentario sobre la ciudad y su historia marítima."
     },
     "informations": {
       "heroLabel": "Información Práctica",
@@ -442,7 +458,14 @@
       "closuresBody": "Los festivos siguen el horario habitual. El Petit Train está <strong>cerrado del 9 al 16 de octubre</strong> y <strong>de noviembre a marzo inclusive</strong>.",
       "viewPlanButton": "Ver el mapa del recorrido",
       "viewPlanImageAlt": "Mapa del recorrido — Tour de Menhirs en Petit Train de Carnac",
-      "lightboxClose": "Cerrar"
+      "lightboxClose": "Cerrar",
+      "dep1Location": "Maison des Mégalithes",
+      "dep2Location": "A 50 m de la Base náutica",
+      "dep3Location": "Parada de autobús Cours des Quais, lado mar — antes de la rotonda Alain Barrière",
+      "frequencyEvery20": "Una salida cada 20 min",
+      "frequencyEvery30": "Una salida cada 30 min",
+      "noteSaturdayIncluded": "Sábado incluido",
+      "noteSaturdayException": "Excepto el sábado (el sábado: horario «anaranja»)"
     },
     "routesHeroDefaults": {
       "primaryButton": "Folleto individual",

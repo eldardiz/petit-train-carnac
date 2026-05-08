@@ -145,7 +145,23 @@
       "faqLabel": "Questions Fréquentes",
       "faqHeadingPrefix": "Questions Fréquemment Posées",
       "faqHeadingHighlight": "sur le parcours",
-      "faqDescription": "Trouvez des réponses claires aux questions les plus fréquentes sur le parcours, les arrêts et la durée du Petit Train de Carnac."
+      "faqDescription": "Trouvez des réponses claires aux questions les plus fréquentes sur le parcours, les arrêts et la durée du Petit Train de Carnac.",
+      "faqQ1": "Quel est le parcours du Petit Train de Carnac ?",
+      "faqA1": "Le parcours du Petit Train de Carnac est une visite guidée qui débute et se termine au parking du Ménec. Pendant le trajet, le train passe près des menhirs de Carnac, de Carnac-Plage et du port de La Trinité-sur-Mer, offrant un aperçu complet de la région.",
+      "faqQ2": "Quelle est la durée du parcours du Petit Train de Carnac ?",
+      "faqA2": "Le parcours complet dure environ 55 minutes. Cette durée permet aux visiteurs de découvrir les principaux sites de Carnac à un rythme tranquille, accompagnés d'un commentaire audio tout au long du trajet.",
+      "faqQ3": "Où commence et se termine le parcours ?",
+      "faqA3": "Le parcours commence et se termine au parking du Ménec à Carnac, situé en face de la Maison des Mégalithes. C'est le principal point de départ et d'arrivée pour les visiteurs individuels.",
+      "faqQ4": "Le Petit Train fait-il des arrêts pendant le parcours ?",
+      "faqA4": "Le Petit Train dessert plusieurs sites le long du parcours, notamment Carnac-Plage et le port de La Trinité-sur-Mer. Ces étapes font partie de la visite. Les visiteurs individuels embarquent et débarquent au point de départ du Ménec.",
+      "faqQ5": "Verra-t-on les menhirs de Carnac pendant la visite ?",
+      "faqA5": "Oui. Le parcours passe près des plus célèbres alignements de menhirs de Carnac, notamment ceux du Ménec, de Kermario et de Kerlescan. Le commentaire audio explique l'histoire et la signification de ces monuments préhistoriques tout au long du trajet.",
+      "faqQ6": "Le parcours inclut-il le tumulus Saint-Michel et les dolmens ?",
+      "faqA6": "Oui. Le parcours met en valeur le tumulus Saint-Michel et les dolmens environnants. Ces sites sont présentés via le commentaire audio dans le cadre de la visite guidée.",
+      "faqQ7": "Que verra-t-on à Carnac-Plage pendant le parcours ?",
+      "faqA7": "Pendant le parcours, le Petit Train traverse Carnac-Plage, permettant aux visiteurs de profiter de la vue sur les plages de sable blanc et l'ambiance balnéaire. Cette partie de la visite offre un contraste saisissant entre patrimoine préhistorique et paysages côtiers.",
+      "faqQ8": "Le parcours va-t-il jusqu'à La Trinité-sur-Mer ?",
+      "faqA8": "Oui. Le parcours inclut le port de La Trinité-sur-Mer, destination réputée pour la voile. Les visiteurs peuvent observer la marina, les bateaux et la zone portuaire, accompagnés d'un commentaire sur la ville et son histoire maritime."
     },
     "informations": {
       "heroLabel": "Informations Pratiques",
@@ -443,7 +459,14 @@
       "viewPlanButton": "Voir le plan",
       "viewPlanImageAlt": "Plan du parcours — Menhirs Tour en Petit Train de Carnac",
       "lightboxClose": "Fermer",
-      "intermediateStopNote": "Arrêt intermédiaire — descente définitive uniquement, remontée impossible."
+      "intermediateStopNote": "Arrêt intermédiaire — descente définitive uniquement, remontée impossible.",
+      "dep1Location": "Maison des Mégalithes",
+      "dep2Location": "À 50 m de la Base nautique",
+      "dep3Location": "Arrêt de bus Cours des Quais, côté mer — avant le rond-point Alain Barrière",
+      "frequencyEvery20": "Un départ toutes les 20 min",
+      "frequencyEvery30": "Un départ toutes les 30 min",
+      "noteSaturdayIncluded": "Samedi inclus",
+      "noteSaturdayException": "Sauf le samedi (le samedi : horaires « orange »)"
     },
     "routesHeroDefaults": {
       "primaryButton": "Flyer individuel",

@@ -145,7 +145,23 @@
       "faqLabel": "Časté dotazy",
       "faqHeadingPrefix": "Často kladené otázky",
       "faqHeadingHighlight": "ohledně trasy",
-      "faqDescription": "Najděte jasné odpovědi na nejčastější otázky ohledně trasy, zastávek a délky výletu Petit Train de Carnac."
+      "faqDescription": "Najděte jasné odpovědi na nejčastější otázky ohledně trasy, zastávek a délky výletu Petit Train de Carnac.",
+      "faqQ1": "Jaká je trasa Petit Train de Carnac?",
+      "faqA1": "Trasa Petit Train de Carnac je průvodcovaná prohlídka, která začíná a končí na Parking du Ménec. Vlak projíždí kolem menhirů Carnac, Carnac-Plage a přístavu La Trinité-sur-Mer a nabízí tak ucelený přehled o regionu.",
+      "faqQ2": "Jak dlouho trvá jízda Petit Train de Carnac?",
+      "faqA2": "Celá jízda trvá přibližně 55 minut. Tato doba umožňuje návštěvníkům objevit hlavní zajímavosti Carnac pohodovým tempem, doprovázeni zvukovým komentářem po celou dobu cesty.",
+      "faqQ3": "Kde jízda začíná a končí?",
+      "faqA3": "Jízda začíná a končí na Parking du Ménec v Carnac, naproti Maison des Mégalithes. Jedná se o hlavní nástupní a výstupní místo pro individuální návštěvníky.",
+      "faqQ4": "Zastavuje Petit Train během jízdy?",
+      "faqA4": "Petit Train obsluhuje několik míst podél trasy, včetně Carnac-Plage a přístavu La Trinité-sur-Mer. Tyto zastávky jsou součástí prohlídky. Individuální návštěvníci nastupují a vystupují v nástupním místě Ménec.",
+      "faqQ5": "Uvidíme menhiry Carnac během prohlídky?",
+      "faqA5": "Ano. Trasa prochází kolem nejslavnějších megalitických uspořádání Carnac, zejména těch v Ménec, Kermario a Kerlescan. Zvukový komentář vysvětluje historii a význam těchto prehistorických památek po celou dobu cesty.",
+      "faqQ6": "Zahrnuje trasa tumulus Saint-Michel a dolmeny?",
+      "faqA6": "Ano. Trasa přibližuje tumulus Saint-Michel a okolní dolmeny. Tato místa jsou prezentována prostřednictvím zvukového komentáře jako součást průvodcované prohlídky.",
+      "faqQ7": "Co uvidíme v Carnac-Plage během jízdy?",
+      "faqA7": "Během jízdy projíždí Petit Train přes Carnac-Plage, kde si návštěvníci mohou vychutnat výhledy na bílé písečné pláže a přímořskou atmosféru. Tato část prohlídky nabízí výrazný kontrast mezi prehistorickým dědictvím a pobřežními scenériemi.",
+      "faqQ8": "Jede trasa až do La Trinité-sur-Mer?",
+      "faqA8": "Ano. Trasa zahrnuje přístav La Trinité-sur-Mer, proslulé místo pro plachtění. Návštěvníci mohou pozorovat marinu, lodě a přístavní oblast, doprovázeni komentářem o městě a jeho námořní historii."
     },
     "informations": {
       "heroLabel": "Praktické informace",
@@ -442,7 +458,14 @@
       "closuresBody": "Svátky se řídí běžnými jízdními řády. Petit Train je <strong>uzavřen od 9. do 16. října</strong> a dále <strong>od listopadu do března včetně</strong>.",
       "viewPlanButton": "Zobrazit plán",
       "viewPlanImageAlt": "Plán trasy — Menhiry Tour Petit Train de Carnac",
-      "lightboxClose": "Zavřít"
+      "lightboxClose": "Zavřít",
+      "dep1Location": "Maison des Mégalithes",
+      "dep2Location": "50 m od lodního klubu",
+      "dep3Location": "Zastávka autobusu Cours des Quais, na straně moře — před kruhovým objezdem Alain Barrière",
+      "frequencyEvery20": "Odjezd každých 20 minut",
+      "frequencyEvery30": "Odjezd každých 30 minut",
+      "noteSaturdayIncluded": "Včetně soboty",
+      "noteSaturdayException": "Kromě soboty (sobota: „oranžový“ jízdní řád)"
     },
     "routesHeroDefaults": {
       "primaryButton": "Leták pro jednotlivce",

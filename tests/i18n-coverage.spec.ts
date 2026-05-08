@@ -10,12 +10,29 @@ import { test, expect } from '@playwright/test'
 import fs from 'fs'
 import path from 'path'
 
-const LOCALES = ['fr', 'en', 'es', 'de', 'it', 'nl'] as const
+const LOCALES = ['fr', 'en', 'es', 'de', 'it', 'nl', 'cs'] as const
 const PAGES = ['/', '/prices', '/routes', '/informations', '/faqs', '/book', '/privatisation', '/careers'] as const
 
 // French stop words that should not appear in non-FR locales.
-// Pattern: whole-word match, case-insensitive.
-const FR_STOP_WORDS = /\b(votre|notre|nos|vos|les|des|avec|pour|dans|sans|sur|par|chez|que|qui|est|sont|cette|ces|leurs|leur|aussi|tout|tous|toute|toutes|pendant|après|avant)\b/gi
+// Uses Unicode-aware word boundaries (covers é, ä, ü, etc.) so words like
+// "estándar" and "quién" don't false-match "est" / "qui" via JS \b.
+const FR_STOP_WORDS_BASE = [
+  'votre','notre','nos','vos','les','des','avec','pour','dans','sans','sur','par','chez',
+  'que','qui','est','sont','cette','ces','leurs','leur','aussi','tout','tous','toute',
+  'toutes','pendant','après','avant',
+]
+// Words that are also common standalone words in specific non-French locales.
+const LOCALE_STOP_WORD_EXCLUSIONS: Partial<Record<string, string[]>> = {
+  es: ['que', 'les'],  // common Spanish conjunction & indirect-object pronoun
+  de: ['des'],         // German genitive article
+}
+// Extended-Latin character class — used for Unicode-aware "word" boundary
+const LATIN = 'a-zA-ZÀ-ÖØ-öø-ÿ'
+function getFrStopWordPattern(locale: string): RegExp {
+  const exclusions = LOCALE_STOP_WORD_EXCLUSIONS[locale] ?? []
+  const words = FR_STOP_WORDS_BASE.filter(w => !exclusions.includes(w))
+  return new RegExp(`(?<![${LATIN}])(${words.join('|')})(?![${LATIN}])`, 'gi')
+}
 
 // Brand names and proper nouns that are legitimately French in every locale.
 const FR_ALLOWLIST = [
@@ -95,7 +112,7 @@ for (const locale of LOCALES) {
         await pw.goto(url, { waitUntil: 'domcontentloaded' })
         const bodyText = await pw.locator('body').innerText()
         const stripped = stripAllowlist(bodyText)
-        const matches = stripped.match(FR_STOP_WORDS) ?? []
+        const matches = stripped.match(getFrStopWordPattern(locale)) ?? []
 
         expect(
           matches.length,
