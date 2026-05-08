@@ -20,76 +20,6 @@ type Departure = {
   intermediate?: boolean;
 };
 
-const departures: Departure[] = [
-  {
-    number: 1,
-    name: "Parking du Ménec",
-    location: "Maison des Mégalithes",
-    periods: [
-      {
-        label: "Avril · Mai · Juin · Septembre · 1er – 8 octobre",
-        band: "yellow",
-        hours: "10H – 17H30",
-        frequency: "Un départ toutes les 20 min",
-      },
-      {
-        label: "Juillet & Août",
-        band: "purple",
-        hours: "9H30 – 18H30",
-        frequency: "Un départ toutes les 20 min",
-      },
-      {
-        label: "17 – 31 octobre",
-        band: "green",
-        hours: "10H – 17H",
-        frequency: "Un départ toutes les 30 min",
-      },
-    ],
-  },
-  {
-    number: 2,
-    name: "Port-En-Drô — Carnac Plage",
-    location: "À 50 m de la Base nautique",
-    intermediate: true,
-    periods: [
-      {
-        label: "Avril · Mai · Juin · Septembre · 1er – 8 octobre",
-        band: "orange",
-        hours: "10H15 – 17H15",
-        frequency: "Un départ toutes les 30 min",
-        note: "Samedi inclus",
-      },
-      {
-        label: "Juillet & Août",
-        band: "blue",
-        hours: "10H · 11H · 12H · 14H · 15H · 16H · 17H · 18H",
-        note: "Sauf le samedi (le samedi : horaires « orange »)",
-      },
-    ],
-  },
-  {
-    number: 3,
-    name: "La Trinité-sur-Mer",
-    location: "Arrêt de bus Cours des Quais, côté mer — avant le rond-point Alain Barrière",
-    intermediate: true,
-    periods: [
-      {
-        label: "Avril · Mai · Juin · Septembre · 1er – 8 octobre",
-        band: "orange",
-        hours: "10H30 – 17H",
-        frequency: "Un départ toutes les 30 min",
-        note: "Samedi inclus",
-      },
-      {
-        label: "Juillet & Août",
-        band: "blue",
-        hours: "10H15 · 11H15 · 14H15 · 15H15 · 16H15 · 17H15",
-        note: "Sauf le samedi (le samedi : horaires « orange »)",
-      },
-    ],
-  },
-];
-
 const BAND_STYLES: Record<Band, { bg: string; text: string; pill: string }> = {
   yellow: {
     bg: "bg-[#fde68a]",
@@ -120,6 +50,76 @@ const BAND_STYLES: Record<Band, { bg: string; text: string; pill: string }> = {
 
 export default function InformationsSchedule() {
   const t = useTranslations("sections.informationsScheduleLabels");
+
+  const departures: Departure[] = [
+    {
+      number: 1,
+      name: "Parking du Ménec",
+      location: t("dep1Location"),
+      periods: [
+        {
+          label: "Avril · Mai · Juin · Septembre · 1er – 8 octobre",
+          band: "yellow",
+          hours: "10H – 17H30",
+          frequency: t("frequencyEvery20"),
+        },
+        {
+          label: "Juillet & Août",
+          band: "purple",
+          hours: "9H30 – 18H30",
+          frequency: t("frequencyEvery20"),
+        },
+        {
+          label: "17 – 31 octobre",
+          band: "green",
+          hours: "10H – 17H",
+          frequency: t("frequencyEvery30"),
+        },
+      ],
+    },
+    {
+      number: 2,
+      name: "Port-En-Drô — Carnac Plage",
+      location: t("dep2Location"),
+      intermediate: true,
+      periods: [
+        {
+          label: "Avril · Mai · Juin · Septembre · 1er – 8 octobre",
+          band: "orange",
+          hours: "10H15 – 17H15",
+          frequency: t("frequencyEvery30"),
+          note: t("noteSaturdayIncluded"),
+        },
+        {
+          label: "Juillet & Août",
+          band: "blue",
+          hours: "10H · 11H · 12H · 14H · 15H · 16H · 17H · 18H",
+          note: t("noteSaturdayException"),
+        },
+      ],
+    },
+    {
+      number: 3,
+      name: "La Trinité-sur-Mer",
+      location: t("dep3Location"),
+      intermediate: true,
+      periods: [
+        {
+          label: "Avril · Mai · Juin · Septembre · 1er – 8 octobre",
+          band: "orange",
+          hours: "10H30 – 17H",
+          frequency: t("frequencyEvery30"),
+          note: t("noteSaturdayIncluded"),
+        },
+        {
+          label: "Juillet & Août",
+          band: "blue",
+          hours: "10H15 · 11H15 · 14H15 · 15H15 · 16H15 · 17H15",
+          note: t("noteSaturdayException"),
+        },
+      ],
+    },
+  ];
 
   return (
     <section id="horaires" data-anim-section className="bg-[#f5ebdd] py-20 overflow-hidden">

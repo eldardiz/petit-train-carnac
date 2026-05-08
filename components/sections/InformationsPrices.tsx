@@ -77,7 +77,7 @@ export default function InformationsPrices() {
             </div>
             <div className="flex items-start gap-2 mt-auto pt-2">
               <div className="relative shrink-0 w-6 h-6 mt-0.5">
-                <Image src="/figma-assets/icon-info.svg" alt="" fill className="object-contain" aria-hidden="true" />
+                <Image src="/figma-assets/icon-info.svg" alt="" fill sizes="64px" className="object-contain" aria-hidden="true" />
               </div>
               <p className="font-['Manrope',sans-serif] text-[11px] leading-[1.4] tracking-[-0.5px] text-[rgba(35,35,35,0.7)]">
                 <strong>For individuals:</strong> the meeting point is at the departure point; ticket office on-site.
@@ -89,7 +89,7 @@ export default function InformationsPrices() {
           <div className="bg-[#f5ebdd] border-2 border-[#4d1c64] flex-1 p-6 flex flex-col gap-4">
             <div className="flex items-center gap-2 pb-4 border-b border-[rgba(0,0,0,0.15)]">
               <div className="relative shrink-0 w-6 h-6">
-                <Image src="/figma-assets/icon-ticket.svg" alt="" fill className="object-contain" aria-hidden="true" />
+                <Image src="/figma-assets/icon-ticket.svg" alt="" fill sizes="64px" className="object-contain" aria-hidden="true" />
               </div>
               <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#4d1c64] text-[22px] tracking-[-0.72px]">
                 Early Morning Departures
@@ -110,7 +110,7 @@ export default function InformationsPrices() {
             </div>
             <div className="flex items-start gap-2 mt-auto pt-2">
               <div className="relative shrink-0 w-6 h-6 mt-0.5">
-                <Image src="/figma-assets/icon-info.svg" alt="" fill className="object-contain" aria-hidden="true" />
+                <Image src="/figma-assets/icon-info.svg" alt="" fill sizes="64px" className="object-contain" aria-hidden="true" />
               </div>
               <p className="font-['Manrope',sans-serif] text-[11px] leading-[1.4] tracking-[-0.5px] text-[rgba(35,35,35,0.7)]">
                 <strong>Reduced rate</strong> applicable to the first departures of the morning only. Tickets available at the on-site ticket office.
@@ -122,7 +122,7 @@ export default function InformationsPrices() {
           <div className="bg-[#4d1c64] border border-[rgba(247,247,240,0.15)] flex-1 p-6 flex flex-col gap-4">
             <div className="flex items-center gap-2 pb-4 border-b border-[rgba(255,255,255,0.15)]">
               <div className="relative shrink-0 w-6 h-6">
-                <Image src="/figma-assets/icon-group.svg" alt="" fill className="object-contain" aria-hidden="true" />
+                <Image src="/figma-assets/icon-group.svg" alt="" fill sizes="64px" className="object-contain" aria-hidden="true" />
               </div>
               <p className="font-['Bricolage_Grotesque',sans-serif] italic text-white text-[22px] tracking-[-0.72px]">
                 Group Booking
@@ -135,7 +135,7 @@ export default function InformationsPrices() {
               <div className="flex flex-col gap-2">
                 <a href="mailto:petittrain-lebayon@orange.fr" className="flex items-center gap-2 text-white hover:opacity-80 transition-opacity">
                   <div className="relative shrink-0 w-5 h-5">
-                    <Image src="/figma-assets/icon-email.svg" alt="" fill className="object-contain" aria-hidden="true" />
+                    <Image src="/figma-assets/icon-email.svg" alt="" fill sizes="64px" className="object-contain" aria-hidden="true" />
                   </div>
                   <span className="font-['Manrope',sans-serif] text-[15px] underline underline-offset-2">
                     petittrain-lebayon@orange.fr
@@ -143,7 +143,7 @@ export default function InformationsPrices() {
                 </a>
                 <a href="tel:+33297240629" className="flex items-center gap-2 text-white hover:opacity-80 transition-opacity">
                   <div className="relative shrink-0 w-5 h-5">
-                    <Image src="/figma-assets/icon-phone.svg" alt="" fill className="object-contain" aria-hidden="true" />
+                    <Image src="/figma-assets/icon-phone.svg" alt="" fill sizes="64px" className="object-contain" aria-hidden="true" />
                   </div>
                   <span className="font-['Manrope',sans-serif] text-[15px]">02 97 24 06 29</span>
                 </a>
@@ -151,7 +151,7 @@ export default function InformationsPrices() {
             </div>
             <div className="flex items-start gap-2 mt-auto pt-2">
               <div className="relative shrink-0 w-6 h-6 mt-0.5">
-                <Image src="/figma-assets/icon-info-white.svg" alt="" fill className="object-contain" aria-hidden="true" />
+                <Image src="/figma-assets/icon-info-white.svg" alt="" fill sizes="64px" className="object-contain" aria-hidden="true" />
               </div>
               <p className="font-['Manrope',sans-serif] text-[11px] leading-[1.4] tracking-[-0.5px] text-[rgba(255,255,255,0.7)]">
                 <strong>For groups:</strong> reduced rate for 20+ passengers embarking. Advance reservation recommended.

@@ -25,7 +25,7 @@ export default function Locations() {
         <div data-anim-item className="flex flex-col gap-6 items-center text-center max-w-[768px]">
           <div className="flex items-center gap-2">
             <div className="relative shrink-0 w-[19px] h-[19px]">
-              <Image src="/figma-assets/icon-train.svg" alt="" fill className="object-contain" aria-hidden="true" />
+              <Image src="/figma-assets/icon-train.svg" alt="" fill sizes="64px" className="object-contain" aria-hidden="true" />
             </div>
             <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#54206d] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
               {t("label")}
@@ -86,7 +86,7 @@ export default function Locations() {
                       {t(`${key}.title`)}
                     </p>
                     <div className="relative shrink-0 w-6 h-6">
-                      <Image src="/figma-assets/icon-link.svg" alt="" fill className="object-contain" aria-hidden="true" />
+                      <Image src="/figma-assets/icon-link.svg" alt="" fill sizes="64px" className="object-contain" aria-hidden="true" />
                     </div>
                   </div>
                   <p className="font-['Manrope',sans-serif] font-light italic text-[14px] leading-[1.3] tracking-[-0.42px] w-[271px]">
