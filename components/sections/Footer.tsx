@@ -3,9 +3,10 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import TransitionLink from "@/components/ui/TransitionLink";
+import { brand } from "@/lib/brand";
 
 const socialIcons = [
-  { src: "/figma-assets/icon-facebook.svg", alt: "Facebook", href: "https://www.facebook.com/lespetitstrainsdumorbihan" },
+  { src: "/figma-assets/icon-facebook.svg", alt: "Facebook", href: brand.social.facebook },
 ];
 
 export default function Footer() {
@@ -34,6 +35,7 @@ export default function Footer() {
             src="/figma-assets/FooterBackground.jpg"
             alt=""
             fill
+            sizes="100vw"
             className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-black/70" />
@@ -114,22 +116,22 @@ export default function Footer() {
                 {t("footer.contactUs")}
               </p>
               <a
-                href="mailto:petittrain-lebayon@orange.fr"
+                href={`mailto:${brand.contact.email}`}
                 className="flex items-center gap-1.5 font-['Manrope',sans-serif] font-light text-[#f5ebdd] text-base leading-6 hover:text-white transition-colors"
               >
                 <div className="relative shrink-0 w-4 h-4">
-                  <Image src="/figma-assets/icon-email.svg" alt="" fill className="object-contain" aria-hidden="true" />
+                  <Image src="/figma-assets/icon-email.svg" alt="" fill sizes="64px" className="object-contain" aria-hidden="true" />
                 </div>
-                petittrain-lebayon@orange.fr
+                {brand.contact.email}
               </a>
               <a
-                href="tel:+33297240629"
+                href={`tel:${brand.contact.phone}`}
                 className="flex items-center gap-1.5 font-['Manrope',sans-serif] font-light text-[#f5ebdd] text-base leading-6 hover:text-white transition-colors underline"
               >
                 <div className="relative shrink-0 w-4 h-4">
-                  <Image src="/figma-assets/icon-phone.svg" alt="" fill className="object-contain" aria-hidden="true" />
+                  <Image src="/figma-assets/icon-phone.svg" alt="" fill sizes="64px" className="object-contain" aria-hidden="true" />
                 </div>
-                +33 2 97 24 06 29
+                {brand.contact.phoneDisplay}
               </a>
             </div>
 

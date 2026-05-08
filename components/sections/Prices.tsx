@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-
-const individualPrices = ["8,50€", "5€"];
-const earlyBirdPrices = ["7,00€", "3,50€"];
+import { brand } from "@/lib/brand";
 
 export default function Prices() {
   const t = useTranslations("sections.prices");
 
+  const individualPrices = [brand.prices.individual.adult, brand.prices.individual.child]
+  const earlyBirdPrices = [brand.prices.earlyBird.adult, brand.prices.earlyBird.child]
   const rowLabels = [t("rowAdults"), t("rowChildren")] as const;
 
   return (
@@ -30,7 +30,7 @@ export default function Prices() {
         <div data-anim-item className="relative flex flex-col gap-6 items-center text-center max-w-[623px]">
           <div className="flex items-center gap-2">
             <div className="relative shrink-0 w-[19px] h-[19px]">
-              <Image src="/figma-assets/icon-train.svg" alt="" fill className="object-contain" aria-hidden="true" />
+              <Image src="/figma-assets/icon-train.svg" alt="" fill sizes="64px" className="object-contain" aria-hidden="true" />
             </div>
             <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#f5ebdd] text-base leading-6 tracking-[-0.48px] whitespace-nowrap">
               {t("label")}
@@ -50,7 +50,7 @@ export default function Prices() {
           <div className="bg-[#f5ebdd] flex flex-col w-full max-w-[371px] min-h-[317px] p-6 relative rounded-[16px] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
             <div className="flex items-center gap-2.5 mb-3">
               <div className="relative shrink-0 w-6 h-6">
-                <Image src="/figma-assets/PurpleCashIcon.svg" alt="" fill className="object-contain" aria-hidden="true" />
+                <Image src="/figma-assets/PurpleCashIcon.svg" alt="" fill sizes="64px" className="object-contain" aria-hidden="true" />
               </div>
               <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#4d1c64] text-[24px] leading-normal tracking-[-0.72px] whitespace-nowrap">
                 {t("individual.title")}
@@ -69,7 +69,7 @@ export default function Prices() {
             </div>
             <div className="flex items-start gap-2.5 mt-auto pt-4">
               <div className="relative shrink-0 w-6 h-6">
-                <Image src="/figma-assets/icon-info.svg" alt="" fill className="object-contain" aria-hidden="true" />
+                <Image src="/figma-assets/icon-info.svg" alt="" fill sizes="64px" className="object-contain" aria-hidden="true" />
               </div>
               <p className="font-['Manrope',sans-serif] text-[11px] text-[rgba(35,35,35,0.7)] leading-[1.4] tracking-[-0.5px]">
                 {t.rich("individual.note", {
@@ -83,7 +83,7 @@ export default function Prices() {
           <div className="bg-[#f5ebdd] border-2 border-[#4d1c64] flex flex-col w-full max-w-[371px] min-h-[317px] p-6 rounded-[16px] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
             <div className="flex items-center gap-2.5 mb-3">
               <div className="relative shrink-0 w-6 h-6">
-                <Image src="/figma-assets/PurpleCashIcon.svg" alt="" fill className="object-contain" aria-hidden="true" />
+                <Image src="/figma-assets/PurpleCashIcon.svg" alt="" fill sizes="64px" className="object-contain" aria-hidden="true" />
               </div>
               <p className="font-['Bricolage_Grotesque',sans-serif] italic text-[#4d1c64] text-[24px] leading-normal tracking-[-0.72px]">
                 {t("earlyBird.title")}
@@ -105,7 +105,7 @@ export default function Prices() {
             </div>
             <div className="flex items-start gap-2.5 mt-auto pt-4">
               <div className="relative shrink-0 w-6 h-6">
-                <Image src="/figma-assets/icon-info.svg" alt="" fill className="object-contain" aria-hidden="true" />
+                <Image src="/figma-assets/icon-info.svg" alt="" fill sizes="64px" className="object-contain" aria-hidden="true" />
               </div>
               <p className="font-['Manrope',sans-serif] text-[11px] text-[rgba(35,35,35,0.7)] leading-[1.4] tracking-[-0.5px]">
                 {t.rich("earlyBird.note", {
@@ -119,7 +119,7 @@ export default function Prices() {
           <div className="bg-[#4d1c64] border border-[rgba(247,247,240,0.15)] flex flex-col w-full max-w-[371px] min-h-[317px] p-6 relative rounded-[16px] overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
             <div className="flex items-center gap-2.5 mb-3">
               <div className="relative shrink-0 w-6 h-6">
-                <Image src="/figma-assets/icon-group.svg" alt="" fill className="object-contain" aria-hidden="true" />
+                <Image src="/figma-assets/icon-group.svg" alt="" fill sizes="64px" className="object-contain" aria-hidden="true" />
               </div>
               <p className="font-['Bricolage_Grotesque',sans-serif] italic text-white text-[24px] leading-normal tracking-[-0.72px] whitespace-nowrap">
                 {t("group.title")}
@@ -132,30 +132,30 @@ export default function Prices() {
               </p>
               <div className="flex flex-col gap-2">
                 <a
-                  href="mailto:petittrain-lebayon@orange.fr"
+                  href={`mailto:${brand.contact.email}`}
                   className="flex items-center gap-2 text-white hover:opacity-80 transition-opacity"
                 >
                   <div className="relative shrink-0 w-5 h-5">
-                    <Image src="/figma-assets/icon-email.svg" alt="" fill className="object-contain" aria-hidden="true" />
+                    <Image src="/figma-assets/icon-email.svg" alt="" fill sizes="64px" className="object-contain" aria-hidden="true" />
                   </div>
                   <span className="font-['Manrope',sans-serif] text-[15px] underline underline-offset-2">
-                    petittrain-lebayon@orange.fr
+                    {brand.contact.email}
                   </span>
                 </a>
                 <a
-                  href="tel:+33297240629"
+                  href={`tel:${brand.contact.phone}`}
                   className="flex items-center gap-2 text-white hover:opacity-80 transition-opacity"
                 >
                   <div className="relative shrink-0 w-5 h-5">
-                    <Image src="/figma-assets/icon-phone.svg" alt="" fill className="object-contain" aria-hidden="true" />
+                    <Image src="/figma-assets/icon-phone.svg" alt="" fill sizes="64px" className="object-contain" aria-hidden="true" />
                   </div>
-                  <span className="font-['Manrope',sans-serif] text-[15px]">02 97 24 06 29</span>
+                  <span className="font-['Manrope',sans-serif] text-[15px]">{brand.contact.phoneDisplay}</span>
                 </a>
               </div>
             </div>
             <div className="flex items-start gap-2.5 mt-auto pt-4">
               <div className="relative shrink-0 w-6 h-6">
-                <Image src="/figma-assets/icon-info-white.svg" alt="" fill className="object-contain" aria-hidden="true" />
+                <Image src="/figma-assets/icon-info-white.svg" alt="" fill sizes="64px" className="object-contain" aria-hidden="true" />
               </div>
               <p className="font-['Manrope',sans-serif] text-[11px] text-[rgba(255,255,255,0.7)] leading-[1.4] tracking-[-0.5px]">
                 {t.rich("group.note", {
