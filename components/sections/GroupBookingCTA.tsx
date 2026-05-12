@@ -9,7 +9,15 @@ export default function GroupBookingCTA() {
     <section data-anim-section className="relative overflow-hidden">
       {/* Background image with dark overlay */}
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
-        <Image src="/figma-assets/group-booking-bg.jpg" alt="" fill sizes="100vw" className="object-cover" />
+        <video
+          src="/figma-assets/carnac-hero.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
