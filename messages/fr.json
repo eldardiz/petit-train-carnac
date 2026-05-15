@@ -67,7 +67,7 @@
     "rightImageAlt": "Le Petit Train de Carnac sur un parcours pittoresque",
     "noteImportanteLabel": "Note Importante",
     "noteImportanteHeading": "Réservation en Ligne",
-    "noteImportanteBody": "La réservation est possible mais non obligatoire. Vous pouvez réserver jusqu'à <strong>2 heures</strong> avant le départ souhaité. N'oubliez pas de prévoir le temps de trajet et le stationnement sur place. Passé ce délai, rendez-vous directement au point de départ et achetez vos billets au guichet ou auprès du conducteur.",
+    "noteImportanteBody": "<strong>La réservation est possible mais pas obligatoire.</strong> Vous pouvez réserver jusqu'à <strong>2 heures</strong> avant le départ souhaité. N'oubliez pas de prévoir le temps de trajet et le stationnement sur place. Passé ce délai, rendez-vous directement au point de départ et achetez vos billets à la caisse sur place.",
     "noteImportanteBodyExtra": "Toutes les places ne sont pas disponibles à la vente en ligne."
   },
   "metadata": {
@@ -120,11 +120,11 @@
       "faqDescription": "Trouvez des réponses claires aux questions les plus fréquentes sur les tarifs, les réductions de groupe et comment réserver le Petit Train de Carnac.",
       "faq": {
         "q1": "Quel est le tarif d'un billet pour le Petit Train de Carnac ?",
-        "a1": "Les tarifs dépendent de l'âge et de la taille du groupe. Pour les visiteurs individuels, le billet adulte standard est à 8,5 euros. Les enfants de moins de 12 ans bénéficient d'un tarif réduit à 5 euros. Les tarifs de groupe s'appliquent à partir de 20 personnes.",
+        "a1": "Les tarifs dépendent de l'âge et de la taille du groupe. Pour les visiteurs individuels, le billet adulte standard est à 8,50 euros. Les enfants de 3 à 11 ans bénéficient d'un tarif réduit à 5 euros. Les tarifs de groupe s'appliquent à partir de 20 personnes.",
         "q2": "Y a-t-il des tarifs réduits pour les enfants ?",
-        "a2": "Oui. Les enfants de moins de 12 ans bénéficient d'un tarif réduit. Leur billet donne accès à la même visite guidée et aux commentaires audio, dont une version spécialement adaptée aux enfants.",
+        "a2": "Oui. Les enfants de 3 à 11 ans bénéficient d'un tarif réduit. Leur billet donne accès à la même visite guidée et aux commentaires audio, dont une version spécialement adaptée aux enfants.",
         "q3": "Les enfants ont-ils besoin d'un billet pour monter dans le Petit Train ?",
-        "a3": "Oui. Tout passager doit être en possession d'un billet pour embarquer dans le Petit Train de Carnac. Des tarifs réduits sont appliqués pour les enfants de moins de 12 ans.",
+        "a3": "Oui. Tout passager doit être en possession d'un billet pour embarquer dans le Petit Train de Carnac. Des tarifs réduits sont appliqués pour les enfants de 3 à 11 ans.",
         "q4": "Existe-t-il des réductions pour les groupes ?",
         "a4": "Oui. Des tarifs de groupe sont disponibles à partir de 20 personnes embarquant. Ces tarifs réduits s'appliquent aux adultes comme aux enfants. La réservation à l'avance est recommandée.",
         "q5": "Qu'est-ce qui est inclus dans le prix du billet ?",
@@ -212,15 +212,15 @@
       },
       "schedule": {
         "title": "Horaires",
-        "description": "Les départs ont lieu <strong>d'avril à septembre</strong>, plusieurs fois par jour. Le train fonctionne tous les jours en haute saison. Veuillez consulter les horaires actuels pour les heures exactes de départ et les ajustements saisonniers."
+        "description": "Les départs ont lieu <strong>d'avril au 8 octobre, ainsi que pendant les vacances de la Toussaint</strong>, plusieurs fois par jour. Le train fonctionne tous les jours. Veuillez consulter les horaires actuels pour les heures exactes de départ et les ajustements saisonniers."
       },
       "accessibility": {
         "title": "Accessibilité",
-        "description": "Le Petit Train est <strong>accessible à tous</strong>. Il est idéal pour les familles avec jeunes enfants, les visiteurs âgés et toute personne préférant éviter les longues marches tout en profitant du meilleur de Carnac."
+        "description": "Le Petit Train est idéal pour les familles, les seniors et toute personne souhaitant découvrir Carnac confortablement, sans marcher longtemps."
       },
       "payment": {
         "title": "Paiement",
-        "description": "Les billets peuvent être achetés <strong>directement à bord</strong> ou au point de départ. Le paiement en espèces ou par carte est accepté. Des tarifs groupes et scolaires sont disponibles — contactez-nous pour un devis."
+        "description": "Modes de paiement acceptés : espèces, chèques, chèques-vacances ANCV. Le paiement par carte bancaire est disponible uniquement pour les réservations en ligne. Des tarifs groupes et scolaires sont disponibles, contactez-nous pour un devis."
       },
       "cta": {
         "heading": "Plus d'informations",
@@ -233,7 +233,7 @@
       "heading": "Une aventure abordable pour toute la famille",
       "description": "Des explorateurs solitaires aux grandes familles, trouvez le tarif idéal pour votre visite. Profitez de nos tarifs spéciaux pour les enfants et les familles.",
       "rowAdults": "Adultes",
-      "rowChildren": "Enfants de moins de 12 ans",
+      "rowChildren": "Enfants de 3 à 11 ans",
       "individual": {
         "title": "Billets Individuels",
         "note": "<strong>Pour les individuels :</strong> le point de rendez-vous est au point de départ ; guichet sur place. <strong>Gratuit :</strong> enfants de moins de 3 ans et chiens."
@@ -338,18 +338,18 @@
       "item1Title": "Point de départ principal — Parking du Ménec",
       "item1Description": "Point de départ obligatoire pour les groupes et les réservations individuelles. Situé au parking du Ménec à Carnac, directement en face de la Maison des Mégalithes.",
       "item2Title": "Point 2 — Carnac Plage (Port-En-Drô)",
-      "item2Description": "Achetez vos billets sur place auprès du conducteur, sous réserve de disponibilité.",
+      "item2Description": "Achetez vos billets sur place à la caisse sur place, sous réserve de disponibilité.",
       "item3Title": "Point 3 — La Trinité-sur-Mer",
-      "item3Description": "Arrêt de bus Cours des Quais, côté mer (avant le rond-point Alain Barrière). Achetez vos billets sur place auprès du conducteur, sous réserve de disponibilité.",
+      "item3Description": "Arrêt de bus Cours des Quais, côté mer (avant le rond-point Alain Barrière). Achetez vos billets sur place à la caisse sur place, sous réserve de disponibilité.",
       "item4Title": "En voiture",
       "item4Description": "Si vous venez en voiture, suivez les indications vers Carnac et le parking du Ménec. Le stationnement est gratuit.",
       "item5Title": "En train",
-      "item5Description": "La gare la plus proche est Auray, située à environ 13 km de Carnac. Des bus relient Auray à Carnac en haute saison."
+      "item5Description": "La gare la plus proche est Auray, située à environ 13 km de Carnac. Des bus relient Auray à Carnac."
     },
     "informationsIntro": {
       "label": "Note Importante",
       "heading": "Réservation en Ligne",
-      "description": "La réservation est possible mais non obligatoire. Vous pouvez réserver jusqu'à <strong>2 heures</strong> avant le départ souhaité. N'oubliez pas de prévoir le temps de trajet et le stationnement sur place. Passé ce délai, rendez-vous directement au point de départ et achetez vos billets au guichet ou auprès du conducteur."
+      "description": "<strong>La réservation est possible mais pas obligatoire.</strong> Vous pouvez réserver jusqu'à <strong>2 heures</strong> avant le départ souhaité. N'oubliez pas de prévoir le temps de trajet et le stationnement sur place. Passé ce délai, rendez-vous directement au point de départ et achetez vos billets à la caisse sur place."
     },
     "informationsCta": {
       "label": "Réservation de Groupe — Privatisation",
@@ -383,7 +383,7 @@
         "q6": "Dans quelles langues le commentaire guidé est-il disponible ?",
         "a6": "Le commentaire audio guidé est disponible en 16 langues, dont le français, l'anglais, l'allemand, l'espagnol, l'italien et le néerlandais.",
         "q7": "Faut-il réserver le Petit Train de Carnac à l'avance ?",
-        "a7": "La réservation à l'avance est recommandée, surtout en haute saison. Les billets peuvent aussi être achetés sur place sous réserve de disponibilité."
+        "a7": "<strong>La réservation est possible mais pas obligatoire.</strong> Les billets sont disponibles à la caisse sur place sous réserve de disponibilité."
       }
     },
     "routesTimeline": {
@@ -419,7 +419,7 @@
       "q3": "D'où part le Petit Train de Carnac ?",
       "a3": "Le point de départ principal pour les visiteurs individuels est le parking du Ménec à Carnac (arrêt n°1), situé en face de la Maison des Mégalithes. Le train passe ensuite par deux points intermédiaires — Port-En-Drô (arrêt n°2) et le port de La Trinité-sur-Mer (arrêt n°3) — uniquement pour prendre en charge des passagers supplémentaires ou permettre à un passager de descendre définitivement. Si vous descendez à l'un de ces arrêts, vous ne pouvez pas remonter dans le train.",
       "q4": "Le Petit Train fonctionne-t-il tous les jours ?",
-      "a4": "Oui. Le Petit Train de Carnac fonctionne tous les jours d'avril à fin octobre, y compris les dimanches et jours fériés.",
+      "a4": "Oui. Le Petit Train de Carnac fonctionne tous les jours d'avril au 8 octobre, ainsi que pendant les vacances de la Toussaint, y compris les dimanches et jours fériés.",
       "q5": "La visite fonctionne-t-elle par mauvais temps ?",
       "a5": "Oui. Le Petit Train fonctionne par tous les temps. En cas de pluie ou de grand vent, le train est vitré sur trois côtés, vous permettant de profiter pleinement de votre visite.",
       "q6": "Que vais-je voir pendant la visite ?",
@@ -429,7 +429,7 @@
       "q8": "La visite est-elle adaptée aux enfants ?",
       "a8": "Oui. Le Petit Train de Carnac convient aux enfants et aux familles. Le commentaire audio pour enfants offre une expérience à la fois ludique et éducative.",
       "q9": "Combien coûte un billet ?",
-      "q9Pre": "Les tarifs varient en fonction de l'âge et de la taille du groupe. Les adultes et les enfants de moins de 12 ans bénéficient de tarifs différents. Les tarifs complets sont disponibles sur la ",
+      "q9Pre": "Les tarifs varient en fonction de l'âge et de la taille du groupe. Les adultes et les enfants de 3 à 11 ans bénéficient de tarifs différents. Les tarifs complets sont disponibles sur la",
       "q9LinkText": "page Tarifs et Billets",
       "q9Post": ".",
       "q10": "Faut-il réserver à l'avance ?",
@@ -441,13 +441,13 @@
       "q13": "Les réservations de groupe sont-elles disponibles ?",
       "a13": "Oui. Les réservations de groupe sont disponibles pour les groupes de 20 personnes ou plus. La réservation à l'avance est recommandée.",
       "q14": "Puis-je privatiser le Petit Train pour un événement ?",
-      "q14Pre": "Oui. Le Petit Train de Carnac peut être privatisé pour des événements d'entreprise, des associations, des groupes scolaires et des occasions privées. Un formulaire de demande dédié est disponible sur la ",
+      "q14Pre": "Oui. Le Petit Train de Carnac peut être privatisé pour des événements d'entreprise, des associations, des groupes scolaires et des occasions privées. Un formulaire de demande dédié est disponible sur la",
       "q14LinkText": "page Privatisation",
       "q14Post": "."
     },
     "informationsScheduleLabels": {
       "operatingPeriodTitle": "Période d'exploitation",
-      "operatingPeriodBody": "Le Petit Train de Carnac fonctionne 7j/7 d'avril à fin octobre, y compris les dimanches et jours fériés.",
+      "operatingPeriodBody": "Le Petit Train de Carnac fonctionne 7j/7 d'avril au 8 octobre, ainsi que pendant les vacances de la Toussaint, y compris les dimanches et jours fériés.",
       "weatherTitle": "Météo",
       "weatherBody": "En cas de pluie ou de grand vent, le train est vitré sur trois côtés, vous permettant de profiter pleinement de votre visite.",
       "timetableHeading": "Horaires",

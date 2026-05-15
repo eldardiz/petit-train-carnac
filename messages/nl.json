@@ -67,7 +67,7 @@
     "rightImageAlt": "De Petit Train de Carnac op een schilderachtige route",
     "noteImportanteLabel": "Belangrijke opmerking",
     "noteImportanteHeading": "Online boeken",
-    "noteImportanteBody": "Reserveren kan, maar is niet verplicht. Je kunt tot <strong>2 uur</strong> vóór de gewenste vertrektijd boeken. Houd rekening met reis- en parkeertijd ter plaatse. Daarna ga je rechtstreeks naar het vertrekpunt en koop je je tickets aan het loket of bij de chauffeur.",
+    "noteImportanteBody": "<strong>Reserveren kan, maar is niet verplicht.</strong> Je kunt tot <strong>2 uur</strong> vóór de gewenste vertrektijd boeken. Houd rekening met reis- en parkeertijd ter plaatse. Daarna ga je rechtstreeks naar het vertrekpunt en koop je je tickets aan de kassa ter plaatse.",
     "noteImportanteBodyExtra": "Niet alle plaatsen zijn online beschikbaar."
   },
   "metadata": {
@@ -212,11 +212,11 @@
       },
       "schedule": {
         "title": "Tijden",
-        "description": "Vertrekken zijn er <strong>van april tot september</strong>, meerdere keren per dag. In het hoogseizoen rijdt de trein dagelijks. Raadpleeg de actuele dienstregeling voor exacte vertrektijden en seizoensaanpassingen."
+        "description": "Vertrekken zijn er <strong>van april tot 8 oktober, plus de Allerheiligenvakantie</strong>, meerdere keren per dag. Raadpleeg de actuele dienstregeling voor exacte vertrektijden en seizoensaanpassingen."
       },
       "accessibility": {
         "title": "Toegankelijkheid",
-        "description": "De Petit Train is <strong>voor iedereen toegankelijk</strong>. Ideaal voor gezinnen met jonge kinderen, oudere bezoekers en iedereen die liever lange wandelingen vermijdt en toch het beste van Carnac wil zien."
+        "description": "De Petit Train is ideaal voor gezinnen, senioren en iedereen die Carnac comfortabel wil ontdekken, zonder veel te wandelen."
       },
       "payment": {
         "title": "Betaling",
@@ -338,18 +338,18 @@
       "item1Title": "Hoofdvertrekpunt — Ménec-parking",
       "item1Description": "Verplicht vertrekpunt voor groepen en individuele boekingen. Aan de Ménec-parking in Carnac, recht tegenover de Maison des Mégalithes.",
       "item2Title": "Halte 2 — Carnac Plage (Port-En-Drô)",
-      "item2Description": "Koop tickets ter plaatse bij de chauffeur, afhankelijk van beschikbaarheid.",
+      "item2Description": "Tickets verkrijgbaar aan de kassa ter plaatse, afhankelijk van beschikbaarheid.",
       "item3Title": "Halte 3 — La Trinité-sur-Mer",
-      "item3Description": "Bushalte Cours des Quais, zeezijde (vóór de rotonde Alain Barrière). Koop tickets ter plaatse bij de chauffeur, afhankelijk van beschikbaarheid.",
+      "item3Description": "Bushalte Cours des Quais, zeezijde (vóór de rotonde Alain Barrière). Tickets verkrijgbaar aan de kassa ter plaatse, afhankelijk van beschikbaarheid.",
       "item4Title": "Met de auto",
       "item4Description": "Als je met de auto komt, volg dan de borden naar Carnac en de Ménec-parking. Parkeren is gratis.",
       "item5Title": "Met de trein",
-      "item5Description": "Het dichtstbijzijnde station is Auray, ongeveer 13 km van Carnac. In het hoogseizoen rijden bussen tussen Auray en Carnac."
+      "item5Description": "Het dichtstbijzijnde station is Auray, ongeveer 13 km van Carnac. Tijdens het seizoen rijden bussen tussen Auray en Carnac."
     },
     "informationsIntro": {
       "label": "Belangrijke opmerking",
       "heading": "Online boeken",
-      "description": "Reserveren kan, maar is niet verplicht. Je kunt tot <strong>2 uur</strong> vóór de gewenste vertrektijd boeken. Houd rekening met reis- en parkeertijd ter plaatse. Daarna ga je rechtstreeks naar het vertrekpunt en koop je je tickets aan het loket of bij de chauffeur."
+      "description": "<strong>Reserveren kan, maar is niet verplicht.</strong> Je kunt tot <strong>2 uur</strong> vóór de gewenste vertrektijd boeken. Houd rekening met reis- en parkeertijd ter plaatse. Daarna ga je rechtstreeks naar het vertrekpunt en koop je je tickets aan de kassa ter plaatse."
     },
     "informationsCta": {
       "label": "Groepsboeking — Privé huren",
@@ -383,7 +383,7 @@
         "q6": "In welke talen is het audiocommentaar beschikbaar?",
         "a6": "Het audiocommentaar is beschikbaar in 16 talen, waaronder Frans, Engels, Duits, Spaans, Italiaans en Nederlands.",
         "q7": "Moet ik de Petit Train de Carnac vooraf reserveren?",
-        "a7": "Vooraf boeken wordt aanbevolen, vooral in het hoogseizoen. Tickets zijn ook ter plaatse te koop, afhankelijk van beschikbaarheid."
+        "a7": "Vooraf boeken wordt aanbevolen. Tickets zijn ook ter plaatse te koop, afhankelijk van beschikbaarheid."
       }
     },
     "routesTimeline": {
@@ -419,7 +419,7 @@
       "q3": "Vanwaar vertrekt de Petit Train de Carnac?",
       "a3": "Het belangrijkste vertrek- en aankomstpunt voor individuele bezoekers is de Parking du Ménec in Carnac, tegenover de Maison des Mégalithes.",
       "q4": "Rijdt de Petit Train elke dag?",
-      "a4": "Ja. De Petit Train de Carnac rijdt elke dag van april tot eind oktober, inclusief zondagen en feestdagen.",
+      "a4": "Ja. De Petit Train de Carnac rijdt elke dag van april tot 8 oktober, plus de Allerheiligenvakantie, inclusief zondagen en feestdagen.",
       "q5": "Gaat de rondleiding door bij slecht weer?",
       "a5": "Ja. De Petit Train rijdt bij elk weer. Bij regen of harde wind is de trein aan drie kanten beglaasd, zodat je optimaal kunt genieten van je bezoek.",
       "q6": "Wat zal ik zien tijdens de rondleiding?",
@@ -429,7 +429,7 @@
       "q8": "Is de rondleiding geschikt voor kinderen?",
       "a8": "Ja. De Petit Train de Carnac is geschikt voor kinderen en gezinnen. Het audiocommentaar voor kinderen maakt de ervaring zowel leuk als leerzaam.",
       "q9": "Hoeveel kost een ticket?",
-      "q9Pre": "De prijzen variëren op leeftijd en groepsgrootte. Volwassenen en kinderen onder de 12 jaar hebben verschillende tarieven. Volledige prijzen vind je op de ",
+      "q9Pre": "De prijzen variëren op leeftijd en groepsgrootte. Volwassenen en kinderen onder de 12 jaar hebben verschillende tarieven. Volledige prijzen vind je op de",
       "q9LinkText": "pagina Tarieven & Tickets",
       "q9Post": ".",
       "q10": "Moet ik vooraf reserveren?",
@@ -441,13 +441,13 @@
       "q13": "Zijn groepsboekingen mogelijk?",
       "a13": "Ja. Groepsboekingen zijn beschikbaar voor groepen van 20 personen of meer. Vooraf reserveren wordt aanbevolen.",
       "q14": "Kan ik de Petit Train privé reserveren voor een evenement?",
-      "q14Pre": "Ja. De Petit Train de Carnac kan privé worden gereserveerd voor bedrijfsevents, verenigingen, schoolgroepen en privégelegenheden. Een speciaal aanvraagformulier vind je op de ",
+      "q14Pre": "Ja. De Petit Train de Carnac kan privé worden gereserveerd voor bedrijfsevents, verenigingen, schoolgroepen en privégelegenheden. Een speciaal aanvraagformulier vind je op de",
       "q14LinkText": "pagina Privéverhuur",
       "q14Post": "."
     },
     "informationsScheduleLabels": {
       "operatingPeriodTitle": "Bedrijfsperiode",
-      "operatingPeriodBody": "De Petit Train de Carnac rijdt 7 dagen per week van april tot eind oktober, inclusief zondagen en feestdagen.",
+      "operatingPeriodBody": "De Petit Train de Carnac rijdt 7 dagen per week van april tot 8 oktober, plus de Allerheiligenvakantie, inclusief zondagen en feestdagen.",
       "weatherTitle": "Weer",
       "weatherBody": "Bij regen of harde wind is de trein aan drie kanten beglaasd, zodat je optimaal kunt genieten van je bezoek.",
       "timetableHeading": "Dienstregeling",

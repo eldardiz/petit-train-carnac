@@ -67,7 +67,7 @@
     "rightImageAlt": "Le Petit Train de Carnac en un recorrido pintoresco",
     "noteImportanteLabel": "Nota importante",
     "noteImportanteHeading": "Reserva en línea",
-    "noteImportanteBody": "La reserva es posible pero no obligatoria. Puedes reservar hasta <strong>2 horas</strong> antes de la salida deseada. No olvides prever el tiempo de desplazamiento y de aparcamiento. Pasado ese plazo, dirígete directamente al punto de salida y compra tus billetes en la taquilla o al conductor.",
+    "noteImportanteBody": "<strong>La reserva es posible pero no obligatoria.</strong> Puedes reservar hasta <strong>2 horas</strong> antes de la salida deseada. No olvides prever el tiempo de desplazamiento y de aparcamiento. Pasado ese plazo, dirígete directamente al punto de salida y compra tus billetes en la taquilla del lugar.",
     "noteImportanteBodyExtra": "No todas las plazas están disponibles para la venta en línea."
   },
   "metadata": {
@@ -120,11 +120,11 @@
       "faqDescription": "Encuentra respuestas claras a las preguntas más habituales sobre tarifas, descuentos de grupo y cómo reservar el Petit Train de Carnac.",
       "faq": {
         "q1": "¿Cuánto cuesta un billete para el Petit Train de Carnac?",
-        "a1": "Las tarifas dependen de la edad y del tamaño del grupo. Para visitantes individuales, el billete adulto estándar es de 8,50 €. Los niños menores de 12 años disfrutan de una tarifa reducida de 5 €. Las tarifas de grupo se aplican a partir de 20 personas.",
+        "a1": "Las tarifas dependen de la edad y del tamaño del grupo. Para visitantes individuales, el billete adulto estándar es de 8,50 €. Los niños de 3 a 11 años disfrutan de una tarifa reducida de 5 €. Las tarifas de grupo se aplican a partir de 20 personas.",
         "q2": "¿Hay tarifas reducidas para los niños?",
-        "a2": "Sí. Los niños menores de 12 años tienen tarifa reducida. Su billete da acceso a la misma visita guiada y a los comentarios de audio, incluida una versión adaptada para niños.",
+        "a2": "Sí. Los niños de 3 a 11 años tienen tarifa reducida. Su billete da acceso a la misma visita guiada y a los comentarios de audio, incluida una versión adaptada para niños.",
         "q3": "¿Los niños necesitan billete para subir al Petit Train?",
-        "a3": "Sí. Todo pasajero debe tener un billete para subir al Petit Train de Carnac. Se aplican tarifas reducidas para los menores de 12 años.",
+        "a3": "Sí. Todo pasajero debe tener un billete para subir al Petit Train de Carnac. Se aplican tarifas reducidas para los de 3 a 11 años.",
         "q4": "¿Hay descuentos para grupos?",
         "a4": "Sí. Las tarifas de grupo están disponibles a partir de 20 pasajeros. Estas tarifas reducidas se aplican tanto a adultos como a niños. Se recomienda reservar con antelación.",
         "q5": "¿Qué incluye el precio del billete?",
@@ -212,11 +212,11 @@
       },
       "schedule": {
         "title": "Horarios",
-        "description": "Las salidas tienen lugar <strong>de abril a septiembre</strong>, varias veces al día. El tren funciona todos los días en temporada alta. Consulta los horarios actuales para conocer los horarios exactos y los ajustes de temporada."
+        "description": "Las salidas tienen lugar <strong>de abril al 8 de octubre, además de las vacaciones de Todos los Santos</strong>, varias veces al día. Consulta los horarios actuales para conocer los horarios exactos y los ajustes de temporada."
       },
       "accessibility": {
         "title": "Accesibilidad",
-        "description": "El Petit Train es <strong>accesible para todos</strong>. Ideal para familias con niños pequeños, personas mayores y cualquiera que prefiera evitar largas caminatas mientras disfruta de Carnac."
+        "description": "El Petit Train es ideal para familias, personas mayores y cualquier persona que quiera descubrir Carnac cómodamente, sin caminar mucho."
       },
       "payment": {
         "title": "Pago",
@@ -233,7 +233,7 @@
       "heading": "Una aventura asequible para toda la familia",
       "description": "Desde exploradores en solitario a grandes familias, encuentra la tarifa ideal para tu visita. Aprovecha nuestras tarifas especiales para niños y familias.",
       "rowAdults": "Adultos",
-      "rowChildren": "Niños menores de 12 años",
+      "rowChildren": "Niños de 3 a 11 años",
       "individual": {
         "title": "Billetes Individuales",
         "note": "<strong>Para individuales:</strong> el punto de encuentro es el de salida; taquilla en el lugar. <strong>Gratis:</strong> niños menores de 3 años y perros."
@@ -338,18 +338,18 @@
       "item1Title": "Punto de salida principal — Aparcamiento del Ménec",
       "item1Description": "Punto de salida obligatorio para grupos y reservas individuales. Situado en el aparcamiento del Ménec, en Carnac, frente a la Maison des Mégalithes.",
       "item2Title": "Parada 2 — Carnac Plage (Port-En-Drô)",
-      "item2Description": "Compra los billetes en el lugar al conductor, según disponibilidad.",
+      "item2Description": "Compra los billetes en la taquilla del lugar, según disponibilidad.",
       "item3Title": "Parada 3 — La Trinité-sur-Mer",
-      "item3Description": "Parada de autobús Cours des Quais, lado del mar (antes de la rotonda Alain Barrière). Compra los billetes en el lugar al conductor, según disponibilidad.",
+      "item3Description": "Parada de autobús Cours des Quais, lado del mar (antes de la rotonda Alain Barrière). Compra los billetes en la taquilla del lugar, según disponibilidad.",
       "item4Title": "En coche",
       "item4Description": "Si vienes en coche, sigue las indicaciones hacia Carnac y el aparcamiento del Ménec. El aparcamiento es gratuito.",
       "item5Title": "En tren",
-      "item5Description": "La estación más cercana es Auray, a unos 13 km de Carnac. Hay autobuses que conectan Auray con Carnac en temporada alta."
+      "item5Description": "La estación más cercana es Auray, a unos 13 km de Carnac. Hay autobuses que conectan Auray con Carnac durante la temporada."
     },
     "informationsIntro": {
       "label": "Nota Importante",
       "heading": "Reserva en línea",
-      "description": "La reserva es posible pero no obligatoria. Puedes reservar hasta <strong>2 horas</strong> antes de la salida deseada. No olvides prever el tiempo de desplazamiento y de aparcamiento. Pasado ese plazo, dirígete directamente al punto de salida y compra tus billetes en la taquilla o al conductor."
+      "description": "<strong>La reserva es posible pero no obligatoria.</strong> Puedes reservar hasta <strong>2 horas</strong> antes de la salida deseada. No olvides prever el tiempo de desplazamiento y de aparcamiento. Pasado ese plazo, dirígete directamente al punto de salida y compra tus billetes en la taquilla del lugar."
     },
     "informationsCta": {
       "label": "Reserva de Grupo — Privatización",
@@ -383,7 +383,7 @@
         "q6": "¿En qué idiomas está disponible el audio guiado?",
         "a6": "El audio guiado está disponible en 16 idiomas, entre ellos francés, inglés, alemán, español, italiano y neerlandés.",
         "q7": "¿Hay que reservar el Petit Train de Carnac con antelación?",
-        "a7": "Se recomienda reservar con antelación, sobre todo en temporada alta. Los billetes también se pueden comprar en el lugar según disponibilidad."
+        "a7": "Las reservas se pueden hacer hasta 2 horas antes de la salida. Los billetes también se pueden comprar en el lugar según disponibilidad."
       }
     },
     "routesTimeline": {
@@ -419,7 +419,7 @@
       "q3": "¿Desde dónde sale el Petit Train de Carnac?",
       "a3": "El punto principal de salida y llegada para los visitantes individuales es el Parking du Ménec en Carnac, frente a la Maison des Mégalithes.",
       "q4": "¿El Petit Train funciona todos los días?",
-      "a4": "Sí. El Petit Train de Carnac funciona todos los días de abril a finales de octubre, incluidos domingos y festivos.",
+      "a4": "Sí. El Petit Train de Carnac funciona todos los días de abril al 8 de octubre, además de las vacaciones de Todos los Santos, incluidos domingos y festivos.",
       "q5": "¿La visita funciona con mal tiempo?",
       "a5": "Sí. El Petit Train funciona con cualquier clima. En caso de lluvia o viento fuerte, el tren está acristalado en tres lados, lo que te permite disfrutar plenamente de la visita.",
       "q6": "¿Qué veré durante la visita?",
@@ -429,11 +429,11 @@
       "q8": "¿La visita es adecuada para niños?",
       "a8": "Sí. El Petit Train de Carnac es adecuado para niños y familias. El audio para niños hace que la experiencia sea divertida y educativa.",
       "q9": "¿Cuánto cuesta un billete?",
-      "q9Pre": "Las tarifas varían según la edad y el tamaño del grupo. Los adultos y los niños menores de 12 años tienen tarifas distintas. Las tarifas completas están disponibles en la ",
+      "q9Pre": "Las tarifas varían según la edad y el tamaño del grupo. Los adultos y los niños de 3 a 11 años tienen tarifas distintas. Las tarifas completas están disponibles en la",
       "q9LinkText": "página de Tarifas y Billetes",
       "q9Post": ".",
       "q10": "¿Hay que reservar con antelación?",
-      "a10": "Se recomienda reservar con antelación, especialmente en temporada alta. Las reservas en línea deben hacerse al menos dos horas antes de la salida.",
+      "a10": "Las reservas en línea deben hacerse al menos dos horas antes de la salida.",
       "q11": "¿Puedo comprar los billetes en el lugar?",
       "a11": "Sí. Los billetes se pueden comprar en la taquilla del Parking du Ménec, según disponibilidad.",
       "q12": "¿Con cuánta antelación debo llegar antes de la salida?",
@@ -441,13 +441,13 @@
       "q13": "¿Hay reservas para grupos?",
       "a13": "Sí. Las reservas de grupo están disponibles para grupos de 20 personas o más. Se recomienda reservar con antelación.",
       "q14": "¿Puedo privatizar el Petit Train para un evento?",
-      "q14Pre": "Sí. El Petit Train de Carnac puede privatizarse para eventos de empresa, asociaciones, grupos escolares y ocasiones privadas. Hay un formulario dedicado en la ",
+      "q14Pre": "Sí. El Petit Train de Carnac puede privatizarse para eventos de empresa, asociaciones, grupos escolares y ocasiones privadas. Hay un formulario dedicado en la",
       "q14LinkText": "página de Privatización",
       "q14Post": "."
     },
     "informationsScheduleLabels": {
       "operatingPeriodTitle": "Periodo de funcionamiento",
-      "operatingPeriodBody": "El Petit Train de Carnac funciona 7 días/7 de abril a finales de octubre, incluidos domingos y festivos.",
+      "operatingPeriodBody": "El Petit Train de Carnac funciona 7 días/7 de abril al 8 de octubre, además de las vacaciones de Todos los Santos, incluidos domingos y festivos.",
       "weatherTitle": "Tiempo",
       "weatherBody": "En caso de lluvia o viento fuerte, el tren está acristalado en tres lados, lo que te permite disfrutar plenamente de tu visita.",
       "timetableHeading": "Horarios",

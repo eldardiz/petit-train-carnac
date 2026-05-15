@@ -67,7 +67,7 @@
     "rightImageAlt": "Le Petit Train de Carnac on a scenic route",
     "noteImportanteLabel": "Important Note",
     "noteImportanteHeading": "Online Booking",
-    "noteImportanteBody": "Booking is possible but not required. You can book up to <strong>2 hours</strong> before your departure. Remember to allow time for travel and on-site parking. After that, head straight to the departure point and buy your tickets at the kiosk or from the driver.",
+    "noteImportanteBody": "<strong>Booking is possible but not required.</strong> You can book up to <strong>2 hours</strong> before your departure. Remember to allow time for travel and on-site parking. After that, head straight to the departure point and buy your tickets at the counter on site.",
     "noteImportanteBodyExtra": "Not all seats are available for online sale."
   },
   "metadata": {
@@ -120,11 +120,11 @@
       "faqDescription": "Find clear answers to the most common questions about prices, group discounts and how to book the Petit Train de Carnac.",
       "faq": {
         "q1": "How much is a ticket for the Petit Train de Carnac?",
-        "a1": "Prices depend on age and group size. For individual visitors, the standard adult ticket is €8.50. Children under 12 enjoy a reduced rate of €5. Group prices apply from 20 people.",
+        "a1": "Prices depend on age and group size. For individual visitors, the standard adult ticket is €8.50. Children aged 3 to 11 enjoy a reduced rate of €5. Group prices apply from 20 people.",
         "q2": "Are there discounts for children?",
-        "a2": "Yes. Children under 12 get a reduced rate. Their ticket gives access to the same guided tour and audio commentaries, including a version specially adapted for children.",
+        "a2": "Yes. Children aged 3 to 11 get a reduced rate. Their ticket gives access to the same guided tour and audio commentaries, including a version specially adapted for children.",
         "q3": "Do children need a ticket to ride the Petit Train?",
-        "a3": "Yes. Every passenger must hold a ticket to board the Petit Train de Carnac. Reduced rates apply for children under 12.",
+        "a3": "Yes. Every passenger must hold a ticket to board the Petit Train de Carnac. Reduced rates apply for children aged 3 to 11.",
         "q4": "Are there group discounts?",
         "a4": "Yes. Group rates are available from 20 boarding passengers. These reduced rates apply to both adults and children. Booking in advance is recommended.",
         "q5": "What's included in the ticket price?",
@@ -212,11 +212,11 @@
       },
       "schedule": {
         "title": "Schedule",
-        "description": "Departures run <strong>from April to September</strong>, several times a day. The train operates daily in high season. Check current schedules for exact departure times and seasonal adjustments."
+        "description": "Departures run <strong>from April to October 8, plus the All Saints' school holidays</strong>, several times a day. The train operates daily. Check current schedules for exact departure times and seasonal adjustments."
       },
       "accessibility": {
         "title": "Accessibility",
-        "description": "The Petit Train is <strong>accessible to everyone</strong>. Ideal for families with young children, elderly visitors and anyone who'd rather skip long walks while still enjoying the best of Carnac."
+        "description": "The Petit Train is ideal for families, seniors and anyone who wants to discover Carnac comfortably, without walking far."
       },
       "payment": {
         "title": "Payment",
@@ -233,7 +233,7 @@
       "heading": "An affordable adventure for the whole family",
       "description": "From solo explorers to large families, find the right ticket for your visit. Take advantage of our special rates for children and families.",
       "rowAdults": "Adults",
-      "rowChildren": "Children under 12",
+      "rowChildren": "Children aged 3 to 11",
       "individual": {
         "title": "Individual Tickets",
         "note": "<strong>For individuals:</strong> meeting point is at the departure point; on-site ticket office. <strong>Free:</strong> children under 3 and dogs."
@@ -338,18 +338,18 @@
       "item1Title": "Main departure point — Ménec car park",
       "item1Description": "Mandatory departure point for groups and individual bookings. Located at the Ménec car park in Carnac, directly opposite the Maison des Mégalithes.",
       "item2Title": "Stop 2 — Carnac Plage (Port-En-Drô)",
-      "item2Description": "Buy tickets on site from the driver, subject to availability.",
+      "item2Description": "Buy tickets on site at the counter on site, subject to availability.",
       "item3Title": "Stop 3 — La Trinité-sur-Mer",
-      "item3Description": "Cours des Quais bus stop, sea side (before the Alain Barrière roundabout). Buy tickets on site from the driver, subject to availability.",
+      "item3Description": "Cours des Quais bus stop, sea side (before the Alain Barrière roundabout). Buy tickets on site at the counter on site, subject to availability.",
       "item4Title": "By car",
       "item4Description": "If you're coming by car, follow signs to Carnac and the Ménec car park. Parking is free.",
       "item5Title": "By train",
-      "item5Description": "The nearest station is Auray, about 13 km from Carnac. Buses connect Auray to Carnac in high season."
+      "item5Description": "The nearest station is Auray, about 13 km from Carnac. Buses connect Auray to Carnac."
     },
     "informationsIntro": {
       "label": "Important Note",
       "heading": "Online Booking",
-      "description": "Booking is possible but not required. You can book up to <strong>2 hours</strong> before your departure. Remember to allow time for travel and on-site parking. After that, head straight to the departure point and buy your tickets at the kiosk or from the driver."
+      "description": "<strong>Booking is possible but not required.</strong> You can book up to <strong>2 hours</strong> before your departure. Remember to allow time for travel and on-site parking. After that, head straight to the departure point and buy your tickets at the counter on site."
     },
     "informationsCta": {
       "label": "Group Booking — Private Hire",
@@ -383,7 +383,7 @@
         "q6": "What languages is the guided commentary available in?",
         "a6": "The audio commentary is available in 16 languages, including French, English, German, Spanish, Italian and Dutch.",
         "q7": "Do I need to book the Petit Train de Carnac in advance?",
-        "a7": "Booking in advance is recommended, especially in high season. Tickets can also be bought on site, subject to availability."
+        "a7": "Booking in advance is recommended, especially. Tickets can also be bought on site, subject to availability."
       }
     },
     "routesTimeline": {
@@ -419,7 +419,7 @@
       "q3": "Where does the Petit Train de Carnac depart from?",
       "a3": "The main departure point for individual visitors is the Parking du Ménec in Carnac (stop n°1), opposite the Maison des Mégalithes. The train then passes through two intermediate points — Port-En-Drô (stop n°2) and the harbour of La Trinité-sur-Mer (stop n°3) — solely to pick up additional passengers or allow a passenger to alight permanently. If you get off at one of these stops, you cannot reboard the train.",
       "q4": "Does the Petit Train run every day?",
-      "a4": "Yes. The Petit Train de Carnac runs every day from April to the end of October, including Sundays and public holidays.",
+      "a4": "Yes. The Petit Train de Carnac runs every day from April to October 8, plus the All Saints' school holidays, including Sundays and public holidays.",
       "q5": "Does the tour run in bad weather?",
       "a5": "Yes. The Petit Train runs in all weather. In rain or strong wind the train is glazed on three sides, so you can fully enjoy your tour.",
       "q6": "What will I see during the tour?",
@@ -429,7 +429,7 @@
       "q8": "Is the tour suitable for children?",
       "a8": "Yes. The Petit Train de Carnac is suitable for children and families. The children's audio commentary makes the experience both fun and educational.",
       "q9": "How much is a ticket?",
-      "q9Pre": "Prices vary by age and group size. Adults and children under 12 have different rates. Full prices are available on the ",
+      "q9Pre": "Prices vary by age and group size. Adults and children aged 3 to 11 have different rates. Full prices are available on the",
       "q9LinkText": "Prices & Tickets page",
       "q9Post": ".",
       "q10": "Do I need to book in advance?",
@@ -441,13 +441,13 @@
       "q13": "Are group bookings available?",
       "a13": "Yes. Group bookings are available for groups of 20 people or more. Booking in advance is recommended.",
       "q14": "Can I privatise the Petit Train for an event?",
-      "q14Pre": "Yes. The Petit Train de Carnac can be privatised for corporate events, associations, school groups and private occasions. A dedicated request form is available on the ",
+      "q14Pre": "Yes. The Petit Train de Carnac can be privatised for corporate events, associations, school groups and private occasions. A dedicated request form is available on the",
       "q14LinkText": "Private Hire page",
       "q14Post": "."
     },
     "informationsScheduleLabels": {
       "operatingPeriodTitle": "Operating Period",
-      "operatingPeriodBody": "The Petit Train de Carnac runs every day from April to the end of October, including Sundays and public holidays.",
+      "operatingPeriodBody": "The Petit Train de Carnac runs every day from April to October 8, plus the All Saints' school holidays, including Sundays and public holidays.",
       "weatherTitle": "Weather",
       "weatherBody": "In rain or strong wind, the train is glazed on three sides, so you can fully enjoy your tour.",
       "timetableHeading": "Timetable",
