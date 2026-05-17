@@ -201,7 +201,7 @@
     "practicalInfo": {
       "label": "Informationen",
       "heading": "Praktische Informationen",
-      "description": "Damit Sie Ihren Besuch im Sightseeing-Zug in Carnac gut planen können, hier die wichtigsten Informationen vor der Buchung.",
+      "description": "Damit Sie Ihren Besuch im Sightseeing-Zug in Carnac gut planen können, hier die wichtigsten Informationen vor der Buchung. Unser Petit Train ist für alle zugänglich: ideal für Familien, Senioren und Besucher, die längere Fußwege vermeiden möchten.",
       "duration": {
         "title": "Dauer",
         "description": "Die Tour dauert etwa <strong>55 Minuten.</strong> In diesem Tempo können Sie Carnac in Ruhe entdecken und Kommentar wie Landschaft genießen — ohne Eile oder Erschöpfung."
@@ -450,8 +450,8 @@
       "departurePrefix": "Abfahrt —",
       "saturdayRule": "<strong>Samstag im Juli & August:</strong> Abfahrten von Carnac Plage und La Trinité-sur-Mer folgen dem « orangen » Nebensaison-Fahrplan.",
       "onlineBookingNote": "<strong>Online-Buchung:</strong> nur verfügbar für Abfahrt Nr. 1 — Parking du Ménec.",
-      "closuresHeading": "Feiertage & Schließzeiten",
-      "closuresBody": "An Feiertagen gilt der reguläre Fahrplan. Der Petit Train ist <strong>vom 9. bis 16. Oktober geschlossen</strong> sowie <strong>von November bis März einschließlich</strong>.",
+      "closuresHeading": "Feiertage & Öffnungszeiten",
+      "closuresBody": "Der Petit Train verkehrt an Feiertagen zu den üblichen Zeiten. Geöffnet von April bis zum 8. Oktober sowie während der Allerheiligenferien.",
       "viewPlanButton": "Streckenkarte ansehen",
       "viewPlanImageAlt": "Streckenkarte — Menhirs Tour mit dem Petit Train de Carnac",
       "lightboxClose": "Schließen",

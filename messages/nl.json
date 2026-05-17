@@ -201,7 +201,7 @@
     "practicalInfo": {
       "label": "Informatie",
       "heading": "Praktische informatie",
-      "description": "Om je bezoek aan de toeristische trein in Carnac goed te plannen, vind je hier de essentiële info die je voor het boeken moet weten.",
+      "description": "Om je bezoek aan de toeristische trein in Carnac goed te plannen, vind je hier de essentiële info die je voor het boeken moet weten. Onze Petit Train is voor iedereen toegankelijk: ideaal voor gezinnen, senioren en bezoekers die lange wandelingen liever vermijden.",
       "duration": {
         "title": "Duur",
         "description": "De rit duurt ongeveer <strong>55 minuten.</strong> In dit tempo ontdek je Carnac op je gemak en geniet je van het commentaar en de landschappen — zonder gehaast of vermoeid te raken."
@@ -450,8 +450,8 @@
       "departurePrefix": "Vertrek —",
       "saturdayRule": "<strong>Zaterdag in juli & augustus:</strong> de vertrekken vanaf Carnac Plage en La Trinité-sur-Mer volgen de « oranje » laagseizoen-tijden.",
       "onlineBookingNote": "<strong>Online reserveren:</strong> alleen beschikbaar voor vertrek nr. 1 — Parking du Ménec.",
-      "closuresHeading": "Feestdagen & Sluitingen",
-      "closuresBody": "Op feestdagen geldt het reguliere schema. De Petit Train is <strong>gesloten van 9 tot en met 16 oktober</strong> en <strong>van november tot en met maart</strong>.",
+      "closuresHeading": "Feestdagen & Openingstijden",
+      "closuresBody": "De Petit Train rijdt op feestdagen volgens de gebruikelijke uren. Geopend van april tot 8 oktober, evenals tijdens de Allerheiligenvakantie.",
       "viewPlanButton": "Bekijk de routekaart",
       "viewPlanImageAlt": "Routekaart — Menhirs Tour per Petit Train de Carnac",
       "lightboxClose": "Sluiten",

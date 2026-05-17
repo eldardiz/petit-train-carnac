@@ -201,7 +201,7 @@
     "practicalInfo": {
       "label": "Informations",
       "heading": "Informations Pratiques",
-      "description": "Pour vous aider à planifier votre visite en train touristique à Carnac, voici les informations essentielles à connaître avant de réserver.",
+      "description": "Pour vous aider à planifier votre visite en train touristique à Carnac, voici les informations essentielles à connaître avant de réserver. Notre Petit Train est accessible à tous : il convient particulièrement aux familles, aux seniors et aux visiteurs qui préfèrent éviter de longues marches.",
       "duration": {
         "title": "Durée",
         "description": "La visite touristique dure environ <strong>55 minutes.</strong> Cette durée vous permet de découvrir Carnac à un rythme détendu tout en profitant du commentaire et des paysages, sans vous sentir pressé ou fatigué."
@@ -450,8 +450,8 @@
       "departurePrefix": "Départ —",
       "saturdayRule": "<strong>Samedi en juillet & août :</strong> les départs Carnac Plage et La Trinité-sur-Mer suivent les horaires « orange » de basse saison.",
       "onlineBookingNote": "<strong>Réservation en ligne :</strong> uniquement disponible pour le départ N°1 — Parking du Ménec.",
-      "closuresHeading": "Jours fériés & Fermetures",
-      "closuresBody": "Les jours fériés suivent les horaires habituels. Le Petit Train est <strong>fermé du 9 au 16 octobre</strong> ainsi que <strong>de novembre à mars inclus</strong>.",
+      "closuresHeading": "Jours fériés & Horaires d'ouverture",
+      "closuresBody": "Le Petit Train circule aux horaires habituels les jours fériés. Ouvert d'avril au 8 octobre, ainsi que pendant les vacances de la Toussaint.",
       "viewPlanButton": "Voir le plan",
       "viewPlanImageAlt": "Plan du parcours — Menhirs Tour en Petit Train de Carnac",
       "lightboxClose": "Fermer",

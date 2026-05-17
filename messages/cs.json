@@ -201,7 +201,7 @@
     "practicalInfo": {
       "label": "Informace",
       "heading": "Praktické informace",
-      "description": "Abychom vám pomohli naplánovat výlet turistickým vlakem v Carnaci, zde jsou základní informace, které byste měli vědět před rezervací.",
+      "description": "Abychom vám pomohli naplánovat výlet turistickým vlakem v Carnaci, zde jsou základní informace, které byste měli vědět před rezervací. Náš Petit Train je přístupný všem: ideální pro rodiny, seniory a návštěvníky, kteří se chtějí vyhnout dlouhé chůzi.",
       "duration": {
         "title": "Délka trasy",
         "description": "Turistická prohlídka trvá přibližně <strong>55 minut.</strong> Tato délka vám umožní objevit Carnac uvolněným tempem a užít si komentář a krajinu bez spěchu nebo únavy."
@@ -450,8 +450,8 @@
       "departurePrefix": "Odjezd —",
       "saturdayRule": "<strong>Soboty v červenci a srpnu:</strong> odjezdy Carnac Plage a La Trinité-sur-Mer se řídí «oranžovými» mimosezónními jízdními řády.",
       "onlineBookingNote": "<strong>Online rezervace:</strong> dostupná pouze pro odjezd č. 1 — Parkoviště Ménec.",
-      "closuresHeading": "Svátky a zavírací dny",
-      "closuresBody": "Svátky se řídí běžnými jízdními řády. Petit Train je <strong>uzavřen od 9. do 16. října</strong> a dále <strong>od listopadu do března včetně</strong>.",
+      "closuresHeading": "Svátky a otevírací doba",
+      "closuresBody": "Petit Train jezdí ve svátky v běžných hodinách. Otevřeno od dubna do 8. října a také během prázdnin Všech svatých.",
       "viewPlanButton": "Zobrazit plán",
       "viewPlanImageAlt": "Plán trasy — Menhiry Tour Petit Train de Carnac",
       "lightboxClose": "Zavřít",
