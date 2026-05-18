@@ -35,11 +35,11 @@ export default function Navbar() {
             {t("navbar.bannerPrefixBefore")}{" "}
             <span className="italic underline">{t("navbar.bannerBrand")}</span>{" "}
             {t("navbar.bannerPrefixAfter")}{" "}
-            <a href="https://www.petittrain-morbihan.com/en/vannes/" className="underline text-[#f5ebdd]" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.lepetittraindevannes.fr/" className="underline text-[#f5ebdd]" target="_blank" rel="noopener noreferrer">
               {t("navbar.bannerLinkVannes")}
             </a>{" "}
             {t("navbar.bannerAnd")}{" "}
-            <a href="https://www.petittrain-morbihan.com/en/quiberon/" className="underline text-[#f5ebdd]" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.lepetittraindequiberon.fr/" className="underline text-[#f5ebdd]" target="_blank" rel="noopener noreferrer">
               {t("navbar.bannerLinkQuiberon")}
             </a>
           </p>

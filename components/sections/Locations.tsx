@@ -4,12 +4,12 @@ import { useTranslations } from "next-intl";
 const locationKeys = ["vannes", "quiberon"] as const;
 const locationData: Record<(typeof locationKeys)[number], { href: string; image: string; rounded: string }> = {
   vannes: {
-    href: "https://www.petittrain-morbihan.com/en/vannes/",
+    href: "https://www.lepetittraindevannes.fr/",
     image: "/figma-assets/vannes.jpg",
     rounded: "rounded-tl-[32px]",
   },
   quiberon: {
-    href: "https://www.petittrain-morbihan.com/en/quiberon/",
+    href: "https://www.lepetittraindequiberon.fr/",
     image: "/figma-assets/quiberon.jpg",
     rounded: "rounded-tr-[32px]",
   },
