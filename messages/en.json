@@ -462,7 +462,10 @@
       "frequencyEvery20": "One departure every 20 min",
       "frequencyEvery30": "One departure every 30 min",
       "noteSaturdayIncluded": "Saturday included",
-      "noteSaturdayException": "Except Saturday (Saturday: “orange” timetable)"
+      "noteSaturdayException": "Except Saturday (Saturday: “orange” timetable)",
+      "periodAprMayJunSepEarlyOct": "April · May · June · September · 1st – 8th October",
+      "periodJulAug": "July & August",
+      "periodOctToussaint": "17 – 31 October"
     },
     "routesHeroDefaults": {
       "primaryButton": "Individual flyer",

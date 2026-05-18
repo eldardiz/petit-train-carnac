@@ -461,7 +461,10 @@
       "frequencyEvery20": "Odjezd každých 20 minut",
       "frequencyEvery30": "Odjezd každých 30 minut",
       "noteSaturdayIncluded": "Včetně soboty",
-      "noteSaturdayException": "Kromě soboty (sobota: „oranžový“ jízdní řád)"
+      "noteSaturdayException": "Kromě soboty (sobota: „oranžový“ jízdní řád)",
+      "periodAprMayJunSepEarlyOct": "Duben · Květen · Červen · Září · 1. – 8. října",
+      "periodJulAug": "Červenec a Srpen",
+      "periodOctToussaint": "17. – 31. října"
     },
     "routesHeroDefaults": {
       "primaryButton": "Leták pro jednotlivce",

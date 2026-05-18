@@ -58,19 +58,19 @@ export default function InformationsSchedule() {
       location: t("dep1Location"),
       periods: [
         {
-          label: "Avril · Mai · Juin · Septembre · 1er – 8 octobre",
+          label: t("periodAprMayJunSepEarlyOct"),
           band: "yellow",
           hours: "10H – 17H30",
           frequency: t("frequencyEvery20"),
         },
         {
-          label: "Juillet & Août",
+          label: t("periodJulAug"),
           band: "purple",
           hours: "9H30 – 18H30",
           frequency: t("frequencyEvery20"),
         },
         {
-          label: "17 – 31 octobre",
+          label: t("periodOctToussaint"),
           band: "green",
           hours: "10H – 17H",
           frequency: t("frequencyEvery30"),
@@ -84,14 +84,14 @@ export default function InformationsSchedule() {
       intermediate: true,
       periods: [
         {
-          label: "Avril · Mai · Juin · Septembre · 1er – 8 octobre",
+          label: t("periodAprMayJunSepEarlyOct"),
           band: "orange",
           hours: "10H15 – 17H15",
           frequency: t("frequencyEvery30"),
           note: t("noteSaturdayIncluded"),
         },
         {
-          label: "Juillet & Août",
+          label: t("periodJulAug"),
           band: "blue",
           hours: "10H · 11H · 12H · 14H · 15H · 16H · 17H · 18H",
           note: t("noteSaturdayException"),
@@ -105,14 +105,14 @@ export default function InformationsSchedule() {
       intermediate: true,
       periods: [
         {
-          label: "Avril · Mai · Juin · Septembre · 1er – 8 octobre",
+          label: t("periodAprMayJunSepEarlyOct"),
           band: "orange",
           hours: "10H30 – 17H",
           frequency: t("frequencyEvery30"),
           note: t("noteSaturdayIncluded"),
         },
         {
-          label: "Juillet & Août",
+          label: t("periodJulAug"),
           band: "blue",
           hours: "10H15 · 11H15 · 14H15 · 15H15 · 16H15 · 17H15",
           note: t("noteSaturdayException"),

@@ -462,7 +462,10 @@
       "frequencyEvery20": "Un départ toutes les 20 min",
       "frequencyEvery30": "Un départ toutes les 30 min",
       "noteSaturdayIncluded": "Samedi inclus",
-      "noteSaturdayException": "Sauf le samedi (le samedi : horaires « orange »)"
+      "noteSaturdayException": "Sauf le samedi (le samedi : horaires « orange »)",
+      "periodAprMayJunSepEarlyOct": "Avril · Mai · Juin · Septembre · 1er – 8 octobre",
+      "periodJulAug": "Juillet & Août",
+      "periodOctToussaint": "17 – 31 octobre"
     },
     "routesHeroDefaults": {
       "primaryButton": "Flyer individuel",

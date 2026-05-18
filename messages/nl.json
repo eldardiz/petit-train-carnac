@@ -461,7 +461,10 @@
       "frequencyEvery20": "Eén vertrek elke 20 min",
       "frequencyEvery30": "Eén vertrek elke 30 min",
       "noteSaturdayIncluded": "Zaterdag inbegrepen",
-      "noteSaturdayException": "Behalve zaterdag (zaterdag: „oranje“-dienstregeling)"
+      "noteSaturdayException": "Behalve zaterdag (zaterdag: „oranje“-dienstregeling)",
+      "periodAprMayJunSepEarlyOct": "April · Mei · Juni · September · 1 – 8 oktober",
+      "periodJulAug": "Juli & Augustus",
+      "periodOctToussaint": "17 – 31 oktober"
     },
     "routesHeroDefaults": {
       "primaryButton": "Individuele flyer",

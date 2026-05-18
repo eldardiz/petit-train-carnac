@@ -461,7 +461,10 @@
       "frequencyEvery20": "Eine Abfahrt alle 20 Min.",
       "frequencyEvery30": "Eine Abfahrt alle 30 Min.",
       "noteSaturdayIncluded": "Samstag eingeschlossen",
-      "noteSaturdayException": "Außer samstags (samstags: „oranger“ Fahrplan)"
+      "noteSaturdayException": "Außer samstags (samstags: „oranger“ Fahrplan)",
+      "periodAprMayJunSepEarlyOct": "April · Mai · Juni · September · 1. – 8. Oktober",
+      "periodJulAug": "Juli & August",
+      "periodOctToussaint": "17. – 31. Oktober"
     },
     "routesHeroDefaults": {
       "primaryButton": "Einzelflyer",

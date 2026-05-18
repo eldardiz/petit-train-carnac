@@ -461,7 +461,10 @@
       "frequencyEvery20": "Una partenza ogni 20 min",
       "frequencyEvery30": "Una partenza ogni 30 min",
       "noteSaturdayIncluded": "Sabato incluso",
-      "noteSaturdayException": "Tranne il sabato (il sabato: orario «arancione»)"
+      "noteSaturdayException": "Tranne il sabato (il sabato: orario «arancione»)",
+      "periodAprMayJunSepEarlyOct": "Aprile · Maggio · Giugno · Settembre · 1 – 8 ottobre",
+      "periodJulAug": "Luglio e Agosto",
+      "periodOctToussaint": "17 – 31 ottobre"
     },
     "routesHeroDefaults": {
       "primaryButton": "Volantino individuale",

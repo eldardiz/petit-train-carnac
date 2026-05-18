@@ -461,7 +461,10 @@
       "frequencyEvery20": "Una salida cada 20 min",
       "frequencyEvery30": "Una salida cada 30 min",
       "noteSaturdayIncluded": "Sábado incluido",
-      "noteSaturdayException": "Excepto el sábado (el sábado: horario «anaranja»)"
+      "noteSaturdayException": "Excepto el sábado (el sábado: horario «anaranja»)",
+      "periodAprMayJunSepEarlyOct": "Abril · Mayo · Junio · Septiembre · 1 – 8 octubre",
+      "periodJulAug": "Julio y Agosto",
+      "periodOctToussaint": "17 – 31 octubre"
     },
     "routesHeroDefaults": {
       "primaryButton": "Folleto individual",
