@@ -133,7 +133,8 @@
         "a6": "Ja. Tickets zijn verkrijgbaar aan het loket op de Ménec-parking of rechtstreeks bij haltes 1 en 2.",
         "q7": "Kunnen tickets online worden geboekt?",
         "a7": "Ja. Online boeken is uitsluitend mogelijk op vertrekpunt nr. 1 (Ménec-parking). Online boekingen moeten minstens twee uur voor vertrek worden gemaakt."
-      }
+      },
+      "paymentNote": "<strong>Geaccepteerde betaalmethoden:</strong> contant geld, cheques, chèques-vacances ANCV. Creditcardbetaling is alleen beschikbaar voor online boekingen."
     },
     "routes": {
       "heroLabel": "De Route",

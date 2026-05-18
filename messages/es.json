@@ -133,7 +133,8 @@
         "a6": "Sí. Los billetes se pueden adquirir en la taquilla del aparcamiento del Ménec o directamente en las paradas 1 y 2.",
         "q7": "¿Se pueden reservar billetes en línea?",
         "a7": "Sí. La reserva en línea está disponible exclusivamente en el punto de salida n.° 1 (aparcamiento del Ménec). Las reservas en línea deben realizarse al menos dos horas antes de la salida."
-      }
+      },
+      "paymentNote": "<strong>Métodos de pago aceptados:</strong> efectivo, cheques, chèques-vacances ANCV. El pago con tarjeta de crédito está disponible solo para reservas en línea."
     },
     "routes": {
       "heroLabel": "El Recorrido",

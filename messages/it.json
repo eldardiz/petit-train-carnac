@@ -133,7 +133,8 @@
         "a6": "Sì. I biglietti possono essere acquistati alla biglietteria del parcheggio del Ménec o direttamente alle fermate 1 e 2.",
         "q7": "Si possono prenotare i biglietti online?",
         "a7": "Sì. La prenotazione online è disponibile esclusivamente al punto di partenza n° 1 (parcheggio del Ménec). Le prenotazioni online devono essere effettuate almeno due ore prima della partenza."
-      }
+      },
+      "paymentNote": "<strong>Metodi di pagamento accettati:</strong> contanti, assegni, chèques-vacances ANCV. Il pagamento con carta di credito è disponibile solo per le prenotazioni online."
     },
     "routes": {
       "heroLabel": "Il Percorso",

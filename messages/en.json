@@ -133,7 +133,8 @@
         "a6": "Yes. Tickets can be purchased at the ticket office at the Parking du Ménec or directly at stops 1 and 2.",
         "q7": "Can tickets be booked online?",
         "a7": "Yes. Online booking is available exclusively at departure point n°1 (Parking du Ménec). Reservations must be made at least two hours before departure."
-      }
+      },
+      "paymentNote": "<strong>Accepted payment methods:</strong> cash, cheques, chèques-vacances ANCV. Credit card payment is available only for online bookings."
     },
     "routes": {
       "heroLabel": "The Tour",

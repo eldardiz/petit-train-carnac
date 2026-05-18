@@ -108,6 +108,20 @@ export default async function PricesPage({ params }: PageProps) {
         <div id="prices">
           <Prices />
         </div>
+        {/* Payment methods note */}
+        <section className="bg-[#f5ebdd] pb-12">
+          <div className="max-w-[960px] mx-auto px-5 xl:px-0">
+            <div className="bg-[#fef9f0] border border-[rgba(28,27,41,0.1)] rounded-[12px] px-5 py-4 flex items-start gap-3">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1c1b29" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-0.5 opacity-70" aria-hidden="true">
+                <rect x="2" y="5" width="20" height="14" rx="2" />
+                <line x1="2" y1="10" x2="22" y2="10" />
+              </svg>
+              <p className="font-['Manrope',sans-serif] text-[14px] leading-[1.5] text-[#1c1b29] tracking-[-0.3px]">
+                {t.rich("pages.prices.paymentNote", { strong: (chunks) => <strong>{chunks}</strong> })}
+              </p>
+            </div>
+          </div>
+        </section>
         <InformationsSchedule />
         <Reviews />
         <Locations />

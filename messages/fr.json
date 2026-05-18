@@ -133,7 +133,8 @@
         "a6": "Oui. Les billets peuvent être achetés au guichet situé au parking du Ménec ou directement aux arrêts 1 et 2.",
         "q7": "Peut-on réserver des billets en ligne ?",
         "a7": "Oui. La réservation en ligne est disponible uniquement au point de départ numéro 1 (parking du Ménec). Les réservations en ligne doivent être effectuées au moins deux heures avant le départ."
-      }
+      },
+      "paymentNote": "<strong>Modes de paiement acceptés :</strong> espèces, chèques, chèques-vacances ANCV. Le paiement par carte bancaire est disponible uniquement pour les réservations en ligne."
     },
     "routes": {
       "heroLabel": "Le Parcours",

@@ -133,7 +133,8 @@
         "a6": "Ja. Tickets sind am Schalter im Parkplatz Ménec oder direkt an den Haltestellen 1 und 2 erhältlich.",
         "q7": "Kann man Tickets online buchen?",
         "a7": "Ja. Die Online-Buchung ist ausschließlich am Abfahrtsort Nr. 1 (Parkplatz Ménec) möglich. Online-Buchungen müssen mindestens zwei Stunden vor Abfahrt erfolgen."
-      }
+      },
+      "paymentNote": "<strong>Akzeptierte Zahlungsmethoden:</strong> Bargeld, Schecks, chèques-vacances ANCV. Kartenzahlung ist nur für Online-Buchungen verfügbar."
     },
     "routes": {
       "heroLabel": "Die Route",

@@ -133,7 +133,8 @@
         "a6": "Ano. Jízdenky lze koupit u pokladny na parkovišti Ménec nebo přímo na zastávkách 1 a 2.",
         "q7": "Lze rezervovat jízdenky online?",
         "a7": "Ano. Online rezervace je dostupná výhradně v místě odjezdu č. 1 (parkoviště Ménec). Online rezervace musí být provedeny nejméně dvě hodiny před odjezdem."
-      }
+      },
+      "paymentNote": "<strong>Akceptované platební metody:</strong> hotovost, šeky, chèques-vacances ANCV. Platba kartou je dostupná pouze pro online rezervace."
     },
     "routes": {
       "heroLabel": "Trasa",

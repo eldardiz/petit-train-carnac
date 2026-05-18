@@ -118,8 +118,8 @@ export default function PracticalInfo() {
             </div>
           </div>
 
-          {/* Row 2 col 3-4: purple CTA card */}
-          <div className="col-span-2 relative h-[423px] rounded-xl overflow-hidden bg-[#4d1c64]">
+          {/* Row 2 col 3: purple CTA card (fills the empty cell next to col-span-2 payment) */}
+          <div className="relative h-[423px] rounded-xl overflow-hidden bg-[#4d1c64]">
             <div
               aria-hidden="true"
               className="absolute inset-0 pointer-events-none opacity-40"
